@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    @apply antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01";
+  }
+
+  body {
+    @apply bg-finn-bg text-finn-text;
+    overflow-x: hidden;
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer components {
+  .finn-card {
+    @apply bg-finn-card border border-finn-border rounded-xl p-3;
+  }
+
+  .finn-badge {
+    @apply inline-flex items-center px-1.5 py-0.5 rounded text-2xs font-medium uppercase tracking-wider;
+  }
+
+  .finn-badge-red {
+    @apply finn-badge bg-red-500/15 text-red-400;
+  }
+
+  .finn-badge-green {
+    @apply finn-badge bg-green-500/15 text-green-400;
+  }
+
+  .finn-badge-amber {
+    @apply finn-badge bg-amber-500/15 text-amber-400;
+  }
+
+  .finn-badge-blue {
+    @apply finn-badge bg-blue-500/15 text-blue-400;
+  }
+
+  .finn-badge-muted {
+    @apply finn-badge bg-finn-border text-finn-muted;
+  }
+
+  .finn-section-title {
+    @apply text-xs font-semibold uppercase tracking-wider text-finn-muted mb-2;
+  }
+
+  /* Shimmer loading animation */
+  .finn-shimmer {
+    @apply animate-pulse bg-finn-border rounded;
+  }
+}
+
+@layer utilities {
+  .text-positive {
+    @apply text-finn-green;
+  }
+  .text-negative {
+    @apply text-finn-red;
+  }
+  .text-warning {
+    @apply text-finn-amber;
+  }
+}

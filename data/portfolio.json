@@ -1,0 +1,27 @@
+{
+  "stocks": [
+    { "ticker": "RELIANCE.NS", "name": "Reliance Industries", "sector": "Energy", "in_portfolio": true },
+    { "ticker": "TCS.NS", "name": "Tata Consultancy Services", "sector": "IT Services", "in_portfolio": true },
+    { "ticker": "HDFCBANK.NS", "name": "HDFC Bank", "sector": "Banking", "in_portfolio": true },
+    { "ticker": "INFY.NS", "name": "Infosys", "sector": "IT Services", "in_portfolio": true },
+    { "ticker": "ICICIBANK.NS", "name": "ICICI Bank", "sector": "Banking", "in_portfolio": true },
+    { "ticker": "HINDUNILVR.NS", "name": "Hindustan Unilever", "sector": "FMCG", "in_portfolio": true },
+    { "ticker": "BHARTIARTL.NS", "name": "Bharti Airtel", "sector": "Telecom", "in_portfolio": true },
+    { "ticker": "LT.NS", "name": "Larsen & Toubro", "sector": "Industrials", "in_portfolio": true },
+    { "ticker": "TATAMOTORS.NS", "name": "Tata Motors", "sector": "Auto", "in_portfolio": true },
+    { "ticker": "SUNPHARMA.NS", "name": "Sun Pharma", "sector": "Pharma", "in_portfolio": true },
+    { "ticker": "MARUTI.NS", "name": "Maruti Suzuki", "sector": "Auto", "in_portfolio": true },
+    { "ticker": "TITAN.NS", "name": "Titan Company", "sector": "Consumer", "in_portfolio": true },
+    { "ticker": "ASIANPAINT.NS", "name": "Asian Paints", "sector": "Consumer", "in_portfolio": true },
+    { "ticker": "TATASTEEL.NS", "name": "Tata Steel", "sector": "Metals", "in_portfolio": true },
+    { "ticker": "NTPC.NS", "name": "NTPC", "sector": "Power", "in_portfolio": true },
+    { "ticker": "BAJFINANCE.NS", "name": "Bajaj Finance", "sector": "NBFC", "in_portfolio": false },
+    { "ticker": "ZOMATO.NS", "name": "Zomato", "sector": "Tech", "in_portfolio": false },
+    { "ticker": "ITC.NS", "name": "ITC", "sector": "Conglomerate", "in_portfolio": false }
+  ],
+  "alert_config": {
+    "volume_threshold": 2.0,
+    "price_move_pct": 3.0,
+    "watched_categories": ["results", "M&A", "management_change", "insider_trading", "litigation"]
+  }
+}

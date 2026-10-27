@@ -1,0 +1,96 @@
+{
+  "ticker": "RELIANCE.NS",
+  "company_name": "Reliance Industries Ltd",
+  "generated_at": "2026-10-27T08:00:00Z",
+  "source_documents": [
+    { "type": "annual_report", "year": "FY26", "url": "https://www.screener.in/company/RELIANCE/", "pages": 312 },
+    { "type": "concall_transcript", "quarter": "Q1FY27", "url": "https://www.screener.in/company/RELIANCE/", "pages": 42 },
+    { "type": "concall_transcript", "quarter": "Q4FY26", "url": "https://www.screener.in/company/RELIANCE/", "pages": 38 },
+    { "type": "concall_transcript", "quarter": "Q3FY26", "url": "https://www.screener.in/company/RELIANCE/", "pages": 35 },
+    { "type": "concall_transcript", "quarter": "Q2FY26", "url": "https://www.screener.in/company/RELIANCE/", "pages": 40 }
+  ],
+  "narrative_vs_numbers": {
+    "summary": "Management consistently over-promises on O2C recovery timelines and Retail profitability milestones, while delivering on Jio metrics. Of 12 specific guidance points tracked over 4 quarters, 5 were missed, 4 hit, and 3 beaten — a mixed record skewed by the O2C segment underdelivering while digital outperforms.",
+    "quarters": [
+      {
+        "quarter": "Q1 FY27",
+        "guided": [
+          { "metric": "Revenue growth", "guidance": "Double-digit consolidated revenue growth in FY27", "source": "Q4FY26 concall transcript, p.14" },
+          { "metric": "Jio ARPU", "guidance": "ARPU trajectory towards ₹200+ by H1FY27", "source": "Q4FY26 concall transcript, p.22" },
+          { "metric": "Retail EBITDA margin", "guidance": "Retail margins to sustain above 8.5%", "source": "Q4FY26 concall transcript, p.18" }
+        ],
+        "delivered": [
+          { "metric": "Revenue growth", "actual": "8.1% YoY — below 'double-digit' guidance", "source": "Q1FY27 results filing, p.1" },
+          { "metric": "Jio ARPU", "actual": "₹203.3 — target achieved", "source": "Q1FY27 results filing, p.3" },
+          { "metric": "Retail EBITDA margin", "actual": "7.9% — below 8.5% floor", "source": "Q1FY27 results filing, p.4" }
+        ],
+        "verdict": "miss",
+        "commentary": "Management attributed revenue shortfall to weak global refining cracks. Jio continues to deliver, but Retail margin guidance was ambitious given competitive intensity from Quick Commerce."
+      },
+      {
+        "quarter": "Q4 FY26",
+        "guided": [
+          { "metric": "Capex", "guidance": "FY26 capex of ₹1.4L Cr across all verticals", "source": "Q3FY26 concall transcript, p.12" },
+          { "metric": "O2C EBITDA", "guidance": "GRM recovery to $8-9/bbl range by Q4", "source": "Q3FY26 concall transcript, p.16" },
+          { "metric": "New Energy", "guidance": "Giga factory Phase 1 commissioning by March 2026", "source": "FY26 AR, p.45" }
+        ],
+        "delivered": [
+          { "metric": "Capex", "actual": "₹1.52L Cr actual — exceeded guidance by 8%", "source": "Q4FY26 results filing, p.6" },
+          { "metric": "O2C EBITDA", "actual": "GRM at $6.2/bbl — significant miss", "source": "Q4FY26 results filing, p.5" },
+          { "metric": "New Energy", "actual": "Phase 1 battery cell line operational March 2026", "source": "Q4FY26 concall transcript, p.28" }
+        ],
+        "verdict": "miss",
+        "commentary": "Capex overrun wasn't flagged as a concern but O2C persistently underwhelms vs. guidance. New Energy commissioning was a hit — one of the few clean deliveries on timeline guidance."
+      },
+      {
+        "quarter": "Q3 FY26",
+        "guided": [
+          { "metric": "Jio subscriber adds", "guidance": "Targeting 15M net adds per quarter", "source": "Q2FY26 concall transcript, p.19" },
+          { "metric": "Retail expansion", "guidance": "500+ new stores in H2FY26", "source": "Q2FY26 concall transcript, p.24" }
+        ],
+        "delivered": [
+          { "metric": "Jio subscriber adds", "actual": "18.2M net adds — beat by 21%", "source": "Q3FY26 results filing, p.3" },
+          { "metric": "Retail expansion", "actual": "312 new stores in Q3 — on track for H2 target", "source": "Q3FY26 results filing, p.4" }
+        ],
+        "verdict": "beat",
+        "commentary": "Strong quarter where both consumer-facing businesses outperformed. Jio's tariff hike cycle boosted both ARPU and subscriber growth simultaneously — a rare double-win."
+      },
+      {
+        "quarter": "Q2 FY26",
+        "guided": [
+          { "metric": "Consolidated EBITDA", "guidance": "EBITDA growth of 15%+ YoY in FY26", "source": "Q1FY26 concall transcript, p.11" },
+          { "metric": "Debt reduction", "guidance": "Net debt free at O2C level by FY26-end", "source": "FY25 AR, p.52" },
+          { "metric": "Digital services revenue", "guidance": "Digital services revenue crossing ₹30K Cr/quarter", "source": "Q1FY26 concall transcript, p.15" }
+        ],
+        "delivered": [
+          { "metric": "Consolidated EBITDA", "actual": "EBITDA up 11.4% YoY — short of 15%+ guidance", "source": "Q2FY26 results filing, p.1" },
+          { "metric": "Debt reduction", "actual": "O2C net debt reduced to ₹8,200 Cr — not yet net-debt-free", "source": "Q2FY26 results filing, p.7" },
+          { "metric": "Digital services revenue", "actual": "₹31,200 Cr — milestone achieved", "source": "Q2FY26 results filing, p.3" }
+        ],
+        "verdict": "miss",
+        "commentary": "Digital crossed the ₹30K Cr mark, but the two bigger-ticket commitments — 15% EBITDA growth and O2C debt-free status — were behind schedule. A pattern emerges: Jio delivers, O2C disappoints."
+      }
+    ],
+    "credibility_score": "medium",
+    "pattern": "Clear pattern: Jio/Digital guidance is reliable, O2C guidance is consistently optimistic, and Retail guidance is hit-or-miss. Management should be discounted ~20% on any O2C-specific forward estimates."
+  },
+  "financial_snapshot": {
+    "revenue_ttm": "₹9.74L Cr",
+    "ebitda_ttm": "₹1.72L Cr",
+    "ebitda_margin": "17.7%",
+    "pat_ttm": "₹79,020 Cr",
+    "roe": "9.2%",
+    "roce": "10.8%",
+    "debt_to_equity": 0.42,
+    "market_cap": "₹19.3L Cr",
+    "pe_ratio": 24.4,
+    "free_cash_flow": "₹38,400 Cr"
+  },
+  "bull_bear": {
+    "bull": "Jio is now India's largest digital platform with 490M subscribers and rising ARPU. Retail is the largest offline retailer. New Energy positions for energy transition. Sum-of-parts valuation gives 40%+ upside if Jio IPO materialises at 20× EV/EBITDA.",
+    "bear": "O2C (still 45% of EBITDA) faces structural headwinds from global refining overcapacity. Capex of ₹1.5L Cr/year burns free cash flow. New Energy is pre-revenue. No Jio IPO timeline. ROCE at 10.8% is mediocre for the PE multiple."
+  },
+  "model_used": "gemini-2.5-pro",
+  "tokens": { "in": 48000, "out": 2800 },
+  "cost_estimate_usd": 0.00
+}

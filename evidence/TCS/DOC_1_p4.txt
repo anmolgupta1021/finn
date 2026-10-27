@@ -1,0 +1,36 @@
+TICKER: TCS.NS
+DOCUMENT_ID: DOC_1
+DOCUMENT_TITLE: Q2 FY27 Concall Transcript (14-Oct-2026)
+PDF_PAGE: 4 (of 29)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14102026155941_SEInt14102026_signed.pdf#page=4
+========================================================================
+
+wins demonstrates our continued relevance in large, complex, and
+strategically important transformation programs.
+Fourth, AI continues to scale as a structural growth opportunity.
+Annualized AI revenue reached $3.1 billion and crossed 10% of our
+overall revenue.
+Finally, we advanced our strategy through AI-led deals, ecosystem
+partnerships, and targeted acquisitions.
+- Our partnership with Porsche and the proposed acquisition of MHP,
+which is subject to regulatory approvals, strengthen our position in AI
+powered mobility and engineering.
+- The Best Buy GCC engagement highlights our ability to help clients
+build and transform AI-native global capability centers.
+- We also launched TCS ADD AgentHub for drug discovery, domain-
+specific agentic control planes, and new Physical AI capabilities,
+including Autonomous Engineering Lab powered by NVIDIA in
+Bengaluru and an AI-first lights-out factory lab in Pune.
+The demand environment has not materially changed since last quarter,
+and discretionary programs without near-term value remain under
+scrutiny. Against this backdrop, our primary opportunity and focus are on
+translating the advances in AI into measurable enterprise advantage for
+our clients.
+I will now invite Samir, Aarthi, and Sudeep to go over di(cid:431)erent aspects of
+our performance during the quarter. I'll step in later and provide more
+color on the demand trends that we are seeing. Over to you, Samir.
+Samir Seksaria: Thank you, Krithi. Good day everyone.
+Our quarterly revenue was ₹73,188 crore, a growth of 1.3% sequentially
+and 11.2% on a year-on-year basis. In dollar terms, revenue was $7,642
+million, a growth of 20 basis points sequentially and 2.4% year-on-year.
+Page 3 of 28

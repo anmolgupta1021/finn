@@ -1,0 +1,37 @@
+TICKER: TCS.NS
+DOCUMENT_ID: DOC_2
+DOCUMENT_TITLE: Q1 FY27 Concall Transcript (15-Jul-2026)
+PDF_PAGE: 3 (of 25)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/TCS_CORPCS_15072026193646_SEInt15072026_Signed.pdf#page=3
+========================================================================
+
+Nehal Shah: Our management team will give a brief overview of the company's
+performance followed by a Q&A session. As you are aware, we don't
+provide any specific revenue or earnings guidance, and anything said on
+this call, which reflects our outlook for the future or which could be
+construed as a forward-looking statement, must be reviewed in
+conjunction with the risk that the company faces.
+We have outlined these risks in the second slide of the quarterly fact sheet
+available on our website and emailed out to those who have subscribed
+to our mailing list. With that, I would like to turn the call over to Krithi.
+K Krithivasan: Thank you, Nehal. Good day everyone and thank you for joining us. I would
+like to begin by calling out the key takeaways from our Q1 FY27
+performance.
+First, Q1 FY27 reflects continued growth momentum and the strength of
+our strategic positioning despite the geopolitical and macroeconomic
+headwinds.
+Our Q1 revenue stood at ₹72,275 crore, growing 2.2% sequentially and
+13.9% year-on-year. This is the fourth consecutive quarter of growth.
+Growth was led by BFSI, Technology, software and services, regional
+markets, and products and platforms.
+Second, strong order book closure and large deal momentum continued.
+We delivered a TCV of $9.5 billion, including net new AI-led business
+transformation deals such as,
+ US$ 800 million mega deal with SKF; 6th mega deal win in the last 5
+quarters
+ Multi-million $ strategic partnership agreement with ServiceNow
+ Multi-million $ deal with Europe-based Fortune Global 50 firm
+The third key takeaway is our AI services revenue continues to
+accelerate. At the end of Q1 FY27, it stands at $2.6 billion in annualized
+revenue, which is up 13.6% QoQ.
+Page 2 of 24

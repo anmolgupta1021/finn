@@ -1,0 +1,39 @@
+TICKER: INFY.NS
+DOCUMENT_ID: DOC_3
+DOCUMENT_TITLE: Q3 FY26 Concall Transcript (19-Jan-2026)
+PDF_PAGE: 4 (of 39)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/Infosys_19012026222220_SEfiling_Earningscalltranscript_19012026.pdf#page=4
+========================================================================
+
+- AI deployed in physical devices and
+- AI trust and risk services
+We believe we are uniquely positioned to capture market share across these value pools and emerge
+as the leading AI value creator for global enterprises. We will share a comprehensive view of our
+approach at an investor day later this quarter.
+With a strong performance in this quarter, we have revised our revenue growth guidance for the
+financial year. The new revenue growth guidance for this financial year is 3% to 3.5% growth in
+constant currency. Our operating margin guidance for the financial year remains the same at 20%
+to 22%.
+With that, let us open it up for questions.
+Rishi Basu
+Thank you, Salil. We will now open the floor for questions. Joining Salil is Mr. Jayesh Sanghrajka,
+Chief Financial Officer, Infosys. The first question is from Ritu Singh from CNBC TV18.
+Ritu Singh
+Hi. Thank you. Rishi, sorry, this is our only chance to speak with the management every quarter. So
+we will have to exceed that one question limit. With that, Salil and Jayesh, to begin with, I wanted to
+start with your headcount number. We have seen an increase of 13,246 over the last two quarters.
+And this is interesting because it is coming at a time when your peer, TCS, is cutting 30,000 jobs.
+How should we read into this? I mean, is this a real indicator of how you see the demand environment
+improving?
+And with that, I wanted to get to your guidance figure being raised to 3% to 3.5%. How much of that
+upgrade is because of large deals like NHS being factored in? How much of the Versent acquisition,
+which is yet to be completed as we understand, is baked into that number? And, last quarter, you
+were telling us, for instance, there are segments like Retail that remain the weakest link, so where
+are you seeing improvement that has led you to upgrade your guidance? That is one.
+Also, sequentially, we have seen a bit of a marginal dip in your margins that is to 20.8%. This is at a
+time when there are tailwinds emerging from the rupee depreciation. So if you could break down why
+that has been the case? And while you continue to tell us about how you are uniquely placed to
+exploit that AI opportunity, and the likes of HCLTech and TCS have been giving us concrete
+numbers. Why does Infosys refrain from doing so? Thank you.
+3
+External Document © 2026 Infosys Limited

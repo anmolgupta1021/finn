@@ -1,0 +1,37 @@
+TICKER: INFY.NS
+DOCUMENT_ID: DOC_2
+DOCUMENT_TITLE: Q4 FY26 Concall Transcript (27-Apr-2026)
+PDF_PAGE: 7 (of 46)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/Infosys_27042026203405_Transcript_April232026_Q4.pdf#page=7
+========================================================================
+
+I will let Jayesh answer the other questions.
+Jayesh Sanghrajka
+Yes. So, if you look at the revenue guidance, and I will just maybe come back to the full year revenue
+numbers. The 3.1% growth was after absorbing lower third party-related revenue which was 1% and
+the lower on-site mix which was 70 basis points. So, we should look at the revenue numbers in that
+context. Both of that impacted the revenue from the overall revenue growth perspective.
+In terms of the guidance for the next year, we had three acquisitions or two acquisitions and a JV
+that we announced last year. The acquisition with an insurance company which is Stratus, which is
+already closed and it is baked in the guidance. What is baked into the guidance is approximately 25
+basis points or a quarter point of the guidance.
+The other acquisition was Optimum, which is not baked in because we have not closed it yet. We
+are still awaiting certain regulatory approvals. And once that is closed is when we will bake in. The
+third one is a JV with an Australian client of ours which is also pending regulatory approvals right
+now. So, we have not baked in both of that in the guidance at this point in time.
+Ritu Singh
+So only Optimum is 25 basis points?
+Jayesh Sanghrajka
+The Stratus is 25 basis points at this point in time.
+Ritu Singh
+The margin breakup?
+Jayesh Sanghrajka
+So if you look at the margins, the full year margins is at 21%. The quarterly margins also 20.9%, very
+close to 21%. If you look at the puts and takes of the margin walk from the last quarter, we got 50
+basis points impact from an acquisition-related amortization that we absorbed.
+There was a 30 basis points of one-off benefit that we got in Q3, so you know when you compare,
+that is a headwind. And 20 basis points was on account of comp-related matters. That was partially
+offset by 40 basis points of currency benefit and 30 basis points came from Maximus performance.
+Rishi Basu
+6
+External Document © 2025 Infosys Limited

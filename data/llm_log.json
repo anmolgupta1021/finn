@@ -1191,5 +1191,83 @@
     "free_tier": true,
     "cost_usd": 0.0,
     "paid_tier_equivalent_usd": 0.0
+  },
+  {
+    "timestamp": "2026-10-27T09:22:59.822811Z",
+    "task": "narrative_vs_numbers_v2",
+    "ticker": "INFY.NS",
+    "model": "gemini-3.6-flash",
+    "tokens_in": 46658,
+    "tokens_out": 10834,
+    "content_hash": "6a8cc20c12fb906c",
+    "cache_hit": false,
+    "free_tier": true,
+    "cost_usd": 0.0,
+    "paid_tier_equivalent_usd": 0.041082
+  },
+  {
+    "timestamp": "2026-10-27T09:24:35.725437Z",
+    "task": "narrative_vs_numbers_v2",
+    "ticker": "RELIANCE.NS",
+    "model": "gemini-3.6-flash",
+    "tokens_in": 46149,
+    "tokens_out": 6573,
+    "content_hash": "5179b61cabdf1139",
+    "cache_hit": false,
+    "free_tier": true,
+    "cost_usd": 0.0,
+    "paid_tier_equivalent_usd": 0.030277
+  },
+  {
+    "timestamp": "2026-10-27T09:25:48.993327Z",
+    "task": "narrative_vs_numbers_v2",
+    "ticker": "TCS.NS",
+    "model": "gemini-3.6-flash",
+    "tokens_in": 46332,
+    "tokens_out": 11835,
+    "content_hash": "062161016207fc9c",
+    "cache_hit": false,
+    "free_tier": true,
+    "cost_usd": 0.0,
+    "paid_tier_equivalent_usd": 0.043487
+  },
+  {
+    "timestamp": "2026-10-27T09:27:25.869294Z",
+    "task": "narrative_vs_numbers_v2",
+    "ticker": "ICICIBANK.NS",
+    "model": "gemini-3.6-flash",
+    "tokens_in": 49125,
+    "tokens_out": 10165,
+    "content_hash": "30986449a043b597",
+    "cache_hit": false,
+    "free_tier": true,
+    "cost_usd": 0.0,
+    "paid_tier_equivalent_usd": 0.04015
+  },
+  {
+    "timestamp": "2026-10-27T09:28:15.227927Z",
+    "task": "narrative_vs_numbers_v2",
+    "ticker": "ETERNAL.NS",
+    "model": "gemini-3.6-flash",
+    "tokens_in": 47668,
+    "tokens_out": 6109,
+    "content_hash": "064352e4ce519bf3",
+    "cache_hit": false,
+    "free_tier": true,
+    "cost_usd": 0.0,
+    "paid_tier_equivalent_usd": 0.029573
+  },
+  {
+    "timestamp": "2026-10-27T09:28:55.852109Z",
+    "task": "narrative_vs_numbers_v2",
+    "ticker": "PIDILITIND.NS",
+    "model": "gemini-3.6-flash",
+    "tokens_in": 47704,
+    "tokens_out": 5895,
+    "content_hash": "77997ff1808491f8",
+    "cache_hit": false,
+    "free_tier": true,
+    "cost_usd": 0.0,
+    "paid_tier_equivalent_usd": 0.029049
   }
 ]

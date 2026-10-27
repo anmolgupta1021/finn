@@ -147,12 +147,20 @@ export interface GuidanceItem {
   metric: string;
   guidance: string;
   source: string;
+  source_url?: string;
+  doc_id?: string;
+  page?: number;
+  evidence_file?: string;
 }
 
 export interface DeliveredItem {
   metric: string;
   actual: string;
   source: string;
+  source_url?: string;
+  doc_id?: string;
+  page?: number;
+  evidence_file?: string;
 }
 
 export interface ResearchData {

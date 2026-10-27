@@ -1,0 +1,39 @@
+TICKER: INFY.NS
+DOCUMENT_ID: DOC_1
+DOCUMENT_TITLE: Q1 FY27 Concall Transcript (28-Jul-2026)
+PDF_PAGE: 5 (of 48)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/Infosys_28072026202438_SE_filing_Earnings_call_transcript.pdf#page=5
+========================================================================
+
+And there is a tremendous set of opportunities from that on to the overall company, the learnings
+from that as we apply to the overall company. Ashiss Dash, also a very collaborative individual
+working well with all of the various components within Infosys and having been here for a long time,
+has made sure he has learned everything and also understood how all different parts of the company
+work. So huge, huge congratulations to him and looking forward to working with him as we do the
+transition over the next few months.
+Rishi Basu
+I now invite Jayesh to join Salil on stage to commence the quarter updates. As always, for this
+section, I will request one question from each media house. But with that, let me invite Salil for his
+remarks. Over to you, Salil.
+Salil Parekh
+Thanks, Rishi, and thanks Nandan. So good afternoon, everyone. Thank you for being here.
+Our revenue growth for Q1 was at 2.4% Y-on-Y and 1% Q-on-Q in constant currency terms. We had
+a one-time revenue impact of a client decision during the quarter. Our AI services revenue was 8.2%
+of overall revenue in Q1. Our large deals, $3.6 bn at 61% net new, operating margin at 21.1%, free
+cash flow at $955 mn. Earnings per share were up 15% Y-on-Y in rupee terms.
+We saw a strong acceleration in our AI work, as I shared earlier, with AI revenues at 8.2%. This is
+growing at double-digit Q-on-Q for the last several quarters. With this momentum, we see long-term
+relevance of our services for our clients, which are all driven through AI. From our delivery team,
+over 80,000 employees are working on coding tools such as Claude Code or Codex or several others
+for our clients, for our work inside. We see strong traction across the six areas of new growth that
+we see in AI, our Hexagon for AI strategy.
+We see client work, for example in building agents for processes, work on data, modernization and
+using coding tools. We are building a team of frontier engineers to support our client work. Our plan
+is to have 6,000 Frontier Engineers over the next few years. We have built a platform, Topaz Fabric
+that enables our clients to get the benefits of AI while keeping the sovereignty of their own data within
+their company.
+Our clients are able to work with any foundation model, closed, open-weight or on the cloud on their
+own servers. Our clients are able to optimize token cost, which has become very critical now to make
+sure its appropriate for the type of work they are doing and not out of hand.
+4
+External Document © 2025 Infosys Limited

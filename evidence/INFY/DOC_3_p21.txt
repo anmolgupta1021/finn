@@ -1,0 +1,40 @@
+TICKER: INFY.NS
+DOCUMENT_ID: DOC_3
+DOCUMENT_TITLE: Q3 FY26 Concall Transcript (19-Jan-2026)
+PDF_PAGE: 21 (of 39)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/Infosys_19012026222220_SEfiling_Earningscalltranscript_19012026.pdf#page=21
+========================================================================
+
+financial year 2027 over financial year 2026. This is based on good deal wins and AI preferred partner
+status with 15 of our largest 25 clients in each of these verticals.
+With the strong performance in this quarter, we have revised our revenue guidance for the financial
+year. The new revenue growth guidance for this financial year is 3% to 3.5% growth in constant
+currency. Our operating margin guidance for the financial year remains the same at 20% to 22%.
+With that, let me hand it over to Jayesh for his update.
+Jayesh Sanghrajka
+Thank you, Salil. Good morning, good evening, everyone, and thank you for joining the call today.
+First of all, a very Happy New Year to all of you.
+Coming to the quarter, our Q3 performance demonstrates continued momentum we saw in the last
+two quarters, underscoring resilience of our business model, relevance of our offerings and our
+disciplined execution.
+We had another quarter of growth, despite seasonal weakness and reduction in third party costs.
+The results for Q3 FY'26 include a charge associated with change in labor codes in India, which had
+an impact on operating profit, net profit, EPS and free cash flow for the quarter. Reference to the
+adjusted numbers exclude the impact from the same.
+Revenue for Q3 was $5.1 bn, up 0.6% sequentially and 1.7% year-on-year basis in constant currency
+terms. Operating margins including the impact of change in labor codes stands at 18.4%, adjusting
+for the same, it is at 21.2%.
+Key highlights of the quarter are as follows:
+1. We achieved strong revenue growth despite seasonality and lower third-party costs. Third-party
+as a percentage of revenue reduced by 0.3% sequentially and approximately 2.4% on a year-
+on-year basis.
+2. With three strong quarters of performance, our revenue growth in 9 months stood at 2.8%, which
+is at the higher end of our earlier guided range. This is despite the lower third party, which has
+reduced by approximately 1% compared to the same period last year and now stands at 7.3%.
+3. Momentum in Financial Services continues with 3.9% year-on-year growth in constant currency
+terms.
+4. Among geos, Europe continued to lead the growth by 7.2% year-on-year in constant currency
+terms.
+5. Volumes continue to remain soft for the quarter and the year.
+4
+External Document © 2026 Infosys Limited

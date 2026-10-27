@@ -1,0 +1,195 @@
+{
+  "ticker": "PIDILITIND.NS",
+  "company_name": "Pidilite Industries Limited",
+  "generated_at": "2026-10-27T09:28:55.862064Z",
+  "source_documents": [
+    {
+      "type": "concall_transcript",
+      "quarter": "Q1 FY27",
+      "url": "https://nsearchives.nseindia.com/corporate/Nisha_12082026181037_SEintimationEarningscallTranscriptQ1FY2027finaluploadsigned.pdf",
+      "pages": 22
+    },
+    {
+      "type": "concall_transcript",
+      "quarter": "Q4 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/Nisha_15052026142328_SEintimationEarningscallTranscriptQ4FY2026finalsigned.pdf",
+      "pages": 20
+    },
+    {
+      "type": "concall_transcript",
+      "quarter": "Q3 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/Nisha_11022026173121_SEintimationearningscalltranscriptfinalupload.pdf",
+      "pages": 21
+    },
+    {
+      "type": "concall_transcript",
+      "quarter": "Q2 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/Nisha_06112025184945_SEIntimationTranscript.pdf",
+      "pages": 16
+    },
+    {
+      "type": "concall_transcript",
+      "quarter": "Q1 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/Nisha_14082025160355_SEIntimationTranscript.pdf",
+      "pages": 24
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q1 FY27",
+      "url": "https://nsearchives.nseindia.com/corporate/Nisha_04082026141511_SEIntimationoutcomeofBM.pdf",
+      "pages": 14
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q4 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/Nisha_07052026193939_SEintimationBMoutcomeMay2026finaluploadsigned.pdf",
+      "pages": 20
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q3 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/Nisha_03022026181305_SEintimationoutcomeBMFeb2026uploadfinal.pdf",
+      "pages": 13
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q2 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/Nisha_30102025184756_SEOutcome.pdf",
+      "pages": 17
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q1 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/Nisha_06082025174826_SEIntimationUnauditedFinancialResultsJune2025.pdf",
+      "pages": 14
+    }
+  ],
+  "narrative_vs_numbers": {
+    "summary": "Pidilite Industries has consistently met or exceeded its profitability and volume targets over the past four quarters. Operating within its target EBITDA corridor of 20% to 24%, management delivered standalone EBITDA margins of 23.4% in Q4 FY26 and beat the upper bound in Q1 FY27 reaching 26.4%. Underlying volume growth (UVG) accelerated from 10.3% in Q2 FY26 to 15.3% in Q4 FY26 and maintained a healthy 11.3% in Q1 FY27.",
+    "quarters": [
+      {
+        "quarter": "Q1 FY27",
+        "guided": [
+          {
+            "metric": "EBITDA Margin Guidance Corridor",
+            "guidance": "corridor of 20% to 24%",
+            "source": "Q4 FY26 Concall Transcript (15-May-2026), PDF p. 12 — \"As far as we are concerned, at this moment, I would say we have guided a corridor of 20% to 24%.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/Nisha_15052026142328_SEintimationEarningscallTranscriptQ4FY2026finalsigned.pdf#page=12",
+            "doc_id": "DOC_2",
+            "page": 12,
+            "evidence_file": "evidence/PIDILITIND/DOC_2_p12.txt"
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "Standalone EBITDA Margin",
+            "actual": "26.4%",
+            "source": "Q1 FY27 Concall Transcript (12-Aug-2026), PDF p. 4 — \"EBITDA margins at 26.4% improved by 80 basis points quarter-on-quarter and profit after tax grew by 27.7%.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/Nisha_12082026181037_SEintimationEarningscallTranscriptQ1FY2027finaluploadsigned.pdf#page=4",
+            "doc_id": "DOC_1",
+            "page": 4,
+            "evidence_file": "evidence/PIDILITIND/DOC_1_p4.txt"
+          }
+        ],
+        "verdict": "beat",
+        "commentary": "Pidilite surpassed its operating margin guidance band of 20% to 24%, delivering a standalone EBITDA margin of 26.4% due to proactive price increases and operating leverage."
+      },
+      {
+        "quarter": "Q4 FY26",
+        "guided": [
+          {
+            "metric": "EBITDA Margin Guidance Corridor",
+            "guidance": "20% to 24%",
+            "source": "Q3 FY26 Concall Transcript (11-Feb-2026), PDF p. 10 — \"because for us, the EBITDA corridor which we have shared is 20% to 24%.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/Nisha_11022026173121_SEintimationearningscalltranscriptfinalupload.pdf#page=10",
+            "doc_id": "DOC_3",
+            "page": 10,
+            "evidence_file": "evidence/PIDILITIND/DOC_3_p10.txt"
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "Standalone EBITDA Margin",
+            "actual": "23.4%",
+            "source": "Q4 FY26 Concall Transcript (15-May-2026), PDF p. 3 — \"And EBITDA margin at 23.4% expanded by 280 bps versus same period last year.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/Nisha_15052026142328_SEintimationEarningscallTranscriptQ4FY2026finalsigned.pdf#page=3",
+            "doc_id": "DOC_2",
+            "page": 3,
+            "evidence_file": "evidence/PIDILITIND/DOC_2_p3.txt"
+          }
+        ],
+        "verdict": "hit",
+        "commentary": "Management delivered standalone EBITDA margins of 23.4%, landing comfortably within the guided 20% to 24% corridor, alongside strong 15.3% underlying volume growth."
+      },
+      {
+        "quarter": "Q3 FY26",
+        "guided": [
+          {
+            "metric": "VAM Consumption Rate Outlook",
+            "guidance": "below $900",
+            "source": "Q2 FY26 Concall Transcript (06-Nov-2025), PDF p. 4 — \"Sudhanshu Vats: Yes, Sandeep just told you about our VAM numbers, yes, VAM is now below $900.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/Nisha_06112025184945_SEIntimationTranscript.pdf#page=4",
+            "doc_id": "DOC_4",
+            "page": 4,
+            "evidence_file": "evidence/PIDILITIND/DOC_4_p4.txt"
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "VAM Consumption Rate",
+            "actual": "$830",
+            "source": "Q3 FY26 Concall Transcript (11-Feb-2026), PDF p. 4 — \"Just for information, VAM consumption in the quarter was at about $830 as compared to $884 in the same period \"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/Nisha_11022026173121_SEintimationearningscalltranscriptfinalupload.pdf#page=4",
+            "doc_id": "DOC_3",
+            "page": 4,
+            "evidence_file": "evidence/PIDILITIND/DOC_3_p4.txt"
+          }
+        ],
+        "verdict": "beat",
+        "commentary": "Pidilite kept VAM consumption costs down to $830 per tonne, beating its outlook of keeping raw material costs below $900, while maintaining standalone EBITDA margins at 24.5%."
+      },
+      {
+        "quarter": "Q2 FY26",
+        "guided": [
+          {
+            "metric": "EBITDA Margin Guidance Range",
+            "guidance": "20%, 24%",
+            "source": "Q3 FY26 Concall Transcript (11-Feb-2026), PDF p. 21 — \"But if you look at full year, we are confident that we will be at the upper end of this 20%, 24% range.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/Nisha_11022026173121_SEintimationearningscalltranscriptfinalupload.pdf#page=21",
+            "doc_id": "DOC_3",
+            "page": 21,
+            "evidence_file": "evidence/PIDILITIND/DOC_3_p21.txt"
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "Standalone UVG Growth",
+            "actual": "10.3%",
+            "source": "Q2 FY26 Concall Transcript (06-Nov-2025), PDF p. 3 — \"Total stand-alone UVG was 10.3%, which translated into a value growth of 10.4%.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/Nisha_06112025184945_SEIntimationTranscript.pdf#page=3",
+            "doc_id": "DOC_4",
+            "page": 3,
+            "evidence_file": "evidence/PIDILITIND/DOC_4_p3.txt"
+          }
+        ],
+        "verdict": "hit",
+        "commentary": "Underlying volume growth (UVG) rebounded to double digits at 10.3%, while management maintained profitability around the target margin corridor."
+      }
+    ],
+    "credibility_score": "high",
+    "pattern": "Management consistently maintains a conservative profitability corridor of 20% to 24%, proactively taking calibrated price increases during input cost spikes while reinvesting gross margin expansions into A&SP to protect double-digit volume growth."
+  },
+  "citation_audit": {
+    "documents_fetched": 10,
+    "pages_actually_read": 169,
+    "verified_claims": 8,
+    "rejected_claims": 0,
+    "rejections_detail": []
+  },
+  "model_used": "gemini-3.6-flash",
+  "tokens": {
+    "in": 47704,
+    "out": 5895
+  },
+  "cost_estimate_usd": 0.029049
+}

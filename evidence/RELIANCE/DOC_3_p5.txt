@@ -1,0 +1,46 @@
+TICKER: RELIANCE.NS
+DOCUMENT_ID: DOC_3
+DOCUMENT_TITLE: Q3 FY26 Concall Transcript (18-Jan-2026)
+PDF_PAGE: 5 (of 38)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/kavinavora_18012026235015_SE_Transcript.pdf#page=5
+========================================================================
+
+the emphasis on technology, developing our own proprietary technologies, which are suitable
+for Indian customers, which are suitable for Indian price points and are truly differentiated
+and can work at global scale with global efficiencies.
+We have developed proprietary technologies, as you can see on the left-hand side, across
+our network. Today, our whole core of 4G and 5.G run on our own stack, developed in-house.
+We have, of course, spoken about the fixed wireless solutions technology that we have
+deployed in India, which is working very well, which has made us the world's largest fixed
+wireless operator already, which is, again, developed completely in-house. It is a completely
+Jio solution, both the software side, the software stack, as well as hardware, and that is
+working quite well. You are, of course, familiar with the innovations that we have done on
+devices and OS as well.
+And currently, the home OS, the tele OS that we are offering to homes on their connected
+devices, on the CTV, and of course, the set-top box, which is now scaled up to over 25 million
+homes and working very efficiently. And then, of course, the various applications that we
+have developed and kept launching from time to time and we will speak about some of them
+in a bit. That, combined with the reach that we have got through a combination of both digital
+as well as physical, with our own family of apps,
+MyJio, the set-top box, JioTV +, and then, of course, other partner apps that we have got in
+the ecosystem, be it the JioHotstar or now with the financial services companies, helps us
+take these technologies and these platforms deeper into the ecosystem, scale them up very
+fast, prove that they are working efficiently. And of course, that alongside the physical on the
+ground presence as well, the fact that we have 99% population reach and a million plus touch
+points helps us scale these up. And we have now proven them at scale and on cost, which
+is where we see a lot of both organic efficiencies coming in as well as opportunities for us to
+really use these technologies beyond just the Jio network and Jio companies.
+Getting on to some of the key numbers for the quarter, we ended the quarter with 515 million
+plus subscribers, 8.9 million net adds during the quarter. We continue to have very healthy
+growth rate on subscriber additions. 5G user base has been growing very rapidly and quite
+well, 253 million plus 5G subscribers as well on our network.
+Homes, we continue to add almost a million homes every month. In fact, more than a million
+homes every month over the last seven months. Now we maintain that run rate, 25 million
+plus fixed broadband connects, and 11.5 million JioAirFiber homes. So, these are homes
+where we are using our own proprietary technology, as well as our 5G network, the 5G based
+FWA technology to connect these homes. And bulk of the connections are now really
+happening through these wireless technologies in the last mile.
+Revenues crossed 37,000 Crores during the quarter, and with a fairly healthy EBITDA margin
+of 52%, and broadband subscriber share of over 50% in the country. So, mobility, we
+continue to get market share.
+© Reliance Industries Limited 2020 4

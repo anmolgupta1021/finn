@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "corruption_type": "Wrong page number (PDF p. 15 instead of PDF p. 3)",
+    "doc_id": "DOC_4",
+    "page": 15,
+    "claim_text": "Q2 FY26 revenue grew 2.2% QoQ and 2.9% YoY in CC terms.",
+    "quote": "revenues for the quarter grew 2.2% sequentially and 2.9% year-on-year in constant currency",
+    "rejected": true,
+    "rejection_reasons": [
+      "quote_not_on_page (segment 'revenues for the quarter grew 2.2% sequentially and 2.9% yea' not found on DOC_4 p.15)",
+      "quote_numbers_missing_on_page (['2.2', '2.9'] not on DOC_4 p.15)",
+      "claim_numbers_missing_on_page (['2.2', '2.9'] in claim 'Q2 FY26 revenue grew 2.2% QoQ and 2.9% YoY in CC terms.' not on DOC_4 p.15)"
+    ]
+  },
+  {
+    "id": 2,
+    "corruption_type": "Off-by-one page number (PDF p. 2 footer page instead of PDF p. 3 — tests removal of ±1 page tolerance)",
+    "doc_id": "DOC_4",
+    "page": 2,
+    "claim_text": "Q2 FY26 revenue grew 2.2% QoQ and 2.9% YoY in CC terms.",
+    "quote": "revenues for the quarter grew 2.2% sequentially and 2.9% year-on-year in constant currency",
+    "rejected": true,
+    "rejection_reasons": [
+      "quote_not_on_page (segment 'revenues for the quarter grew 2.2% sequentially and 2.9% yea' not found on DOC_4 p.2)",
+      "quote_numbers_missing_on_page (['2.2', '2.9'] not on DOC_4 p.2)",
+      "claim_numbers_missing_on_page (['2.2', '2.9'] in claim 'Q2 FY26 revenue grew 2.2% QoQ and 2.9% YoY in CC terms.' not on DOC_4 p.2)"
+    ]
+  },
+  {
+    "id": 3,
+    "corruption_type": "Non-existent doc_id (DOC_99)",
+    "doc_id": "DOC_99",
+    "page": 3,
+    "claim_text": "Q2 FY26 revenue grew 2.2% QoQ and 2.9% YoY in CC terms.",
+    "quote": "revenues for the quarter grew 2.2% sequentially and 2.9% year-on-year in constant currency",
+    "rejected": true,
+    "rejection_reasons": [
+      "invalid_doc_id ('DOC_99' not in fetched manifest)"
+    ]
+  },
+  {
+    "id": 4,
+    "corruption_type": "Page outside read range (DOC_6 p. 190 of 195 — unread auditor/annexure page)",
+    "doc_id": "DOC_6",
+    "page": 190,
+    "claim_text": "Q2 FY26 revenue grew 2.2% QoQ and 2.9% YoY in CC terms.",
+    "quote": "revenues for the quarter grew 2.2% sequentially and 2.9% year-on-year in constant currency",
+    "rejected": true,
+    "rejection_reasons": [
+      "page_not_read ((DOC_6, p.190) not in read_pages; ±1 tolerance disabled)"
+    ]
+  },
+  {
+    "id": 5,
+    "corruption_type": "Quote on valid page (PDF p. 3) with one number changed ('2.4% sequentially' instead of '2.2% sequentially')",
+    "doc_id": "DOC_4",
+    "page": 3,
+    "claim_text": "Q2 FY26 revenue grew 2.4% QoQ and 2.9% YoY in CC terms.",
+    "quote": "revenues for the quarter grew 2.4% sequentially and 2.9% year-on-year in constant currency",
+    "rejected": true,
+    "rejection_reasons": [
+      "quote_not_on_page (segment 'revenues for the quarter grew 2.4% sequentially and 2.9% yea' not found on DOC_4 p.3)",
+      "quote_numbers_missing_on_page (['2.4'] not on DOC_4 p.3)",
+      "claim_numbers_missing_on_page (['2.4'] in claim 'Q2 FY26 revenue grew 2.4% QoQ and 2.9% YoY in CC terms.' not on DOC_4 p.3)"
+    ]
+  },
+  {
+    "id": 6,
+    "corruption_type": "Valid verbatim quote on PDF p. 3, but claim text alters one number ('3.9% YoY' instead of '2.9% YoY')",
+    "doc_id": "DOC_4",
+    "page": 3,
+    "claim_text": "Q2 FY26 revenue grew 2.2% QoQ and 3.9% YoY in CC terms.",
+    "quote": "revenues for the quarter grew 2.2% sequentially and 2.9% year-on-year in constant currency",
+    "rejected": true,
+    "rejection_reasons": [
+      "claim_numbers_missing_on_page (['3.9'] in claim 'Q2 FY26 revenue grew 2.2% QoQ and 3.9% YoY in CC terms.' not on DOC_4 p.3)"
+    ]
+  },
+  {
+    "id": 7,
+    "corruption_type": "Valid verbatim quote on PDF p. 3 ('21%'), but claim text adds unprinted decimal ('21.0%')",
+    "doc_id": "DOC_4",
+    "page": 3,
+    "claim_text": "Delivered Q2 FY26 operating margin of 21.0%.",
+    "quote": "Our operating margin was 21%.",
+    "rejected": true,
+    "rejection_reasons": [
+      "claim_numbers_missing_on_page (['21.0'] in claim 'Delivered Q2 FY26 operating margin of 21.0%.' not on DOC_4 p.3)"
+    ]
+  },
+  {
+    "id": 8,
+    "corruption_type": "Quote from a different quarter's transcript (Q3 FY26 DOC_3 p. 4 cited against Q2 FY26 DOC_4 p. 3)",
+    "doc_id": "DOC_4",
+    "page": 3,
+    "claim_text": "Revised revenue growth guidance to 3% to 3.5% growth in constant currency.",
+    "quote": "The new revenue growth guidance for this financial year is 3% to 3.5% growth in constant currency",
+    "rejected": true,
+    "rejection_reasons": [
+      "quote_not_on_page (segment 'the new revenue growth guidance for this financial year is 3' not found on DOC_4 p.3)",
+      "quote_numbers_missing_on_page (['3.5'] not on DOC_4 p.3)",
+      "claim_numbers_missing_on_page (['3.5'] in claim 'Revised revenue growth guidance to 3% to 3.5% growth in constant currency.' not on DOC_4 p.3)"
+    ]
+  },
+  {
+    "id": 9,
+    "corruption_type": "Valid verbatim quote on PDF p. 3, but claim invents a bps figure (50 bps expansion) not on the page",
+    "doc_id": "DOC_4",
+    "page": 3,
+    "claim_text": "Operating margin was 21%, expanding 50 bps QoQ.",
+    "quote": "Our operating margin was 21%.",
+    "rejected": true,
+    "rejection_reasons": [
+      "claim_numbers_missing_on_page (['50'] in claim 'Operating margin was 21%, expanding 50 bps QoQ.' not on DOC_4 p.3)"
+    ]
+  },
+  {
+    "id": 10,
+    "corruption_type": "Valid verbatim quote on PDF p. 3, but claim invents a dollar deal-value count ($4.5 billion) not on the page",
+    "doc_id": "DOC_4",
+    "page": 3,
+    "claim_text": "Growth between 2% and 3% backed by $4.5 billion in large deals.",
+    "quote": "The new guidance is growth between 2% and 3% in constant currency terms for the full year.",
+    "rejected": true,
+    "rejection_reasons": [
+      "claim_numbers_missing_on_page (['4.5'] in claim 'Growth between 2% and 3% backed by $4.5 billion in large deals.' not on DOC_4 p.3)"
+    ]
+  }
+]

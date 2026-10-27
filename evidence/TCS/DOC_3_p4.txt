@@ -1,0 +1,36 @@
+TICKER: TCS.NS
+DOCUMENT_ID: DOC_3
+DOCUMENT_TITLE: Q4 FY26 Concall Transcript (14-Apr-2026)
+PDF_PAGE: 4 (of 35)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14042026200132_SEInt14042026_signed.pdf#page=4
+========================================================================
+
+strength of our five pillar strategy and our AI-led positioning across
+services.
+2. Second key message is on our client metrics – You will see from the
+factsheet that every revenue band saw healthy additions this
+quarter after a gap of about 2 years, which speaks to the early signs of
+stability and growth returning to our mid-sized and large accounts. The
+number of accounts where we generate more than $100 million
+annually increased by 4 QoQ, bringing the total to 66; we added 3 more
+clients in the $50 million+ band, bringing the total to 139; and 14 more
+clients in the $1 million+ band bringing the total to 1,397 from
+last quarter.
+3. Third message is on the announcement of salary increments. We
+have announced annual salary increments for our eligible associates
+across all grades, effective April 1.
+4. Fourth is the momentum we see in our AI Services, which
+continued to accelerate impressively, standing at US$2.3 billion on an
+annualized basis.
+5. Lastly, the promise we see in our HyperVault Business – which has
+made significant progress this quarter on its journey to build out 1 GW
+of capacity. This includes winning customer commitments, land
+parcel finalizations and partnering agreements. We are actively
+engaging across the full ecosystem of—hyperscalers, semiconductor
+companies, and model providers, while TCS is the integration partner
+across infrastructure, engineering, and AI-led services. Demand
+signals remain strong and are translating into structured engagements
+and commitments, positioning TCS at the forefront of this build-out.
+As we progress, this infrastructure layer is forming the foundation of
+TCS’s full spectrum play from infrastructure to intelligence.
+Page 3 of 34

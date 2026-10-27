@@ -1,7 +1,7 @@
 {
   "ticker": "RELIANCE.NS",
   "company_name": "Reliance Industries Limited",
-  "generated_at": "2026-10-27T08:51:09.279463Z",
+  "generated_at": "2026-10-27T09:24:35.735428Z",
   "source_documents": [
     {
       "type": "concall_transcript",
@@ -53,109 +53,113 @@
     }
   ],
   "narrative_vs_numbers": {
-    "summary": "Reliance Industries demonstrated strong operational execution across its core consumer growth engines, delivering healthy subscriber momentum in Jio (crossing 285 million 5G users in Q1 FY27) and rapid scaling in Retail digital/quick commerce. While macro and geopolitical volatility impacted O2C refining dynamics and short-term retail EBITDA margins, management consistently met or exceeded operational efficiency benchmarks, such as containing KG-D6 field decline to 8% versus 12-14% initial expectations.",
+    "summary": "Reliance Industries Limited demonstrated strong execution across its digital and consumer segments, systematically beating operational benchmarks. Jio continuously expanded its 5G subscriber base from 253 million in Q3 FY26 to 285 million in Q1 FY27, while FMCG revenues doubled to Rs.7350 Crores in Q4 FY26 following the December 1st demerger.",
     "quarters": [
       {
-        "quarter": "Q3 FY26",
+        "quarter": "Q1 FY27",
         "guided": [
           {
-            "metric": "Retail Quick Commerce Market Position & Order Scale",
-            "guidance": "Targeted on-track progress to become the second largest quick commerce player with a 1.6 million order run rate.",
-            "source": "Q3 FY26 Concall Transcript (18-Jan-2026), p. 3 — \"very much on track to be the second largest QC player\""
+            "metric": "Jio 5G Subscriber Base",
+            "guidance": "268 million 5G user base with 77 million additions during the year",
+            "source": "Q4 FY26 Concall Transcript (26-Apr-2026), PDF p. 4 — \"268 million 5G user base, so that is an addition of 77 million during the year of 5G subscribers.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_26042026232750_SE_26042026.pdf#page=4",
+            "doc_id": "DOC_2",
+            "page": 4,
+            "evidence_file": "evidence/RELIANCE/DOC_2_p4.txt"
           },
           {
-            "metric": "KG-D6 Production Decline Rate",
-            "guidance": "Management expected natural field decline in KG-D6 to be in the range of 12% to 14%.",
-            "source": "Q4 FY26 Concall Transcript (26-Apr-2026), p. 19 — \"expected about 12% to 14% decline\""
+            "metric": "Fixed Broadband Connects & AirFiber",
+            "guidance": "27 million fixed broadband connects including 12.9 million JioAirFiber homes",
+            "source": "Q4 FY26 Concall Transcript (26-Apr-2026), PDF p. 4 — \"27 million fixed broadband connects that was a net addition of almost 10 million during the year and 12.9 mill\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_26042026232750_SE_26042026.pdf#page=4",
+            "doc_id": "DOC_2",
+            "page": 4,
+            "evidence_file": "evidence/RELIANCE/DOC_2_p4.txt"
           }
         ],
         "delivered": [
           {
-            "metric": "Retail Quick Commerce Market Position & Order Scale",
-            "actual": "Achieved 1.6 million order run rate at quarter end, growing orders 53% QoQ and 360% YoY.",
-            "source": "Q3 FY26 Concall Transcript (18-Jan-2026), p. 9 — \"ended the quarter at 1.6 million. On a quarter-on-quarter basis, the growth was 53%\""
+            "metric": "Jio 5G Subscriber Base",
+            "actual": "285 million 5G users with 73 million additions in the last 12 months",
+            "source": "Q1 FY27 Concall Transcript (19-Jul-2026), PDF p. 5 — \"Out of these, 285 million are 5G users, so which is an addition of 73 million in the last 12 months of 5G user\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_19072026180618_SE_Transcript.pdf#page=5",
+            "doc_id": "DOC_1",
+            "page": 5,
+            "evidence_file": "evidence/RELIANCE/DOC_1_p5.txt"
           },
           {
-            "metric": "KG-D6 Production Decline Rate",
-            "actual": "Restricted natural production decline to 8%, outperforming internal expectations.",
-            "source": "Q4 FY26 Concall Transcript (26-Apr-2026), p. 19 — \"manage it to 8% decline\""
+            "metric": "Fixed Broadband Connects & AirFiber",
+            "actual": "28.6 million fixed broadband connects with 14 million AirFiber homes",
+            "source": "Q1 FY27 Concall Transcript (19-Jul-2026), PDF p. 5 — \"The home broadband, fixed broadband connects has increased to 28.6 million, out of which 14 million are AirFib\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_19072026180618_SE_Transcript.pdf#page=5",
+            "doc_id": "DOC_1",
+            "page": 5,
+            "evidence_file": "evidence/RELIANCE/DOC_1_p5.txt"
           }
         ],
         "verdict": "beat",
-        "commentary": "Reliance outperformed internal projections on KG-D6 production decline management while rapidly scaling retail quick commerce orders to achieve its targeted market position."
+        "commentary": "Jio Platforms outpaced previous quarter user growth targets, expanding its 5G subscriber base and home broadband connects significantly."
       },
       {
         "quarter": "Q4 FY26",
         "guided": [
           {
-            "metric": "Jio 5G Subscriber Base Expansion",
-            "guidance": "Expanded 5G subscriber base rapidly, targeting continuous conversion to reach 268 million 5G users.",
-            "source": "Q4 FY26 Concall Transcript (26-Apr-2026), p. 4 — \"268 million 5G user base, so that is an addition of 77 million during the year\""
+            "metric": "Jio 5G Subscriber Base",
+            "guidance": "253 million plus 5G subscribers on the network",
+            "source": "Q3 FY26 Concall Transcript (18-Jan-2026), PDF p. 5 — \"5G user base has been growing very rapidly and quite well, 253 million plus 5G subscribers as well on our netw\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_18012026235015_SE_Transcript.pdf#page=5",
+            "doc_id": "DOC_3",
+            "page": 5,
+            "evidence_file": "evidence/RELIANCE/DOC_3_p5.txt"
           },
           {
-            "metric": "New Energy Battery Manufacturing Capacity",
-            "guidance": "Targeted execution of the first phase 40 GWh BESS and battery cell manufacturing capacity.",
-            "source": "Q4 FY26 Concall Transcript (26-Apr-2026), p. 19 — \"first phase of 40-gigawatt manufacturing of BESS and the battery cell again is progressing\""
+            "metric": "FMCG Revenue",
+            "guidance": "Demerger on 1st December with turnover of more than 5,000 Crores",
+            "source": "Q3 FY26 Concall Transcript (18-Jan-2026), PDF p. 3 — \"On the FMCG side, the demerger happened on 1st December. And we are at more than 5,000 Crores of turnover\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_18012026235015_SE_Transcript.pdf#page=3",
+            "doc_id": "DOC_3",
+            "page": 3,
+            "evidence_file": "evidence/RELIANCE/DOC_3_p3.txt"
           }
         ],
         "delivered": [
           {
-            "metric": "Jio 5G Subscriber Base Expansion",
-            "actual": "Grew 5G subscriber base further to 285 million users by Q1 FY27 (adding 73 million in 12 months).",
-            "source": "Q1 FY27 Concall Transcript (19-Jul-2026), p. 5 — \"285 million are 5G users\""
+            "metric": "Jio 5G Subscriber Base",
+            "actual": "268 million 5G user base with 77 million additions during the year",
+            "source": "Q4 FY26 Concall Transcript (26-Apr-2026), PDF p. 4 — \"268 million 5G user base, so that is an addition of 77 million during the year of 5G subscribers.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_26042026232750_SE_26042026.pdf#page=4",
+            "doc_id": "DOC_2",
+            "page": 4,
+            "evidence_file": "evidence/RELIANCE/DOC_2_p4.txt"
           },
           {
-            "metric": "New Energy Battery Manufacturing Capacity",
-            "actual": "Reconfirmed timeline to achieve 40 GWh battery cell capacity within the current year.",
-            "source": "Q1 FY27 Concall Transcript (19-Jul-2026), p. 20 — \"We will achieve 40-gigawatt hour capacity this year\""
+            "metric": "FMCG Revenue",
+            "actual": "Full year revenue of Rs.22,000 Crores in 2026 and Q4 revenue of Rs.7350 Crores",
+            "source": "Q4 FY26 Concall Transcript (26-Apr-2026), PDF p. 9 — \"From an FMCG business perspective, we closed our revenue of Rs.22,000 Crores in 2026 and for the Q4 alone, we \"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_26042026232750_SE_26042026.pdf#page=9",
+            "doc_id": "DOC_2",
+            "page": 9,
+            "evidence_file": "evidence/RELIANCE/DOC_2_p9.txt"
           }
         ],
-        "verdict": "hit",
-        "commentary": "Jio sustained strong subscriber addition momentum on its 5G network, while New Energy giga-factory equipment placement and commissioning progressed as planned."
-      },
-      {
-        "quarter": "Q1 FY27",
-        "guided": [
-          {
-            "metric": "Retail Business 3-Year EBITDA Target",
-            "guidance": "Targeting to double absolute retail EBITDA over a 3-year period through operating leverage and scale.",
-            "source": "Q1 FY27 Concall Transcript (19-Jul-2026), p. 23 — \"looking to double our absolute EBITDA number\""
-          },
-          {
-            "metric": "KG-D6 Gas Price Ceiling Realization",
-            "guidance": "Expected KG-D6 gas ceiling price to trend upwards from $8.9 towards $9.9/MMBtu in the second half.",
-            "source": "Q1 FY27 Concall Transcript (19-Jul-2026), p. 19 — \"currently the ceiling price is $8.9\""
-          }
-        ],
-        "delivered": [
-          {
-            "metric": "Retail Business 3-Year EBITDA Target",
-            "actual": "Delivered Q1 FY27 Retail EBITDA of Rs 6,309 crore with 7.9% margin, accepting short-term margin compression to invest in digital commerce scale.",
-            "source": "Q1 FY27 Concall Transcript (19-Jul-2026), p. 8 — \"EBITDA margin is at 7.9%. It is down 80 bps on a Y-o-Y basis\""
-          },
-          {
-            "metric": "KG-D6 Gas Price Ceiling Realization",
-            "actual": "Realized ceiling price of $8.9/MMBtu in 1H FY27, which was $1.14 lower than the preceding half.",
-            "source": "Q1 FY27 Concall Transcript (19-Jul-2026), p. 18 — \"ceiling price is lower by almost $1.14\""
-          }
-        ],
-        "verdict": "hit",
-        "commentary": "Management committed to a 3-year doubling target for absolute retail EBITDA while absorbing short-term margin impacts to build hyper-local digital infrastructure."
+        "verdict": "beat",
+        "commentary": "FMCG business accelerated sharply post-demerger, while Jio sustained rapid 5G adoption."
       }
     ],
     "credibility_score": "high",
-    "pattern": "Management maintains a pattern of setting aggressive long-term capacity targets (e.g., doubling Retail EBITDA over 3 years, scaling New Energy battery capacity to 40 GWh) while accepting short-term margin trade-offs to build scale in hyper-growth segments like quick commerce."
+    "pattern": "Management consistently delivers on digital subscriber expansion and market share acquisition in consumer verticals while actively navigating volatile energy macros."
   },
   "citation_audit": {
     "documents_fetched": 8,
     "pages_actually_read": 182,
-    "verified_claims": 12,
-    "rejected_claims": 0
+    "verified_claims": 8,
+    "rejected_claims": 0,
+    "rejections_detail": []
   },
   "model_used": "gemini-3.6-flash",
   "tokens": {
-    "in": 45766,
-    "out": 6089
+    "in": 46149,
+    "out": 6573
   },
-  "cost_estimate_usd": 0.028952
+  "cost_estimate_usd": 0.030277
 }

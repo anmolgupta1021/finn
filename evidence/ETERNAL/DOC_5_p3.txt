@@ -1,0 +1,43 @@
+TICKER: ETERNAL.NS
+DOCUMENT_ID: DOC_5
+DOCUMENT_TITLE: Q1 FY26 Concall Transcript (25-Jul-2025)
+PDF_PAGE: 3 (of 18)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/ZOMATO_25072025223203_TranscriptfilingsignedJuly2025.pdf#page=3
+========================================================================
+
+Moderator: Ladies and gentlemen, a very good evening, and welcome to Eternal Limited's Q1FY26
+earnings conference call. From Eternal's management team, we have with us today
+Akshant Goyal, Chief Financial Officer; Albinder Singh Dhindsa, Founder and CEO, Blinkit;
+and Kunal Swarup, Head of Corporate Development.
+Before we begin, a few quick announcements for the attendees. Anything said on this
+call, which reflects the outlook for the future, or which could be construed as a forward-
+looking statement, may involve risks and uncertainties. Such statements or comments
+are not guarantees of future performance, and actual results may differ from those
+statements.
+Additionally, please note that this earnings call is scheduled for a duration of 45 minutes,
+and we will be starting directly with the Q&A section of the call. If you wish to ask a
+question, please use the raise hand feature available on your Zoom dashboard. We will
+announce your name on the call and unmute your line, post which you can proceed with
+your question. We will wait for a minute while the question queue assembles.
+Moderator: The first question is from the line of Ankur Rudra from JP Morgan. Please go ahead.
+Ankur Rudra: Thank you, and a nice set of numbers overall. Just starting with quick commerce,
+pleased to see very strong growth there. Is it possible to give us a sense of how same-
+store sales growth compares with growth from new stores given that we'll probably see
+store additions potentially begin to slow down a bit more?
+And, also on the quick commerce side, I think you did mention competition, but if you
+think competition is able to raise capital, then if your strategy will change in the short
+term anyway. Thanks.
+Albinder Singh Dhindsa: Hi, Ankur, this is Albinder. So same-store sales growth is not really a metric that we track
+internally because of the structure of our polygons and the catchment area that a store
+serves - that changes quite dynamically. So, it is harder for us to compare same-store
+sales growth.
+But when we look at existing polygon versus new polygons that we open, most of the
+current growth has come from existing polygons. Even in this quarter when we opened a
+lot more cities, less than 5% of the overall growth came from the expansion areas that
+we were not serving earlier.
+Akshant Goyal: Just to add, we have also mentioned in the letter that a city like Delhi, which from a
+geographical coverage standpoint is fairly well covered, we've seen a growth of 70%
+year-on-year in this quarter. So, as Albinder said, same-store growth may not be that
+relevant in our business, but at least that data point was to showcase that even the
+relatively more mature markets are growing reasonably well.
+Page 2 of 17

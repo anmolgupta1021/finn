@@ -1,0 +1,48 @@
+TICKER: ICICIBANK.NS
+DOCUMENT_ID: DOC_2
+DOCUMENT_TITLE: Q1 FY27 Concall Transcript (23-Jul-2026)
+PDF_PAGE: 3 (of 43)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/ICICI2022_23072026185521_NSEBSE.pdf#page=3
+========================================================================
+
+Our Board has approved the financial results of ICICI Bank for the quarter ended June 30,
+2026. I would like to highlight some key numbers:
+First, moving on to profit and capital
+A. Profit and capital
+1. Net interest income grew by 12.7% year-on-year to ₹24,384 crore in Q1-2027
+2. Net interest margin was 4.36% in Q1-2027 compared to 4.32% in Q4-2026
+3. Fee income grew by 23.5% year-on-year to ₹7,286 crore in Q1-2027
+4. Operating expenses grew by 10.4% year-on-year to ₹12,574 crore in Q1-2027
+5. Core operating profit grew by 15.6% year-on-year to ₹20,235 crore in Q1-2027
+6. Core operating profit excluding dividend from subsidiaries grew by 18.3% year-
+on-year to ₹19,125 crore in Q1-2027
+7. Provisions (excluding provision for tax) were ₹1,260 crore in Q1-2027
+8. Profit before tax excluding treasury grew by 20.9% year-on-year to ₹18,975
+crore in Q1-2027
+9. Profit after tax grew by 15.9% year-on-year to ₹14,805 crore in Q1-2027
+10. Standalone RoE was 17.1% in Q1-2027
+11. At June 30, 2026, the Bank had net worth of about ₹3.5 lakh crore. CET-1 ratio
+was 16.19% and total capital adequacy ratio was 16.84% at June 30, 2026
+Moving on to deposit growth
+B. Deposit growth
+1. Total period-end deposits increased by 14.0% year-on-year and 2.2% quarter-on-
+quarter at June 30, 2026
+2. Average deposits increased by 14.0% year-on-year and 6.1% sequentially during
+Q1-2027
+3. Average current and savings account deposits increased by 12.1% year-on-year
+4. The Bank opened 97 branches during Q1-2027 and had a network of 7,608
+branches and 12,190 ATMs and cash recycling machines at June 30, 2026
+Moving on to loan growth
+C. Loan growth
+1. The total loan portfolio grew by 19.6% year-on-year and 5.0% quarter-on-quarter
+at June 30, 2026
+2. The retail loan portfolio grew by 12.0% year-on-year. Including non-fund
+outstanding, the retail loan portfolio was 41.1% of the total portfolio. The
+mortgage portfolio grew by 14.6% year-on-year. The personal loan portfolio grew
+by 12.9% year-on-year. The credit card portfolio declined by 1.9% year-on-year.
+The rural portfolio grew by 35.4% year-on-year. The business banking portfolio
+grew by 28.2% year-on-year. Growth in the domestic corporate portfolio was
+18.5% year-on-year at June 30, 2026
+3. About 71.9% of the corporate loan portfolio was rated ‘A- and above’ at June 30,
+2026
+Page 2 of 18

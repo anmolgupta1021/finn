@@ -1,0 +1,35 @@
+TICKER: TCS.NS
+DOCUMENT_ID: DOC_3
+DOCUMENT_TITLE: Q4 FY26 Concall Transcript (14-Apr-2026)
+PDF_PAGE: 6 (of 35)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14042026200132_SEInt14042026_signed.pdf#page=6
+========================================================================
+
+In the fourth quarter of financial year 2026, our revenue
+was ₹70,698 crore, which is a quarter-on-quarter growth of 5.4%. In dollar
+terms, revenue was $7.621 billion, a quarter-on-quarter growth of 1.5%.
+In constant currency, we had a sequential revenue growth of 1.2%.
+Our Q4 operating margin stood at 25.3%, a sequential increase of 10
+basis points.
+During the quarter, we saw an improvement in realizations driven by
+continued focus on value-led delivery. Currency was also supportive
+during the quarter, providing a translation tailwind. These factors
+contributed to a benefit of around 40 basis points and 110 basis
+points respectively.
+Consistent with the ‘Build–Partner-Acquire’ strategy we shared at our
+Analyst Day, we consciously reinvested these tailwinds back into
+strengthening our capabilities and growth engines.
+• Under ‘Build’, we saw higher external consultants’ cost of 40 basis
+points, to capture the demand and to ensure delivery timelines and
+quality were protected while we continue to scale internal
+capabilities.
+In parallel, we made targeted interventions in critical talent,
+certifications, upskilling and creation of niche delivery pods. These
+investments are aimed at building a scalable, future-ready AI delivery
+model that straddles the entire stack across our Infrastructure to
+Intelligence strategy layout. Also, the ingoing impact of the India wage
+code is included. Together these two accounted for an impact of 40
+basis points.
+• Under ‘Partner’, we stepped up investments in ecosystem
+partnerships, reflected in multiple announcements such as OpenAI,
+Page 5 of 34

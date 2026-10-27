@@ -1,0 +1,287 @@
+[
+  {
+    "claim_id": "INFY-01",
+    "ticker": "INFY.NS",
+    "quarter": "Q1 FY27",
+    "type": "guided",
+    "metric": "FY27 Constant Currency Revenue Growth Guidance",
+    "claim_text": "Full year FY27 constant currency revenue growth guidance of 1.5% to 3.5% year-on-year.",
+    "verbatim_quote": "Our revenue growth guidance for the financial year 2027 is 1.5% to 3.5% growth year-on-year in constant currency terms.",
+    "numbers_verified_on_page": [
+      "1.5",
+      "3.5"
+    ],
+    "doc_id": "DOC_2",
+    "doc_title": "Q4 FY26 Concall Transcript (27-Apr-2026)",
+    "pdf_page": 4,
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_27042026203405_Transcript_April232026_Q4.pdf#page=4",
+    "evidence_page_file": "evidence/INFY/DOC_2_p4.txt"
+  },
+  {
+    "claim_id": "INFY-02",
+    "ticker": "INFY.NS",
+    "quarter": "Q1 FY27",
+    "type": "delivered",
+    "metric": "FY27 Constant Currency Revenue Growth Guidance",
+    "claim_text": "Q1 revenue growth was at 2.4% Y-on-Y and 1% Q-on-Q in constant currency terms.",
+    "verbatim_quote": "Our revenue growth for Q1 was at 2.4% Y-on-Y and 1% Q-on-Q in constant currency terms.",
+    "numbers_verified_on_page": [
+      "2.4",
+      "1"
+    ],
+    "doc_id": "DOC_1",
+    "doc_title": "Q1 FY27 Concall Transcript (28-Jul-2026)",
+    "pdf_page": 5,
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_28072026202438_SE_filing_Earnings_call_transcript.pdf#page=5",
+    "evidence_page_file": "evidence/INFY/DOC_1_p5.txt"
+  },
+  {
+    "claim_id": "INFY-03",
+    "ticker": "INFY.NS",
+    "quarter": "Q1 FY27",
+    "type": "guided",
+    "metric": "FY27 Operating Margin Guidance",
+    "claim_text": "Operating margin guidance for financial year '27 is 20% to 22%.",
+    "verbatim_quote": "Our operating margin guidance for financial year '27 is 20% to 22%.",
+    "numbers_verified_on_page": [
+      "27",
+      "20",
+      "22"
+    ],
+    "doc_id": "DOC_2",
+    "doc_title": "Q4 FY26 Concall Transcript (27-Apr-2026)",
+    "pdf_page": 4,
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_27042026203405_Transcript_April232026_Q4.pdf#page=4",
+    "evidence_page_file": "evidence/INFY/DOC_2_p4.txt"
+  },
+  {
+    "claim_id": "INFY-04",
+    "ticker": "INFY.NS",
+    "quarter": "Q1 FY27",
+    "type": "delivered",
+    "metric": "FY27 Operating Margin Guidance",
+    "claim_text": "Operating margin delivered at 21.1% in Q1.",
+    "verbatim_quote": "Our large deals, $3.6 bn at 61% net new, operating margin at 21.1%, free cash flow at $955 mn.",
+    "numbers_verified_on_page": [
+      "21.1"
+    ],
+    "doc_id": "DOC_1",
+    "doc_title": "Q1 FY27 Concall Transcript (28-Jul-2026)",
+    "pdf_page": 5,
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_28072026202438_SE_filing_Earnings_call_transcript.pdf#page=5",
+    "evidence_page_file": "evidence/INFY/DOC_1_p5.txt"
+  },
+  {
+    "claim_id": "INFY-05",
+    "ticker": "INFY.NS",
+    "quarter": "Q4 FY26",
+    "type": "guided",
+    "metric": "FY26 Constant Currency Revenue Growth Guidance",
+    "claim_text": "Revised revenue growth guidance for this financial year is 3% to 3.5% growth in constant currency.",
+    "verbatim_quote": "The new revenue growth guidance for this financial year is 3% to 3.5% growth in constant currency.",
+    "numbers_verified_on_page": [
+      "3",
+      "3.5"
+    ],
+    "doc_id": "DOC_3",
+    "doc_title": "Q3 FY26 Concall Transcript (19-Jan-2026)",
+    "pdf_page": 4,
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_19012026222220_SEfiling_Earningscalltranscript_19012026.pdf#page=4",
+    "evidence_page_file": "evidence/INFY/DOC_3_p4.txt"
+  },
+  {
+    "claim_id": "INFY-06",
+    "ticker": "INFY.NS",
+    "quarter": "Q4 FY26",
+    "type": "delivered",
+    "metric": "FY26 Constant Currency Revenue Growth Guidance",
+    "claim_text": "Growth of 3.1% for the full year in constant currency terms.",
+    "verbatim_quote": "We delivered a strong performance in financial year 2026. We had growth of 3.1% for the full year in constant currency terms.",
+    "numbers_verified_on_page": [
+      "3.1"
+    ],
+    "doc_id": "DOC_2",
+    "doc_title": "Q4 FY26 Concall Transcript (27-Apr-2026)",
+    "pdf_page": 4,
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_27042026203405_Transcript_April232026_Q4.pdf#page=4",
+    "evidence_page_file": "evidence/INFY/DOC_2_p4.txt"
+  },
+  {
+    "claim_id": "INFY-07",
+    "ticker": "INFY.NS",
+    "quarter": "Q4 FY26",
+    "type": "guided",
+    "metric": "FY26 Operating Margin Guidance",
+    "claim_text": "Operating margin guidance for the financial year remains the same at 20% to 22%.",
+    "verbatim_quote": "Our operating margin guidance for the financial year remains the same at 20% to 22%.",
+    "numbers_verified_on_page": [
+      "20",
+      "22"
+    ],
+    "doc_id": "DOC_3",
+    "doc_title": "Q3 FY26 Concall Transcript (19-Jan-2026)",
+    "pdf_page": 4,
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_19012026222220_SEfiling_Earningscalltranscript_19012026.pdf#page=4",
+    "evidence_page_file": "evidence/INFY/DOC_3_p4.txt"
+  },
+  {
+    "claim_id": "INFY-08",
+    "ticker": "INFY.NS",
+    "quarter": "Q4 FY26",
+    "type": "delivered",
+    "metric": "FY26 Operating Margin Guidance",
+    "claim_text": "Full year margins is at 21%.",
+    "verbatim_quote": "So if you look at the margins, the full year margins is at 21%.",
+    "numbers_verified_on_page": [
+      "21"
+    ],
+    "doc_id": "DOC_2",
+    "doc_title": "Q4 FY26 Concall Transcript (27-Apr-2026)",
+    "pdf_page": 7,
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_27042026203405_Transcript_April232026_Q4.pdf#page=7",
+    "evidence_page_file": "evidence/INFY/DOC_2_p7.txt"
+  },
+  {
+    "claim_id": "INFY-09",
+    "ticker": "INFY.NS",
+    "quarter": "Q3 FY26",
+    "type": "guided",
+    "metric": "FY26 Constant Currency Revenue Growth Guidance",
+    "claim_text": "Full year revenue growth guidance between 2% and 3% in constant currency terms.",
+    "verbatim_quote": "The new guidance is growth between 2% and 3% in constant currency terms for the full year.",
+    "numbers_verified_on_page": [
+      "2",
+      "3"
+    ],
+    "doc_id": "DOC_4",
+    "doc_title": "Q2 FY26 Concall Transcript (21-Oct-2025)",
+    "pdf_page": 3,
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_21102025214121_SEfiling_Earningscalltranscript_q2.pdf#page=3",
+    "evidence_page_file": "evidence/INFY/DOC_4_p3.txt"
+  },
+  {
+    "claim_id": "INFY-10",
+    "ticker": "INFY.NS",
+    "quarter": "Q3 FY26",
+    "type": "delivered",
+    "metric": "FY26 Constant Currency Revenue Growth Guidance",
+    "claim_text": "Revenue growth in 9 months stood at 2.8%.",
+    "verbatim_quote": "our revenue growth in 9 months stood at 2.8%, which is at the higher end of our earlier guided range.",
+    "numbers_verified_on_page": [
+      "9",
+      "2.8"
+    ],
+    "doc_id": "DOC_3",
+    "doc_title": "Q3 FY26 Concall Transcript (19-Jan-2026)",
+    "pdf_page": 21,
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_19012026222220_SEfiling_Earningscalltranscript_19012026.pdf#page=21",
+    "evidence_page_file": "evidence/INFY/DOC_3_p21.txt"
+  },
+  {
+    "claim_id": "INFY-11",
+    "ticker": "INFY.NS",
+    "quarter": "Q3 FY26",
+    "type": "guided",
+    "metric": "FY26 Operating Margin Guidance",
+    "claim_text": "Operating margin guidance remains the same as in the past quarter at 20% to 22% for the full year.",
+    "verbatim_quote": "And our operating margin guidance remains the same as in the past quarter at 20% to 22% for the full year.",
+    "numbers_verified_on_page": [
+      "20",
+      "22"
+    ],
+    "doc_id": "DOC_4",
+    "doc_title": "Q2 FY26 Concall Transcript (21-Oct-2025)",
+    "pdf_page": 3,
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_21102025214121_SEfiling_Earningscalltranscript_q2.pdf#page=3",
+    "evidence_page_file": "evidence/INFY/DOC_4_p3.txt"
+  },
+  {
+    "claim_id": "INFY-12",
+    "ticker": "INFY.NS",
+    "quarter": "Q3 FY26",
+    "type": "delivered",
+    "metric": "FY26 Operating Margin Guidance",
+    "claim_text": "Adjusted operating margins for Q3 expanded by 20 basis points to 21.2% sequentially.",
+    "verbatim_quote": "Adjusted operating margins for Q3 expanded by 20 basis points to 21.2% sequentially.",
+    "numbers_verified_on_page": [
+      "20",
+      "21.2"
+    ],
+    "doc_id": "DOC_3",
+    "doc_title": "Q3 FY26 Concall Transcript (19-Jan-2026)",
+    "pdf_page": 22,
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_19012026222220_SEfiling_Earningscalltranscript_19012026.pdf#page=22",
+    "evidence_page_file": "evidence/INFY/DOC_3_p22.txt"
+  },
+  {
+    "claim_id": "INFY-13",
+    "ticker": "INFY.NS",
+    "quarter": "Q2 FY26",
+    "type": "guided",
+    "metric": "FY26 Constant Currency Revenue Growth Guidance",
+    "claim_text": "Previous guidance was 1% to 3%.",
+    "verbatim_quote": "The previous guidance was 1% to 3%, and now it is 2% to 3%.",
+    "numbers_verified_on_page": [
+      "1",
+      "3"
+    ],
+    "doc_id": "DOC_4",
+    "doc_title": "Q2 FY26 Concall Transcript (21-Oct-2025)",
+    "pdf_page": 4,
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_21102025214121_SEfiling_Earningscalltranscript_q2.pdf#page=4",
+    "evidence_page_file": "evidence/INFY/DOC_4_p4.txt"
+  },
+  {
+    "claim_id": "INFY-14",
+    "ticker": "INFY.NS",
+    "quarter": "Q2 FY26",
+    "type": "delivered",
+    "metric": "FY26 Constant Currency Revenue Growth Guidance",
+    "claim_text": "Revenues for the quarter grew 2.2% sequentially and 2.9% year-on-year in constant currency terms.",
+    "verbatim_quote": "Our revenues for the quarter grew 2.2% sequentially and 2.9% year-on-year in constant currency terms.",
+    "numbers_verified_on_page": [
+      "2.2",
+      "2.9"
+    ],
+    "doc_id": "DOC_4",
+    "doc_title": "Q2 FY26 Concall Transcript (21-Oct-2025)",
+    "pdf_page": 3,
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_21102025214121_SEfiling_Earningscalltranscript_q2.pdf#page=3",
+    "evidence_page_file": "evidence/INFY/DOC_4_p3.txt"
+  },
+  {
+    "claim_id": "INFY-15",
+    "ticker": "INFY.NS",
+    "quarter": "Q2 FY26",
+    "type": "guided",
+    "metric": "FY26 Operating Margin Guidance",
+    "claim_text": "Operating margin guidance remains the same as in the past quarter at 20% to 22% for the full year.",
+    "verbatim_quote": "And our operating margin guidance remains the same as in the past quarter at 20% to 22% for the full year.",
+    "numbers_verified_on_page": [
+      "20",
+      "22"
+    ],
+    "doc_id": "DOC_4",
+    "doc_title": "Q2 FY26 Concall Transcript (21-Oct-2025)",
+    "pdf_page": 3,
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_21102025214121_SEfiling_Earningscalltranscript_q2.pdf#page=3",
+    "evidence_page_file": "evidence/INFY/DOC_4_p3.txt"
+  },
+  {
+    "claim_id": "INFY-16",
+    "ticker": "INFY.NS",
+    "quarter": "Q2 FY26",
+    "type": "delivered",
+    "metric": "FY26 Operating Margin Guidance",
+    "claim_text": "Operating margin was 21%.",
+    "verbatim_quote": "Our revenues for the quarter grew 2.2% sequentially and 2.9% year-on-year in constant currency terms. Our operating margin was 21%.",
+    "numbers_verified_on_page": [
+      "21"
+    ],
+    "doc_id": "DOC_4",
+    "doc_title": "Q2 FY26 Concall Transcript (21-Oct-2025)",
+    "pdf_page": 3,
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_21102025214121_SEfiling_Earningscalltranscript_q2.pdf#page=3",
+    "evidence_page_file": "evidence/INFY/DOC_4_p3.txt"
+  }
+]

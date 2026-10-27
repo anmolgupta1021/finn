@@ -1,0 +1,141 @@
+[
+  {
+    "claim_id": "PIDILITIND-01",
+    "ticker": "PIDILITIND.NS",
+    "quarter": "Q1 FY27",
+    "type": "guided",
+    "metric": "EBITDA Margin Guidance Corridor",
+    "claim_text": "corridor of 20% to 24%",
+    "verbatim_quote": "As far as we are concerned, at this moment, I would say we have guided a corridor of 20% to 24%.",
+    "numbers_verified_on_page": [
+      "20",
+      "24"
+    ],
+    "doc_id": "DOC_2",
+    "doc_title": "Q4 FY26 Concall Transcript (15-May-2026)",
+    "pdf_page": 12,
+    "source_url": "https://nsearchives.nseindia.com/corporate/Nisha_15052026142328_SEintimationEarningscallTranscriptQ4FY2026finalsigned.pdf#page=12",
+    "evidence_page_file": "evidence/PIDILITIND/DOC_2_p12.txt"
+  },
+  {
+    "claim_id": "PIDILITIND-02",
+    "ticker": "PIDILITIND.NS",
+    "quarter": "Q1 FY27",
+    "type": "delivered",
+    "metric": "EBITDA Margin Guidance Corridor",
+    "claim_text": "26.4%",
+    "verbatim_quote": "EBITDA margins at 26.4% improved by 80 basis points quarter-on-quarter and profit after tax grew by 27.7%.",
+    "numbers_verified_on_page": [
+      "26.4"
+    ],
+    "doc_id": "DOC_1",
+    "doc_title": "Q1 FY27 Concall Transcript (12-Aug-2026)",
+    "pdf_page": 4,
+    "source_url": "https://nsearchives.nseindia.com/corporate/Nisha_12082026181037_SEintimationEarningscallTranscriptQ1FY2027finaluploadsigned.pdf#page=4",
+    "evidence_page_file": "evidence/PIDILITIND/DOC_1_p4.txt"
+  },
+  {
+    "claim_id": "PIDILITIND-03",
+    "ticker": "PIDILITIND.NS",
+    "quarter": "Q4 FY26",
+    "type": "guided",
+    "metric": "EBITDA Margin Guidance Corridor",
+    "claim_text": "20% to 24%",
+    "verbatim_quote": "because for us, the EBITDA corridor which we have shared is 20% to 24%.",
+    "numbers_verified_on_page": [
+      "20",
+      "24"
+    ],
+    "doc_id": "DOC_3",
+    "doc_title": "Q3 FY26 Concall Transcript (11-Feb-2026)",
+    "pdf_page": 10,
+    "source_url": "https://nsearchives.nseindia.com/corporate/Nisha_11022026173121_SEintimationearningscalltranscriptfinalupload.pdf#page=10",
+    "evidence_page_file": "evidence/PIDILITIND/DOC_3_p10.txt"
+  },
+  {
+    "claim_id": "PIDILITIND-04",
+    "ticker": "PIDILITIND.NS",
+    "quarter": "Q4 FY26",
+    "type": "delivered",
+    "metric": "EBITDA Margin Guidance Corridor",
+    "claim_text": "23.4%",
+    "verbatim_quote": "And EBITDA margin at 23.4% expanded by 280 bps versus same period last year.",
+    "numbers_verified_on_page": [
+      "23.4"
+    ],
+    "doc_id": "DOC_2",
+    "doc_title": "Q4 FY26 Concall Transcript (15-May-2026)",
+    "pdf_page": 3,
+    "source_url": "https://nsearchives.nseindia.com/corporate/Nisha_15052026142328_SEintimationEarningscallTranscriptQ4FY2026finalsigned.pdf#page=3",
+    "evidence_page_file": "evidence/PIDILITIND/DOC_2_p3.txt"
+  },
+  {
+    "claim_id": "PIDILITIND-05",
+    "ticker": "PIDILITIND.NS",
+    "quarter": "Q3 FY26",
+    "type": "guided",
+    "metric": "VAM Consumption Rate Outlook",
+    "claim_text": "below $900",
+    "verbatim_quote": "Sudhanshu Vats: Yes, Sandeep just told you about our VAM numbers, yes, VAM is now below $900.",
+    "numbers_verified_on_page": [
+      "900"
+    ],
+    "doc_id": "DOC_4",
+    "doc_title": "Q2 FY26 Concall Transcript (06-Nov-2025)",
+    "pdf_page": 4,
+    "source_url": "https://nsearchives.nseindia.com/corporate/Nisha_06112025184945_SEIntimationTranscript.pdf#page=4",
+    "evidence_page_file": "evidence/PIDILITIND/DOC_4_p4.txt"
+  },
+  {
+    "claim_id": "PIDILITIND-06",
+    "ticker": "PIDILITIND.NS",
+    "quarter": "Q3 FY26",
+    "type": "delivered",
+    "metric": "VAM Consumption Rate Outlook",
+    "claim_text": "$830",
+    "verbatim_quote": "Just for information, VAM consumption in the quarter was at about $830 as compared to $884 in the same period last year.",
+    "numbers_verified_on_page": [
+      "830"
+    ],
+    "doc_id": "DOC_3",
+    "doc_title": "Q3 FY26 Concall Transcript (11-Feb-2026)",
+    "pdf_page": 4,
+    "source_url": "https://nsearchives.nseindia.com/corporate/Nisha_11022026173121_SEintimationearningscalltranscriptfinalupload.pdf#page=4",
+    "evidence_page_file": "evidence/PIDILITIND/DOC_3_p4.txt"
+  },
+  {
+    "claim_id": "PIDILITIND-07",
+    "ticker": "PIDILITIND.NS",
+    "quarter": "Q2 FY26",
+    "type": "guided",
+    "metric": "EBITDA Margin Guidance Range",
+    "claim_text": "20%, 24%",
+    "verbatim_quote": "But if you look at full year, we are confident that we will be at the upper end of this 20%, 24% range.",
+    "numbers_verified_on_page": [
+      "20",
+      "24"
+    ],
+    "doc_id": "DOC_3",
+    "doc_title": "Q3 FY26 Concall Transcript (11-Feb-2026)",
+    "pdf_page": 21,
+    "source_url": "https://nsearchives.nseindia.com/corporate/Nisha_11022026173121_SEintimationearningscalltranscriptfinalupload.pdf#page=21",
+    "evidence_page_file": "evidence/PIDILITIND/DOC_3_p21.txt"
+  },
+  {
+    "claim_id": "PIDILITIND-08",
+    "ticker": "PIDILITIND.NS",
+    "quarter": "Q2 FY26",
+    "type": "delivered",
+    "metric": "EBITDA Margin Guidance Range",
+    "claim_text": "10.3%",
+    "verbatim_quote": "Total stand-alone UVG was 10.3%, which translated into a value growth of 10.4%.",
+    "numbers_verified_on_page": [
+      "10.3"
+    ],
+    "doc_id": "DOC_4",
+    "doc_title": "Q2 FY26 Concall Transcript (06-Nov-2025)",
+    "pdf_page": 3,
+    "source_url": "https://nsearchives.nseindia.com/corporate/Nisha_06112025184945_SEIntimationTranscript.pdf#page=3",
+    "evidence_page_file": "evidence/PIDILITIND/DOC_4_p3.txt"
+  }
+]

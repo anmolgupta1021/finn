@@ -1,0 +1,47 @@
+TICKER: ICICIBANK.NS
+DOCUMENT_ID: DOC_2
+DOCUMENT_TITLE: Q1 FY27 Concall Transcript (23-Jul-2026)
+PDF_PAGE: 5 (of 43)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/ICICI2022_23072026185521_NSEBSE.pdf#page=5
+========================================================================
+
+and upholds the values of brand ICICI. We aim to be the trusted financial services
+provider of choice for our customers and deliver sustainable returns to our shareholders.
+With this, I conclude my opening remarks. I will be happy to take your questions.
+Moderator:
+Thank you very much, sir. We will now begin the Q&A session with Mr. Batra and Mr.
+Banerjee. Anyone who wishes to ask a question may press ‘*’ and ‘1’ on their telephone.
+If you wish to remove yourself from the question queue, you may press ‘*’ and ‘2’. Today's
+announcement is on the bank's financial performance; hence we would like to request
+you to ask questions related to that. Please write to the corporate communications team
+separately for any other queries.
+Due to time constraints, I request all of you to ask two questions at a time. If you have
+additional queries, you may join the queue again if time permits. Thank you.
+We will take our first question from Ritu Singh from CNBC-TV18. Please go ahead.
+Ritu Singh:
+Good evening, Mr. Batra and Mr. Banerjee. First, I wanted to start by asking about your
+margins that really stood out, especially compared to almost all other banks that have
+reported numbers today. This further expansion, you have been able to achieve now at
+almost 4.36%. Is this the normalised rate we should look at? How sustainable are these
+levels? Do you have levers to further expand? That was the first part.
+Second, this rise in slippages that we have seen substantially in the quarter from about
+₹4,200-odd crore to about ₹5,500 crore. How much of this is seasonal? And are you
+seeing any stress on account of what is happening in West Asia because this is the first
+quarter when we have seen some of that impact come through?
+And if I may add a question on loan growth as well, which has been pretty strong.
+Corporate also seems to be doing well. What are the segments, of course, within your
+risk-calibrated view, that you think are seeing higher credit demand that you believe will
+drive incremental credit growth for the bank?
+Sandeep Batra:
+Thank you, Ritu. There are lots of questions. First of all, I will start with the NIM question
+that you asked. As we have reported the NII increased by about 12.7% year-on-year and
+about 6.1% sequentially. This quarter we had the benefit of income tax refunds which
+helped in the margin improvement. This was about eight basis points compared to about
+five basis points in the previous quarter and seven bps in the Q1 of last year. The margins
+in Q1 are also reflective of the benefits due to repricing of term deposits, impact of higher
+interest refunds, offset partially by higher interest reversal on KCC portfolio. To your point
+on outlook, I think the NIM trajectory would depend on a number of factors which
+includes, the geopolitical developments, monetary policy, liquidity, loan growth, and loan
+pricing. Our expectation of NIM is that, in FY27, it should be range-bound assuming no
+rate movements. Of course, there will be some impact on account of FCNR(B) deposit
+Page 4 of 18

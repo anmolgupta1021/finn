@@ -1,0 +1,146 @@
+[
+  {
+    "claim_id": "RELIANCE-01",
+    "ticker": "RELIANCE.NS",
+    "quarter": "Q1 FY27",
+    "type": "guided",
+    "metric": "Jio 5G Subscriber Base",
+    "claim_text": "268 million 5G user base with 77 million additions during the year",
+    "verbatim_quote": "268 million 5G user base, so that is an addition of 77 million during the year of 5G subscribers.",
+    "numbers_verified_on_page": [
+      "268",
+      "77"
+    ],
+    "doc_id": "DOC_2",
+    "doc_title": "Q4 FY26 Concall Transcript (26-Apr-2026)",
+    "pdf_page": 4,
+    "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_26042026232750_SE_26042026.pdf#page=4",
+    "evidence_page_file": "evidence/RELIANCE/DOC_2_p4.txt"
+  },
+  {
+    "claim_id": "RELIANCE-02",
+    "ticker": "RELIANCE.NS",
+    "quarter": "Q1 FY27",
+    "type": "delivered",
+    "metric": "Jio 5G Subscriber Base",
+    "claim_text": "285 million 5G users with 73 million additions in the last 12 months",
+    "verbatim_quote": "Out of these, 285 million are 5G users, so which is an addition of 73 million in the last 12 months of 5G users.",
+    "numbers_verified_on_page": [
+      "285",
+      "73",
+      "12"
+    ],
+    "doc_id": "DOC_1",
+    "doc_title": "Q1 FY27 Concall Transcript (19-Jul-2026)",
+    "pdf_page": 5,
+    "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_19072026180618_SE_Transcript.pdf#page=5",
+    "evidence_page_file": "evidence/RELIANCE/DOC_1_p5.txt"
+  },
+  {
+    "claim_id": "RELIANCE-03",
+    "ticker": "RELIANCE.NS",
+    "quarter": "Q1 FY27",
+    "type": "guided",
+    "metric": "Fixed Broadband Connects & AirFiber",
+    "claim_text": "27 million fixed broadband connects including 12.9 million JioAirFiber homes",
+    "verbatim_quote": "27 million fixed broadband connects that was a net addition of almost 10 million during the year and 12.9 million JioAirFiber homes.",
+    "numbers_verified_on_page": [
+      "27",
+      "12.9"
+    ],
+    "doc_id": "DOC_2",
+    "doc_title": "Q4 FY26 Concall Transcript (26-Apr-2026)",
+    "pdf_page": 4,
+    "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_26042026232750_SE_26042026.pdf#page=4",
+    "evidence_page_file": "evidence/RELIANCE/DOC_2_p4.txt"
+  },
+  {
+    "claim_id": "RELIANCE-04",
+    "ticker": "RELIANCE.NS",
+    "quarter": "Q1 FY27",
+    "type": "delivered",
+    "metric": "Fixed Broadband Connects & AirFiber",
+    "claim_text": "28.6 million fixed broadband connects with 14 million AirFiber homes",
+    "verbatim_quote": "The home broadband, fixed broadband connects has increased to 28.6 million, out of which 14 million are AirFiber homes.",
+    "numbers_verified_on_page": [
+      "28.6",
+      "14"
+    ],
+    "doc_id": "DOC_1",
+    "doc_title": "Q1 FY27 Concall Transcript (19-Jul-2026)",
+    "pdf_page": 5,
+    "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_19072026180618_SE_Transcript.pdf#page=5",
+    "evidence_page_file": "evidence/RELIANCE/DOC_1_p5.txt"
+  },
+  {
+    "claim_id": "RELIANCE-05",
+    "ticker": "RELIANCE.NS",
+    "quarter": "Q4 FY26",
+    "type": "guided",
+    "metric": "Jio 5G Subscriber Base",
+    "claim_text": "253 million plus 5G subscribers on the network",
+    "verbatim_quote": "5G user base has been growing very rapidly and quite well, 253 million plus 5G subscribers as well on our network.",
+    "numbers_verified_on_page": [
+      "253"
+    ],
+    "doc_id": "DOC_3",
+    "doc_title": "Q3 FY26 Concall Transcript (18-Jan-2026)",
+    "pdf_page": 5,
+    "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_18012026235015_SE_Transcript.pdf#page=5",
+    "evidence_page_file": "evidence/RELIANCE/DOC_3_p5.txt"
+  },
+  {
+    "claim_id": "RELIANCE-06",
+    "ticker": "RELIANCE.NS",
+    "quarter": "Q4 FY26",
+    "type": "delivered",
+    "metric": "Jio 5G Subscriber Base",
+    "claim_text": "268 million 5G user base with 77 million additions during the year",
+    "verbatim_quote": "268 million 5G user base, so that is an addition of 77 million during the year of 5G subscribers.",
+    "numbers_verified_on_page": [
+      "268",
+      "77"
+    ],
+    "doc_id": "DOC_2",
+    "doc_title": "Q4 FY26 Concall Transcript (26-Apr-2026)",
+    "pdf_page": 4,
+    "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_26042026232750_SE_26042026.pdf#page=4",
+    "evidence_page_file": "evidence/RELIANCE/DOC_2_p4.txt"
+  },
+  {
+    "claim_id": "RELIANCE-07",
+    "ticker": "RELIANCE.NS",
+    "quarter": "Q4 FY26",
+    "type": "guided",
+    "metric": "FMCG Revenue",
+    "claim_text": "Demerger on 1st December with turnover of more than 5,000 Crores",
+    "verbatim_quote": "On the FMCG side, the demerger happened on 1st December. And we are at more than 5,000 Crores of turnover",
+    "numbers_verified_on_page": [
+      "5000"
+    ],
+    "doc_id": "DOC_3",
+    "doc_title": "Q3 FY26 Concall Transcript (18-Jan-2026)",
+    "pdf_page": 3,
+    "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_18012026235015_SE_Transcript.pdf#page=3",
+    "evidence_page_file": "evidence/RELIANCE/DOC_3_p3.txt"
+  },
+  {
+    "claim_id": "RELIANCE-08",
+    "ticker": "RELIANCE.NS",
+    "quarter": "Q4 FY26",
+    "type": "delivered",
+    "metric": "FMCG Revenue",
+    "claim_text": "Full year revenue of Rs.22,000 Crores in 2026 and Q4 revenue of Rs.7350 Crores",
+    "verbatim_quote": "From an FMCG business perspective, we closed our revenue of Rs.22,000 Crores in 2026 and for the Q4 alone, we delivered a revenue of Rs.7350 Crores",
+    "numbers_verified_on_page": [
+      "22000",
+      "2026",
+      "7350"
+    ],
+    "doc_id": "DOC_2",
+    "doc_title": "Q4 FY26 Concall Transcript (26-Apr-2026)",
+    "pdf_page": 9,
+    "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_26042026232750_SE_26042026.pdf#page=9",
+    "evidence_page_file": "evidence/RELIANCE/DOC_2_p9.txt"
+  }
+]

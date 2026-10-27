@@ -14,6 +14,7 @@ const SUGGESTIONS = [
   { ticker: "TCS.NS", label: "TCS · 5 transcripts + 5 results filings" },
   { ticker: "ICICIBANK.NS", label: "ICICI Bank · 5 transcripts + 5 results filings" },
   { ticker: "ETERNAL.NS", label: "Eternal (formerly Zomato) · 5 transcripts + 5 results filings" },
+  { ticker: "PIDILITIND.NS", label: "Pidilite Industries · Cold-ticker test" },
   { ticker: "HDFCBANK.NS", label: "HDFC Bank" },
   { ticker: "BAJFINANCE.NS", label: "Bajaj Finance" },
   { ticker: "ITC.NS", label: "ITC" },

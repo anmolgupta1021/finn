@@ -1,0 +1,42 @@
+TICKER: ETERNAL.NS
+DOCUMENT_ID: DOC_1
+DOCUMENT_TITLE: Q1 FY27 Concall Transcript (29-Jul-2026)
+PDF_PAGE: 3 (of 17)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/ZOMATO_29072026145100_TranscriptfilingJuly222026.pdf#page=3
+========================================================================
+
+Moderator: Ladies and gentlemen, a very good evening, and welcome to Eternal Limited's Q1FY27
+earnings conference call. From Eternal's management team, we have with us today
+Albinder Singh Dhindsa, Akshant Goyal and Kunal Swarup.
+Before we begin, a few quick announcements for the attendees. Anything said on this
+call, which reflects outlook for the future, or which could be construed as a forward-
+looking statement, may involve risks and uncertainties. Such statements or comments
+are not guarantees of future performance, and actual results may differ from those
+statements.
+Additionally, please note that this earnings call is scheduled for a duration of 45 minutes,
+and we will be starting directly with the Q&A section of the call. If you wish to ask a
+question, please use the raise hand feature available on your Zoom dashboard. We will
+announce your name on the call and unmute your line, post which you can proceed with
+your question. We will wait for a minute while the question queue assembles.
+The first question is from the line of Gaurav Malhotra from Axis. Please go ahead.
+Gaurav Malhotra: Hi, good evening, everyone. Congrats on a good set of numbers. Just had a couple of
+questions. Firstly, you seem to have raised the long-term guidance in quick commerce
+from 5-6% to 6%. What gives you this confidence to do this now, especially when there
+is sort of competitive intensity in this sector?
+Akshant Goyal: Hi, Gaurav. This is basis what we are seeing in the business. What we're trying to
+communicate here is that over time, we have increased the capex per store in our
+business and some of these investments are leading to increase in efficiency in the
+business. It's also a function of increase in average store sizes, etc. All these
+investments are clearly lining up in a way where we now have higher visibility on margins
+and we think at this point we're likely to end at the higher end of the range that we had
+guided earlier and hence, the communication.
+Gaurav Malhotra: Understood. The next question is you mentioned the older cohorts are spending 3x
+versus three years back. Just wanted to get a sense of the split between how much of
+this is related to order frequency and how much of it is related to the AOV growth?
+Akshant Goyal: Gaurav, we don't share that data, but directionally, most of it is frequency growth. With
+passage of time for a customer cohort, we see that NAOV stabilizes. It grows but only
+slightly, and most of the growth comes from frequency growth.
+Gaurav Malhotra: Got it. Just one last question. How much of this growth, which we are seeing at an
+aggregate level in Blinkit, is coming from existing cities versus geographical expansion?
+Albinder Singh Dhindsa: Most of it is from existing cities.
+Page 2 of 16

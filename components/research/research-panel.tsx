@@ -90,6 +90,17 @@ function QuarterCard({ quarter }: { quarter: QuarterAnalysis }) {
                     <span className="text-2xs text-finn-muted block mt-0.5 italic">
                       {g.source}
                     </span>
+                    {g.source_url && (
+                      <a
+                        href={g.source_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-0.5 text-2xs text-finn-accent hover:underline mt-0.5 font-mono"
+                      >
+                        PDF p.{g.page ?? "?"}
+                        <ArrowUpRight className="w-2.5 h-2.5" />
+                      </a>
+                    )}
                   </div>
                   {delivered && (
                     <div>
@@ -100,6 +111,17 @@ function QuarterCard({ quarter }: { quarter: QuarterAnalysis }) {
                       <span className="text-2xs text-finn-muted block mt-0.5 italic">
                         {delivered.source}
                       </span>
+                      {delivered.source_url && (
+                        <a
+                          href={delivered.source_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-0.5 text-2xs text-finn-accent hover:underline mt-0.5 font-mono"
+                        >
+                          PDF p.{delivered.page ?? "?"}
+                          <ArrowUpRight className="w-2.5 h-2.5" />
+                        </a>
+                      )}
                     </div>
                   )}
                 </div>

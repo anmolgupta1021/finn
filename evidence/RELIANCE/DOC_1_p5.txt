@@ -1,0 +1,46 @@
+TICKER: RELIANCE.NS
+DOCUMENT_ID: DOC_1
+DOCUMENT_TITLE: Q1 FY27 Concall Transcript (19-Jul-2026)
+PDF_PAGE: 5 (of 32)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/kavinavora_19072026180618_SE_Transcript.pdf#page=5
+========================================================================
+
+was getting capitalized now flows through the P&L. So that really more reflects what we have
+done in terms of the Jio capitalization.
+And overall, we talked through these numbers on O2C, oil and gas. I am not going to spend
+time because each of the individual businesses will also talk about it. And overall, when you
+see from a net debt point of view, it is slightly lower than what it was in March, Rs 1,23,000
+Crores odd. And capex of about close to Rs.39,000 Crores. So, we had an upgrade in the
+Moody's rating to Baa1 and, of course, with S&P at A-. So overall the balance sheet is healthy
+and supporting our capex initiative both in the O2C side, New Energy side and also as we
+build more on the hyper local strategy on retail and of course on RCPL and the data center.
+So, the cash flow momentum is enormously valuable to support those capex. With this,
+Anshuman.
+Sh Anshuman Thakur 00:09:51 – 00:20:53 (Jio Platforms)
+Thank you, Srikanth. Good evening, everyone. Update on the Jio results. Some key highlight
+numbers for the quarter, 533 million subscribers in connectivity. That is a net addition of 35.2
+million over the last 12 months. Out of these, 285 million are 5G users, so which is an addition
+of 73 million in the last 12 months of 5G users. The home broadband, fixed broadband
+connects has increased to 28.6 million, out of which 14 million are AirFiber homes. So now
+a lot of the growth is really coming through the AirFiber connectivity, and we are also kind of
+encouraging that because the last mile becomes much more economical and time efficient
+in being able to do that. Financial numbers, Rs.39,173 Crores is the revenue, that is, 11.8%
+year-on-year growth, EBITDA at Rs.20,865 Crores, that is a 15.1% year-on-year growth, with
+an EBITDA margin of 53.3%. That is 150 basis points higher than the same quarter last year.
+And 69.4 exabytes of total data traffic on the network, so 27% growth year-on-year. So, all
+of these metrics showing fairly healthy performance and growth momentum continues.
+So, in terms of performance highlights, double-digit EBITDA growth and this is when we have
+now, as we had spoken last quarter, all of the 5G-related expenses and assets have been
+fully capitalized. So, all of those are getting expensed now. Even after that, we had double-
+digit EBITDA growth for the quarter.
+The digital services growth is 20% year-on-year, which outpaces the connectivity growth,
+which has been the trend over the last several quarters. It is of a smaller base. But
+nonetheless, it is growing and growing well. And we have been able to monetize services
+across content, cloud, IoT and managed services and a few others which are smaller in scale.
+So that piece is doing quite well. We are the world's largest standalone 5G operator outside
+of China with 285 million subscribers on our network. This is as of 30th June 2026. Per capita
+data engagement increased to 43.7 GB per user per month, which again is amongst the
+highest globally or for any operator. Another interesting stats is that 5G data traffic is now
+one-and-a-half times of the 4G data traffic on our network. So, it is growing much more
+rapidly, and we are also encouraging pushing a lot of data usage to that.
+© Reliance Industries Limited 2020 4

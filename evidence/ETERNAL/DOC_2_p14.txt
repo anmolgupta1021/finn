@@ -1,0 +1,42 @@
+TICKER: ETERNAL.NS
+DOCUMENT_ID: DOC_2
+DOCUMENT_TITLE: Q4 FY26 Concall Transcript (06-May-2026)
+PDF_PAGE: 14 (of 18)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/ZOMATO_06052026135430_TranscriptfilingsignedApril2026.pdf#page=14
+========================================================================
+
+Garima Mishra: Got it. Second question was on District. You are already present in different verticals
+pertaining to the broad going-out category. What new categories are you looking to add
+within District and particularly within travel?
+Akshant Goyal: Garima, we have no plans to add any more category to District than what we already
+have, and travel is not a focus area for us at this point.
+Garima Mishra: Got it. Last question maybe. Hyperpure reported a small margin in the quarter. You have,
+however, not included this segment when you talk about your future profitability. How
+should we read this and should we assume that this business remains insignificant from
+an overall profitability perspective?
+Akshant Goyal: Not really. I don't know why you are saying that we haven't included this business when
+we're talking of the overall billion-dollar profit. The statement that we have made
+includes all the businesses that we are in today, including Hyperpure. It might be the
+smallest, but it will still be meaningful and relevant.
+Garima Mishra: Got it. Thank you so much.
+Moderator: Thank you. Next question is from the line of Rishi Jhunjhunwala from IIFL. Please go
+ahead.
+Rishi Jhunjhunwala: Yes, thank you. A couple of questions. Firstly, if we look at our order growth in food
+delivery as well as in QC, in food, order growth was 15% YoY but the active delivery
+partners on a monthly basis went up by 30%. In QC, the order growth was slightly above
+90%, but the rider growth was 120%. While in QC, I can still understand that you're
+expanding rapidly and probably adding a lot more there, but in food, what explains this
+gap given that effectively if I calculate number of orders per rider per month, it has come
+down by 10% to 15% in both the businesses over the last one year?
+Albinder Singh Dhindsa: Rishi, the nuance over here is the changing nature of how much people work every day
+on these platforms. We are seeing more and more part-timers also delivering and that
+actually increases the active partners but reduces the number of orders they do per shift
+per day.
+Rishi Jhunjhunwala: Understood. The second question is on food delivery. We are close to that 20% mark
+from a growth perspective. We are at 5.5% from a margin perspective. We had taken a
+mid-quarter hike in platform fee, probably next quarter, it flows down completely to the
+bottom line.
+How do we think about incremental operating leverage that you would get in the
+business as well as some of these increase in monetization to flow through the food
+delivery P&L? Do you intend to utilize that incrementally in some sort to increase
+Page 13 of 17

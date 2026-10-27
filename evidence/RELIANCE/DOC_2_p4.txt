@@ -1,0 +1,49 @@
+TICKER: RELIANCE.NS
+DOCUMENT_ID: DOC_2
+DOCUMENT_TITLE: Q4 FY26 Concall Transcript (26-Apr-2026)
+PDF_PAGE: 4 (of 31)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/kavinavora_26042026232750_SE_26042026.pdf#page=4
+========================================================================
+
+look at what happened in terms of just physical inability to get crude, in fact if you see the
+throughput for us it was lower by 4% and just getting physical crude, the premium which was
+trading on top of the benchmarks, logistics cost, insurance cost, the sheer volatility that we
+saw there and coupled with under recoveries on fuel retailing, the introduction of SAED, there
+are million things which have happened in this quarter and that is what I meant by saying
+that 4% number really does not capture what the environment was and in that sense
+I am very happy or delighted to look at this performance and the quality of the performance
+is very strong. Oil and Gas because of gas volumes, digital services has been good, 16% on
+the back of subscriber additions, which was up 7.5%, and the 5G user base has been growing
+at about 40% and retail more broad based consumption that we have seen and the
+hyperscale expansion, which Dinesh will talk through in the retail presentations and this is
+again, same five year perspective I just thought to put that overall still net debt we have been
+able to keep that in control or continuing the capex vis a vis what is the cash profit, all of
+those trends have remained fairly strong and these numbers say that the EBITDA has been
+at about 0.64, which against what we have been talking about below one.
+Sh Anshuman Thakur 00:06:36 – 00:18:28 (Jio Platforms)
+Thank you Srikanth. Good evening, everyone. Update on the Jio Platforms results for the
+quarter and the full year. So strong double-digit growth in our digital services business, which
+is already a global scale business and then showing double digit growth. We ended the year
+with 524 million subscribers that is a net add of 36.3 million during the year and it has been
+fairly sustained picking up over the last couple of quarters, 268 million 5G user base, so that
+is an addition of 77 million during the year of 5G subscribers. That makes us our 5G
+subscriber base the largest outside of China, the single country operator. Number one in
+homes as well 27 million fixed broadband connects that was a net addition of almost 10
+million during the year and 12.9 million JioAirFiber homes. So roughly 75% of the connections
+coming in through the AirFiber, where we are by far the largest globally with our AirFiber
+product across 5G and UBR.
+On the financial metrices, the revenue for the year at Rs.1,46,085 Crores, which was up
+14.6% year-on-year, Rs.76,255 Crores of EBITDA that was almost 19% year-on-year,
+EBITDA margin of 52%. We saw a 190-basis points improvement there, increase there and
+one of the metrices we have been tracking is the amount of data consumed on the network.
+Total data traffic increased to 241 Exabytes for the year, around 66 Exabytes for this quarter,
+so that is 31% increase year-on-year. So, across all of the operating and financial metrices,
+we see strong growth and continue to see strong growth on these. I will just speak a bit about
+some of the priority areas, focus areas for us currently and as we move forward mobility
+continues. We have the largest market share; we are growing that business rapidly. There
+are a few priority areas, focus areas for us to improve the product offering and gain more
+market share. On the product side, the 5G premium services with our stack, we are able to
+offer. Now, of course, some of this is being done on a trial basis. We need to ensure that we
+are fully regulatory compliant, but these products are ready for the market. AI-first network
+being used, on our network we have been implementing a whole bunch of intelligence, AI
+© Reliance Industries Limited 2020 3

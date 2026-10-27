@@ -1,0 +1,38 @@
+TICKER: INFY.NS
+DOCUMENT_ID: DOC_4
+DOCUMENT_TITLE: Q2 FY26 Concall Transcript (21-Oct-2025)
+PDF_PAGE: 4 (of 38)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/Infosys_21102025214121_SEfiling_Earningscalltranscript_q2.pdf#page=4
+========================================================================
+
+Also on the H-1B visa issue, if you could give us some details on how many employees you deployed
+on this visa for this year and the previous maybe a couple of years? And whether you see now this
+as being something unviable, sending freshers on H-1B visas to work in the U.S.
+If I may also ask, your peers like HCL Tech have also started to quantify their AI revenues. We have
+been asking you this for several quarters now, and we understand AI cuts across services and
+sectors. Could you give us a sense of what exactly you are seeing there? And finally, the Versent
+Group acquisition, what exactly was the contribution to revenues and whether you are looking at
+further M&A in the region or outside? Thank you.
+Salil Parekh
+So let me start, and Jayesh will add in a couple of things. First, on the guidance and the environment.
+So in the guidance, typically, second half of the year is slower than the first half. That is the normal
+pattern. So we have continued with that pattern. Having said that, we have seen good traction, and
+that is how we have actually increased the guidance.
+The previous guidance was 1% to 3%, and now it is 2% to 3%. So, in a sense, we have much more
+confidence with the lower end being increased in what we see into the outlook for the year.
+In terms of the specific industries you mentioned, we had a good performance in Manufacturing, in
+Financial Services. We still see constraints in Retail. We do see a good pipeline there, and we will
+see how that plays out in the coming quarters. Keeping all those things in mind and the global
+environment in terms of the macro, we decided to keep the guidance at 2% to 3% with all of those
+factors that I mentioned.
+On the H-1B visa, what we have shared in the past, what we have shared recently, first, our U.S.
+workforce, the number of people that require Infosys sponsorship for immigration is a minority. So,
+the majority of the people do not require it from our perspective.
+Second, we have built a large number of centers and hubs, which are focused on digital, on
+innovation, on technology and AI in the U.S. We have relationships with universities. We have a
+training facility there. With all of that in mind, we are clear today that we will work with our clients
+without any disruption to their services and into the future. We do not have any specific information
+to share on the numbers that you had suggested.
+Ritu Singh
+3
+External Document © 2025 Infosys Limited

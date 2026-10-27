@@ -1,0 +1,232 @@
+[
+  {
+    "name": "models/gemini-2.5-flash",
+    "displayName": "Gemini 2.5 Flash",
+    "version": "001"
+  },
+  {
+    "name": "models/gemini-2.5-pro",
+    "displayName": "Gemini 2.5 Pro",
+    "version": "2.5"
+  },
+  {
+    "name": "models/gemini-2.5-flash-preview-tts",
+    "displayName": "Gemini 2.5 Flash Preview TTS",
+    "version": "gemini-2.5-flash-exp-tts-2025-05-19"
+  },
+  {
+    "name": "models/gemini-2.5-pro-preview-tts",
+    "displayName": "Gemini 2.5 Pro Preview TTS",
+    "version": "gemini-2.5-pro-preview-tts-2025-05-19"
+  },
+  {
+    "name": "models/gemma-4-26b-a4b-it",
+    "displayName": "Gemma 4 26B A4B IT",
+    "version": "001"
+  },
+  {
+    "name": "models/gemma-4-31b-it",
+    "displayName": "Gemma 4 31B IT",
+    "version": "001"
+  },
+  {
+    "name": "models/gemini-flash-latest",
+    "displayName": "Gemini Flash Latest",
+    "version": "Gemini Flash Latest"
+  },
+  {
+    "name": "models/gemini-flash-lite-latest",
+    "displayName": "Gemini Flash-Lite Latest",
+    "version": "Gemini Flash-Lite Latest"
+  },
+  {
+    "name": "models/gemini-pro-latest",
+    "displayName": "Gemini Pro Latest",
+    "version": "Gemini Pro Latest"
+  },
+  {
+    "name": "models/gemini-2.5-flash-lite",
+    "displayName": "Gemini 2.5 Flash-Lite",
+    "version": "001"
+  },
+  {
+    "name": "models/gemini-2.5-flash-image",
+    "displayName": "Nano Banana",
+    "version": "2.0"
+  },
+  {
+    "name": "models/gemini-3-flash-preview",
+    "displayName": "Gemini 3 Flash Preview",
+    "version": "3-flash-preview-12-2025"
+  },
+  {
+    "name": "models/gemini-3.1-pro-preview",
+    "displayName": "Gemini 3.1 Pro Preview",
+    "version": "3.1-pro-preview-01-2026"
+  },
+  {
+    "name": "models/gemini-3.1-pro-preview-customtools",
+    "displayName": "Gemini 3.1 Pro Preview Custom Tools",
+    "version": "3.1-pro-preview-01-2026"
+  },
+  {
+    "name": "models/gemini-3.1-flash-lite-preview",
+    "displayName": "Gemini 3.1 Flash Lite Preview",
+    "version": "3.1-flash-lite-preview-03-2026"
+  },
+  {
+    "name": "models/gemini-3.1-flash-lite",
+    "displayName": "Gemini 3.1 Flash Lite",
+    "version": "3.1-flash-lite-05-2026"
+  },
+  {
+    "name": "models/gemini-3-pro-image-preview",
+    "displayName": "Nano Banana Pro",
+    "version": "3.0"
+  },
+  {
+    "name": "models/gemini-3-pro-image",
+    "displayName": "Nano Banana Pro",
+    "version": "3.0"
+  },
+  {
+    "name": "models/nano-banana-pro-preview",
+    "displayName": "Nano Banana Pro",
+    "version": "3.0"
+  },
+  {
+    "name": "models/gemini-3.1-flash-image-preview",
+    "displayName": "Nano Banana 2",
+    "version": "3.0"
+  },
+  {
+    "name": "models/gemini-3.1-flash-image",
+    "displayName": "Nano Banana 2",
+    "version": "3.0"
+  },
+  {
+    "name": "models/gemini-3.1-flash-lite-image",
+    "displayName": "Nano Banana 2 Lite",
+    "version": "3.0"
+  },
+  {
+    "name": "models/gemini-nano-banana-2.1",
+    "displayName": "Nano Banana 2.1",
+    "version": "3.0"
+  },
+  {
+    "name": "models/gemini-3.5-flash",
+    "displayName": "Gemini 3.5 Flash",
+    "version": "3.5-flash-05-2026"
+  },
+  {
+    "name": "models/gemini-3.5-flash-lite",
+    "displayName": "Gemini 3.5 Flash Lite",
+    "version": "3.5-flash-lite-07-2026"
+  },
+  {
+    "name": "models/gemini-omni-flash-preview",
+    "displayName": "Gemini Omni Flash Preview",
+    "version": "001"
+  },
+  {
+    "name": "models/gemini-omni-1.1-flash",
+    "displayName": "Gemini Omni 1.1 Flash",
+    "version": "001"
+  },
+  {
+    "name": "models/gemini-3.5-transcribe",
+    "displayName": "Gemini 3.5 Transcribe",
+    "version": "3.5-transcribe-08-2026"
+  },
+  {
+    "name": "models/gemini-3.6-flash",
+    "displayName": "Gemini 3.6 Flash",
+    "version": "3.6-flash-07-2026"
+  },
+  {
+    "name": "models/gemini-3.7-flash",
+    "displayName": "Gemini 3.7 Flash",
+    "version": "3.7-flash-08-2026"
+  },
+  {
+    "name": "models/gemini-3.8-flash",
+    "displayName": "Gemini 3.8 Flash",
+    "version": "3.0"
+  },
+  {
+    "name": "models/gemini-4-argon",
+    "displayName": "Gemini 4 Argon",
+    "version": "3.0"
+  },
+  {
+    "name": "models/lyria-3-clip-preview",
+    "displayName": "Lyria 3 Clip Preview",
+    "version": "lyria-3-clip-preview"
+  },
+  {
+    "name": "models/lyria-3-pro-preview",
+    "displayName": "Lyria 3 Pro Preview",
+    "version": "lyria-3-pro-preview"
+  },
+  {
+    "name": "models/lyria-3.5",
+    "displayName": "Lyria 3.5",
+    "version": "3.5"
+  },
+  {
+    "name": "models/gemini-3.1-flash-tts-preview",
+    "displayName": "Gemini 3.1 Flash TTS Preview",
+    "version": "3.1-flash-tts-preview"
+  },
+  {
+    "name": "models/gemini-3.8-flash-tts",
+    "displayName": "Gemini 3.8 Flash TTS",
+    "version": "3.8-flash-tts"
+  },
+  {
+    "name": "models/gemini-3.8-flash-lite-tts",
+    "displayName": "Gemini 3.8 Flash Lite TTS",
+    "version": "3.8-flash-lite-tts"
+  },
+  {
+    "name": "models/gemini-robotics-er-2-preview",
+    "displayName": "Gemini Robotics-ER 2 Preview",
+    "version": "2-preview"
+  },
+  {
+    "name": "models/gemini-2.5-computer-use-preview-10-2025",
+    "displayName": "Gemini 2.5 Computer Use Preview 10-2025",
+    "version": "Gemini 2.5 Computer Use Preview 10-2025"
+  },
+  {
+    "name": "models/antigravity-preview-05-2026",
+    "displayName": "Antigravity Agent Preview",
+    "version": "0.1"
+  },
+  {
+    "name": "models/antigravity-preview-09-2026",
+    "displayName": "Antigravity Agent Preview",
+    "version": "0.1"
+  },
+  {
+    "name": "models/antigravity-preview-latest",
+    "displayName": "Antigravity Agent Preview Latest",
+    "version": "Antigravity Agent Preview Latest"
+  },
+  {
+    "name": "models/deep-research-max-preview-04-2026",
+    "displayName": "Deep Research Max Preview (Apr-21-2026)",
+    "version": "deepthink-exp-05-20"
+  },
+  {
+    "name": "models/deep-research-preview-04-2026",
+    "displayName": "Deep Research Preview (Apr-21-2026)",
+    "version": "deepthink-exp-05-20"
+  },
+  {
+    "name": "models/deep-research-pro-preview-12-2025",
+    "displayName": "Deep Research Pro Preview (Dec-12-2025) [Rerouted]",
+    "version": "deepthink-exp-05-20"
+  }
+]

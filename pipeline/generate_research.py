@@ -5,12 +5,15 @@ Grounded STRICTLY in primary sources fetched from NSE (`nsearchives.nseindia.com
 - Earnings conference call transcripts (`concall_transcript`)
 - Quarterly financial results & board outcome filings (`results_filing`)
 
-Strict Citation Gate (enforced in Python before saving):
-1. Every `guided` and `delivered` claim must return `doc_id`, integer `page`,
-   and a short `verbatim_quote` from that page.
-2. Python checks that `doc_id` is a real downloaded PDF and `(doc_id, page)` is
-   in `read_pages` (meaning that exact page was extracted and non-empty).
-3. Any claim without a valid `(doc_id, page)` in `read_pages` is REJECTED.
+Hardened 4-Rule Citation Gate (enforced in Python via `citation_gate.py`):
+1. `valid_doc_id`: `doc_id` must exist in the fetched NSE PDF manifest.
+2. `exact_page_read`: `(doc_id, page)` must exist in `read_pages` (ZERO ±1 page tolerance).
+3. `contiguous_quote_on_page`: `quote` must appear verbatim on `read_pages[(doc_id, page)]`.
+4. `exact_numbers_on_page`: Every quantitative number (%, $, ₹, bps, count) in BOTH
+   `claim_text` (`guidance` or `actual`) AND `quote` must appear with exact digits
+   on `read_pages[(doc_id, page)]`.
+
+For every verified claim, writes the cited page text and source URL to `evidence/{SYMBOL}/`.
 """
 
 from __future__ import annotations
@@ -26,10 +29,12 @@ from typing import Any
 import pdfplumber
 from curl_cffi import requests as creq
 
+from citation_gate import extract_quantitative_numbers, verify_single_claim
 from config import (
     DATA_DIR,
     DOCS_DIR,
     RESEARCH_DIR,
+    ROOT,
     estimate_cost_usd,
     save_json,
     ticker_symbol,
@@ -39,24 +44,28 @@ from fetch_announcements import create_nse_session
 
 
 RESEARCH_DOCS_DIR = DOCS_DIR / "research"
+EVIDENCE_DIR = ROOT / "evidence"
 RESEARCH_DOCS_DIR.mkdir(parents=True, exist_ok=True)
+EVIDENCE_DIR.mkdir(parents=True, exist_ok=True)
 
+# Confirmed in data/verified_models.json (v=3.6-flash-07-2026); retry gemini-3.6-flash
+# twice before falling back to gemini-3.5-flash / gemini-3-flash-preview.
 ANALYSIS_MODELS = [
     "gemini-3.6-flash",
+    "gemini-3.6-flash",
+    "gemini-3.5-flash",
     "gemini-3-flash-preview",
-    "gemini-3.5-flash-lite",
 ]
 
 
 def infer_quarter_from_date(an_dt_str: str, text: str = "") -> str:
     """
-    Infer Indian fiscal quarter label (e.g. 'Q2 FY27') from an NSE filing date
-    or filing description.
+    Infer Indian fiscal quarter label (e.g. 'Q2 FY27') from an NSE filing date.
     Indian FY runs April 1 to March 31:
-    - Filing in Apr/May (for period ended Mar 31, YYYY) -> Q4 FY{YY}
-    - Filing in Jul/Aug (for period ended Jun 30, YYYY) -> Q1 FY{YY+1}
-    - Filing in Oct/Nov (for period ended Sep 30, YYYY) -> Q2 FY{YY+1}
-    - Filing in Jan/Feb (for period ended Dec 31, YYYY-1) -> Q3 FY{YY}
+    - Filing in Apr/May/Jun (period ended Mar 31, YYYY) -> Q4 FY{YY}
+    - Filing in Jul/Aug/Sep (period ended Jun 30, YYYY) -> Q1 FY{YY+1}
+    - Filing in Oct/Nov/Dec (period ended Sep 30, YYYY) -> Q2 FY{YY+1}
+    - Filing in Jan/Feb/Mar (period ended Dec 31, YYYY-1) -> Q3 FY{YY}
     """
     dt = None
     for fmt in ("%d-%b-%Y %H:%M:%S", "%d-%b-%Y %H:%M", "%d-%b-%Y"):
@@ -76,7 +85,7 @@ def infer_quarter_from_date(an_dt_str: str, text: str = "") -> str:
         return f"Q1 FY{str(y + 1)[-2:]}"
     elif m in (10, 11, 12):
         return f"Q2 FY{str(y + 1)[-2:]}"
-    else:  # Jan, Feb, Mar
+    else:
         return f"Q3 FY{str(y)[-2:]}"
 
 
@@ -119,7 +128,7 @@ def discover_nse_primary_documents(
         an_dt = (r.get("an_dt") or "").strip()
         q_label = infer_quarter_from_date(an_dt, comb)
 
-        # 1. Earnings Call Transcripts (exclude AGM / AI Day / non-earnings transcripts)
+        # 1. Earnings Call Transcripts (exclude AGM / AI Day / postal ballot)
         if "transcript" in comb and not any(
             skip in comb for skip in ["annual general meeting", "agm", "ai day", "postal ballot"]
         ):
@@ -150,7 +159,6 @@ def discover_nse_primary_documents(
                 "record date for",
             ]
         ):
-            # Prefer full financial results / media release packet
             if q_label not in outcomes_by_q:
                 outcomes_by_q[q_label] = {
                     "type": "results_filing",
@@ -160,7 +168,6 @@ def discover_nse_primary_documents(
                     "description": att_text[:160],
                 }
 
-    # Combine up to 5 most recent transcripts + 5 most recent results outcomes
     docs: list[dict[str, Any]] = []
     for d in list(transcripts_by_q.values())[:5]:
         docs.append(d)
@@ -180,15 +187,12 @@ def download_and_extract_pages(
     via `pdfplumber`, and build:
     - `enriched_docs`: metadata list with `doc_id`, `pages`, `local_path`, `url`
     - `read_pages`: `{(doc_id, page_number): extracted_text}` for strict citation verification
-    - `prompt_corpus`: formatted text corpus tagged with `[DOC_ID | Page N]`
+    - `prompt_corpus`: formatted text corpus tagged with `[{doc_id} | PDF PAGE {p_num}]`
     """
     sym = ticker_symbol(ticker)
     ticker_dir = RESEARCH_DOCS_DIR / sym
     ticker_dir.mkdir(parents=True, exist_ok=True)
 
-    # Also load verified Slice 1 results extractions so if a scanned results PDF
-    # has broken OCR on its statement page (like RELIANCE_Q1FY27.pdf p. 9 or
-    # INFY_Q2FY27.pdf p. 18), that page's verified table summary is appended.
     slice1_by_url: dict[str, dict[str, Any]] = {}
     slice1_path = DATA_DIR / "slice1_extractions.json"
     if slice1_path.exists():
@@ -210,7 +214,6 @@ def download_and_extract_pages(
         local_path = ticker_dir / fname
 
         if not local_path.exists():
-            # Also check if already downloaded in data/documents/results/
             alt_results = DOCS_DIR / "results"
             found_alt = None
             for cand in alt_results.glob(f"{sym}_*.pdf"):
@@ -243,10 +246,6 @@ def download_and_extract_pages(
                     else f"{q_label} Results Filing ({f_date})"
                 )
 
-                # Select pages to read:
-                # - For concall transcripts (usually 12-22 pages), read up to 22 pages.
-                # - For results filings (can be 15-195 pages), read first 18 pages
-                #   PLUS any page matching Consolidated/Standalone financial results or press release.
                 pages_to_read: list[int] = []
                 if doc_type == "concall_transcript":
                     pages_to_read = list(range(1, min(total_pages, 24) + 1))
@@ -256,7 +255,6 @@ def download_and_extract_pages(
                         sp = int(slice1_by_url[pdf_url]["source_page"])
                         if sp not in pages_to_read and 1 <= sp <= total_pages:
                             pages_to_read.append(sp)
-                    # Also scan up to page 40 for press release / media release / consolidated results pages
                     for p_i in range(19, min(total_pages, 45) + 1):
                         if p_i not in pages_to_read:
                             pages_to_read.append(p_i)
@@ -264,7 +262,6 @@ def download_and_extract_pages(
                 page_texts_for_doc: list[str] = []
                 for p_num in sorted(pages_to_read):
                     raw_txt = (pdf.pages[p_num - 1].extract_text() or "").strip()
-                    # Append verified Slice 1 vision-extracted numbers if this is the exact statement page
                     if pdf_url in slice1_by_url and slice1_by_url[pdf_url].get("source_page") == p_num:
                         s1 = slice1_by_url[pdf_url]
                         v_block = (
@@ -280,11 +277,20 @@ def download_and_extract_pages(
                     if len(raw_txt) < 40:
                         continue
 
-                    # Cap per-page characters to keep prompt dense and focused
-                    trimmed = raw_txt[:3200]
                     read_pages[(doc_id, p_num)] = raw_txt
+                    trimmed = raw_txt[:3200]
+                    # Redact internal transcript footers like "Page 2 of 37" in the prompt
+                    # so the model never confuses the footer number with PDF PAGE p_num.
+                    prompt_safe_txt = re.sub(
+                        r"\bPage\s+\d+\s+of\s+\d+\b",
+                        f"[PDF_PAGE_{p_num}]",
+                        trimmed,
+                        flags=re.IGNORECASE,
+                    )
                     page_texts_for_doc.append(
-                        f"[{doc_id} | Page {p_num} | {doc_title}]\n{trimmed}"
+                        f"[{doc_id} | PDF PAGE {p_num} | {doc_title}]\n"
+                        f"{prompt_safe_txt}\n"
+                        f"[END OF {doc_id} | PDF PAGE {p_num}]"
                     )
 
                 if not page_texts_for_doc:
@@ -317,17 +323,19 @@ def download_and_extract_pages(
 
 NARRATIVE_VS_NUMBERS_PROMPT = """You are a senior institutional equity analyst at an Indian investment firm conducting a "Narrative vs. Numbers" (Promised vs. Delivered) audit for {company} ({ticker}).
 
-CRITICAL GROUNDING & CITATION RULES:
+STRICT VERIFICATION GATE RULES (violation of any rule causes automatic rejection of the claim):
 1. Use ONLY the primary source documents provided below (official NSE Earnings Call Transcripts and Financial Results Filings). Do NOT use model memory, broker notes, or news.
-2. Every single `guided` item (what management guided, targeted, or committed to on the call/release) and `delivered` item (what the company actually delivered in that or the subsequent quarter's filing/transcript) MUST cite:
+2. Every `guided` item and every `delivered` item MUST cite:
    - `"doc_id"`: Exact document ID from the header (e.g. `"DOC_1"`, `"DOC_2"`).
-   - `"page"`: Exact integer page number from `[DOC_X | Page N | ...]`.
-   - `"quote"`: A short verbatim phrase or figure from that exact page proving the claim.
-3. Any claim whose `(doc_id, page)` was not in the provided pages will be automatically rejected by our verification gate. Never guess a page number.
-4. For each quarter (up to the 4 most recent quarters covered by the documents), pair each `guided` item with a corresponding `delivered` item at the same array index so they compare side-by-side:
-   - If management gave explicit quantitative guidance (e.g. FY constant-currency revenue growth %, operating margin band %, store addition target, capex/order inflow target, NIM/credit-cost range), quote the exact guidance band and compare against the actual delivered figure.
-   - If management gave qualitative directional guidance on a key operating metric (e.g. margin expansion, store rollout, segment growth, debt reduction, asset quality), quote their stated commitment and compare against the actual delivered numbers from the results filing / subsequent transcript.
-5. Assign `"verdict"`: `"beat"`, `"hit"`, or `"miss"` for each quarter, and an overall `"credibility_score"`: `"high"`, `"medium"`, or `"low"`.
+   - `"page"`: Exact integer from `[DOC_X | PDF PAGE N | ...]` (ZERO ±1 page tolerance).
+   - `"quote"`: An EXACT contiguous verbatim substring copied character-for-character from that page (10 to 25 words). Do NOT use `...` ellipses or alter any word or punctuation in `"quote"`.
+3. **EXACT NUMBER MATCHING RULE (CRITICAL)**:
+   - Every single number (percentage, $, ₹, bps, count, duration) that you write in `"guidance"` or `"actual"` MUST appear with the **EXACT same digits** on that single cited page `(doc_id, page)`!
+   - If the cited page prints `"21%"`, write `"21%"`, NEVER `"21.0%"`.
+   - If the cited page prints `"1%"`, write `"1%"`, NEVER `"1.0%"`.
+   - If the cited page prints `"three-year"` or `"nine-month"` in words, write `"three-year"` or `"nine-month"` in words, NEVER `"3-year"` or `"9-month"`.
+   - NEVER include a number from another page or previous quarter inside `"guidance"` or `"actual"` — every number in `"guidance"` must appear on `(guided.doc_id, guided.page)` and every number in `"actual"` must appear on `(delivered.doc_id, delivered.page)`.
+4. Cover up to the 4 most recent quarters available in the documents, with 1 to 2 high-signal pairs of `guided` vs `delivered` metrics per quarter.
 
 Available Fetched Primary Documents:
 {doc_manifest}
@@ -339,30 +347,30 @@ Primary Source Pages Read:
 
 Return ONLY valid JSON matching this exact schema:
 {{
-  "summary": "2-3 sharp sentences judging management execution vs guidance across the last 4 quarters, citing specific numbers.",
+  "summary": "2-3 sharp sentences judging management execution vs guidance across the quarters, citing specific numbers.",
   "credibility_score": "high" | "medium" | "low",
-  "pattern": "1-2 sentences identifying management's recurring pattern (e.g., conservative initial guidance followed by upward revisions, or aggressive store targets with margin trade-offs).",
+  "pattern": "1-2 sentences identifying management's recurring execution pattern.",
   "quarters": [
     {{
-      "quarter": "Q2 FY27",
+      "quarter": "Q1 FY27",
       "verdict": "beat" | "hit" | "miss",
       "commentary": "1-2 concise sentences explaining the quarter's outcome against management's stated outlook.",
       "guided": [
         {{
-          "metric": "Name of metric (e.g. FY27 Revenue Growth Guidance / Operating Margin / Store Additions)",
-          "guidance": "What management guided or stated (with exact numbers/targets)",
-          "doc_id": "DOC_1",
+          "metric": "Name of metric",
+          "guidance": "What management guided (every number here MUST appear with exact digits on doc_id + page)",
+          "doc_id": "DOC_2",
           "page": 4,
-          "quote": "Short verbatim quote from that page"
+          "quote": "Exact contiguous verbatim substring from DOC_2 PDF PAGE 4"
         }}
       ],
       "delivered": [
         {{
           "metric": "Same metric name",
-          "actual": "Actual delivered number/outcome from the results filing or transcript",
-          "doc_id": "DOC_5",
-          "page": 18,
-          "quote": "Short verbatim figure/quote from that page"
+          "actual": "Actual delivered outcome (every number here MUST appear with exact digits on doc_id + page)",
+          "doc_id": "DOC_1",
+          "page": 5,
+          "quote": "Exact contiguous verbatim substring from DOC_1 PDF PAGE 5"
         }}
       ]
     }}
@@ -371,56 +379,38 @@ Return ONLY valid JSON matching this exact schema:
 """
 
 
-def _quote_verified_on_page(
-    quote: str,
-    doc_id: str,
-    page: int,
-    read_pages: dict[tuple[str, int], str],
-) -> tuple[bool, int]:
-    """
-    Verify that the substantive words/numbers of `quote` actually appear on
-    `(doc_id, page)` (or `page ± 1` if a sentence spans a page break).
-    Returns `(is_verified, matched_page)`.
-    """
-    if not quote or len(quote.strip()) < 5:
-        return False, page
-    tokens = [
-        t.lower()
-        for t in re.findall(r"[A-Za-z0-9%.]+", quote)
-        if len(t) >= 2
-    ]
-    if not tokens:
-        return False, page
-
-    for candidate_page in (page, page - 1, page + 1):
-        page_txt = read_pages.get((doc_id, candidate_page))
-        if not page_txt:
-            continue
-        low_page = page_txt.lower()
-        matched = sum(1 for t in tokens if t in low_page)
-        if matched / len(tokens) >= 0.65:
-            return True, candidate_page
-    return False, page
-
-
-def verify_and_format_citations(
+def verify_and_write_evidence(
+    ticker: str,
     raw_nvn: dict[str, Any],
     docs_by_id: dict[str, dict[str, Any]],
     read_pages: dict[tuple[str, int], str],
-) -> tuple[dict[str, Any], dict[str, int]]:
+) -> tuple[dict[str, Any], dict[str, Any]]:
     """
-    Enforce the strict citation gate:
-    - Reject any `guided` or `delivered` claim if `doc_id` is not in `docs_by_id`,
-      `(doc_id, int(page))` is not in `read_pages`, or the verbatim quote tokens
-      do not appear on that page.
-    - Format `source` deterministically as `<Doc Title>, p. <page> — "<quote>"`.
+    Run `verify_single_claim()` (zero ±1 page tolerance + exact number matching)
+    on every claim, reject any claim that fails, and write verified evidence
+    files (`evidence/{SYM}/claims.json` + `evidence/{SYM}/{doc_id}_p{page}.txt`).
     """
-    stats = {"verified_claims": 0, "rejected_claims": 0}
+    sym = ticker_symbol(ticker)
+    sym_ev_dir = EVIDENCE_DIR / sym
+    sym_ev_dir.mkdir(parents=True, exist_ok=True)
+    # Clear old evidence files for this symbol before writing fresh verified ones
+    for old_f in sym_ev_dir.glob("*"):
+        if old_f.is_file():
+            old_f.unlink()
+
+    stats: dict[str, Any] = {
+        "verified_claims": 0,
+        "rejected_claims": 0,
+        "rejections_detail": [],
+    }
+    evidence_records: list[dict[str, Any]] = []
     verified_quarters: list[dict[str, Any]] = []
+    claim_counter = 0
 
     for q in raw_nvn.get("quarters") or []:
         if not isinstance(q, dict):
             continue
+        q_name = str(q.get("quarter") or "Quarter")
         raw_guided = q.get("guided") or []
         raw_delivered = q.get("delivered") or []
 
@@ -435,58 +425,128 @@ def verify_and_format_citations(
                 stats["rejected_claims"] += 1
                 continue
 
+            g_txt = str(g.get("guidance") or "").strip()
+            g_quote = str(g.get("quote") or "").strip()
             g_doc = str(g.get("doc_id") or "").strip()
+            g_page_raw = g.get("page")
+
+            d_txt = str(d.get("actual") or "").strip()
+            d_quote = str(d.get("quote") or "").strip()
             d_doc = str(d.get("doc_id") or "").strip()
-            try:
-                g_page = int(g.get("page"))
-                d_page = int(d.get("page"))
-            except (TypeError, ValueError):
-                stats["rejected_claims"] += 2
-                continue
+            d_page_raw = d.get("page")
 
-            if (g_doc, g_page) not in read_pages or g_doc not in docs_by_id:
-                print(f"    ❌ REJECTED guided claim: ({g_doc}, p.{g_page}) not in read_pages")
+            g_ok, g_reasons = verify_single_claim(
+                g_txt, g_quote, g_doc, g_page_raw, docs_by_id, read_pages
+            )
+            d_ok, d_reasons = verify_single_claim(
+                d_txt, d_quote, d_doc, d_page_raw, docs_by_id, read_pages
+            )
+
+            if not g_ok:
                 stats["rejected_claims"] += 1
-                continue
-
-            if (d_doc, d_page) not in read_pages or d_doc not in docs_by_id:
-                print(f"    ❌ REJECTED delivered claim: ({d_doc}, p.{d_page}) not in read_pages")
-                stats["rejected_claims"] += 1
-                continue
-
-            g_quote = (g.get("quote") or "").strip().replace('"', "'")
-            d_quote = (d.get("quote") or "").strip().replace('"', "'")
-
-            g_ok, g_page = _quote_verified_on_page(g_quote, g_doc, g_page, read_pages)
-            d_ok, d_page = _quote_verified_on_page(d_quote, d_doc, d_page, read_pages)
-            if not g_ok or not d_ok:
-                print(
-                    f"    ❌ REJECTED claim pair: quote text mismatch on ({g_doc}, p.{g_page}) or ({d_doc}, p.{d_page})"
+                stats["rejections_detail"].append(
+                    {
+                        "quarter": q_name,
+                        "type": "guided",
+                        "doc_id": g_doc,
+                        "page": g_page_raw,
+                        "claim": g_txt,
+                        "quote": g_quote,
+                        "reasons": g_reasons,
+                    }
                 )
-                stats["rejected_claims"] += 2
+                print(f"    ❌ REJECTED [{q_name} guided] ({g_doc} p.{g_page_raw}): {g_reasons}")
+            if not d_ok:
+                stats["rejected_claims"] += 1
+                stats["rejections_detail"].append(
+                    {
+                        "quarter": q_name,
+                        "type": "delivered",
+                        "doc_id": d_doc,
+                        "page": d_page_raw,
+                        "claim": d_txt,
+                        "quote": d_quote,
+                        "reasons": d_reasons,
+                    }
+                )
+                print(f"    ❌ REJECTED [{q_name} delivered] ({d_doc} p.{d_page_raw}): {d_reasons}")
+
+            if not (g_ok and d_ok):
                 continue
 
+            g_page = int(g_page_raw)
+            d_page = int(d_page_raw)
             g_meta = docs_by_id[g_doc]
             d_meta = docs_by_id[d_doc]
 
-            g_source = f"{g_meta['title']}, p. {g_page}" + (f' — "{g_quote[:90]}"' if g_quote else "")
-            d_source = f"{d_meta['title']}, p. {d_page}" + (f' — "{d_quote[:90]}"' if d_quote else "")
+            # Write cited page texts to evidence/{SYM}/{doc_id}_p{page}.txt
+            for doc_key, pg_num, meta in [(g_doc, g_page, g_meta), (d_doc, d_page, d_meta)]:
+                ev_txt_path = sym_ev_dir / f"{doc_key}_p{pg_num}.txt"
+                if not ev_txt_path.exists():
+                    header = (
+                        f"TICKER: {ticker}\n"
+                        f"DOCUMENT_ID: {doc_key}\n"
+                        f"DOCUMENT_TITLE: {meta['title']}\n"
+                        f"PDF_PAGE: {pg_num} (of {meta['pages']})\n"
+                        f"SOURCE_URL: {meta['url']}#page={pg_num}\n"
+                        f"{'=' * 72}\n\n"
+                    )
+                    ev_txt_path.write_text(header + read_pages[(doc_key, pg_num)])
+
+            g_url = f"{g_meta['url']}#page={g_page}"
+            d_url = f"{d_meta['url']}#page={d_page}"
+            g_ev_rel = f"evidence/{sym}/{g_doc}_p{g_page}.txt"
+            d_ev_rel = f"evidence/{sym}/{d_doc}_p{d_page}.txt"
+
+            g_source = f"{g_meta['title']}, PDF p. {g_page} — \"{g_quote[:110]}\""
+            d_source = f"{d_meta['title']}, PDF p. {d_page} — \"{d_quote[:110]}\""
 
             clean_guided.append(
                 {
                     "metric": g.get("metric", "Metric"),
-                    "guidance": g.get("guidance", ""),
+                    "guidance": g_txt,
                     "source": g_source,
+                    "source_url": g_url,
+                    "doc_id": g_doc,
+                    "page": g_page,
+                    "evidence_file": g_ev_rel,
                 }
             )
             clean_delivered.append(
                 {
                     "metric": d.get("metric", g.get("metric", "Metric")),
-                    "actual": d.get("actual", ""),
+                    "actual": d_txt,
                     "source": d_source,
+                    "source_url": d_url,
+                    "doc_id": d_doc,
+                    "page": d_page,
+                    "evidence_file": d_ev_rel,
                 }
             )
             stats["verified_claims"] += 2
+
+            for kind_label, c_txt, c_quote, doc_k, pg_n, meta_obj, s_url, ev_rel in [
+                ("guided", g_txt, g_quote, g_doc, g_page, g_meta, g_url, g_ev_rel),
+                ("delivered", d_txt, d_quote, d_doc, d_page, d_meta, d_url, d_ev_rel),
+            ]:
+                claim_counter += 1
+                evidence_records.append(
+                    {
+                        "claim_id": f"{sym}-{claim_counter:02d}",
+                        "ticker": ticker,
+                        "quarter": q_name,
+                        "type": kind_label,
+                        "metric": g.get("metric", "Metric"),
+                        "claim_text": c_txt,
+                        "verbatim_quote": c_quote,
+                        "numbers_verified_on_page": extract_quantitative_numbers(c_txt),
+                        "doc_id": doc_k,
+                        "doc_title": meta_obj["title"],
+                        "pdf_page": pg_n,
+                        "source_url": s_url,
+                        "evidence_page_file": ev_rel,
+                    }
+                )
 
         if clean_guided and clean_delivered:
             verdict = str(q.get("verdict") or "hit").lower()
@@ -494,13 +554,15 @@ def verify_and_format_citations(
                 verdict = "hit"
             verified_quarters.append(
                 {
-                    "quarter": q.get("quarter", "Quarter"),
+                    "quarter": q_name,
                     "guided": clean_guided,
                     "delivered": clean_delivered,
                     "verdict": verdict,
                     "commentary": q.get("commentary", ""),
                 }
             )
+
+    save_json(sym_ev_dir / "claims.json", evidence_records)
 
     cred = str(raw_nvn.get("credibility_score") or "medium").lower()
     if cred not in ("high", "medium", "low"):
@@ -551,14 +613,16 @@ def generate_research_for_ticker(
     raw_out, model_used, tokens_in, tokens_out = call_gemini_multimodal(
         prompt=prompt,
         image_png_bytes=None,
-        task="narrative_vs_numbers_v1",
+        task="narrative_vs_numbers_v2",
         ticker=ticker,
         models=ANALYSIS_MODELS,
     )
 
-    verified_nvn, stats = verify_and_format_citations(raw_out, docs_by_id, read_pages)
+    verified_nvn, stats = verify_and_write_evidence(
+        ticker, raw_out, docs_by_id, read_pages
+    )
     print(
-        f"  🛡️ Citation gate: {stats['verified_claims']} claims verified, "
+        f"  🛡️ Tightened Citation Gate: {stats['verified_claims']} claims verified, "
         f"{stats['rejected_claims']} rejected ({len(verified_nvn['quarters'])} quarters retained)"
     )
 
@@ -583,6 +647,7 @@ def generate_research_for_ticker(
             "pages_actually_read": len(read_pages),
             "verified_claims": stats["verified_claims"],
             "rejected_claims": stats["rejected_claims"],
+            "rejections_detail": stats["rejections_detail"],
         },
         "model_used": model_used,
         "tokens": {"in": tokens_in, "out": tokens_out},

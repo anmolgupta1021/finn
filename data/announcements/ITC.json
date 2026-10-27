@@ -4,12 +4,12 @@
     "ticker": "ITC.NS",
     "company_name": "ITC Limited",
     "timestamp": "2026-07-31T16:31:22+05:30",
-    "headline": "Outcome of Board Meeting — Unaudited Standalone and Consolidated Financial Results for Q1 FY27 (quarter ended Jun 30, 2026)",
+    "headline": "Outcome of Board Meeting \u2014 Unaudited Standalone and Consolidated Financial Results for Q1 FY27 (quarter ended Jun 30, 2026)",
     "category": "results",
     "priority": 1,
-    "summary": "Q1 FY27 (consolidated): Revenue ₹29,523 Cr (+27.6% YoY, +23.9% QoQ); Operating EBITDA ₹5,181 Cr (-24.0% YoY, margin 17.5%); PAT ₹4,509 Cr (-15.6% YoY, -17.6% QoQ).",
+    "summary": "Q1 FY27 (consolidated): Revenue \u20b929,523 Cr (+27.6% YoY, +23.9% QoQ); Operating EBITDA \u20b95,181 Cr (-24.0% YoY, margin 17.5%); PAT \u20b94,509 Cr (-15.6% YoY, -17.6% QoQ).",
     "source_url": "https://nsearchives.nseindia.com/corporate/ITC_31072026162945_Results.pdf",
-    "raw_text": "Outcome of Board Meeting — Unaudited Standalone and Consolidated Financial Results for Q1 FY27 (quarter ended Jun 30, 2026)",
+    "raw_text": "Outcome of Board Meeting \u2014 Unaudited Standalone and Consolidated Financial Results for Q1 FY27 (quarter ended Jun 30, 2026)",
     "enrichment": {
       "status": "ok",
       "quarter": "Q1 FY27",
@@ -66,7 +66,14 @@
         "passed": true,
         "flags": []
       },
-      "highlights": "Basis: Consolidated · Normalised from ₹ crore (Page 6) · EBITDA derived from schedule iii"
+      "highlights": "Basis: Consolidated \u00b7 Normalised from \u20b9 crore (Page 6) \u00b7 EBITDA derived from schedule iii",
+      "derivation": {
+        "basis_note": "Statement of Consolidated Unaudited Financial Results (PDF p. 6, reported in \u20b9 crore; Note: PDF Column 2 is YoY 30.06.2025 and Column 3 is QoQ 31.03.2026).",
+        "revenue_definition": "Revenue from Operations (Gross Revenue \u20b929,523.30 Cr including Excise Duty; Net Revenue from Operations). Normalised in \u20b9 crore.",
+        "ebitda_formula": "Operating Profit (Revenue \u20b929,523.30 Cr \u2212 Total Expenses \u20b924,809.95 Cr = \u20b94,713.35 Cr) + Finance Costs (\u20b939.78 Cr) + Depreciation & Amortisation (\u20b9427.73 Cr) = \u20b95,180.86 Cr (17.55% margin).",
+        "pbt_basis": "Profit Before Exceptional Items and Tax = \u20b95,860.85 Cr.",
+        "pat_basis": "Total Consolidated Profit for the period from Continuing Operations = \u20b94,508.79 Cr (Profit attributable to owners of the parent = \u20b94,394.13 Cr; Non-controlling interest = \u20b9114.66 Cr)."
+      }
     },
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {

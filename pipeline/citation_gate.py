@@ -1,18 +1,21 @@
 """
-FINN Pipeline — Hardened Citation Gate & Negative Test Suite.
+FINN Pipeline — Hardened Citation Gate (v3) & 12-Case Negative Test Suite.
 
 Enforces strict primary-source verification on every "Narrative vs. Numbers"
 claim (`guided` and `delivered`):
 1. `valid_doc_id`: `doc_id` must exist in the fetched NSE PDF manifest.
 2. `exact_page_read`: `(doc_id, page)` must exist in `read_pages` (NO ±1 page
    tolerance — the exact integer page number cited must have been extracted).
-3. `contiguous_quote_on_page`: The cited `quote` (after normalising whitespace
-   and ellipses `...`) must appear verbatim on `read_pages[(doc_id, page)]`.
-4. `exact_numbers_on_page`: Every quantitative number (percentage, $, ₹, bps,
-   count, multiple) in BOTH `claim_text` (`guidance` or `actual`) AND `quote`
-   must appear as an exact number token on `read_pages[(doc_id, page)]`
-   (including exact decimal digits: e.g. `21.0` is rejected if the page only
-   prints `21`, and `3.2%` is rejected if the page prints `3.1%`).
+3. `contiguous_quote_on_page`: The cited `quote` (after normalising whitespace)
+   must appear verbatim on `read_pages[(doc_id, page)]`.
+4. `exact_numbers_on_page`: Every quantitative number in BOTH `claim_text`
+   AND `quote` must appear on `read_pages[(doc_id, page)]` with exact digits.
+5. `claim_numbers_in_quote` (Rule 2a): Every quantitative number in `claim_text`
+   must appear inside the cited `quote` itself, not merely elsewhere on the same page.
+6. `chronology_rule` (Rule 2b): For any `guided` claim, the cited document's
+   fiscal period `(fy, quarter)` must be STRICTLY EARLIER (`<`) than the
+   `delivered` document's fiscal period (rejects hindsight / same-quarter or
+   later-quarter citations as "prior guidance").
 """
 
 from __future__ import annotations
@@ -32,6 +35,24 @@ LABEL_TOKEN_RE = re.compile(
 
 # Number pattern capturing integers and decimals (with optional thousand commas)
 NUMBER_TOKEN_RE = re.compile(r"(?<![A-Za-z])(\d+(?:,\d+)*(?:\.\d+)?)(?![A-Za-z])")
+
+QUARTER_PARSE_RE = re.compile(r"Q([1-4])\s*FY\s*'?(\d{2,4})", re.IGNORECASE)
+
+
+def parse_quarter_rank(text: str | None) -> tuple[int, int] | None:
+    """
+    Parse a fiscal period string like 'Q1 FY27' or 'Q3 FY2026' into `(fy_2digit, q_int)`,
+    e.g. `(27, 1)` or `(26, 3)`, so periods can be compared chronologically with `<`.
+    """
+    if not text:
+        return None
+    m = QUARTER_PARSE_RE.search(text)
+    if not m:
+        return None
+    q_int = int(m.group(1))
+    fy_raw = int(m.group(2))
+    fy_2d = fy_raw % 100
+    return (fy_2d, q_int)
 
 
 def extract_quantitative_numbers(text: str) -> list[str]:
@@ -60,10 +81,17 @@ def verify_single_claim(
     page: Any,
     docs_by_id: dict[str, dict[str, Any]],
     read_pages: dict[tuple[str, int], str],
+    claim_kind: str | None = None,
+    evaluated_quarter: str | None = None,
+    delivered_doc_quarters: list[str] | None = None,
 ) -> tuple[bool, list[str]]:
     """
-    Verify a single claim against `docs_by_id` and `read_pages` with ZERO page
-    tolerance. Returns `(passed, rejection_reasons)`.
+    Verify a single claim against `docs_by_id` and `read_pages` with:
+    - ZERO ±1 page tolerance
+    - Exact verbatim quote on page
+    - Every number in `claim_text` present inside `quote` itself (Rule 2a)
+    - Strict chronology `guided_period < delivered_period` for `guided` claims (Rule 2b)
+    Returns `(passed, rejection_reasons)`.
     """
     reasons: list[str] = []
 
@@ -72,6 +100,8 @@ def verify_single_claim(
     if not doc_id_clean or doc_id_clean not in docs_by_id:
         reasons.append(f"invalid_doc_id ({doc_id_clean!r} not in fetched manifest)")
         return False, reasons
+
+    doc_meta = docs_by_id[doc_id_clean]
 
     # 2. Check exact page was read (NO ±1 page tolerance)
     try:
@@ -96,8 +126,6 @@ def verify_single_claim(
         reasons.append("quote_too_short_or_missing")
         return False, reasons
 
-    # Split on '...' if the LLM elided middle words, and require every segment to
-    # appear as a contiguous normalised substring on `page_text`.
     segments = [
         _normalise_for_substring(seg)
         for seg in re.split(r"\.{2,}|…", quote_clean)
@@ -116,19 +144,51 @@ def verify_single_claim(
 
     # 4. Every quantitative number in `quote` must appear on the page
     quote_nums = extract_quantitative_numbers(quote_clean)
+    quote_nums_set = set(quote_nums)
     missing_quote_nums = [n for n in quote_nums if n not in page_numbers]
     if missing_quote_nums:
         reasons.append(
             f"quote_numbers_missing_on_page ({missing_quote_nums} not on {doc_id_clean} p.{page_int})"
         )
 
-    # 5. Every quantitative number in `claim_text` (guidance/actual) must appear on the page
+    # 5. Every quantitative number in `claim_text` must appear on the page AND inside `quote` itself (Rule 2a)
     claim_nums = extract_quantitative_numbers(claim_text or "")
-    missing_claim_nums = [n for n in claim_nums if n not in page_numbers]
-    if missing_claim_nums:
+    missing_claim_nums_page = [n for n in claim_nums if n not in page_numbers]
+    if missing_claim_nums_page:
         reasons.append(
-            f"claim_numbers_missing_on_page ({missing_claim_nums} in claim {claim_text!r} not on {doc_id_clean} p.{page_int})"
+            f"claim_numbers_missing_on_page ({missing_claim_nums_page} in claim {claim_text!r} not on {doc_id_clean} p.{page_int})"
         )
+
+    missing_claim_nums_quote = [n for n in claim_nums if n not in quote_nums_set]
+    if missing_claim_nums_quote:
+        reasons.append(
+            f"claim_numbers_missing_in_quote ({missing_claim_nums_quote} in claim {claim_text!r} not inside cited quote)"
+        )
+
+    # 6. Chronology Rule (Rule 2b): For `guided` claims, the guided doc's period must be
+    # STRICTLY EARLIER than the delivered doc's period / evaluated quarter.
+    if claim_kind == "guided":
+        guided_q_str = doc_meta.get("quarter") or doc_meta.get("title") or ""
+        g_rank = parse_quarter_rank(guided_q_str)
+
+        target_ranks: list[tuple[int, int]] = []
+        if evaluated_quarter:
+            er = parse_quarter_rank(evaluated_quarter)
+            if er:
+                target_ranks.append(er)
+        if delivered_doc_quarters:
+            for dq in delivered_doc_quarters:
+                dr = parse_quarter_rank(dq)
+                if dr:
+                    target_ranks.append(dr)
+
+        if g_rank is not None and target_ranks:
+            min_target = min(target_ranks)
+            if not (g_rank < min_target):
+                reasons.append(
+                    f"chronology_violation (guided doc {doc_id_clean} [{guided_q_str}] period Q{g_rank[1]} FY{g_rank[0]} "
+                    f"is not strictly earlier than delivered period Q{min_target[1]} FY{min_target[0]})"
+                )
 
     return len(reasons) == 0, reasons
 
@@ -138,18 +198,9 @@ def run_negative_test_suite(
     read_pages: dict[tuple[str, int], str],
 ) -> list[dict[str, Any]]:
     """
-    Run 10 deliberately corrupted claims against real INFY.NS read_pages.
-    All 10 MUST be rejected.
+    Run 12 deliberately corrupted claims against real INFY.NS read_pages.
+    All 12 MUST be rejected.
     """
-    # Known real reference on INFY.NS:
-    # DOC_4 = Q2 FY26 Concall Transcript (21-Oct-2025)
-    #   PDF Page 3 (which has footer "Page 2 of 37") contains:
-    #   - "revenues for the quarter grew 2.2% sequentially and 2.9% year-on-year in constant currency"
-    #   - "The new guidance is growth between 2% and 3% in constant currency terms for the full year."
-    #   - "Our operating margin was 21%."
-    # DOC_3 = Q3 FY26 Concall Transcript (19-Jan-2026)
-    #   PDF Page 4 contains:
-    #   - "The new revenue growth guidance for this financial year is 3% to 3.5% growth in constant currency"
     test_cases = [
         {
             "id": 1,
@@ -158,6 +209,8 @@ def run_negative_test_suite(
             "quote": "revenues for the quarter grew 2.2% sequentially and 2.9% year-on-year in constant currency",
             "doc_id": "DOC_4",
             "page": 15,
+            "claim_kind": "delivered",
+            "evaluated_quarter": "Q2 FY26",
         },
         {
             "id": 2,
@@ -166,6 +219,8 @@ def run_negative_test_suite(
             "quote": "revenues for the quarter grew 2.2% sequentially and 2.9% year-on-year in constant currency",
             "doc_id": "DOC_4",
             "page": 2,
+            "claim_kind": "delivered",
+            "evaluated_quarter": "Q2 FY26",
         },
         {
             "id": 3,
@@ -174,6 +229,8 @@ def run_negative_test_suite(
             "quote": "revenues for the quarter grew 2.2% sequentially and 2.9% year-on-year in constant currency",
             "doc_id": "DOC_99",
             "page": 3,
+            "claim_kind": "delivered",
+            "evaluated_quarter": "Q2 FY26",
         },
         {
             "id": 4,
@@ -182,6 +239,8 @@ def run_negative_test_suite(
             "quote": "revenues for the quarter grew 2.2% sequentially and 2.9% year-on-year in constant currency",
             "doc_id": "DOC_6",
             "page": 190,
+            "claim_kind": "delivered",
+            "evaluated_quarter": "Q2 FY26",
         },
         {
             "id": 5,
@@ -190,6 +249,8 @@ def run_negative_test_suite(
             "quote": "revenues for the quarter grew 2.4% sequentially and 2.9% year-on-year in constant currency",
             "doc_id": "DOC_4",
             "page": 3,
+            "claim_kind": "delivered",
+            "evaluated_quarter": "Q2 FY26",
         },
         {
             "id": 6,
@@ -198,6 +259,8 @@ def run_negative_test_suite(
             "quote": "revenues for the quarter grew 2.2% sequentially and 2.9% year-on-year in constant currency",
             "doc_id": "DOC_4",
             "page": 3,
+            "claim_kind": "delivered",
+            "evaluated_quarter": "Q2 FY26",
         },
         {
             "id": 7,
@@ -206,6 +269,8 @@ def run_negative_test_suite(
             "quote": "Our operating margin was 21%.",
             "doc_id": "DOC_4",
             "page": 3,
+            "claim_kind": "delivered",
+            "evaluated_quarter": "Q2 FY26",
         },
         {
             "id": 8,
@@ -214,6 +279,8 @@ def run_negative_test_suite(
             "quote": "The new revenue growth guidance for this financial year is 3% to 3.5% growth in constant currency",
             "doc_id": "DOC_4",
             "page": 3,
+            "claim_kind": "delivered",
+            "evaluated_quarter": "Q2 FY26",
         },
         {
             "id": 9,
@@ -222,6 +289,8 @@ def run_negative_test_suite(
             "quote": "Our operating margin was 21%.",
             "doc_id": "DOC_4",
             "page": 3,
+            "claim_kind": "delivered",
+            "evaluated_quarter": "Q2 FY26",
         },
         {
             "id": 10,
@@ -230,6 +299,29 @@ def run_negative_test_suite(
             "quote": "The new guidance is growth between 2% and 3% in constant currency terms for the full year.",
             "doc_id": "DOC_4",
             "page": 3,
+            "claim_kind": "delivered",
+            "evaluated_quarter": "Q2 FY26",
+        },
+        {
+            "id": 11,
+            "corruption_type": "Number from elsewhere on the SAME page (DOC_4 p. 3 has '21%' in para 4, but cited quote only covers revenue growth '2.2%' and '2.9%')",
+            "claim_text": "Q2 FY26 revenue grew 2.2% QoQ and 2.9% YoY with 21% operating margin.",
+            "quote": "revenues for the quarter grew 2.2% sequentially and 2.9% year-on-year in constant currency",
+            "doc_id": "DOC_4",
+            "page": 3,
+            "claim_kind": "delivered",
+            "evaluated_quarter": "Q2 FY26",
+        },
+        {
+            "id": 12,
+            "corruption_type": "Guidance cited from a LATER transcript (Q3 FY26 DOC_3 p. 4 cited as guidance for Q2 FY26 delivery — hindsight chronology violation)",
+            "claim_text": "Guided FY26 revenue growth of 3% to 3.5% in constant currency.",
+            "quote": "The new revenue growth guidance for this financial year is 3% to 3.5% growth in constant currency",
+            "doc_id": "DOC_3",
+            "page": 4,
+            "claim_kind": "guided",
+            "evaluated_quarter": "Q2 FY26",
+            "delivered_doc_quarters": ["Q2 FY26"],
         },
     ]
 
@@ -242,6 +334,9 @@ def run_negative_test_suite(
             page=tc["page"],
             docs_by_id=docs_by_id,
             read_pages=read_pages,
+            claim_kind=tc.get("claim_kind"),
+            evaluated_quarter=tc.get("evaluated_quarter"),
+            delivered_doc_quarters=tc.get("delivered_doc_quarters"),
         )
         results.append(
             {
@@ -259,10 +354,9 @@ def run_negative_test_suite(
 
 
 if __name__ == "__main__":
-    from config import DATA_DIR, RESEARCH_DIR, content_hash, get_cached, save_json
+    from config import DATA_DIR, RESEARCH_DIR, save_json
     from fetch_announcements import create_nse_session
     from generate_research import (
-        NARRATIVE_VS_NUMBERS_PROMPT,
         discover_nse_primary_documents,
         download_and_extract_pages,
     )
@@ -274,7 +368,7 @@ if __name__ == "__main__":
 
     neg_results = run_negative_test_suite(infy_by_id, infy_pages)
     save_json(DATA_DIR / "negative_test_results.json", neg_results)
-    print("=== ITEM 1: 10-CLAIM NEGATIVE TEST SUITE ===")
+    print("=== ITEM 2: 12-CLAIM NEGATIVE TEST SUITE ===")
     caught = sum(1 for r in neg_results if r["rejected"])
     for r in neg_results:
         cid = r["id"]
@@ -283,41 +377,42 @@ if __name__ == "__main__":
         print(f"Test #{cid:2d} | Rejected={rej} | {ctype}")
         for reason in r["rejection_reasons"]:
             print(f"         -> {reason}")
-    print(f"Total negative tests caught: {caught}/10\n")
+    print(f"Total negative tests caught: {caught}/12\n")
 
-    print("=== ITEM 2: AUDIT OF PREVIOUS 60 CLAIMS UNDER TIGHTENED GATE ===")
+    print("=== AUDIT OF PREVIOUS v2 CLAIMS UNDER NEW RULES (2a: number-in-quote, 2b: chronology) ===")
     total_pass = 0
     total_rej = 0
-    for sym in ["INFY.NS", "RELIANCE.NS", "TCS.NS", "ICICIBANK.NS", "ETERNAL.NS"]:
+    for sym in ["INFY.NS", "RELIANCE.NS", "TCS.NS", "ICICIBANK.NS", "ETERNAL.NS", "PIDILITIND.NS"]:
         _, docs = discover_nse_primary_documents(sess, sym, days_back=460)
-        enriched, read_pages, corpus = download_and_extract_pages(sess, sym, docs)
+        enriched, read_pages, _ = download_and_extract_pages(sess, sym, docs)
         docs_by_id = {d["doc_id"]: d for d in enriched}
-        manifest_lines = [
-            f"- {d['doc_id']}: {d['title']} | type={d['type']} | total_pages={d['pages']} | pages_read={d['pages_read']} | url={d['url']}"
-            for d in enriched
-        ]
         comp_file = RESEARCH_DIR / f"{sym.split('.')[0]}.json"
-        comp = json.loads(comp_file.read_text())["company_name"]
-        prompt = NARRATIVE_VS_NUMBERS_PROMPT.format(
-            company=comp,
-            ticker=sym,
-            doc_manifest="\n".join(manifest_lines),
-            corpus=corpus[:180000],
-        )
-        raw_out = get_cached(content_hash(prompt), "narrative_vs_numbers_v1") or {}
+        res_data = json.loads(comp_file.read_text())
         p_cnt = 0
         r_cnt = 0
-        for q in raw_out.get("quarters", []):
+        for q in res_data.get("narrative_vs_numbers", {}).get("quarters", []):
             q_name = q.get("quarter")
+            deliv_qs = [
+                docs_by_id[d_it["doc_id"]]["quarter"]
+                for d_it in q.get("delivered", [])
+                if d_it.get("doc_id") in docs_by_id
+            ]
             for kind, key_txt in [("guided", "guidance"), ("delivered", "actual")]:
                 for item in q.get(kind, []):
+                    # Extract quote from `source` field ("... — \"quote\"")
+                    src_str = item.get("source", "")
+                    q_match = re.search(r'—\s*"(.*)"\s*$', src_str, re.DOTALL)
+                    quote_str = q_match.group(1) if q_match else ""
                     ok, reasons = verify_single_claim(
                         claim_text=item.get(key_txt, ""),
-                        quote=item.get("quote", ""),
+                        quote=quote_str,
                         doc_id=item.get("doc_id", ""),
                         page=item.get("page"),
                         docs_by_id=docs_by_id,
                         read_pages=read_pages,
+                        claim_kind=kind,
+                        evaluated_quarter=q_name,
+                        delivered_doc_quarters=deliv_qs,
                     )
                     if ok:
                         p_cnt += 1
@@ -331,5 +426,4 @@ if __name__ == "__main__":
         total_pass += p_cnt
         total_rej += r_cnt
         print(f"  ==> {sym}: {p_cnt} passed, {r_cnt} rejected (out of {p_cnt + r_cnt})\n")
-    print(f"OVERALL ACROSS 5 COMPANIES: {total_pass} passed, {total_rej} rejected (out of {total_pass + total_rej})")
-
+    print(f"OVERALL ACROSS 6 COMPANIES (v2 audit): {total_pass} passed, {total_rej} rejected (out of {total_pass + total_rej})")

@@ -18,8 +18,8 @@
     },
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 1584,
-      "out": 206
+      "in": 1616,
+      "out": 201
     }
   },
   {
@@ -30,14 +30,14 @@
     "headline": "ESOP/ESOS/ESPS — HDFC Bank Limited has informed the Exchange regarding Grant of 1302379  Options.",
     "category": "unclassified",
     "priority": 3,
-    "summary": "Grant of 1,302,379 options under ESOP/ESOS.",
+    "summary": "HDFC Bank Limited has informed the Exchange regarding Grant of 1302379  Options.",
     "source_url": "https://nsearchives.nseindia.com/corporate/HDFCBANK_24102026222634_SE_Intimation_grant_of_ESOPs.pdf",
     "raw_text": "HDFC Bank Limited has informed the Exchange regarding Grant of 1302379  Options.",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 191,
-      "out": 56
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -48,14 +48,14 @@
     "headline": "Analysts/Institutional Investor Meet/Con. Call Updates — HDFC Bank Limited has informed the Exchange about Transcript",
     "category": "earnings_call",
     "priority": 2,
-    "summary": "Submission of transcript for analysts/institutional investor meet/conference call.",
+    "summary": "HDFC Bank Limited has informed the Exchange about Transcript",
     "source_url": "https://nsearchives.nseindia.com/corporate/HDFCBANK_23102026224657_SEintimationTranscriptofearningscall17oct2026.pdf",
     "raw_text": "HDFC Bank Limited has informed the Exchange about Transcript",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 191,
-      "out": 56
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -66,14 +66,32 @@
     "headline": "ESOP/ESOS/ESPS — HDFC Bank Limited has informed the Exchange regarding Allotment of 9138522  Shares.",
     "category": "unclassified",
     "priority": 3,
-    "summary": "Allotment of 9,138,522 shares pursuant to ESOP/ESOS.",
+    "summary": "HDFC Bank Limited has informed the Exchange regarding Allotment of 9138522  Shares.",
     "source_url": "https://nsearchives.nseindia.com/corporate/HDFCBANK_22102026135701_SELetterESOP22102026.pdf",
     "raw_text": "HDFC Bank Limited has informed the Exchange regarding Allotment of 9138522  Shares.",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 191,
-      "out": 56
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-hdfcbank-d142b66bd0",
+    "ticker": "HDFCBANK.NS",
+    "company_name": "HDFC Bank Limited",
+    "timestamp": "2026-10-22T11:55:18+05:30",
+    "headline": "Copy of Newspaper Publication — HDFC Bank Limited has informed the Exchange about Copy of Newspaper Publication",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "HDFC Bank Limited has informed the Exchange about Copy of Newspaper Publication",
+    "source_url": "https://nsearchives.nseindia.com/corporate/HDFCBANK3_22102026115451_PB_adv_22102026.pdf",
+    "raw_text": "HDFC Bank Limited has informed the Exchange about Copy of Newspaper Publication",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -82,35 +100,267 @@
     "company_name": "HDFC Bank Limited",
     "timestamp": "2026-10-21T11:52:36+05:30",
     "headline": "Shareholders meeting — HDFC Bank Limited has informed the Exchange regarding Notice of Postal Ballot",
-    "category": "postal_ballot",
-    "priority": 2,
-    "summary": "Notice of Postal Ballot sent to shareholders.",
+    "category": "agm_egm",
+    "priority": 3,
+    "summary": "HDFC Bank Limited has informed the Exchange regarding Notice of Postal Ballot",
     "source_url": "https://nsearchives.nseindia.com/corporate/HDFCBANK3_21102026115151_SEIntimationPostalBallotNoticeOct2026.pdf",
     "raw_text": "HDFC Bank Limited has informed the Exchange regarding Notice of Postal Ballot",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 191,
-      "out": 56
+      "in": 0,
+      "out": 0
     }
   },
   {
-    "id": "hdfcbank-results-hdfcbank_q2fy27",
+    "id": "nse-hdfcbank-6812a6bf97",
+    "ticker": "HDFCBANK.NS",
+    "company_name": "HDFC Bank Limited",
+    "timestamp": "2026-10-17T22:09:24+05:30",
+    "headline": "Analysts/Institutional Investor Meet/Con. Call Updates — HDFC Bank Limited has informed the Exchange about Link of Recording",
+    "category": "earnings_call",
+    "priority": 2,
+    "summary": "HDFC Bank Limited has informed the Exchange about Link of Recording",
+    "source_url": "https://nsearchives.nseindia.com/corporate/HDFCBANK_17102026220738_SEintimation-RECORDING-17oct2026.pdf",
+    "raw_text": "HDFC Bank Limited has informed the Exchange about Link of Recording",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-hdfcbank-6c510a0e54",
+    "ticker": "HDFCBANK.NS",
+    "company_name": "HDFC Bank Limited",
+    "timestamp": "2026-10-17T16:14:18+05:30",
+    "headline": "General Updates — HDFC Bank Limited has informed the Exchange regarding disclosure under Regulation 30 and other applicable regulations of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Routine regulatory disclosure under SEBI LODR Regulations.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/HDFCBANK_17102026161248_Stockexchangeintimation_LV_KB.pdf",
+    "raw_text": "HDFC Bank Limited has informed the Exchange regarding disclosure under Regulation 30 and other applicable regulations of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 223,
+      "out": 51
+    }
+  },
+  {
+    "id": "nse-hdfcbank-09c089a9fe",
+    "ticker": "HDFCBANK.NS",
+    "company_name": "HDFC Bank Limited",
+    "timestamp": "2026-10-17T15:15:29+05:30",
+    "headline": "Analysts/Institutional Investor Meet/Con. Call Updates — HDFC Bank Limited has informed the Exchange about Presentation",
+    "category": "investor_meetings",
+    "priority": 3,
+    "summary": "HDFC Bank Limited has informed the Exchange about Presentation",
+    "source_url": "https://nsearchives.nseindia.com/corporate/HDFCBANK_17102026151509_SE_Intimation_earningcall_presentation17oct2026.pdf",
+    "raw_text": "HDFC Bank Limited has informed the Exchange about Presentation",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-hdfcbank-679aec0deb",
     "ticker": "HDFCBANK.NS",
     "company_name": "HDFC Bank Limited",
     "timestamp": "2026-10-17T13:56:22+05:30",
-    "headline": "Outcome of Board Meeting — Financial Results for Q2 FY27 (quarter ended Sep 30, 2026)",
+    "headline": "Outcome of Board Meeting — HDFC Bank Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
     "category": "results",
     "priority": 1,
-    "summary": "Q2 FY27 results filed on NSE, but upstream PDF (HDFCBANK_Q2FY27.pdf) is truncated on nsearchives.nseindia.com (PdfminerException: Unexpected EOF). Extraction skipped rather than guessing numbers.",
+    "summary": "Q2 FY27 Financial Results — Filing couldn't be read, open original",
     "source_url": "https://nsearchives.nseindia.com/corporate/HDFCBANK_17102026135520_OutcomeofBMResults_17oct2026.pdf",
-    "raw_text": "Outcome of Board Meeting — Financial Results for Q2 FY27 (quarter ended Sep 30, 2026)",
+    "raw_text": "HDFC Bank Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
     "enrichment": {
       "status": "corrupted_pdf",
-      "error": "PdfminerException: Unexpected EOF",
-      "highlights": "Upstream PDF failed integrity check (983,040 bytes served vs 1,193,121 bytes in Linearized header)."
+      "quarter": "Q2 FY27",
+      "error": "Upstream NSE file truncated at 983,040 bytes (Content-Range: bytes 0-983039/983040; ends mid-stream at '325 0 R/Resources 216 0 R/Rotate' with no /Root catalog or %%EOF).",
+      "highlights": "Filing couldn't be read, open original"
     },
     "model_used": null,
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-hdfcbank-9346c2ce0d",
+    "ticker": "HDFCBANK.NS",
+    "company_name": "HDFC Bank Limited",
+    "timestamp": "2026-10-16T16:35:12+05:30",
+    "headline": "Certificate under SEBI (Depositories and Participants) Regulations, 2018 — HDFC Bank Limited has informed the Exchange about Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "HDFC Bank Limited has informed the Exchange about Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+    "source_url": "https://nsearchives.nseindia.com/corporate/HDFCBANK_16102026162906_SEintimatiomReg74_530Sep2025.pdf",
+    "raw_text": "HDFC Bank Limited has informed the Exchange about Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-hdfcbank-028dfc7b13",
+    "ticker": "HDFCBANK.NS",
+    "company_name": "HDFC Bank Limited",
+    "timestamp": "2026-10-13T16:19:52+05:30",
+    "headline": "Analysts/Institutional Investor Meet/Con. Call Updates — HDFC Bank Limited has informed the Exchange about Schedule of meet",
+    "category": "investor_meetings",
+    "priority": 3,
+    "summary": "HDFC Bank Limited has informed the Exchange about Schedule of meet",
+    "source_url": "https://nsearchives.nseindia.com/corporate/HDFCBANK3_13102026161935_SE_Intimation_-_Earnings_call.pdf",
+    "raw_text": "HDFC Bank Limited has informed the Exchange about Schedule of meet",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-hdfcbank-577dd36b01",
+    "ticker": "HDFCBANK.NS",
+    "company_name": "HDFC Bank Limited",
+    "timestamp": "2026-10-08T12:23:50+05:30",
+    "headline": "General Updates — HDFC Bank Limited has informed the Exchange about General Updates",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "General corporate update filed with the exchange.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/HDFCBANK3_08102026122324_SE_Intimation-_Newspaper_adv.pdf",
+    "raw_text": "HDFC Bank Limited has informed the Exchange about General Updates",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 223,
+      "out": 51
+    }
+  },
+  {
+    "id": "nse-hdfcbank-e7bc1be812",
+    "ticker": "HDFCBANK.NS",
+    "company_name": "HDFC Bank Limited",
+    "timestamp": "2026-10-07T16:10:26+05:30",
+    "headline": "Shareholders meeting — HDFC Bank Limited has informed the Exchange regarding Notice of Postal Ballot",
+    "category": "agm_egm",
+    "priority": 3,
+    "summary": "HDFC Bank Limited has informed the Exchange regarding Notice of Postal Ballot",
+    "source_url": "https://nsearchives.nseindia.com/corporate/HDFCBANK_07102026160736_SEIntimationPostalBallotNoticeOct2026.pdf",
+    "raw_text": "HDFC Bank Limited has informed the Exchange regarding Notice of Postal Ballot",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-hdfcbank-c8fd9d74f6",
+    "ticker": "HDFCBANK.NS",
+    "company_name": "HDFC Bank Limited",
+    "timestamp": "2026-10-04T22:03:36+05:30",
+    "headline": "General Updates — HDFC Bank Limited has informed the Exchange regarding intimation under SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Routine regulatory intimation under SEBI LODR Regulations.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/HDFCBANK_04102026220033_initial_Final_disclosure_Sep2026.pdf",
+    "raw_text": "HDFC Bank Limited has informed the Exchange regarding intimation under SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 223,
+      "out": 51
+    }
+  },
+  {
+    "id": "nse-hdfcbank-6d7063f1a1",
+    "ticker": "HDFCBANK.NS",
+    "company_name": "HDFC Bank Limited",
+    "timestamp": "2026-10-01T18:23:52+05:30",
+    "headline": "Change in Director(s) — HDFC Bank Limited has informed the Exchange regarding Change in Director(s) of the company.",
+    "category": "management_change",
+    "priority": 1,
+    "summary": "Anup Bagchi appointed as Managing Director & CEO of HDFC Bank for a period of 3 years effective October 27, 2026, succeeding Sashidhar Jagdishan upon the completion of his tenure.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/HDFCBANK3_01102026182319_SE_Intimation-_Anup_Bagchi.pdf",
+    "raw_text": "HDFC Bank Limited has informed the Exchange regarding Change in Director(s) of the company.",
+    "enrichment": {
+      "person_name": "Anup Bagchi",
+      "role": "Managing Director and Chief Executive Officer",
+      "action": "joined",
+      "background": "Mr. Anup Bagchi is a seasoned financial services leader with over three decades of experience across banking, capital markets, wealth management, and insurance, holding an engineering degree from IIT Kanpur and a management degree from IIM Bangalore. (Filing p. 3)"
+    },
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 2285,
+      "out": 150
+    }
+  },
+  {
+    "id": "nse-hdfcbank-828a7f36f6",
+    "ticker": "HDFCBANK.NS",
+    "company_name": "HDFC Bank Limited",
+    "timestamp": "2026-09-30T20:36:35+05:30",
+    "headline": "Change in Management — HDFC Bank Limited has informed the Exchange about change in Management",
+    "category": "management_change",
+    "priority": 1,
+    "summary": "Jigar Shah assumed charge as General Counsel effective October 1, 2026, succeeding Sudhir Kumar Jha upon his superannuation.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/HDFCBANK3_30092026203611_SE_intimation-_sudhir.pdf",
+    "raw_text": "HDFC Bank Limited has informed the Exchange about change in Management",
+    "enrichment": {
+      "person_name": "Jigar Shah",
+      "role": "General Counsel",
+      "action": "joined",
+      "background": "Mr. Jigar Shah, General Counsel – Designate, assumes the position of General Counsel of the Bank effective October 1, 2026, succeeding Mr. Sudhir Kumar Jha upon his superannuation. (Filing p. 1)"
+    },
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 1178,
+      "out": 133
+    }
+  },
+  {
+    "id": "nse-hdfcbank-e601b77cdf",
+    "ticker": "HDFCBANK.NS",
+    "company_name": "HDFC Bank Limited",
+    "timestamp": "2026-09-30T18:33:10+05:30",
+    "headline": "Change in Management — HDFC Bank Limited has informed the Exchange about change in Management",
+    "category": "management_change",
+    "priority": 1,
+    "summary": "V. N. Srivatsan is proposed to be appointed as Chief Compliance Officer for a period of 3 years effective January 4, 2027, succeeding Rakesh Kumar Rajput upon the completion of his tenure.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/HDFCBANK3_30092026183242_SE_Intimation-_CCO.pdf",
+    "raw_text": "HDFC Bank Limited has informed the Exchange about change in Management",
+    "enrichment": {
+      "person_name": "V. N. Srivatsan",
+      "role": "Chief Compliance Officer",
+      "action": "joined",
+      "background": "Mr. V. N. Srivatsan has approximately 34 years of overall professional experience, including around 25 years in the BFSI sector and close to 10 years in Compliance and Regulatory Inspection, previously serving as Head – Compliance: Overseas Banking and Subsidiaries & Data Privacy Officer at ICICI Bank Limited (Filing p. 3)."
+    },
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 1895,
+      "out": 183
+    }
+  },
+  {
+    "id": "nse-hdfcbank-f414ffee14",
+    "ticker": "HDFCBANK.NS",
+    "company_name": "HDFC Bank Limited",
+    "timestamp": "2026-09-29T12:12:17+05:30",
+    "headline": "General Updates — Newspaper publication regarding special window for transfer and dematerialization of physical shares of HDFC Bank Limited.",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Newspaper publication regarding special window for transfer and dematerialization of physical shares of HDFC Bank Limited.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/HDFCBANK3_29092026121137_SE_Intimation_-_Special_window.pdf",
+    "raw_text": "Newspaper publication regarding special window for transfer and dematerialization of physical shares of HDFC Bank Limited.",
+    "enrichment": {},
+    "model_used": "rule_engine",
     "tokens": {
       "in": 0,
       "out": 0

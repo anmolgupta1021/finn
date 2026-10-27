@@ -7,14 +7,14 @@
     "headline": "Updates — Tata Consultancy Services Limited has informed the Exchange regarding 'Press Release - TCS BaNCS for Treasury marks its entry into Sri Lanka with Indian Bank'.",
     "category": "press_release",
     "priority": 2,
-    "summary": "TCS BaNCS for Treasury marks its entry into Sri Lanka with Indian Bank.",
+    "summary": "TCS BaNCS for Treasury enters Sri Lanka with Indian Bank implementation.",
     "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_19102026112258_PR_19Oct26_signed.pdf",
     "raw_text": "Tata Consultancy Services Limited has informed the Exchange regarding 'Press Release - TCS BaNCS for Treasury marks its entry into Sri Lanka with Indian Bank'.",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 167,
-      "out": 52
+      "in": 157,
+      "out": 53
     }
   },
   {
@@ -25,14 +25,14 @@
     "headline": "Analysts/Institutional Investor Meet/Con. Call Updates — Tata Consultancy Services Limited has informed the Exchange about Schedule of meet",
     "category": "investor_meetings",
     "priority": 3,
-    "summary": "Schedule of analysts and institutional investor meetings.",
+    "summary": "Tata Consultancy Services Limited has informed the Exchange about Schedule of meet",
     "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_16102026162737_SE16102026_signed.pdf",
     "raw_text": "Tata Consultancy Services Limited has informed the Exchange about Schedule of meet",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 167,
-      "out": 52
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -49,8 +49,8 @@
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 167,
-      "out": 52
+      "in": 157,
+      "out": 53
     }
   },
   {
@@ -61,14 +61,32 @@
     "headline": "Updates — Tata Consultancy Services Limited has informed the Exchange regarding 'Press Release - TCS launches Industrial Intelligence Foundry to accelerate AI-led autonomy and engineering'.",
     "category": "press_release",
     "priority": 2,
-    "summary": "Launched Industrial Intelligence Foundry to accelerate AI-led autonomy and engineering.",
+    "summary": "TCS launched Industrial Intelligence Foundry for AI-led autonomy and engineering.",
     "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_15102026112020_PR_15Oct26_signed.pdf",
     "raw_text": "Tata Consultancy Services Limited has informed the Exchange regarding 'Press Release - TCS launches Industrial Intelligence Foundry to accelerate AI-led autonomy and engineering'.",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 167,
-      "out": 52
+      "in": 157,
+      "out": 53
+    }
+  },
+  {
+    "id": "nse-tcs-9d8b5af089",
+    "ticker": "TCS.NS",
+    "company_name": "Tata Consultancy Services Limited",
+    "timestamp": "2026-10-14T16:00:08+05:30",
+    "headline": "Analysts/Institutional Investor Meet/Con. Call Updates — Tata Consultancy Services Limited has informed the Exchange about Transcript",
+    "category": "earnings_call",
+    "priority": 2,
+    "summary": "Tata Consultancy Services Limited has informed the Exchange about Transcript",
+    "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14102026155941_SEInt14102026_signed.pdf",
+    "raw_text": "Tata Consultancy Services Limited has informed the Exchange about Transcript",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -79,14 +97,104 @@
     "headline": "Updates — Tata Consultancy Services Limited has informed the Exchange regarding 'Press Release -MyState Limited selects TCS BaNCSTM to transform core banking operations'.",
     "category": "press_release",
     "priority": 2,
-    "summary": "MyState Limited selects TCS BaNCS to transform core banking operations.",
+    "summary": "MyState Limited selected TCS BaNCS to transform core banking operations.",
     "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14102026112025_PR_14Oct26_signed.pdf",
     "raw_text": "Tata Consultancy Services Limited has informed the Exchange regarding 'Press Release -MyState Limited selects TCS BaNCSTM to transform core banking operations'.",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 167,
-      "out": 52
+      "in": 157,
+      "out": 53
+    }
+  },
+  {
+    "id": "nse-tcs-c00f8bbf95",
+    "ticker": "TCS.NS",
+    "company_name": "Tata Consultancy Services Limited",
+    "timestamp": "2026-10-10T18:06:21+05:30",
+    "headline": "Copy of Newspaper Publication — Tata Consultancy Services Limited has informed the Exchange about Copy of Newspaper Publication",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Tata Consultancy Services Limited has informed the Exchange about Copy of Newspaper Publication",
+    "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_10102026180525_SEInt10102026_signed.pdf",
+    "raw_text": "Tata Consultancy Services Limited has informed the Exchange about Copy of Newspaper Publication",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-tcs-fcbfd23d73",
+    "ticker": "TCS.NS",
+    "company_name": "Tata Consultancy Services Limited",
+    "timestamp": "2026-10-10T17:56:32+05:30",
+    "headline": "Copy of Newspaper Publication — Tata Consultancy Services Limited has informed the Exchange about Copy of Newspaper Publication",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Tata Consultancy Services Limited has informed the Exchange about Copy of Newspaper Publication",
+    "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_10102026175539_SEInt10102026_signed.pdf",
+    "raw_text": "Tata Consultancy Services Limited has informed the Exchange about Copy of Newspaper Publication",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-tcs-55c93447d5",
+    "ticker": "TCS.NS",
+    "company_name": "Tata Consultancy Services Limited",
+    "timestamp": "2026-10-09T18:43:52+05:30",
+    "headline": "Copy of Newspaper Publication — Tata Consultancy Services Limited has informed the Exchange about Copy of Newspaper Publication",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Tata Consultancy Services Limited has informed the Exchange about Copy of Newspaper Publication",
+    "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_09102026184305_SEInt09102026_Signed.pdf",
+    "raw_text": "Tata Consultancy Services Limited has informed the Exchange about Copy of Newspaper Publication",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-tcs-c0a2d099ee",
+    "ticker": "TCS.NS",
+    "company_name": "Tata Consultancy Services Limited",
+    "timestamp": "2026-10-09T08:08:19+05:30",
+    "headline": "Updates — Tata Consultancy Services Limited has informed the Exchange regarding 'Statement of the Company regarding the announcement by the US Government on the Permanent Labor Certification Program'.",
+    "category": "press_release",
+    "priority": 2,
+    "summary": "Released a company statement regarding the US Government announcement on the Permanent Labor Certification Program.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_09102026080757_SE_TCS_Statement_f.pdf",
+    "raw_text": "Tata Consultancy Services Limited has informed the Exchange regarding 'Statement of the Company regarding the announcement by the US Government on the Permanent Labor Certification Program'.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 157,
+      "out": 53
+    }
+  },
+  {
+    "id": "nse-tcs-940a14d286",
+    "ticker": "TCS.NS",
+    "company_name": "Tata Consultancy Services Limited",
+    "timestamp": "2026-10-08T22:38:59+05:30",
+    "headline": "Analysts/Institutional Investor Meet/Con. Call Updates — Tata Consultancy Services Limited has informed the Exchange about Link of Recording",
+    "category": "earnings_call",
+    "priority": 2,
+    "summary": "Tata Consultancy Services Limited has informed the Exchange about Link of Recording",
+    "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_08102026223847_SEInt09072026_signed.pdf",
+    "raw_text": "Tata Consultancy Services Limited has informed the Exchange about Link of Recording",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -97,27 +205,63 @@
     "headline": "General Updates — Tata Consultancy Services Limited has informed the Exchange about Date of Payment of Dividend.",
     "category": "dividend",
     "priority": 1,
-    "summary": "Informed the exchange about the date of payment of dividend.",
+    "summary": "Disclosed the payment date for the declared dividend.",
     "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_08102026154436_Post_BM_SE_Letter_fin.pdf",
     "raw_text": "Tata Consultancy Services Limited has informed the Exchange about Date of Payment of Dividend.",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 167,
-      "out": 52
+      "in": 157,
+      "out": 53
     }
   },
   {
-    "id": "tcs-results-tcs_q2fy27",
+    "id": "nse-tcs-780f772291",
+    "ticker": "TCS.NS",
+    "company_name": "Tata Consultancy Services Limited",
+    "timestamp": "2026-10-08T15:43:32+05:30",
+    "headline": "Press Release — Tata Consultancy Services Limited has informed the Exchange regarding a press release dated October 8, 2026, titled \"International Growth and Strategic Wins Underpin TCS  Q2\".",
+    "category": "press_release",
+    "priority": 2,
+    "summary": "Tata Consultancy Services Limited has informed the Exchange regarding a press release dated October 8, 2026, titled \"International Growth and Strategic Wins Underpin TCS  Q2\".",
+    "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_08102026154325_PressReleaseletter.pdf",
+    "raw_text": "Tata Consultancy Services Limited has informed the Exchange regarding a press release dated October 8, 2026, titled \"International Growth and Strategic Wins Underpin TCS  Q2\".",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-tcs-1645e0d666",
+    "ticker": "TCS.NS",
+    "company_name": "Tata Consultancy Services Limited",
+    "timestamp": "2026-10-08T15:42:03+05:30",
+    "headline": "Dividend — Tata Consultancy Services Limited has informed the Exchange that Board of Directors at its meeting held on October 8, 2026, declared Interim Dividend of Rs. 12 per equity share.",
+    "category": "dividend",
+    "priority": 1,
+    "summary": "Tata Consultancy Services Limited has informed the Exchange that Board of Directors at its meeting held on October 8, 2026, declared Interim Dividend of Rs. 12 per equity share.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_08102026154152_Post_BM_SE_Letter_fin.pdf",
+    "raw_text": "Tata Consultancy Services Limited has informed the Exchange that Board of Directors at its meeting held on October 8, 2026, declared Interim Dividend of Rs. 12 per equity share.",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-tcs-14eaf40c17",
     "ticker": "TCS.NS",
     "company_name": "Tata Consultancy Services Limited",
     "timestamp": "2026-10-08T15:40:12+05:30",
-    "headline": "Outcome of Board Meeting — Audited Consolidated and Standalone Interim Financial Results for Q2 FY27 (quarter ended Sep 30, 2026)",
+    "headline": "Outcome of Board Meeting — Tata Consultancy Services Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
     "category": "results",
     "priority": 1,
     "summary": "Q2 FY27 (consolidated): Revenue ₹73,188 Cr (+11.2% YoY, +1.3% QoQ); Operating EBITDA ₹18,815 Cr (+4.7% YoY, margin 25.7%); PAT ₹13,934 Cr (+14.9% YoY, +3.8% QoQ).",
     "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_08102026153124_Post_BM_SE_Letter_fin.pdf",
-    "raw_text": "Outcome of Board Meeting — Audited Consolidated and Standalone Interim Financial Results for Q2 FY27 (quarter ended Sep 30, 2026)",
+    "raw_text": "Tata Consultancy Services Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
     "enrichment": {
       "status": "ok",
       "quarter": "Q2 FY27",
@@ -170,6 +314,13 @@
         "qoq": 4.01,
         "yoy": 14.98
       },
+      "derivation": {
+        "basis_note": "Statement of Consolidated Interim Financial Results under Ind AS (PDF p. 8, reported in ₹ crore).",
+        "revenue_definition": "Revenue from Operations = ₹73,188 Cr (excludes Other Income of ₹1,337 Cr).",
+        "ebitda_formula": "Operating Profit (Revenue ₹73,188 Cr − Total Expenses ₹55,887 Cr = ₹17,301 Cr) + Finance Costs (₹252 Cr) + Depreciation & Amortisation (₹1,262 Cr) = ₹18,815 Cr (25.71% margin).",
+        "pbt_basis": "Profit Before Tax (no exceptional items in Q2 FY27; Q2 FY26 had ₹616 Cr exceptional legal settlement provision) = ₹18,638 Cr.",
+        "pat_basis": "Total Consolidated Profit for the period = ₹13,934 Cr (Profit attributable to shareholders of the company = ₹13,884 Cr; Non-controlling interest = ₹50 Cr)."
+      },
       "validation": {
         "passed": true,
         "flags": []
@@ -180,6 +331,78 @@
     "tokens": {
       "in": 3300,
       "out": 611
+    }
+  },
+  {
+    "id": "nse-tcs-ea6d38740c",
+    "ticker": "TCS.NS",
+    "company_name": "Tata Consultancy Services Limited",
+    "timestamp": "2026-10-01T21:42:54+05:30",
+    "headline": "Press Release — Tata Consultancy Services Limited has informed the Exchange regarding a press release dated October 01, 2026, titled \"Best Buy s Global Capability Center in India to transition to TCS\".",
+    "category": "press_release",
+    "priority": 2,
+    "summary": "Tata Consultancy Services Limited has informed the Exchange regarding a press release dated October 01, 2026, titled \"Best Buy s Global Capability Center in India to transition to TCS\".",
+    "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_01102026214236_Signed_PRSEInt01102026.pdf",
+    "raw_text": "Tata Consultancy Services Limited has informed the Exchange regarding a press release dated October 01, 2026, titled \"Best Buy s Global Capability Center in India to transition to TCS\".",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-tcs-afa0798aac",
+    "ticker": "TCS.NS",
+    "company_name": "Tata Consultancy Services Limited",
+    "timestamp": "2026-10-01T20:08:34+05:30",
+    "headline": "Analysts/Institutional Investor Meet/Con. Call Updates — Tata Consultancy Services Limited has informed the Exchange about Schedule of meet",
+    "category": "investor_meetings",
+    "priority": 3,
+    "summary": "Tata Consultancy Services Limited has informed the Exchange about Schedule of meet",
+    "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_01102026200753_Signed_SEInt01102026.pdf",
+    "raw_text": "Tata Consultancy Services Limited has informed the Exchange about Schedule of meet",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-tcs-ab8b0fa5fe",
+    "ticker": "TCS.NS",
+    "company_name": "Tata Consultancy Services Limited",
+    "timestamp": "2026-10-01T18:41:18+05:30",
+    "headline": "Acquisition — Tata Consultancy Services Limited has informed the Exchange about Acquisition",
+    "category": "M&A",
+    "priority": 1,
+    "summary": "Tata Consultancy Services Limited has informed the Exchange about Acquisition",
+    "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_01102026184041_Signed_SE_Letter.pdf",
+    "raw_text": "Tata Consultancy Services Limited has informed the Exchange about Acquisition",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-tcs-36fe714303",
+    "ticker": "TCS.NS",
+    "company_name": "Tata Consultancy Services Limited",
+    "timestamp": "2026-10-01T18:39:47+05:30",
+    "headline": "Outcome of Board Meeting — Tata Consultancy Services Limited has informed the Exchange regarding Outcome of Meeting of Investment Committee, as empowered by the Board, held on October 01, 2026.",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Outcome of the Investment Committee meeting held on October 01, 2026.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_01102026182634_Signed_SE_Letter.pdf",
+    "raw_text": "Tata Consultancy Services Limited has informed the Exchange regarding Outcome of Meeting of Investment Committee, as empowered by the Board, held on October 01, 2026.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 157,
+      "out": 53
     }
   }
 ]

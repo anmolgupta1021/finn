@@ -1,0 +1,148 @@
+{
+  "total_nse_30d": 174,
+  "total_stored": 177,
+  "total_classified_by_rules": 108,
+  "total_classified_by_llm": 66,
+  "total_batch_classify_llm_calls": 14,
+  "total_mgmt_enrichment_llm_calls": 13,
+  "per_ticker": {
+    "RELIANCE.NS": {
+      "nse_raw_30d": 11,
+      "nse_unique_non_xml_30d": 11,
+      "stored_total": 12,
+      "classified_by_rules": 5,
+      "classified_by_llm_ambiguous": 6,
+      "batch_classify_llm_calls": 1,
+      "mgmt_enrichment_llm_calls": 0
+    },
+    "TCS.NS": {
+      "nse_raw_30d": 19,
+      "nse_unique_non_xml_30d": 19,
+      "stored_total": 19,
+      "classified_by_rules": 12,
+      "classified_by_llm_ambiguous": 7,
+      "batch_classify_llm_calls": 1,
+      "mgmt_enrichment_llm_calls": 0
+    },
+    "HDFCBANK.NS": {
+      "nse_raw_30d": 19,
+      "nse_unique_non_xml_30d": 19,
+      "stored_total": 19,
+      "classified_by_rules": 15,
+      "classified_by_llm_ambiguous": 4,
+      "batch_classify_llm_calls": 1,
+      "mgmt_enrichment_llm_calls": 4
+    },
+    "INFY.NS": {
+      "nse_raw_30d": 13,
+      "nse_unique_non_xml_30d": 13,
+      "stored_total": 13,
+      "classified_by_rules": 4,
+      "classified_by_llm_ambiguous": 9,
+      "batch_classify_llm_calls": 1,
+      "mgmt_enrichment_llm_calls": 0
+    },
+    "ICICIBANK.NS": {
+      "nse_raw_30d": 20,
+      "nse_unique_non_xml_30d": 20,
+      "stored_total": 20,
+      "classified_by_rules": 14,
+      "classified_by_llm_ambiguous": 6,
+      "batch_classify_llm_calls": 1,
+      "mgmt_enrichment_llm_calls": 1
+    },
+    "HINDUNILVR.NS": {
+      "nse_raw_30d": 5,
+      "nse_unique_non_xml_30d": 5,
+      "stored_total": 5,
+      "classified_by_rules": 5,
+      "classified_by_llm_ambiguous": 0,
+      "batch_classify_llm_calls": 0,
+      "mgmt_enrichment_llm_calls": 0
+    },
+    "BHARTIARTL.NS": {
+      "nse_raw_30d": 6,
+      "nse_unique_non_xml_30d": 6,
+      "stored_total": 6,
+      "classified_by_rules": 3,
+      "classified_by_llm_ambiguous": 3,
+      "batch_classify_llm_calls": 1,
+      "mgmt_enrichment_llm_calls": 0
+    },
+    "LT.NS": {
+      "nse_raw_30d": 11,
+      "nse_unique_non_xml_30d": 11,
+      "stored_total": 11,
+      "classified_by_rules": 4,
+      "classified_by_llm_ambiguous": 7,
+      "batch_classify_llm_calls": 1,
+      "mgmt_enrichment_llm_calls": 1
+    },
+    "TMPV.NS": {
+      "nse_raw_30d": 7,
+      "nse_unique_non_xml_30d": 7,
+      "stored_total": 7,
+      "classified_by_rules": 4,
+      "classified_by_llm_ambiguous": 3,
+      "batch_classify_llm_calls": 1,
+      "mgmt_enrichment_llm_calls": 0
+    },
+    "SUNPHARMA.NS": {
+      "nse_raw_30d": 17,
+      "nse_unique_non_xml_30d": 17,
+      "stored_total": 18,
+      "classified_by_rules": 13,
+      "classified_by_llm_ambiguous": 4,
+      "batch_classify_llm_calls": 1,
+      "mgmt_enrichment_llm_calls": 2
+    },
+    "MARUTI.NS": {
+      "nse_raw_30d": 15,
+      "nse_unique_non_xml_30d": 15,
+      "stored_total": 16,
+      "classified_by_rules": 9,
+      "classified_by_llm_ambiguous": 6,
+      "batch_classify_llm_calls": 1,
+      "mgmt_enrichment_llm_calls": 1
+    },
+    "TITAN.NS": {
+      "nse_raw_30d": 5,
+      "nse_unique_non_xml_30d": 5,
+      "stored_total": 5,
+      "classified_by_rules": 2,
+      "classified_by_llm_ambiguous": 3,
+      "batch_classify_llm_calls": 1,
+      "mgmt_enrichment_llm_calls": 0
+    },
+    "ASIANPAINT.NS": {
+      "nse_raw_30d": 6,
+      "nse_unique_non_xml_30d": 6,
+      "stored_total": 6,
+      "classified_by_rules": 4,
+      "classified_by_llm_ambiguous": 2,
+      "batch_classify_llm_calls": 1,
+      "mgmt_enrichment_llm_calls": 0
+    },
+    "TATASTEEL.NS": {
+      "nse_raw_30d": 8,
+      "nse_unique_non_xml_30d": 8,
+      "stored_total": 8,
+      "classified_by_rules": 7,
+      "classified_by_llm_ambiguous": 1,
+      "batch_classify_llm_calls": 1,
+      "mgmt_enrichment_llm_calls": 0
+    },
+    "NTPC.NS": {
+      "nse_raw_30d": 12,
+      "nse_unique_non_xml_30d": 12,
+      "stored_total": 12,
+      "classified_by_rules": 7,
+      "classified_by_llm_ambiguous": 5,
+      "batch_classify_llm_calls": 1,
+      "mgmt_enrichment_llm_calls": 4
+    }
+  },
+  "items_saved_from_llm_classification": 108,
+  "pct_items_classified_by_rules": 62.07,
+  "per_item_llm_calls_avoided": 160
+}

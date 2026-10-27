@@ -7,14 +7,14 @@
     "headline": "Certificate under SEBI (Depositories and Participants) Regulations, 2018 — Please find enclosed herewith the Certificate received from MUFG Intime India Private Limited (formerly Link Intime India Private Limited), Company s Registrar and Share Transfer Agent for the quarter ende",
     "category": "unclassified",
     "priority": 3,
-    "summary": "Asian Paints submitted the SEBI Regulation 74(5) compliance certificate for the quarter ended September 30, 2026.",
+    "summary": "Please find enclosed herewith the Certificate received from MUFG Intime India Private Limited (formerly Link Intime India Private Limited), Company s Registrar and Share Transfer Agent for the quarter ended 30th September 2026 certifying compliance with Regulation 74(5) of the SEBI (Depositories and Participants) Regulations, 2018.",
     "source_url": "https://nsearchives.nseindia.com/corporate/ASIANPAINT_15102026225755_Regulation74DPRegulations30092026signed.pdf",
     "raw_text": "Please find enclosed herewith the Certificate received from MUFG Intime India Private Limited (formerly Link Intime India Private Limited), Company s Registrar and Share Transfer Agent for the quarter ended 30th September 2026 certifying compliance with Regulation 74(5) of the SEBI (Depositories and Participants) Regulations, 2018.",
     "enrichment": {},
-    "model_used": "gemini-3.6-flash",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 211,
-      "out": 277
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -25,14 +25,14 @@
     "headline": "Copy of Newspaper Publication — Please find enclosed newspaper advertisement published on 8th October 2026 informing about the resolution proposed to be passed through Postal Ballot and details relating to e-Voting facility.",
     "category": "unclassified",
     "priority": 3,
-    "summary": "Asian Paints released a newspaper publication detailing the postal ballot notice and e-voting instructions.",
+    "summary": "Please find enclosed newspaper advertisement published on 8th October 2026 informing about the resolution proposed to be passed through Postal Ballot and details relating to e-Voting facility.",
     "source_url": "https://nsearchives.nseindia.com/corporate/ASIANPAINT_08102026151258_SE_Intimation_Newspaper_Advertisement_signed.pdf",
     "raw_text": "Please find enclosed newspaper advertisement published on 8th October 2026 informing about the resolution proposed to be passed through Postal Ballot and details relating to e-Voting facility.",
     "enrichment": {},
-    "model_used": "gemini-3.6-flash",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 211,
-      "out": 277
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -41,16 +41,16 @@
     "company_name": "Asian Paints Limited",
     "timestamp": "2026-10-07T20:44:07+05:30",
     "headline": "Shareholders meeting — Please find enclosed the Postal Ballot Notice dated 7th September 2026 together with the Explanatory Statement being sent to the members of the Company seeking their approval for appointment of Mr. Leo Puri as an Independent Director of the Company for a te",
-    "category": "postal_ballot",
-    "priority": 2,
-    "summary": "Asian Paints issued a postal ballot notice seeking shareholder approval to appoint Mr. Leo Puri as an Independent Director for five years.",
+    "category": "agm_egm",
+    "priority": 3,
+    "summary": "Please find enclosed the Postal Ballot Notice dated 7th September 2026 together with the Explanatory Statement being sent to the members of the Company seeking their approval for appointment of Mr. Leo Puri as an Independent Director of the Company for a term of five consecutive years commencing from 7th September 2026 to 6th September 2031.",
     "source_url": "https://nsearchives.nseindia.com/corporate/ASIANPAINT_07102026204250_SE_Intimation_-_Postal_ballot_Notice.pdf",
     "raw_text": "Please find enclosed the Postal Ballot Notice dated 7th September 2026 together with the Explanatory Statement being sent to the members of the Company seeking their approval for appointment of Mr. Leo Puri as an Independent Director of the Company for a term of five consecutive years commencing from 7th September 2026 to 6th September 2031.",
     "enrichment": {},
-    "model_used": "gemini-3.6-flash",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 211,
-      "out": 277
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -59,16 +59,16 @@
     "company_name": "Asian Paints Limited",
     "timestamp": "2026-10-06T20:12:08+05:30",
     "headline": "Analysts/Institutional Investor Meet/Con. Call Updates — The Company will hold a conference with investors on 29th October 2026 at 5 p.m. IST.on the business and financial performance of the Company for the quarter and half year ended 30th September 2026.",
-    "category": "earnings_call",
-    "priority": 2,
-    "summary": "Asian Paints to hold an investor conference call on October 29, 2026, for Q2 and H1 FY27 financial results.",
+    "category": "investor_meetings",
+    "priority": 3,
+    "summary": "The Company will hold a conference with investors on 29th October 2026 at 5 p.m. IST.on the business and financial performance of the Company for the quarter and half year ended 30th September 2026.",
     "source_url": "https://nsearchives.nseindia.com/corporate/ASIANPAINT_06102026201150_Investor_conference_Q22026-27.pdf",
     "raw_text": "The Company will hold a conference with investors on 29th October 2026 at 5 p.m. IST.on the business and financial performance of the Company for the quarter and half year ended 30th September 2026.",
     "enrichment": {},
-    "model_used": "gemini-3.6-flash",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 211,
-      "out": 277
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -79,14 +79,14 @@
     "headline": "Record Date — Asian Paints Limited has informed the Exchange that Record date for the purpose of Dividend  is 04-Nov-2026.",
     "category": "dividend",
     "priority": 1,
-    "summary": "Asian Paints has fixed November 4, 2026, as the record date for the dividend.",
+    "summary": "Record date fixed as November 4, 2026, for the purpose of dividend.",
     "source_url": "https://nsearchives.nseindia.com/corporate/ASIANPAINT_06102026191216_BMintimationtoStockExchangesOct26.pdf",
     "raw_text": "Asian Paints Limited has informed the Exchange that Record date for the purpose of Dividend  is 04-Nov-2026.",
     "enrichment": {},
-    "model_used": "gemini-3.6-flash",
+    "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 211,
-      "out": 277
+      "in": 392,
+      "out": 74
     }
   },
   {
@@ -97,14 +97,14 @@
     "headline": "Updates — Asian Paints Limited has informed the Exchange regarding 'This is to inform you that a meeting of the Board of Directors of the Company will be held on Thursday, 29th October 2026, inter alia, to consider the declaration of interim dividend, if any, for the financial ye",
     "category": "dividend",
     "priority": 1,
-    "summary": "Asian Paints Board to meet on October 29, 2026, to consider interim dividend declaration for FY 2026-27.",
+    "summary": "Board meeting scheduled for October 29, 2026, to consider interim dividend for FY 2026-27 with a record date of November 4, 2026.",
     "source_url": "https://nsearchives.nseindia.com/corporate/ASIANPAINT_06102026190837_BMintimationtoStockExchangesOct26.pdf",
     "raw_text": "Asian Paints Limited has informed the Exchange regarding 'This is to inform you that a meeting of the Board of Directors of the Company will be held on Thursday, 29th October 2026, inter alia, to consider the declaration of interim dividend, if any, for the financial year ending 31st March 2027.  It is further informed that the record date for payment of interim dividend, if declared, will be Wednesday, 4th November 2026.'.",
     "enrichment": {},
-    "model_used": "gemini-3.6-flash",
+    "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 211,
-      "out": 277
+      "in": 392,
+      "out": 74
     }
   }
 ]

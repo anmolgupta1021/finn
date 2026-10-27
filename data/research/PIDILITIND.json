@@ -1,7 +1,7 @@
 {
   "ticker": "PIDILITIND.NS",
   "company_name": "Pidilite Industries Limited",
-  "generated_at": "2026-10-27T09:28:55.862064Z",
+  "generated_at": "2026-10-27T12:38:52.778754Z",
   "source_documents": [
     {
       "type": "concall_transcript",
@@ -138,7 +138,7 @@
           {
             "metric": "VAM Consumption Rate",
             "actual": "$830",
-            "source": "Q3 FY26 Concall Transcript (11-Feb-2026), PDF p. 4 — \"Just for information, VAM consumption in the quarter was at about $830 as compared to $884 in the same period \"",
+            "source": "Q3 FY26 Concall Transcript (11-Feb-2026), PDF p. 4 — \"Just for information, VAM consumption in the quarter was at about $830 as compared to $884 in the same period last year.\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/Nisha_11022026173121_SEintimationearningscalltranscriptfinalupload.pdf#page=4",
             "doc_id": "DOC_3",
             "page": 4,
@@ -147,33 +147,6 @@
         ],
         "verdict": "beat",
         "commentary": "Pidilite kept VAM consumption costs down to $830 per tonne, beating its outlook of keeping raw material costs below $900, while maintaining standalone EBITDA margins at 24.5%."
-      },
-      {
-        "quarter": "Q2 FY26",
-        "guided": [
-          {
-            "metric": "EBITDA Margin Guidance Range",
-            "guidance": "20%, 24%",
-            "source": "Q3 FY26 Concall Transcript (11-Feb-2026), PDF p. 21 — \"But if you look at full year, we are confident that we will be at the upper end of this 20%, 24% range.\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/Nisha_11022026173121_SEintimationearningscalltranscriptfinalupload.pdf#page=21",
-            "doc_id": "DOC_3",
-            "page": 21,
-            "evidence_file": "evidence/PIDILITIND/DOC_3_p21.txt"
-          }
-        ],
-        "delivered": [
-          {
-            "metric": "Standalone UVG Growth",
-            "actual": "10.3%",
-            "source": "Q2 FY26 Concall Transcript (06-Nov-2025), PDF p. 3 — \"Total stand-alone UVG was 10.3%, which translated into a value growth of 10.4%.\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/Nisha_06112025184945_SEIntimationTranscript.pdf#page=3",
-            "doc_id": "DOC_4",
-            "page": 3,
-            "evidence_file": "evidence/PIDILITIND/DOC_4_p3.txt"
-          }
-        ],
-        "verdict": "hit",
-        "commentary": "Underlying volume growth (UVG) rebounded to double digits at 10.3%, while management maintained profitability around the target margin corridor."
       }
     ],
     "credibility_score": "high",
@@ -182,9 +155,21 @@
   "citation_audit": {
     "documents_fetched": 10,
     "pages_actually_read": 169,
-    "verified_claims": 8,
-    "rejected_claims": 0,
-    "rejections_detail": []
+    "verified_claims": 6,
+    "rejected_claims": 1,
+    "rejections_detail": [
+      {
+        "quarter": "Q2 FY26",
+        "type": "guided",
+        "doc_id": "DOC_3",
+        "page": 21,
+        "claim": "20%, 24%",
+        "quote": "But if you look at full year, we are confident that we will be at the upper end of this 20%, 24% range.",
+        "reasons": [
+          "chronology_violation (guided doc DOC_3 [Q3 FY26] period Q3 FY26 is not strictly earlier than delivered period Q2 FY26)"
+        ]
+      }
+    ]
   },
   "model_used": "gemini-3.6-flash",
   "tokens": {

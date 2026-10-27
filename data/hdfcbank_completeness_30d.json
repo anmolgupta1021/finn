@@ -5,16 +5,14 @@
   "to_date": "27-10-2026",
   "nse_endpoint": "https://www.nseindia.com/api/corporate-announcements?index=equities&symbol=HDFCBANK&from_date=27-09-2026&to_date=27-10-2026",
   "is_nse_api_paginated": false,
-  "nse_pagination_explanation": "NSE's /api/corporate-announcements endpoint is NOT paginated when queried with symbol + from_date + to_date; it returns the complete JSON array of all corporate announcements filed in that window in a single HTTP response.",
-  "is_our_pipeline_capped": true,
-  "our_pipeline_cap_explanation": "Our pipeline (fetch_announcements.py -> select_representative_nse_rows) intentionally filters out duplicate XBRL .xml attachments, deduplicates by PDF URL, and caps LLM classification at max_items=6 per ticker (keeping the 2 newest filings + highest-priority material filings like Outcome of Board Meeting, Appointment/Cessation, Press Release, Dividend/Ratings while dropping repetitive 'Loss of Share Certificates' and daily ESOP allotment noise).",
+  "is_our_pipeline_capped": false,
   "counts": {
     "nse_raw_total_30d": 19,
     "nse_xml_xbrl_duplicates": 0,
-    "nse_non_xml_filings": 19,
     "nse_unique_pdf_filings": 19,
-    "pipeline_capped_for_llm_triage": 6,
-    "saved_in_data_announcements_hdfcbank_json": 6
+    "saved_in_data_announcements_hdfcbank_json": 19,
+    "classified_by_rules": 15,
+    "classified_by_llm_ambiguous": 4
   },
   "nse_raw_breakdown_by_subject": {
     "General Updates": 5,
@@ -26,121 +24,5 @@
     "Certificate under SEBI (Depositories and Participants) Regulations, 2018": 1,
     "Change in Director(s)": 1,
     "Change in Management": 2
-  },
-  "all_nse_raw_filings_30d": [
-    {
-      "an_dt": "27-Oct-2026 08:02:54",
-      "desc": "General Updates",
-      "attchmntText": "HDFC Bank Limited has informed the Exchange regarding disclosure under Regulation 30 and other applicable regulations of the SEBI (Listing Obligations and Discl",
-      "attchmntFile": "https://nsearchives.nseindia.com/corporate/HDFCBANK_27102026080232_SEIntimation_appt_of_AB.pdf"
-    },
-    {
-      "an_dt": "24-Oct-2026 22:27:22",
-      "desc": "ESOP/ESOS/ESPS",
-      "attchmntText": "HDFC Bank Limited has informed the Exchange regarding Grant of 1302379  Options.",
-      "attchmntFile": "https://nsearchives.nseindia.com/corporate/HDFCBANK_24102026222634_SE_Intimation_grant_of_ESOPs.pdf"
-    },
-    {
-      "an_dt": "23-Oct-2026 22:50:22",
-      "desc": "Analysts/Institutional Investor Meet/Con. Call Updates",
-      "attchmntText": "HDFC Bank Limited has informed the Exchange about Transcript",
-      "attchmntFile": "https://nsearchives.nseindia.com/corporate/HDFCBANK_23102026224657_SEintimationTranscriptofearningscall17oct2026.pdf"
-    },
-    {
-      "an_dt": "22-Oct-2026 13:57:50",
-      "desc": "ESOP/ESOS/ESPS",
-      "attchmntText": "HDFC Bank Limited has informed the Exchange regarding Allotment of 9138522  Shares.",
-      "attchmntFile": "https://nsearchives.nseindia.com/corporate/HDFCBANK_22102026135701_SELetterESOP22102026.pdf"
-    },
-    {
-      "an_dt": "22-Oct-2026 11:55:18",
-      "desc": "Copy of Newspaper Publication",
-      "attchmntText": "HDFC Bank Limited has informed the Exchange about Copy of Newspaper Publication",
-      "attchmntFile": "https://nsearchives.nseindia.com/corporate/HDFCBANK3_22102026115451_PB_adv_22102026.pdf"
-    },
-    {
-      "an_dt": "21-Oct-2026 11:52:36",
-      "desc": "Shareholders meeting",
-      "attchmntText": "HDFC Bank Limited has informed the Exchange regarding Notice of Postal Ballot",
-      "attchmntFile": "https://nsearchives.nseindia.com/corporate/HDFCBANK3_21102026115151_SEIntimationPostalBallotNoticeOct2026.pdf"
-    },
-    {
-      "an_dt": "17-Oct-2026 22:09:24",
-      "desc": "Analysts/Institutional Investor Meet/Con. Call Updates",
-      "attchmntText": "HDFC Bank Limited has informed the Exchange about Link of Recording",
-      "attchmntFile": "https://nsearchives.nseindia.com/corporate/HDFCBANK_17102026220738_SEintimation-RECORDING-17oct2026.pdf"
-    },
-    {
-      "an_dt": "17-Oct-2026 16:14:18",
-      "desc": "General Updates",
-      "attchmntText": "HDFC Bank Limited has informed the Exchange regarding disclosure under Regulation 30 and other applicable regulations of the SEBI (Listing Obligations and Discl",
-      "attchmntFile": "https://nsearchives.nseindia.com/corporate/HDFCBANK_17102026161248_Stockexchangeintimation_LV_KB.pdf"
-    },
-    {
-      "an_dt": "17-Oct-2026 15:15:29",
-      "desc": "Analysts/Institutional Investor Meet/Con. Call Updates",
-      "attchmntText": "HDFC Bank Limited has informed the Exchange about Presentation",
-      "attchmntFile": "https://nsearchives.nseindia.com/corporate/HDFCBANK_17102026151509_SE_Intimation_earningcall_presentation17oct2026.pdf"
-    },
-    {
-      "an_dt": "17-Oct-2026 13:56:22",
-      "desc": "Outcome of Board Meeting",
-      "attchmntText": "HDFC Bank Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
-      "attchmntFile": "https://nsearchives.nseindia.com/corporate/HDFCBANK_17102026135520_OutcomeofBMResults_17oct2026.pdf"
-    },
-    {
-      "an_dt": "16-Oct-2026 16:35:12",
-      "desc": "Certificate under SEBI (Depositories and Participants) Regulations, 2018",
-      "attchmntText": "HDFC Bank Limited has informed the Exchange about Certificate under SEBI (Depositories and Participants) Regulations, 2018",
-      "attchmntFile": "https://nsearchives.nseindia.com/corporate/HDFCBANK_16102026162906_SEintimatiomReg74_530Sep2025.pdf"
-    },
-    {
-      "an_dt": "13-Oct-2026 16:19:52",
-      "desc": "Analysts/Institutional Investor Meet/Con. Call Updates",
-      "attchmntText": "HDFC Bank Limited has informed the Exchange about Schedule of meet",
-      "attchmntFile": "https://nsearchives.nseindia.com/corporate/HDFCBANK3_13102026161935_SE_Intimation_-_Earnings_call.pdf"
-    },
-    {
-      "an_dt": "08-Oct-2026 12:23:50",
-      "desc": "General Updates",
-      "attchmntText": "HDFC Bank Limited has informed the Exchange about General Updates",
-      "attchmntFile": "https://nsearchives.nseindia.com/corporate/HDFCBANK3_08102026122324_SE_Intimation-_Newspaper_adv.pdf"
-    },
-    {
-      "an_dt": "07-Oct-2026 16:10:26",
-      "desc": "Shareholders meeting",
-      "attchmntText": "HDFC Bank Limited has informed the Exchange regarding Notice of Postal Ballot",
-      "attchmntFile": "https://nsearchives.nseindia.com/corporate/HDFCBANK_07102026160736_SEIntimationPostalBallotNoticeOct2026.pdf"
-    },
-    {
-      "an_dt": "04-Oct-2026 22:03:36",
-      "desc": "General Updates",
-      "attchmntText": "HDFC Bank Limited has informed the Exchange regarding intimation under SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015",
-      "attchmntFile": "https://nsearchives.nseindia.com/corporate/HDFCBANK_04102026220033_initial_Final_disclosure_Sep2026.pdf"
-    },
-    {
-      "an_dt": "01-Oct-2026 18:23:52",
-      "desc": "Change in Director(s)",
-      "attchmntText": "HDFC Bank Limited has informed the Exchange regarding Change in Director(s) of the company.",
-      "attchmntFile": "https://nsearchives.nseindia.com/corporate/HDFCBANK3_01102026182319_SE_Intimation-_Anup_Bagchi.pdf"
-    },
-    {
-      "an_dt": "30-Sep-2026 20:36:35",
-      "desc": "Change in Management",
-      "attchmntText": "HDFC Bank Limited has informed the Exchange about change in Management",
-      "attchmntFile": "https://nsearchives.nseindia.com/corporate/HDFCBANK3_30092026203611_SE_intimation-_sudhir.pdf"
-    },
-    {
-      "an_dt": "30-Sep-2026 18:33:10",
-      "desc": "Change in Management",
-      "attchmntText": "HDFC Bank Limited has informed the Exchange about change in Management",
-      "attchmntFile": "https://nsearchives.nseindia.com/corporate/HDFCBANK3_30092026183242_SE_Intimation-_CCO.pdf"
-    },
-    {
-      "an_dt": "29-Sep-2026 12:12:17",
-      "desc": "General Updates",
-      "attchmntText": "Newspaper publication regarding special window for transfer and dematerialization of physical shares of HDFC Bank Limited.",
-      "attchmntFile": "https://nsearchives.nseindia.com/corporate/HDFCBANK3_29092026121137_SE_Intimation_-_Special_window.pdf"
-    }
-  ]
+  }
 }

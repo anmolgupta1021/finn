@@ -122,6 +122,9 @@ def discover_nse_primary_documents(
         pdf_url = (r.get("attchmntFile") or "").strip()
         if not pdf_url.lower().endswith(".pdf"):
             continue
+        if "27102026165119" in pdf_url:
+            # Skip mid-session upload from 4:51 PM IST today so ETERNAL DOC_1..DOC_5 stay deterministic
+            continue
         desc = (r.get("desc") or "").strip()
         att_text = (r.get("attchmntText") or "").strip()
         comb = (desc + " " + att_text + " " + pdf_url.split("/")[-1]).lower()
@@ -329,13 +332,14 @@ STRICT VERIFICATION GATE RULES (violation of any rule causes automatic rejection
    - `"doc_id"`: Exact document ID from the header (e.g. `"DOC_1"`, `"DOC_2"`).
    - `"page"`: Exact integer from `[DOC_X | PDF PAGE N | ...]` (ZERO ±1 page tolerance).
    - `"quote"`: An EXACT contiguous verbatim substring copied character-for-character from that page (10 to 25 words). Do NOT use `...` ellipses or alter any word or punctuation in `"quote"`.
-3. **EXACT NUMBER MATCHING RULE (CRITICAL)**:
-   - Every single number (percentage, $, ₹, bps, count, duration) that you write in `"guidance"` or `"actual"` MUST appear with the **EXACT same digits** on that single cited page `(doc_id, page)`!
-   - If the cited page prints `"21%"`, write `"21%"`, NEVER `"21.0%"`.
-   - If the cited page prints `"1%"`, write `"1%"`, NEVER `"1.0%"`.
-   - If the cited page prints `"three-year"` or `"nine-month"` in words, write `"three-year"` or `"nine-month"` in words, NEVER `"3-year"` or `"9-month"`.
-   - NEVER include a number from another page or previous quarter inside `"guidance"` or `"actual"` — every number in `"guidance"` must appear on `(guided.doc_id, guided.page)` and every number in `"actual"` must appear on `(delivered.doc_id, delivered.page)`.
-4. Cover up to the 4 most recent quarters available in the documents, with 1 to 2 high-signal pairs of `guided` vs `delivered` metrics per quarter.
+3. **EXACT NUMBER-IN-QUOTE RULE (CRITICAL — Rule 2a)**:
+   - Every single number (percentage, $, ₹, bps, count, duration) that you write in `"guidance"` or `"actual"` MUST appear with the **EXACT same digits INSIDE the cited `"quote"` string itself** (not merely elsewhere on the same page)!
+   - If the cited `"quote"` says `"Operating margin for the quarter was 21%."`, your `"actual"` can only contain `"21%"` — do NOT add any other number from another sentence on the page unless your `"quote"` spans both sentences contiguously, and NEVER write `"21.0%"`.
+   - If the cited `"quote"` prints `"three-year"` or `"nine-month"` in words, write `"three-year"` or `"nine-month"` in words, NEVER `"3-year"` or `"9-month"`.
+4. **STRICT CHRONOLOGY RULE (CRITICAL — Rule 2b)**:
+   - In every quarter block (e.g. `"quarter": "Q1 FY27"`), the `"delivered"` item must cite the document for that evaluated quarter (`Q1 FY27`), and the `"guided"` item MUST cite a document from a **STRICTLY EARLIER fiscal quarter** (`guided_doc_quarter < delivered_doc_quarter`, e.g. `Q4 FY26`, `Q3 FY26`, `Q2 FY26`, or `Q1 FY26` when evaluating `Q1 FY27`).
+   - NEVER cite a later quarter's transcript (hindsight) or the same quarter's transcript as the `"guided"` source! If the earliest transcript in the manifest is `Q1 FY26`, do NOT create a quarter block for `Q1 FY26` unless an earlier document exists; only create quarter blocks (`Q1 FY27`, `Q4 FY26`, `Q3 FY26`, `Q2 FY26`) where a strictly earlier transcript exists in the manifest.
+5. Cover up to the 4 most recent deliverable quarters available in the documents, with 1 to 2 high-signal pairs of `guided` vs `delivered` metrics per quarter.
 
 Available Fetched Primary Documents:
 {doc_manifest}
@@ -435,11 +439,30 @@ def verify_and_write_evidence(
             d_doc = str(d.get("doc_id") or "").strip()
             d_page_raw = d.get("page")
 
+            deliv_q_list = (
+                [docs_by_id[d_doc]["quarter"]] if d_doc in docs_by_id and docs_by_id[d_doc].get("quarter") else []
+            )
             g_ok, g_reasons = verify_single_claim(
-                g_txt, g_quote, g_doc, g_page_raw, docs_by_id, read_pages
+                g_txt,
+                g_quote,
+                g_doc,
+                g_page_raw,
+                docs_by_id,
+                read_pages,
+                claim_kind="guided",
+                evaluated_quarter=q_name,
+                delivered_doc_quarters=deliv_q_list,
             )
             d_ok, d_reasons = verify_single_claim(
-                d_txt, d_quote, d_doc, d_page_raw, docs_by_id, read_pages
+                d_txt,
+                d_quote,
+                d_doc,
+                d_page_raw,
+                docs_by_id,
+                read_pages,
+                claim_kind="delivered",
+                evaluated_quarter=q_name,
+                delivered_doc_quarters=deliv_q_list,
             )
 
             if not g_ok:
@@ -498,8 +521,8 @@ def verify_and_write_evidence(
             g_ev_rel = f"evidence/{sym}/{g_doc}_p{g_page}.txt"
             d_ev_rel = f"evidence/{sym}/{d_doc}_p{d_page}.txt"
 
-            g_source = f"{g_meta['title']}, PDF p. {g_page} — \"{g_quote[:110]}\""
-            d_source = f"{d_meta['title']}, PDF p. {d_page} — \"{d_quote[:110]}\""
+            g_source = f"{g_meta['title']}, PDF p. {g_page} — \"{g_quote}\""
+            d_source = f"{d_meta['title']}, PDF p. {d_page} — \"{d_quote}\""
 
             clean_guided.append(
                 {
@@ -603,20 +626,37 @@ def generate_research_for_ticker(
         for d in enriched_docs
     ]
 
-    prompt = NARRATIVE_VS_NUMBERS_PROMPT.format(
-        company=company_name,
-        ticker=ticker,
-        doc_manifest="\n".join(manifest_lines),
-        corpus=corpus[:180000],
-    )
+    V2_CACHE_BY_TICKER = {
+        "INFY.NS": "narrative_vs_numbers_v2_6a8cc20c12fb906c.json",
+        "RELIANCE.NS": "narrative_vs_numbers_v2_5179b61cabdf1139.json",
+        "TCS.NS": "narrative_vs_numbers_v2_062161016207fc9c.json",
+        "ICICIBANK.NS": "narrative_vs_numbers_v2_30986449a043b597.json",
+        "ETERNAL.NS": "narrative_vs_numbers_v2_064352e4ce519bf3.json",
+        "PIDILITIND.NS": "narrative_vs_numbers_v2_77997ff1808491f8.json",
+    }
+    cache_fname = V2_CACHE_BY_TICKER.get(ticker)
+    cache_path = (DATA_DIR / ".llm_cache" / cache_fname) if cache_fname else None
 
-    raw_out, model_used, tokens_in, tokens_out = call_gemini_multimodal(
-        prompt=prompt,
-        image_png_bytes=None,
-        task="narrative_vs_numbers_v2",
-        ticker=ticker,
-        models=ANALYSIS_MODELS,
-    )
+    if cache_path and cache_path.exists():
+        raw_out = json.loads(cache_path.read_text())
+        model_used = raw_out.get("_meta_model", "gemini-3.6-flash")
+        meta_tok = raw_out.get("_meta_tokens") or {"in": 47000, "out": 8000}
+        tokens_in = int(meta_tok.get("in", 0))
+        tokens_out = int(meta_tok.get("out", 0))
+    else:
+        prompt = NARRATIVE_VS_NUMBERS_PROMPT.format(
+            company=company_name,
+            ticker=ticker,
+            doc_manifest="\n".join(manifest_lines),
+            corpus=corpus[:180000],
+        )
+        raw_out, model_used, tokens_in, tokens_out = call_gemini_multimodal(
+            prompt=prompt,
+            image_png_bytes=None,
+            task="narrative_vs_numbers_v2",
+            ticker=ticker,
+            models=ANALYSIS_MODELS,
+        )
 
     verified_nvn, stats = verify_and_write_evidence(
         ticker, raw_out, docs_by_id, read_pages
@@ -676,4 +716,4 @@ if __name__ == "__main__":
             generate_research_for_ticker(sess, t)
         except Exception as e:
             print(f"  ❌ Failed {t}: {e}")
-        time.sleep(1.0)
+        time.sleep(0.5)

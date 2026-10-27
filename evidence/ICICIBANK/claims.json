@@ -207,39 +207,5 @@
     "pdf_page": 3,
     "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_24042026135323_NSEBSE_24042026.pdf#page=3",
     "evidence_page_file": "evidence/ICICIBANK/DOC_3_p3.txt"
-  },
-  {
-    "claim_id": "ICICIBANK-13",
-    "ticker": "ICICIBANK.NS",
-    "quarter": "Q3 FY26",
-    "type": "guided",
-    "metric": "Agricultural PSL Compliance",
-    "claim_text": "Management stated the bank has originated the portfolio since 2012 and will work to bring it in conformity with regulatory expectations.",
-    "verbatim_quote": "The Bank has been originating this portfolio since 2012 and will work to bring it in conformity with regulatory expectations.",
-    "numbers_verified_on_page": [
-      "2012"
-    ],
-    "doc_id": "DOC_4",
-    "doc_title": "Q3 FY26 Concall Transcript (22-Jan-2026)",
-    "pdf_page": 3,
-    "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_22012026172959_NSEBSE.pdf#page=3",
-    "evidence_page_file": "evidence/ICICIBANK/DOC_4_p3.txt"
-  },
-  {
-    "claim_id": "ICICIBANK-14",
-    "ticker": "ICICIBANK.NS",
-    "quarter": "Q3 FY26",
-    "type": "delivered",
-    "metric": "Agricultural PSL Compliance",
-    "claim_text": "RBI directed the Bank to make a standard asset provision of ₹1,283 crore.",
-    "verbatim_quote": "Following its annual supervisory review, RBI has directed the Bank to make a standard asset provision of ₹1,283 crore",
-    "numbers_verified_on_page": [
-      "1283"
-    ],
-    "doc_id": "DOC_4",
-    "doc_title": "Q3 FY26 Concall Transcript (22-Jan-2026)",
-    "pdf_page": 3,
-    "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_22012026172959_NSEBSE.pdf#page=3",
-    "evidence_page_file": "evidence/ICICIBANK/DOC_4_p3.txt"
   }
 ]

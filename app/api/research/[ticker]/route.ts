@@ -10,11 +10,14 @@ export async function GET(
 
   if (!research) {
     const available = getAvailableResearch();
+    const upper = ticker.trim().toUpperCase();
+    const normTicker =
+      upper.endsWith(".NS") || upper.endsWith(".BO") ? upper : `${upper}.NS`;
     return NextResponse.json(
       {
-        error: `No research data for ${ticker}`,
+        error: `Not pre-computed, run \`python pipeline/generate_research.py ${normTicker}\``,
         available,
-        hint: "Try one of the available tickers, or run the pipeline to generate data.",
+        hint: `Not pre-computed, run \`python pipeline/generate_research.py ${normTicker}\``,
       },
       { status: 404 }
     );

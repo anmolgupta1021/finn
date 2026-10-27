@@ -1,7 +1,7 @@
 {
   "ticker": "TCS.NS",
   "company_name": "Tata Consultancy Services Limited",
-  "generated_at": "2026-10-27T09:25:49.002857Z",
+  "generated_at": "2026-10-27T12:38:17.705513Z",
   "source_documents": [
     {
       "type": "concall_transcript",
@@ -78,31 +78,13 @@
             "doc_id": "DOC_5",
             "page": 4,
             "evidence_file": "evidence/TCS/DOC_5_p4.txt"
-          },
-          {
-            "metric": "Operating Margin Band",
-            "guidance": "Aspiration to inch closer to 26% to 28% band",
-            "source": "Q3 FY26 Concall Transcript (16-Jan-2026), PDF p. 23 — \"while we will not shy away from making investments, we want to inch closer to our 26% to 28% band\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_16012026163741_Signed_SEIntimation.pdf#page=23",
-            "doc_id": "DOC_4",
-            "page": 23,
-            "evidence_file": "evidence/TCS/DOC_4_p23.txt"
           }
         ],
         "delivered": [
           {
             "metric": "AI Project Engagements",
             "actual": "Annualized AI revenue reached US$1.8 billion, growing 17.3% QoQ in constant currency",
-            "source": "Q3 FY26 Concall Transcript (16-Jan-2026), PDF p. 4 — \"Our AI services now generate US$1.8 billion in annualized revenue and is growing at 17.3% QoQ in constant curr\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_16012026163741_Signed_SEIntimation.pdf#page=4",
-            "doc_id": "DOC_4",
-            "page": 4,
-            "evidence_file": "evidence/TCS/DOC_4_p4.txt"
-          },
-          {
-            "metric": "Operating Margin Band",
-            "actual": "Operating margin stood at 25.2%, remaining stable sequentially",
-            "source": "Q3 FY26 Concall Transcript (16-Jan-2026), PDF p. 4 — \"Our Q3 operating margins stood at 25.2%, remaining stable sequentially. This excludes one-o(cid:431)s.\"",
+            "source": "Q3 FY26 Concall Transcript (16-Jan-2026), PDF p. 4 — \"Our AI services now generate US$1.8 billion in annualized revenue and is growing at 17.3% QoQ in constant currency.\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_16012026163741_Signed_SEIntimation.pdf#page=4",
             "doc_id": "DOC_4",
             "page": 4,
@@ -127,7 +109,7 @@
           {
             "metric": "Annualized AI Revenue",
             "guidance": "Prior run-rate of US$1.8 billion growing at 17.3% QoQ",
-            "source": "Q3 FY26 Concall Transcript (16-Jan-2026), PDF p. 4 — \"Our AI services now generate US$1.8 billion in annualized revenue and is growing at 17.3% QoQ in constant curr\"",
+            "source": "Q3 FY26 Concall Transcript (16-Jan-2026), PDF p. 4 — \"Our AI services now generate US$1.8 billion in annualized revenue and is growing at 17.3% QoQ in constant currency.\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_16012026163741_Signed_SEIntimation.pdf#page=4",
             "doc_id": "DOC_4",
             "page": 4,
@@ -147,7 +129,7 @@
           {
             "metric": "Annualized AI Revenue",
             "actual": "Annualized AI revenue reached US$2.3 billion",
-            "source": "Q4 FY26 Concall Transcript (14-Apr-2026), PDF p. 4 — \"Fourth is the momentum we see in our AI Services, which continued to accelerate impressively, standing at US$2\"",
+            "source": "Q4 FY26 Concall Transcript (14-Apr-2026), PDF p. 4 — \"Fourth is the momentum we see in our AI Services, which continued to accelerate impressively, standing at US$2.3 billion on an annualized basis.\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14042026200132_SEInt14042026_signed.pdf#page=4",
             "doc_id": "DOC_3",
             "page": 4,
@@ -163,7 +145,7 @@
           {
             "metric": "Annualized AI Revenue",
             "guidance": "Prior run-rate of US$2.3 billion on an annualized basis",
-            "source": "Q4 FY26 Concall Transcript (14-Apr-2026), PDF p. 4 — \"Fourth is the momentum we see in our AI Services, which continued to accelerate impressively, standing at US$2\"",
+            "source": "Q4 FY26 Concall Transcript (14-Apr-2026), PDF p. 4 — \"Fourth is the momentum we see in our AI Services, which continued to accelerate impressively, standing at US$2.3 billion on an annualized basis.\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14042026200132_SEInt14042026_signed.pdf#page=4",
             "doc_id": "DOC_3",
             "page": 4,
@@ -210,7 +192,7 @@
           {
             "metric": "Operating Margin Target",
             "actual": "Operating margin remained stable sequentially at 24%",
-            "source": "Q2 FY27 Concall Transcript (14-Oct-2026), PDF p. 5 — \"Our operating margins remained stable sequentially at 24%. Consistent with our philosophy to drive long-term p\"",
+            "source": "Q2 FY27 Concall Transcript (14-Oct-2026), PDF p. 5 — \"Our operating margins remained stable sequentially at 24%. Consistent with our philosophy to drive long-term profitable growth\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14102026155941_SEInt14102026_signed.pdf#page=5",
             "doc_id": "DOC_1",
             "page": 5,
@@ -236,9 +218,20 @@
   "citation_audit": {
     "documents_fetched": 10,
     "pages_actually_read": 193,
-    "verified_claims": 14,
-    "rejected_claims": 1,
+    "verified_claims": 12,
+    "rejected_claims": 2,
     "rejections_detail": [
+      {
+        "quarter": "Q3 FY26",
+        "type": "guided",
+        "doc_id": "DOC_4",
+        "page": 23,
+        "claim": "Aspiration to inch closer to 26% to 28% band",
+        "quote": "while we will not shy away from making investments, we want to inch closer to our 26% to 28% band",
+        "reasons": [
+          "chronology_violation (guided doc DOC_4 [Q3 FY26] period Q3 FY26 is not strictly earlier than delivered period Q3 FY26)"
+        ]
+      },
       {
         "quarter": "Q1 FY27",
         "type": "guided",

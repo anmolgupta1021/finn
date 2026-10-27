@@ -73,6 +73,14 @@ export type AnnouncementCategory =
   | "pledging"
   | "unclassified";
 
+export interface ResultsDerivation {
+  basis_note: string;
+  revenue_definition: string;
+  ebitda_formula: string;
+  pbt_basis: string;
+  pat_basis: string;
+}
+
 export interface ResultsEnrichment {
   status?: "ok" | "corrupted_pdf" | "no_statement_page_found";
   error?: string;
@@ -96,6 +104,7 @@ export interface ResultsEnrichment {
   pbt?: MetricWithChange;
   pat?: MetricWithChange;
   pat_owners?: MetricWithChange | null;
+  derivation?: ResultsDerivation;
   validation?: {
     passed: boolean;
     flags: string[];

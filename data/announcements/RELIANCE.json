@@ -7,14 +7,14 @@
     "headline": "General Updates — Initial Public Offer of Jio Platforms Limited",
     "category": "fund_raise",
     "priority": 1,
-    "summary": "Update regarding the Initial Public Offer of Jio Platforms Limited.",
+    "summary": "Updates regarding the Initial Public Offer (IPO) of Jio Platforms Limited.",
     "source_url": "https://nsearchives.nseindia.com/corporate/PVIVINMA_24102026214355_RIL_SE_241026.pdf",
     "raw_text": "Initial Public Offer of Jio Platforms Limited",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "gemini-3.6-flash",
     "tokens": {
-      "in": 160,
-      "out": 50
+      "in": 170,
+      "out": 259
     }
   },
   {
@@ -25,14 +25,14 @@
     "headline": "Updates — Please find attached a media statement issued by the Company.",
     "category": "press_release",
     "priority": 2,
-    "summary": "Company issued a media statement.",
+    "summary": "Reliance Industries Limited issued a media statement.",
     "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_21102026224413_SE_21102026.pdf",
     "raw_text": "Please find attached a media statement issued by the Company.",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "gemini-3.6-flash",
     "tokens": {
-      "in": 160,
-      "out": 50
+      "in": 170,
+      "out": 259
     }
   },
   {
@@ -43,14 +43,68 @@
     "headline": "Credit Rating — Reliance Industries Limited has informed the Exchange about Credit Rating",
     "category": "credit_rating",
     "priority": 2,
-    "summary": "Exchange informed regarding credit rating update.",
+    "summary": "Reliance Industries Limited has informed the Exchange about Credit Rating",
     "source_url": "https://nsearchives.nseindia.com/corporate/PVIVINMA_21102026204310_SE_ICRA.pdf",
     "raw_text": "Reliance Industries Limited has informed the Exchange about Credit Rating",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 160,
-      "out": 50
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-reliance-94e29d70e3",
+    "ticker": "RELIANCE.NS",
+    "company_name": "Reliance Industries Limited",
+    "timestamp": "2026-10-17T19:32:52+05:30",
+    "headline": "Updates — The newspaper clippings of the advertisement on the captioned subject published today are enclosed.",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "The newspaper clippings of the advertisement on the captioned subject published today are enclosed.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/PVIVINMA_17102026193113_RIL_SE_171026.pdf",
+    "raw_text": "The newspaper clippings of the advertisement on the captioned subject published today are enclosed.",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-reliance-ee25fb3457",
+    "ticker": "RELIANCE.NS",
+    "company_name": "Reliance Industries Limited",
+    "timestamp": "2026-10-16T20:58:26+05:30",
+    "headline": "Copy of Newspaper Publication — Newspaper Clippings   Proposed Initial Public Offer of Jio Platforms Limited - Reservation for eligible RIL shareholders",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Newspaper Clippings   Proposed Initial Public Offer of Jio Platforms Limited - Reservation for eligible RIL shareholders",
+    "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_16102026205736_RILSELetter_16102026.pdf",
+    "raw_text": "Newspaper Clippings   Proposed Initial Public Offer of Jio Platforms Limited - Reservation for eligible RIL shareholders",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-reliance-9b8ea2cb86",
+    "ticker": "RELIANCE.NS",
+    "company_name": "Reliance Industries Limited",
+    "timestamp": "2026-10-15T18:06:36+05:30",
+    "headline": "Copy of Newspaper Publication — Newspaper clippings   Special Window for transfer and dematerialisation (demat) of physical sharesThe newspaper clippings of the advertisement on the captioned subject published today i.e., October 15, 2026 in the newspapers viz. The Indian Express",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Newspaper clippings   Special Window for transfer and dematerialisation (demat) of physical sharesThe newspaper clippings of the advertisement on the captioned subject published today i.e., October 15, 2026 in the newspapers viz. The Indian Express (English), Financial Express (English), Loksatta (Marathi) and Jansatta (Hindi) are enclosed for information and records.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/PVIVINMA_15102026180155_RILSpecialWindowAdvt.pdf",
+    "raw_text": "Newspaper clippings   Special Window for transfer and dematerialisation (demat) of physical sharesThe newspaper clippings of the advertisement on the captioned subject published today i.e., October 15, 2026 in the newspapers viz. The Indian Express (English), Financial Express (English), Loksatta (Marathi) and Jansatta (Hindi) are enclosed for information and records.",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -61,14 +115,14 @@
     "headline": "General Updates — Proposed Initial Public Offer of Jio Platforms Limited.",
     "category": "fund_raise",
     "priority": 1,
-    "summary": "Proposed Initial Public Offer of Jio Platforms Limited.",
+    "summary": "Update regarding the proposed Initial Public Offer (IPO) of Jio Platforms Limited.",
     "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_14102026201111_RIL_SE_14102026_.pdf",
     "raw_text": "Proposed Initial Public Offer of Jio Platforms Limited.",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "gemini-3.6-flash",
     "tokens": {
-      "in": 160,
-      "out": 50
+      "in": 170,
+      "out": 259
     }
   },
   {
@@ -83,10 +137,10 @@
     "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_14102026183404_RIL_SE14102026.pdf",
     "raw_text": "Proposed Initial Public Offer of Jio Platforms Limited - filing of the Red Herring Prospectus.",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "gemini-3.6-flash",
     "tokens": {
-      "in": 160,
-      "out": 50
+      "in": 170,
+      "out": 259
     }
   },
   {
@@ -97,27 +151,63 @@
     "headline": "Action(s) taken or orders passed — Disclosure under Regulation 30 of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015 is attached.",
     "category": "litigation",
     "priority": 2,
-    "summary": "Disclosure of regulatory or tax order under Regulation 30.",
+    "summary": "Disclosure under Regulation 30 regarding regulatory action or order passed.",
     "source_url": "https://nsearchives.nseindia.com/corporate/PVIVINMA_07102026223504_RIL_SEletter07102026.pdf",
     "raw_text": "Disclosure under Regulation 30 of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015 is attached.",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "gemini-3.6-flash",
     "tokens": {
-      "in": 160,
-      "out": 50
+      "in": 170,
+      "out": 259
     }
   },
   {
-    "id": "reliance-results-reliance_q1fy27",
+    "id": "nse-reliance-0e76ccbb8e",
     "ticker": "RELIANCE.NS",
     "company_name": "Reliance Industries Limited",
-    "timestamp": "2026-07-17T19:07:44+05:30",
-    "headline": "Outcome of Board Meeting — Unaudited Consolidated and Standalone Financial Results for Q1 FY27 (quarter ended Jun 30, 2026)",
+    "timestamp": "2026-10-01T15:02:20+05:30",
+    "headline": "Allotment of Securities — We wish to inform that the Company has today allotted 13,00,000 Unsecured, Redeemable, Non-Convertible Debentures (\"NCDs\") of the face value of Rs. 1,00,000 each (\"PPD Series R\"), issued on private placement basis.",
+    "category": "fund_raise",
+    "priority": 1,
+    "summary": "Allotted 13,00,000 Unsecured Redeemable Non-Convertible Debentures (PPD Series R) of face value ₹1,00,000 each on a private placement basis.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_01102026150203_SE_01102026.pdf",
+    "raw_text": "We wish to inform that the Company has today allotted 13,00,000 Unsecured, Redeemable, Non-Convertible Debentures (\"NCDs\") of the face value of Rs. 1,00,000 each (\"PPD Series R\"), issued on private placement basis.",
+    "enrichment": {},
+    "model_used": "gemini-3.6-flash",
+    "tokens": {
+      "in": 170,
+      "out": 259
+    }
+  },
+  {
+    "id": "nse-reliance-d7acf01bc6",
+    "ticker": "RELIANCE.NS",
+    "company_name": "Reliance Industries Limited",
+    "timestamp": "2026-09-30T17:19:17+05:30",
+    "headline": "Trading Window — Reliance Industries Limited has informed the Exchange regarding the Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015",
+    "category": "insider_trading",
+    "priority": 3,
+    "summary": "Reliance Industries Limited has informed the Exchange regarding the Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015",
+    "source_url": "https://nsearchives.nseindia.com/corporate/PVIVINMA_30092026170527_SE_TWC_300926.pdf",
+    "raw_text": "Reliance Industries Limited has informed the Exchange regarding the Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-reliance-slice1-q1fy27",
+    "ticker": "RELIANCE.NS",
+    "company_name": "Reliance Industries Limited",
+    "timestamp": "2026-06-30T16:00:00+05:30",
+    "headline": "Outcome of Board Meeting — Q1 FY27 Financial Results (Consolidated)",
     "category": "results",
     "priority": 1,
     "summary": "Q1 FY27 (consolidated): Revenue ₹311,850 Cr (+25.4% YoY, +4.4% QoQ); Operating EBITDA ₹47,517 Cr (+10.8% YoY, margin 15.2%); PAT ₹23,196 Cr (-24.6% YoY, +12.7% QoQ).",
     "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_17072026190726_SE_FR_1.pdf",
-    "raw_text": "Outcome of Board Meeting — Unaudited Consolidated and Standalone Financial Results for Q1 FY27 (quarter ended Jun 30, 2026)",
+    "raw_text": "Q1 FY27 (consolidated): Revenue ₹311,850 Cr (+25.4% YoY, +4.4% QoQ); Operating EBITDA ₹47,517 Cr (+10.8% YoY, margin 15.2%); PAT ₹23,196 Cr (-24.6% YoY, +12.7% QoQ).",
     "enrichment": {
       "status": "ok",
       "quarter": "Q1 FY27",
@@ -169,6 +259,13 @@
         "year_ago_quarter": 26994.0,
         "qoq": 23.42,
         "yoy": -22.4
+      },
+      "derivation": {
+        "basis_note": "Statement of Consolidated Unaudited Financial Results (PDF p. 9 via vision, reported in ₹ crore).",
+        "revenue_definition": "Revenue from Operations (Net of GST/Excise) = ₹3,11,850 Cr.",
+        "ebitda_formula": "Operating Profit (Revenue ₹3,11,850 Cr − Total Expenses ₹2,87,770 Cr = ₹24,080 Cr) + Finance Costs (₹8,337 Cr) + Depreciation, Depletion & Amortisation (₹15,100 Cr) = ₹47,517 Cr (15.24% margin).",
+        "pbt_basis": "Profit Before Tax (after Share of Profit of Associates/JVs; no exceptional items in Q1 FY27) = ₹30,630 Cr.",
+        "pat_basis": "Total Consolidated Profit for the period = ₹23,196 Cr (Profit attributable to Owners of the Company = ₹20,946 Cr; Non-controlling interest = ₹2,250 Cr)."
       },
       "validation": {
         "passed": true,

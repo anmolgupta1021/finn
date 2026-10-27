@@ -74,7 +74,8 @@
     "quote": "revenues for the quarter grew 2.2% sequentially and 2.9% year-on-year in constant currency",
     "rejected": true,
     "rejection_reasons": [
-      "claim_numbers_missing_on_page (['3.9'] in claim 'Q2 FY26 revenue grew 2.2% QoQ and 3.9% YoY in CC terms.' not on DOC_4 p.3)"
+      "claim_numbers_missing_on_page (['3.9'] in claim 'Q2 FY26 revenue grew 2.2% QoQ and 3.9% YoY in CC terms.' not on DOC_4 p.3)",
+      "claim_numbers_missing_in_quote (['3.9'] in claim 'Q2 FY26 revenue grew 2.2% QoQ and 3.9% YoY in CC terms.' not inside cited quote)"
     ]
   },
   {
@@ -86,7 +87,8 @@
     "quote": "Our operating margin was 21%.",
     "rejected": true,
     "rejection_reasons": [
-      "claim_numbers_missing_on_page (['21.0'] in claim 'Delivered Q2 FY26 operating margin of 21.0%.' not on DOC_4 p.3)"
+      "claim_numbers_missing_on_page (['21.0'] in claim 'Delivered Q2 FY26 operating margin of 21.0%.' not on DOC_4 p.3)",
+      "claim_numbers_missing_in_quote (['21.0'] in claim 'Delivered Q2 FY26 operating margin of 21.0%.' not inside cited quote)"
     ]
   },
   {
@@ -112,7 +114,8 @@
     "quote": "Our operating margin was 21%.",
     "rejected": true,
     "rejection_reasons": [
-      "claim_numbers_missing_on_page (['50'] in claim 'Operating margin was 21%, expanding 50 bps QoQ.' not on DOC_4 p.3)"
+      "claim_numbers_missing_on_page (['50'] in claim 'Operating margin was 21%, expanding 50 bps QoQ.' not on DOC_4 p.3)",
+      "claim_numbers_missing_in_quote (['50'] in claim 'Operating margin was 21%, expanding 50 bps QoQ.' not inside cited quote)"
     ]
   },
   {
@@ -124,7 +127,32 @@
     "quote": "The new guidance is growth between 2% and 3% in constant currency terms for the full year.",
     "rejected": true,
     "rejection_reasons": [
-      "claim_numbers_missing_on_page (['4.5'] in claim 'Growth between 2% and 3% backed by $4.5 billion in large deals.' not on DOC_4 p.3)"
+      "claim_numbers_missing_on_page (['4.5'] in claim 'Growth between 2% and 3% backed by $4.5 billion in large deals.' not on DOC_4 p.3)",
+      "claim_numbers_missing_in_quote (['4.5'] in claim 'Growth between 2% and 3% backed by $4.5 billion in large deals.' not inside cited quote)"
+    ]
+  },
+  {
+    "id": 11,
+    "corruption_type": "Number from elsewhere on the SAME page (DOC_4 p. 3 has '21%' in para 4, but cited quote only covers revenue growth '2.2%' and '2.9%')",
+    "doc_id": "DOC_4",
+    "page": 3,
+    "claim_text": "Q2 FY26 revenue grew 2.2% QoQ and 2.9% YoY with 21% operating margin.",
+    "quote": "revenues for the quarter grew 2.2% sequentially and 2.9% year-on-year in constant currency",
+    "rejected": true,
+    "rejection_reasons": [
+      "claim_numbers_missing_in_quote (['21'] in claim 'Q2 FY26 revenue grew 2.2% QoQ and 2.9% YoY with 21% operating margin.' not inside cited quote)"
+    ]
+  },
+  {
+    "id": 12,
+    "corruption_type": "Guidance cited from a LATER transcript (Q3 FY26 DOC_3 p. 4 cited as guidance for Q2 FY26 delivery — hindsight chronology violation)",
+    "doc_id": "DOC_3",
+    "page": 4,
+    "claim_text": "Guided FY26 revenue growth of 3% to 3.5% in constant currency.",
+    "quote": "The new revenue growth guidance for this financial year is 3% to 3.5% growth in constant currency",
+    "rejected": true,
+    "rejection_reasons": [
+      "chronology_violation (guided doc DOC_3 [Q3 FY26] period Q3 FY26 is not strictly earlier than delivered period Q2 FY26)"
     ]
   }
 ]

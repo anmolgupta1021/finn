@@ -1,7 +1,7 @@
 {
   "ticker": "ICICIBANK.NS",
   "company_name": "ICICI Bank Limited",
-  "generated_at": "2026-10-27T09:27:25.878054Z",
+  "generated_at": "2026-10-27T12:38:32.030087Z",
   "source_documents": [
     {
       "type": "concall_transcript",
@@ -82,7 +82,7 @@
           {
             "metric": "FCNR(B) Deposit Mobilisation",
             "guidance": "Management expected momentum in FCNR(B) deposit mobilization to pick up.",
-            "source": "Q1 FY27 Concall Transcript (23-Jul-2026), PDF p. 6 — \"We do expect the momentum to pick up as we go along and, of course, we are committed to make this initiative o\"",
+            "source": "Q1 FY27 Concall Transcript (23-Jul-2026), PDF p. 6 — \"We do expect the momentum to pick up as we go along and, of course, we are committed to make this initiative of RBI, a success.\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_23072026185521_NSEBSE.pdf#page=6",
             "doc_id": "DOC_2",
             "page": 6,
@@ -102,7 +102,7 @@
           {
             "metric": "FCNR(B) Deposit Mobilisation",
             "actual": "The Bank mobilised gross FCNR (B) deposits of about $18 billion.",
-            "source": "Q2 FY27 Concall Transcript (23-Oct-2026), PDF p. 3 — \"The Bank has mobilised gross FCNR (B) deposits of about $18 billion, pursuant to Reserve Bank of India’s swap \"",
+            "source": "Q2 FY27 Concall Transcript (23-Oct-2026), PDF p. 3 — \"The Bank has mobilised gross FCNR (B) deposits of about $18 billion, pursuant to Reserve Bank of India’s swap facility\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_23102026175603_NSEBSE23102026.pdf#page=3",
             "doc_id": "DOC_1",
             "page": 3,
@@ -118,7 +118,7 @@
           {
             "metric": "Net Interest Margin Trajectory",
             "guidance": "Management expected NIMs to be range-bound in FY27.",
-            "source": "Q4 FY26 Concall Transcript (24-Apr-2026), PDF p. 8 — \"We do expect NIMs to be range-bound in FY27. From our perspective, we continue to focus on risk-calibrated ope\"",
+            "source": "Q4 FY26 Concall Transcript (24-Apr-2026), PDF p. 8 — \"We do expect NIMs to be range-bound in FY27. From our perspective, we continue to focus on risk-calibrated operating profit\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_24042026135323_NSEBSE_24042026.pdf#page=8",
             "doc_id": "DOC_3",
             "page": 8,
@@ -163,7 +163,7 @@
           {
             "metric": "Net Interest Margin",
             "guidance": "Management expected NIMs to remain more or less range bound.",
-            "source": "Q3 FY26 Concall Transcript (22-Jan-2026), PDF p. 8 — \"Looking ahead, we do expect NIMs to remain more or less range bound, reflecting the repricing of the external \"",
+            "source": "Q3 FY26 Concall Transcript (22-Jan-2026), PDF p. 8 — \"Looking ahead, we do expect NIMs to remain more or less range bound, reflecting the repricing of the external benchmarks on loans\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_22012026172959_NSEBSE.pdf#page=8",
             "doc_id": "DOC_4",
             "page": 8,
@@ -172,7 +172,7 @@
           {
             "metric": "Normalized Provisions",
             "guidance": "Excluding the additional standard asset provision, total provisions were ₹1,273 crore or 7.3% of core operating profit and 0.36% of average advances.",
-            "source": "Q3 FY26 Concall Transcript (22-Jan-2026), PDF p. 4 — \"Excluding the additional standard asset provision, the total provisions were ₹1,273 crore or 7.3% of core oper\"",
+            "source": "Q3 FY26 Concall Transcript (22-Jan-2026), PDF p. 4 — \"Excluding the additional standard asset provision, the total provisions were ₹1,273 crore or 7.3% of core operating profit and 0.36% of average advances\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_22012026172959_NSEBSE.pdf#page=4",
             "doc_id": "DOC_4",
             "page": 4,
@@ -192,7 +192,7 @@
           {
             "metric": "Normalized Provisions",
             "actual": "Provisions excluding tax were ₹96 crore in Q4-2026 reflecting healthy asset quality.",
-            "source": "Q4 FY26 Concall Transcript (24-Apr-2026), PDF p. 3 — \"Provisions (excluding provision for tax) were ₹96 crore in Q4-2026 reflecting healthy asset quality and higher\"",
+            "source": "Q4 FY26 Concall Transcript (24-Apr-2026), PDF p. 3 — \"Provisions (excluding provision for tax) were ₹96 crore in Q4-2026 reflecting healthy asset quality and higher recoveries and write-backs.\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_24042026135323_NSEBSE_24042026.pdf#page=3",
             "doc_id": "DOC_3",
             "page": 3,
@@ -201,33 +201,6 @@
         ],
         "verdict": "beat",
         "commentary": "NIM remained steady at 4.32% in Q4-2026, while provisions dropped sharply to ₹96 crore in Q4-2026 supported by corporate recoveries."
-      },
-      {
-        "quarter": "Q3 FY26",
-        "guided": [
-          {
-            "metric": "Agricultural PSL Compliance",
-            "guidance": "Management stated the bank has originated the portfolio since 2012 and will work to bring it in conformity with regulatory expectations.",
-            "source": "Q3 FY26 Concall Transcript (22-Jan-2026), PDF p. 3 — \"The Bank has been originating this portfolio since 2012 and will work to bring it in conformity with regulator\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_22012026172959_NSEBSE.pdf#page=3",
-            "doc_id": "DOC_4",
-            "page": 3,
-            "evidence_file": "evidence/ICICIBANK/DOC_4_p3.txt"
-          }
-        ],
-        "delivered": [
-          {
-            "metric": "Agricultural PSL Compliance",
-            "actual": "RBI directed the Bank to make a standard asset provision of ₹1,283 crore.",
-            "source": "Q3 FY26 Concall Transcript (22-Jan-2026), PDF p. 3 — \"Following its annual supervisory review, RBI has directed the Bank to make a standard asset provision of ₹1,28\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_22012026172959_NSEBSE.pdf#page=3",
-            "doc_id": "DOC_4",
-            "page": 3,
-            "evidence_file": "evidence/ICICIBANK/DOC_4_p3.txt"
-          }
-        ],
-        "verdict": "hit",
-        "commentary": "Bank met underlying operating expectations with 0.37% net NPA ratio, while absorbing a regulatory-directed ₹1,283 crore standard asset provision on agricultural priority sector facilities."
       }
     ],
     "credibility_score": "high",
@@ -236,9 +209,21 @@
   "citation_audit": {
     "documents_fetched": 10,
     "pages_actually_read": 185,
-    "verified_claims": 14,
-    "rejected_claims": 0,
-    "rejections_detail": []
+    "verified_claims": 12,
+    "rejected_claims": 1,
+    "rejections_detail": [
+      {
+        "quarter": "Q3 FY26",
+        "type": "guided",
+        "doc_id": "DOC_4",
+        "page": 3,
+        "claim": "Management stated the bank has originated the portfolio since 2012 and will work to bring it in conformity with regulatory expectations.",
+        "quote": "The Bank has been originating this portfolio since 2012 and will work to bring it in conformity with regulatory expectations.",
+        "reasons": [
+          "chronology_violation (guided doc DOC_4 [Q3 FY26] period Q3 FY26 is not strictly earlier than delivered period Q3 FY26)"
+        ]
+      }
+    ]
   },
   "model_used": "gemini-3.6-flash",
   "tokens": {

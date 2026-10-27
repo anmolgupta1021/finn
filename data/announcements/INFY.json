@@ -1,5 +1,23 @@
 [
   {
+    "id": "nse-infy-0afc3c3e06",
+    "ticker": "INFY.NS",
+    "company_name": "Infosys Limited",
+    "timestamp": "2026-10-27T16:38:30+05:30",
+    "headline": "Updates — Infosys Limited has informed the Exchange regarding 'Infosys Successfully Delivers Syngenta s Global SAP S/4HANA Transformation for Crop Protection Business'.",
+    "category": "press_release",
+    "priority": 2,
+    "summary": "Infosys successfully delivered Syngenta's global SAP S/4HANA transformation for its crop protection business.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_27102026163727_PR_27102026.pdf",
+    "raw_text": "Infosys Limited has informed the Exchange regarding 'Infosys Successfully Delivers Syngenta s Global SAP S/4HANA Transformation for Crop Protection Business'.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 142,
+      "out": 57
+    }
+  },
+  {
     "id": "nse-infy-f0aa120de5",
     "ticker": "INFY.NS",
     "company_name": "Infosys Limited",
@@ -7,14 +25,14 @@
     "headline": "Copy of Newspaper Publication — Infosys Limited has informed the Exchange about Copy of Newspaper Publication",
     "category": "unclassified",
     "priority": 3,
-    "summary": "Infosys submitted a copy of a newspaper publication as per routine compliance.",
+    "summary": "Infosys Limited has informed the Exchange about Copy of Newspaper Publication",
     "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_24102026194244_Financials_newspaper_ad_SE_filing.pdf",
     "raw_text": "Infosys Limited has informed the Exchange about Copy of Newspaper Publication",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 189,
-      "out": 59
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -23,47 +41,11 @@
     "company_name": "Infosys Limited",
     "timestamp": "2026-10-23T20:07:11+05:30",
     "headline": "Updates — Infosys Limited has informed the Exchange regarding 'Report of auditors on financial statements for the quarter and half year ended September 30, 2026 withUDIN'.",
-    "category": "unclassified",
-    "priority": 3,
-    "summary": "Audited financial results report with UDIN submitted for the quarter and half year ended September 30, 2026.",
-    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_23102026200652_SE_filing_Auditors_report_with_UDIN.pdf",
-    "raw_text": "Infosys Limited has informed the Exchange regarding 'Report of auditors on financial statements for the quarter and half year ended September 30, 2026 withUDIN'.",
-    "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
-    "tokens": {
-      "in": 189,
-      "out": 59
-    }
-  },
-  {
-    "id": "nse-infy-efb52f7c68",
-    "ticker": "INFY.NS",
-    "company_name": "Infosys Limited",
-    "timestamp": "2026-10-23T16:10:52+05:30",
-    "headline": "Record Date — Infosys Limited has informed the Exchange that Record date for the purpose of Dividend  is 03-Nov-2026.",
-    "category": "dividend",
-    "priority": 1,
-    "summary": "Fixed November 03, 2026, as the record date for the dividend.",
-    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_23102026160926_BM_Outcome_Oct232026_1.pdf",
-    "raw_text": "Infosys Limited has informed the Exchange that Record date for the purpose of Dividend  is 03-Nov-2026.",
-    "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
-    "tokens": {
-      "in": 189,
-      "out": 59
-    }
-  },
-  {
-    "id": "infy-results-infy_q2fy27",
-    "ticker": "INFY.NS",
-    "company_name": "Infosys Limited",
-    "timestamp": "2026-10-23T16:08:26+05:30",
-    "headline": "Outcome of Board Meeting — Audited Consolidated and Standalone Financial Results for Q2 FY27 (quarter ended Sep 30, 2026)",
     "category": "results",
     "priority": 1,
     "summary": "Q2 FY27 (consolidated): Revenue ₹49,244 Cr (+10.7% YoY, +2.1% QoQ); Operating EBITDA ₹11,689 Cr (+10.9% YoY, margin 23.7%); PAT ₹7,838 Cr (+6.3% YoY, +0.8% QoQ).",
-    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_23102026160704_BM_Outcome_Oct232026_1.pdf",
-    "raw_text": "Outcome of Board Meeting — Audited Consolidated and Standalone Financial Results for Q2 FY27 (quarter ended Sep 30, 2026)",
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_23102026200652_SE_filing_Auditors_report_with_UDIN.pdf",
+    "raw_text": "Infosys Limited has informed the Exchange regarding 'Report of auditors on financial statements for the quarter and half year ended September 30, 2026 withUDIN'.",
     "enrichment": {
       "status": "ok",
       "quarter": "Q2 FY27",
@@ -116,6 +98,113 @@
         "qoq": 0.7,
         "yoy": 6.23
       },
+      "derivation": {
+        "basis_note": "Statement of Consolidated Audited Financial Results under Ind AS (PDF p. 18 via vision, reported in ₹ crore).",
+        "revenue_definition": "Revenue from Operations = ₹49,244 Cr (excludes Other Income of ₹969 Cr).",
+        "ebitda_formula": "Operating Profit (Revenue ₹49,244 Cr − Total Expenses ₹39,029 Cr = ₹10,215 Cr) + Finance Costs (₹115 Cr) + Depreciation & Amortisation (₹1,359 Cr) = ₹11,689 Cr (23.74% margin).",
+        "pbt_basis": "Profit Before Tax (before & after exceptional items; exceptional items = ₹0) = ₹11,063 Cr.",
+        "pat_basis": "Total Consolidated Profit for the period = ₹7,838 Cr (Profit attributable to owners of the company = ₹7,823 Cr; Non-controlling interest = ₹15 Cr)."
+      },
+      "validation": {
+        "passed": true,
+        "flags": []
+      },
+      "highlights": "Basis: Consolidated · Normalised from ₹ crore (Page 18 via vision) · EBITDA derived from schedule iii"
+    },
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 4588,
+      "out": 603
+    }
+  },
+  {
+    "id": "nse-infy-efb52f7c68",
+    "ticker": "INFY.NS",
+    "company_name": "Infosys Limited",
+    "timestamp": "2026-10-23T16:10:52+05:30",
+    "headline": "Record Date — Infosys Limited has informed the Exchange that Record date for the purpose of Dividend  is 03-Nov-2026.",
+    "category": "dividend",
+    "priority": 1,
+    "summary": "Record date for dividend fixed as November 3, 2026.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_23102026160926_BM_Outcome_Oct232026_1.pdf",
+    "raw_text": "Infosys Limited has informed the Exchange that Record date for the purpose of Dividend  is 03-Nov-2026.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 142,
+      "out": 57
+    }
+  },
+  {
+    "id": "nse-infy-c99cbfce24",
+    "ticker": "INFY.NS",
+    "company_name": "Infosys Limited",
+    "timestamp": "2026-10-23T16:08:26+05:30",
+    "headline": "Outcome of Board Meeting — Infosys Limited has submitted to the Exchange, Financial Results for the quarter and half year ended September 30, 2026 and declaration of interim dividend",
+    "category": "results",
+    "priority": 1,
+    "summary": "Q2 FY27 (consolidated): Revenue ₹49,244 Cr (+10.7% YoY, +2.1% QoQ); Operating EBITDA ₹11,689 Cr (+10.9% YoY, margin 23.7%); PAT ₹7,838 Cr (+6.3% YoY, +0.8% QoQ).",
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_23102026160704_BM_Outcome_Oct232026_1.pdf",
+    "raw_text": "Infosys Limited has submitted to the Exchange, Financial Results for the quarter and half year ended September 30, 2026 and declaration of interim dividend",
+    "enrichment": {
+      "status": "ok",
+      "quarter": "Q2 FY27",
+      "basis": "consolidated",
+      "entity_type": "corporate",
+      "reported_unit": "crore",
+      "normalised_unit": "crore",
+      "source_page": 18,
+      "vision_used": true,
+      "ebitda_status": "derived_from_schedule_iii",
+      "revenue_label": "Revenue from Operations",
+      "period_ended": {
+        "current": "2026-09-30",
+        "previous": "2026-06-30",
+        "year_ago": "2025-09-30"
+      },
+      "revenue": {
+        "value": 49244.0,
+        "previous_quarter": 48211.0,
+        "year_ago_quarter": 44490.0,
+        "qoq": 2.14,
+        "yoy": 10.69
+      },
+      "ebitda": {
+        "value": 11689.0,
+        "previous_quarter": 11409.0,
+        "year_ago_quarter": 10535.0,
+        "qoq": 2.45,
+        "yoy": 10.95
+      },
+      "operating_profit_ex_provisions": null,
+      "pbt": {
+        "value": 11063.0,
+        "previous_quarter": 11028.0,
+        "year_ago_quarter": 10229.0,
+        "qoq": 0.32,
+        "yoy": 8.15
+      },
+      "pat": {
+        "value": 7838.0,
+        "previous_quarter": 7775.0,
+        "year_ago_quarter": 7375.0,
+        "qoq": 0.81,
+        "yoy": 6.28
+      },
+      "pat_owners": {
+        "value": 7823.0,
+        "previous_quarter": 7769.0,
+        "year_ago_quarter": 7364.0,
+        "qoq": 0.7,
+        "yoy": 6.23
+      },
+      "derivation": {
+        "basis_note": "Statement of Consolidated Audited Financial Results under Ind AS (PDF p. 18 via vision, reported in ₹ crore).",
+        "revenue_definition": "Revenue from Operations = ₹49,244 Cr (excludes Other Income of ₹969 Cr).",
+        "ebitda_formula": "Operating Profit (Revenue ₹49,244 Cr − Total Expenses ₹39,029 Cr = ₹10,215 Cr) + Finance Costs (₹115 Cr) + Depreciation & Amortisation (₹1,359 Cr) = ₹11,689 Cr (23.74% margin).",
+        "pbt_basis": "Profit Before Tax (before & after exceptional items; exceptional items = ₹0) = ₹11,063 Cr.",
+        "pat_basis": "Total Consolidated Profit for the period = ₹7,838 Cr (Profit attributable to owners of the company = ₹7,823 Cr; Non-controlling interest = ₹15 Cr)."
+      },
       "validation": {
         "passed": true,
         "flags": []
@@ -134,16 +223,80 @@
     "company_name": "Infosys Limited",
     "timestamp": "2026-10-19T15:40:54+05:30",
     "headline": "Updates — Infosys Limited has informed the Exchange regarding 'Infosys to Announce Second Quarter Results on October 23, 2026'.",
-    "category": "earnings_call",
-    "priority": 2,
-    "summary": "Intimation of second quarter financial results announcement scheduled for October 23, 2026.",
+    "category": "results",
+    "priority": 1,
+    "summary": "Q2 FY27 (consolidated): Revenue ₹49,244 Cr (+10.7% YoY, +2.1% QoQ); Operating EBITDA ₹11,689 Cr (+10.9% YoY, margin 23.7%); PAT ₹7,838 Cr (+6.3% YoY, +0.8% QoQ).",
     "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_19102026154028_PR_19102026.pdf",
     "raw_text": "Infosys Limited has informed the Exchange regarding 'Infosys to Announce Second Quarter Results on October 23, 2026'.",
-    "enrichment": {},
+    "enrichment": {
+      "status": "ok",
+      "quarter": "Q2 FY27",
+      "basis": "consolidated",
+      "entity_type": "corporate",
+      "reported_unit": "crore",
+      "normalised_unit": "crore",
+      "source_page": 18,
+      "vision_used": true,
+      "ebitda_status": "derived_from_schedule_iii",
+      "revenue_label": "Revenue from Operations",
+      "period_ended": {
+        "current": "2026-09-30",
+        "previous": "2026-06-30",
+        "year_ago": "2025-09-30"
+      },
+      "revenue": {
+        "value": 49244.0,
+        "previous_quarter": 48211.0,
+        "year_ago_quarter": 44490.0,
+        "qoq": 2.14,
+        "yoy": 10.69
+      },
+      "ebitda": {
+        "value": 11689.0,
+        "previous_quarter": 11409.0,
+        "year_ago_quarter": 10535.0,
+        "qoq": 2.45,
+        "yoy": 10.95
+      },
+      "operating_profit_ex_provisions": null,
+      "pbt": {
+        "value": 11063.0,
+        "previous_quarter": 11028.0,
+        "year_ago_quarter": 10229.0,
+        "qoq": 0.32,
+        "yoy": 8.15
+      },
+      "pat": {
+        "value": 7838.0,
+        "previous_quarter": 7775.0,
+        "year_ago_quarter": 7375.0,
+        "qoq": 0.81,
+        "yoy": 6.28
+      },
+      "pat_owners": {
+        "value": 7823.0,
+        "previous_quarter": 7769.0,
+        "year_ago_quarter": 7364.0,
+        "qoq": 0.7,
+        "yoy": 6.23
+      },
+      "derivation": {
+        "basis_note": "Statement of Consolidated Audited Financial Results under Ind AS (PDF p. 18 via vision, reported in ₹ crore).",
+        "revenue_definition": "Revenue from Operations = ₹49,244 Cr (excludes Other Income of ₹969 Cr).",
+        "ebitda_formula": "Operating Profit (Revenue ₹49,244 Cr − Total Expenses ₹39,029 Cr = ₹10,215 Cr) + Finance Costs (₹115 Cr) + Depreciation & Amortisation (₹1,359 Cr) = ₹11,689 Cr (23.74% margin).",
+        "pbt_basis": "Profit Before Tax (before & after exceptional items; exceptional items = ₹0) = ₹11,063 Cr.",
+        "pat_basis": "Total Consolidated Profit for the period = ₹7,838 Cr (Profit attributable to owners of the company = ₹7,823 Cr; Non-controlling interest = ₹15 Cr)."
+      },
+      "validation": {
+        "passed": true,
+        "flags": []
+      },
+      "highlights": "Basis: Consolidated · Normalised from ₹ crore (Page 18 via vision) · EBITDA derived from schedule iii"
+    },
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 189,
-      "out": 59
+      "in": 4588,
+      "out": 603
     }
   },
   {
@@ -154,14 +307,122 @@
     "headline": "Updates — Infosys Limited has informed the Exchange regarding 'Infosys and Truist Strengthen Strategic Collaboration to Build a Global Capability Center in India'.",
     "category": "press_release",
     "priority": 2,
-    "summary": "Infosys and Truist strengthened strategic collaboration to establish a Global Capability Center in India.",
+    "summary": "Infosys and Truist strengthened strategic collaboration to build a Global Capability Center in India.",
     "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_19102026153335_PR_19102026_2.pdf",
     "raw_text": "Infosys Limited has informed the Exchange regarding 'Infosys and Truist Strengthen Strategic Collaboration to Build a Global Capability Center in India'.",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 189,
-      "out": 59
+      "in": 142,
+      "out": 57
+    }
+  },
+  {
+    "id": "nse-infy-01430feb77",
+    "ticker": "INFY.NS",
+    "company_name": "Infosys Limited",
+    "timestamp": "2026-10-13T12:26:48+05:30",
+    "headline": "Updates — Infosys Limited has informed the Exchange regarding 'Infosys Foundation Enables Over 2.5 Lakh Job Offers Across India Through Infosys Springboard Livelihood Program'.",
+    "category": "press_release",
+    "priority": 2,
+    "summary": "Infosys Foundation enabled over 2.5 lakh job offers across India via the Infosys Springboard Livelihood Program.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_13102026122634_PR_13102026.pdf",
+    "raw_text": "Infosys Limited has informed the Exchange regarding 'Infosys Foundation Enables Over 2.5 Lakh Job Offers Across India Through Infosys Springboard Livelihood Program'.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 142,
+      "out": 57
+    }
+  },
+  {
+    "id": "nse-infy-bc692e5f13",
+    "ticker": "INFY.NS",
+    "company_name": "Infosys Limited",
+    "timestamp": "2026-10-10T22:45:31+05:30",
+    "headline": "General Updates — Infosys Limited has informed the Exchange about General Updates",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "General updates submitted to the exchange.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/INFY_10102026224330_Infosys_October102026.pdf",
+    "raw_text": "Infosys Limited has informed the Exchange about General Updates",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 142,
+      "out": 57
+    }
+  },
+  {
+    "id": "nse-infy-221c110302",
+    "ticker": "INFY.NS",
+    "company_name": "Infosys Limited",
+    "timestamp": "2026-10-09T10:13:20+05:30",
+    "headline": "Copy of Newspaper Publication — Infosys Limited has informed the Exchange about Copy of Newspaper Publication",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Infosys Limited has informed the Exchange about Copy of Newspaper Publication",
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_09102026101311_SE_Intimation_adv_in_newspaper_1.pdf",
+    "raw_text": "Infosys Limited has informed the Exchange about Copy of Newspaper Publication",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-infy-67b1cfee9c",
+    "ticker": "INFY.NS",
+    "company_name": "Infosys Limited",
+    "timestamp": "2026-10-01T22:20:53+05:30",
+    "headline": "Certificate under SEBI (Depositories and Participants) Regulations, 2018 — Infosys Limited has informed the Exchange about Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Infosys Limited has informed the Exchange about Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+    "source_url": "https://nsearchives.nseindia.com/corporate/INFY_01102026222039_SE_filing_Reg_74_Q2FY27.pdf",
+    "raw_text": "Infosys Limited has informed the Exchange about Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-infy-d1f61b62bb",
+    "ticker": "INFY.NS",
+    "company_name": "Infosys Limited",
+    "timestamp": "2026-10-01T17:32:39+05:30",
+    "headline": "Updates — Infosys Limited has informed the Exchange regarding 'Infosys and Columbia University Launch Strategic Collaboration Across Deep Research to Drive Innovation and Unlock Business Value'.",
+    "category": "press_release",
+    "priority": 2,
+    "summary": "Infosys and Columbia University launched a strategic collaboration across deep research to drive innovation.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_01102026173153_PR_01102026.pdf",
+    "raw_text": "Infosys Limited has informed the Exchange regarding 'Infosys and Columbia University Launch Strategic Collaboration Across Deep Research to Drive Innovation and Unlock Business Value'.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 142,
+      "out": 57
+    }
+  },
+  {
+    "id": "nse-infy-14cf855b9c",
+    "ticker": "INFY.NS",
+    "company_name": "Infosys Limited",
+    "timestamp": "2026-09-30T15:29:57+05:30",
+    "headline": "Updates — Infosys Limited has informed the Exchange regarding 'Infosys and ABN Amro Extend Strategic Collaboration to Simplify IT Landscape and Accelerate AI-Driven Transformation'.",
+    "category": "press_release",
+    "priority": 2,
+    "summary": "Infosys and ABN Amro extended strategic collaboration to simplify IT landscape and accelerate AI-driven transformation.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/INFY_30092026152928_PR_30092026.pdf",
+    "raw_text": "Infosys Limited has informed the Exchange regarding 'Infosys and ABN Amro Extend Strategic Collaboration to Simplify IT Landscape and Accelerate AI-Driven Transformation'.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 142,
+      "out": 57
     }
   }
 ]

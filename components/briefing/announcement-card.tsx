@@ -50,10 +50,24 @@ function ResultsCard({ announcement }: { announcement: Announcement }) {
   if (e.status && e.status !== "ok") {
     return (
       <div className="mt-2 rounded-lg border border-amber-500/30 bg-amber-500/10 p-2.5 text-2xs">
-        <div className="font-semibold text-amber-300">
-          Extraction skipped ({e.status.replace(/_/g, " ")})
+        <div className="flex items-center justify-between gap-2 flex-wrap">
+          <span className="font-semibold text-amber-300">
+            Filing couldn&apos;t be read, open original
+          </span>
+          {announcement.source_url && (
+            <a
+              href={announcement.source_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(ev) => ev.stopPropagation()}
+              className="inline-flex items-center gap-1 text-finn-accent hover:underline font-medium"
+            >
+              Open original PDF
+              <ArrowUpRight className="w-3 h-3" />
+            </a>
+          )}
         </div>
-        {e.error && <div className="text-finn-muted mt-0.5 font-mono">{e.error}</div>}
+        {e.error && <div className="text-finn-muted mt-1 font-mono">{e.error}</div>}
         {e.highlights && <div className="text-finn-muted mt-1">{e.highlights}</div>}
       </div>
     );
@@ -167,6 +181,34 @@ function ResultsCard({ announcement }: { announcement: Announcement }) {
         })}
       </div>
 
+      {e.derivation && (
+        <div className="mt-2 rounded-lg border border-finn-border/60 bg-finn-bg/40 p-2 space-y-1 text-2xs text-finn-muted">
+          <div className="text-[10px] font-semibold uppercase tracking-wider text-finn-text/80">
+            Line-Item Derivations (PDF p.{e.source_page ?? "?"})
+          </div>
+          <div>
+            <span className="text-finn-text/90 font-medium">Basis: </span>
+            {e.derivation.basis_note}
+          </div>
+          <div>
+            <span className="text-finn-text/90 font-medium">Revenue: </span>
+            {e.derivation.revenue_definition}
+          </div>
+          <div>
+            <span className="text-finn-text/90 font-medium">EBITDA: </span>
+            {e.derivation.ebitda_formula}
+          </div>
+          <div>
+            <span className="text-finn-text/90 font-medium">PBT: </span>
+            {e.derivation.pbt_basis}
+          </div>
+          <div>
+            <span className="text-finn-text/90 font-medium">PAT: </span>
+            {e.derivation.pat_basis}
+          </div>
+        </div>
+      )}
+
       {e.highlights && (
         <p className="text-2xs text-finn-muted mt-2 leading-relaxed">
           {e.highlights}
@@ -205,7 +247,9 @@ export function AnnouncementCard({
   announcement: Announcement;
   variant?: "full" | "compact";
 }) {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(
+    announcement.category === "results" || announcement.category === "management_change"
+  );
   const Icon = CATEGORY_ICONS[announcement.category] || Star;
   const categoryLabel =
     CATEGORY_LABELS[announcement.category] || announcement.category;

@@ -37,41 +37,6 @@
   {
     "claim_id": "TCS-03",
     "ticker": "TCS.NS",
-    "quarter": "Q3 FY26",
-    "type": "guided",
-    "metric": "Operating Margin Band",
-    "claim_text": "Aspiration to inch closer to 26% to 28% band",
-    "verbatim_quote": "while we will not shy away from making investments, we want to inch closer to our 26% to 28% band",
-    "numbers_verified_on_page": [
-      "26",
-      "28"
-    ],
-    "doc_id": "DOC_4",
-    "doc_title": "Q3 FY26 Concall Transcript (16-Jan-2026)",
-    "pdf_page": 23,
-    "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_16012026163741_Signed_SEIntimation.pdf#page=23",
-    "evidence_page_file": "evidence/TCS/DOC_4_p23.txt"
-  },
-  {
-    "claim_id": "TCS-04",
-    "ticker": "TCS.NS",
-    "quarter": "Q3 FY26",
-    "type": "delivered",
-    "metric": "Operating Margin Band",
-    "claim_text": "Operating margin stood at 25.2%, remaining stable sequentially",
-    "verbatim_quote": "Our Q3 operating margins stood at 25.2%, remaining stable sequentially. This excludes one-o(cid:431)s.",
-    "numbers_verified_on_page": [
-      "25.2"
-    ],
-    "doc_id": "DOC_4",
-    "doc_title": "Q3 FY26 Concall Transcript (16-Jan-2026)",
-    "pdf_page": 4,
-    "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_16012026163741_Signed_SEIntimation.pdf#page=4",
-    "evidence_page_file": "evidence/TCS/DOC_4_p4.txt"
-  },
-  {
-    "claim_id": "TCS-05",
-    "ticker": "TCS.NS",
     "quarter": "Q4 FY26",
     "type": "guided",
     "metric": "Operating Margin Band",
@@ -88,7 +53,7 @@
     "evidence_page_file": "evidence/TCS/DOC_4_p23.txt"
   },
   {
-    "claim_id": "TCS-06",
+    "claim_id": "TCS-04",
     "ticker": "TCS.NS",
     "quarter": "Q4 FY26",
     "type": "delivered",
@@ -106,7 +71,7 @@
     "evidence_page_file": "evidence/TCS/DOC_3_p6.txt"
   },
   {
-    "claim_id": "TCS-07",
+    "claim_id": "TCS-05",
     "ticker": "TCS.NS",
     "quarter": "Q4 FY26",
     "type": "guided",
@@ -124,7 +89,7 @@
     "evidence_page_file": "evidence/TCS/DOC_4_p4.txt"
   },
   {
-    "claim_id": "TCS-08",
+    "claim_id": "TCS-06",
     "ticker": "TCS.NS",
     "quarter": "Q4 FY26",
     "type": "delivered",
@@ -141,7 +106,7 @@
     "evidence_page_file": "evidence/TCS/DOC_3_p4.txt"
   },
   {
-    "claim_id": "TCS-09",
+    "claim_id": "TCS-07",
     "ticker": "TCS.NS",
     "quarter": "Q1 FY27",
     "type": "guided",
@@ -158,7 +123,7 @@
     "evidence_page_file": "evidence/TCS/DOC_3_p4.txt"
   },
   {
-    "claim_id": "TCS-10",
+    "claim_id": "TCS-08",
     "ticker": "TCS.NS",
     "quarter": "Q1 FY27",
     "type": "delivered",
@@ -176,7 +141,7 @@
     "evidence_page_file": "evidence/TCS/DOC_2_p3.txt"
   },
   {
-    "claim_id": "TCS-11",
+    "claim_id": "TCS-09",
     "ticker": "TCS.NS",
     "quarter": "Q2 FY27",
     "type": "guided",
@@ -193,7 +158,7 @@
     "evidence_page_file": "evidence/TCS/DOC_2_p23.txt"
   },
   {
-    "claim_id": "TCS-12",
+    "claim_id": "TCS-10",
     "ticker": "TCS.NS",
     "quarter": "Q2 FY27",
     "type": "delivered",
@@ -210,7 +175,7 @@
     "evidence_page_file": "evidence/TCS/DOC_1_p5.txt"
   },
   {
-    "claim_id": "TCS-13",
+    "claim_id": "TCS-11",
     "ticker": "TCS.NS",
     "quarter": "Q2 FY27",
     "type": "guided",
@@ -228,7 +193,7 @@
     "evidence_page_file": "evidence/TCS/DOC_2_p3.txt"
   },
   {
-    "claim_id": "TCS-14",
+    "claim_id": "TCS-12",
     "ticker": "TCS.NS",
     "quarter": "Q2 FY27",
     "type": "delivered",

@@ -1,7 +1,7 @@
 {
   "ticker": "ETERNAL.NS",
   "company_name": "ETERNAL LIMITED",
-  "generated_at": "2026-10-27T09:28:15.236491Z",
+  "generated_at": "2026-10-27T12:38:42.622937Z",
   "source_documents": [
     {
       "type": "concall_transcript",
@@ -100,7 +100,7 @@
           {
             "metric": "Food delivery YoY growth trend",
             "guidance": "20% YoY",
-            "source": "Q3 FY26 Concall Transcript (27-Jan-2026), PDF p. 11 — \"we expect year-on-year growth to continue slowly trending up towards 20% YoY, is what our current sense on the\"",
+            "source": "Q3 FY26 Concall Transcript (27-Jan-2026), PDF p. 11 — \"we expect year-on-year growth to continue slowly trending up towards 20% YoY, is what our current sense on the market is.\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/ZOMATO_27012026182242_Eternallimitedtranscriptofearningcallsigned.pdf#page=11",
             "doc_id": "DOC_3",
             "page": 11,
@@ -154,7 +154,7 @@
           {
             "metric": "Mature city baseline growth rate",
             "guidance": "70% year-on-year",
-            "source": "Q1 FY26 Concall Transcript (25-Jul-2025), PDF p. 3 — \"we've seen a growth of 70% year-on-year in this quarter. So, as Albinder said, same-store growth may not be th\"",
+            "source": "Q1 FY26 Concall Transcript (25-Jul-2025), PDF p. 3 — \"we've seen a growth of 70% year-on-year in this quarter. So, as Albinder said, same-store growth may not be that relevant\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/ZOMATO_25072025223203_TranscriptfilingsignedJuly2025.pdf#page=3",
             "doc_id": "DOC_5",
             "page": 3,

@@ -7,14 +7,14 @@
     "headline": "Amalgamation/Merger — Tata Steel Limited has informed the Exchange about receipt of certified true copy of the Order of the Hon ble National Company Law Tribunal, Mumbai Bench in the matter of the Scheme of Amalgamation of Rujuvalika Investments Limited and Tata Steel Limited and",
     "category": "M&A",
     "priority": 1,
-    "summary": "Received certified true copy of NCLT Mumbai Bench order for the amalgamation of Rujuvalika Investments Limited with Tata Steel Limited.",
+    "summary": "Tata Steel Limited has informed the Exchange about receipt of certified true copy of the Order of the Hon ble National Company Law Tribunal, Mumbai Bench in the matter of the Scheme of Amalgamation of Rujuvalika Investments Limited and Tata Steel Limited and their respective shareholder",
     "source_url": "https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_15102026192421_BSENSE_Signed.pdf",
     "raw_text": "Tata Steel Limited has informed the Exchange about receipt of certified true copy of the Order of the Hon ble National Company Law Tribunal, Mumbai Bench in the matter of the Scheme of Amalgamation of Rujuvalika Investments Limited and Tata Steel Limited and their respective shareholder",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 185,
-      "out": 59
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -25,14 +25,32 @@
     "headline": "Copy of Newspaper Publication — Tata Steel Limited has informed the Exchange about Copy of Newspaper Publication",
     "category": "unclassified",
     "priority": 3,
-    "summary": "Submitted copy of newspaper publication as required under regulations.",
+    "summary": "Tata Steel Limited has informed the Exchange about Copy of Newspaper Publication",
     "source_url": "https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_15102026181041_Reg_30-SE_Release.pdf",
     "raw_text": "Tata Steel Limited has informed the Exchange about Copy of Newspaper Publication",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 185,
-      "out": 59
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-tatasteel-3ff7295b9a",
+    "ticker": "TATASTEEL.NS",
+    "company_name": "Tata Steel Limited",
+    "timestamp": "2026-10-08T20:47:31+05:30",
+    "headline": "Certificate under SEBI (Depositories and Participants) Regulations, 2018 — Tata Steel Limited has informed the Exchange about Certificate under Regulation 74(5) of the SEBI (Depositories and Participants) Regulations 2018 for the quarter ended September 30, 2026",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Tata Steel Limited has informed the Exchange about Certificate under Regulation 74(5) of the SEBI (Depositories and Participants) Regulations 2018 for the quarter ended September 30, 2026",
+    "source_url": "https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_08102026204706_BSENSE_Reg_74_5__Signed.pdf",
+    "raw_text": "Tata Steel Limited has informed the Exchange about Certificate under Regulation 74(5) of the SEBI (Depositories and Participants) Regulations 2018 for the quarter ended September 30, 2026",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -43,14 +61,14 @@
     "headline": "Press Release — Tata Steel Limited has informed the Exchange regarding a press release dated October 07, 2026, titled \"Tata Steel: 2QFY2027 Production and Delivery Volumes (Provisional)\".",
     "category": "press_release",
     "priority": 2,
-    "summary": "Released provisional production and delivery volumes for 2QFY2027.",
+    "summary": "Tata Steel Limited has informed the Exchange regarding a press release dated October 07, 2026, titled \"Tata Steel: 2QFY2027 Production and Delivery Volumes (Provisional)\".",
     "source_url": "https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_07102026215052_BSENSE.pdf",
     "raw_text": "Tata Steel Limited has informed the Exchange regarding a press release dated October 07, 2026, titled \"Tata Steel: 2QFY2027 Production and Delivery Volumes (Provisional)\".",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 185,
-      "out": 59
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -61,14 +79,14 @@
     "headline": "Scheme of Arrangement — Tata Steel Limited has informed the Exchange about Pronouncement of Order by the Hon ble National Company Law Tribunal, Mumbai Bench, approving and sanctioning the Scheme of Amalgamation amongst Tata Steel Limited and Rujuvalika Investments Limited and the",
     "category": "M&A",
     "priority": 1,
-    "summary": "NCLT Mumbai Bench pronounced order approving and sanctioning the scheme of amalgamation of Rujuvalika Investments Limited with Tata Steel Limited.",
+    "summary": "Tata Steel Limited has informed the Exchange about Pronouncement of Order by the Hon ble National Company Law Tribunal, Mumbai Bench, approving and sanctioning the Scheme of Amalgamation amongst Tata Steel Limited and Rujuvalika Investments Limited and their respective shareholders",
     "source_url": "https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_01102026210329_BSENSE_-_RIL_Order.pdf",
     "raw_text": "Tata Steel Limited has informed the Exchange about Pronouncement of Order by the Hon ble National Company Law Tribunal, Mumbai Bench, approving and sanctioning the Scheme of Amalgamation amongst Tata Steel Limited and Rujuvalika Investments Limited and their respective shareholders",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 185,
-      "out": 59
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -79,14 +97,14 @@
     "headline": "Amalgamation/Merger — Tata Steel Limited has informed the Exchange about Pronouncement of Order by the Hon ble National Company Law Tribunal, Mumbai Bench, approving and sanctioning the Scheme of Amalgamation amongst Tata Steel Limited and Rujuvalika Investments Limited and their",
     "category": "M&A",
     "priority": 1,
-    "summary": "NCLT Mumbai Bench pronounced order approving and sanctioning the scheme of amalgamation of Rujuvalika Investments Limited with Tata Steel Limited.",
+    "summary": "Tata Steel Limited has informed the Exchange about Pronouncement of Order by the Hon ble National Company Law Tribunal, Mumbai Bench, approving and sanctioning the Scheme of Amalgamation amongst Tata Steel Limited and Rujuvalika Investments Limited and their respective shareholders",
     "source_url": "https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_01102026205831_BSENSE_-_RIL_Order.pdf",
     "raw_text": "Tata Steel Limited has informed the Exchange about Pronouncement of Order by the Hon ble National Company Law Tribunal, Mumbai Bench, approving and sanctioning the Scheme of Amalgamation amongst Tata Steel Limited and Rujuvalika Investments Limited and their respective shareholders",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 185,
-      "out": 59
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -97,14 +115,32 @@
     "headline": "Acquisition — Tata Steel Limited has informed the Exchange about acquisition of equity shares in T Steel Holdings Pte. Ltd",
     "category": "M&A",
     "priority": 1,
-    "summary": "Acquired additional equity shares in T Steel Holdings Pte. Ltd.",
+    "summary": "Tata Steel Limited has informed the Exchange about acquisition of equity shares in T Steel Holdings Pte. Ltd",
     "source_url": "https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_29092026180406_BSENSE-TSH_funding.pdf",
     "raw_text": "Tata Steel Limited has informed the Exchange about acquisition of equity shares in T Steel Holdings Pte. Ltd",
     "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-tatasteel-0a977b6b9c",
+    "ticker": "TATASTEEL.NS",
+    "company_name": "Tata Steel Limited",
+    "timestamp": "2026-09-29T16:47:07+05:30",
+    "headline": "Pendency of Litigation(s)/dispute(s) or the outcome impacting the Company — Tata Steel Limited has informed the Exchange about disclosure under Regulation(s) 30 read with 51 of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulation",
+    "category": "litigation",
+    "priority": 2,
+    "summary": "Tata Steel disclosed details regarding the pendency of litigations or disputes impacting the company pursuant to SEBI regulations.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_29092026164617_BSENSE_Signed.pdf",
+    "raw_text": "Tata Steel Limited has informed the Exchange about disclosure under Regulation(s) 30 read with 51 of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015",
+    "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 185,
-      "out": 59
+      "in": 661,
+      "out": 72
     }
   }
 ]

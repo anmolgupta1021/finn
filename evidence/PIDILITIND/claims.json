@@ -102,40 +102,5 @@
     "pdf_page": 4,
     "source_url": "https://nsearchives.nseindia.com/corporate/Nisha_11022026173121_SEintimationearningscalltranscriptfinalupload.pdf#page=4",
     "evidence_page_file": "evidence/PIDILITIND/DOC_3_p4.txt"
-  },
-  {
-    "claim_id": "PIDILITIND-07",
-    "ticker": "PIDILITIND.NS",
-    "quarter": "Q2 FY26",
-    "type": "guided",
-    "metric": "EBITDA Margin Guidance Range",
-    "claim_text": "20%, 24%",
-    "verbatim_quote": "But if you look at full year, we are confident that we will be at the upper end of this 20%, 24% range.",
-    "numbers_verified_on_page": [
-      "20",
-      "24"
-    ],
-    "doc_id": "DOC_3",
-    "doc_title": "Q3 FY26 Concall Transcript (11-Feb-2026)",
-    "pdf_page": 21,
-    "source_url": "https://nsearchives.nseindia.com/corporate/Nisha_11022026173121_SEintimationearningscalltranscriptfinalupload.pdf#page=21",
-    "evidence_page_file": "evidence/PIDILITIND/DOC_3_p21.txt"
-  },
-  {
-    "claim_id": "PIDILITIND-08",
-    "ticker": "PIDILITIND.NS",
-    "quarter": "Q2 FY26",
-    "type": "delivered",
-    "metric": "EBITDA Margin Guidance Range",
-    "claim_text": "10.3%",
-    "verbatim_quote": "Total stand-alone UVG was 10.3%, which translated into a value growth of 10.4%.",
-    "numbers_verified_on_page": [
-      "10.3"
-    ],
-    "doc_id": "DOC_4",
-    "doc_title": "Q2 FY26 Concall Transcript (06-Nov-2025)",
-    "pdf_page": 3,
-    "source_url": "https://nsearchives.nseindia.com/corporate/Nisha_06112025184945_SEIntimationTranscript.pdf#page=3",
-    "evidence_page_file": "evidence/PIDILITIND/DOC_4_p3.txt"
   }
 ]

@@ -7,14 +7,14 @@
     "headline": "Copy of Newspaper Publication — Hindustan Unilever Limited has informed the Exchange about Copy of Newspaper Publication",
     "category": "unclassified",
     "priority": 3,
-    "summary": "Routine newspaper publication advertisement submitted to the exchange.",
+    "summary": "Hindustan Unilever Limited has informed the Exchange about Copy of Newspaper Publication",
     "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_26102026233424_SEIntimationNewspaperADmergedsigned.pdf",
     "raw_text": "Hindustan Unilever Limited has informed the Exchange about Copy of Newspaper Publication",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 192,
-      "out": 56
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -23,16 +23,16 @@
     "company_name": "Hindustan Unilever Limited",
     "timestamp": "2026-10-21T16:36:15+05:30",
     "headline": "Analysts/Institutional Investor Meet/Con. Call Updates — Intimation of Earnings Conference Call for quarter and half year ended 30th September, 2026",
-    "category": "earnings_call",
-    "priority": 2,
-    "summary": "Intimation of earnings conference call for the quarter and half year ended September 30, 2026.",
+    "category": "investor_meetings",
+    "priority": 3,
+    "summary": "Intimation of Earnings Conference Call for quarter and half year ended 30th September, 2026",
     "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_21102026163513_SEIntimationEarningscallsigned.pdf",
     "raw_text": "Intimation of Earnings Conference Call for quarter and half year ended 30th September, 2026",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 192,
-      "out": 56
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -43,14 +43,14 @@
     "headline": "Copy of Newspaper Publication — Copy of Newspaper Publication dated 09th October, 2026",
     "category": "unclassified",
     "priority": 3,
-    "summary": "Routine newspaper publication submitted to the exchange.",
+    "summary": "Copy of Newspaper Publication dated 09th October, 2026",
     "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_09102026180134_SEIntimationNewspaperAD09102026signed.pdf",
     "raw_text": "Copy of Newspaper Publication dated 09th October, 2026",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 192,
-      "out": 56
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -61,14 +61,14 @@
     "headline": "Certificate under SEBI (Depositories and Participants) Regulations, 2018 — Certificate under Regulation 74(5) of the SEBI (Depositories and Participants) Regulations, 2018 for the quarter ended 30th September, 2026",
     "category": "unclassified",
     "priority": 3,
-    "summary": "Compliance certificate under Regulation 74(5) of SEBI (Depositories and Participants) Regulations for the quarter ended September 30, 2026.",
+    "summary": "Certificate under Regulation 74(5) of the SEBI (Depositories and Participants) Regulations, 2018 for the quarter ended 30th September, 2026",
     "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_08102026193903_Regulation74_5_Intimationsigned.pdf",
     "raw_text": "Certificate under Regulation 74(5) of the SEBI (Depositories and Participants) Regulations, 2018 for the quarter ended 30th September, 2026",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 192,
-      "out": 56
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -79,14 +79,14 @@
     "headline": "Copy of Newspaper Publication — Copy of Newspaper publication dated 01.10.2026",
     "category": "unclassified",
     "priority": 3,
-    "summary": "Routine newspaper publication submitted to the exchange.",
+    "summary": "Copy of Newspaper publication dated 01.10.2026",
     "source_url": "https://nsearchives.nseindia.com/corporate/HINDUNILVR_01102026183139_SEIntimationNewspaperADSakshamNiveshakShivirSigned.pdf",
     "raw_text": "Copy of Newspaper publication dated 01.10.2026",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 192,
-      "out": 56
+      "in": 0,
+      "out": 0
     }
   }
 ]

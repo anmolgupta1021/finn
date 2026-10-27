@@ -1,7 +1,7 @@
 {
   "ticker": "INFY.NS",
   "company_name": "Infosys Limited",
-  "generated_at": "2026-10-27T09:22:59.833958Z",
+  "generated_at": "2026-10-27T12:37:46.765881Z",
   "source_documents": [
     {
       "type": "concall_transcript",
@@ -73,7 +73,7 @@
           {
             "metric": "FY27 Constant Currency Revenue Growth Guidance",
             "guidance": "Full year FY27 constant currency revenue growth guidance of 1.5% to 3.5% year-on-year.",
-            "source": "Q4 FY26 Concall Transcript (27-Apr-2026), PDF p. 4 — \"Our revenue growth guidance for the financial year 2027 is 1.5% to 3.5% growth year-on-year in constant curren\"",
+            "source": "Q4 FY26 Concall Transcript (27-Apr-2026), PDF p. 4 — \"Our revenue growth guidance for the financial year 2027 is 1.5% to 3.5% growth year-on-year in constant currency terms.\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_27042026203405_Transcript_April232026_Q4.pdf#page=4",
             "doc_id": "DOC_2",
             "page": 4,
@@ -138,7 +138,7 @@
           {
             "metric": "FY26 Constant Currency Revenue Growth Guidance",
             "actual": "Growth of 3.1% for the full year in constant currency terms.",
-            "source": "Q4 FY26 Concall Transcript (27-Apr-2026), PDF p. 4 — \"We delivered a strong performance in financial year 2026. We had growth of 3.1% for the full year in constant \"",
+            "source": "Q4 FY26 Concall Transcript (27-Apr-2026), PDF p. 4 — \"We delivered a strong performance in financial year 2026. We had growth of 3.1% for the full year in constant currency terms.\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_27042026203405_Transcript_April232026_Q4.pdf#page=4",
             "doc_id": "DOC_2",
             "page": 4,
@@ -201,51 +201,6 @@
         ],
         "verdict": "hit",
         "commentary": "Infosys posted 9-month revenue growth of 2.8%, near the top end of its prior 2% to 3% band, prompting an upward guidance revision, while adjusted operating margins held steady at 21.2%."
-      },
-      {
-        "quarter": "Q2 FY26",
-        "guided": [
-          {
-            "metric": "FY26 Constant Currency Revenue Growth Guidance",
-            "guidance": "Previous guidance was 1% to 3%.",
-            "source": "Q2 FY26 Concall Transcript (21-Oct-2025), PDF p. 4 — \"The previous guidance was 1% to 3%, and now it is 2% to 3%.\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_21102025214121_SEfiling_Earningscalltranscript_q2.pdf#page=4",
-            "doc_id": "DOC_4",
-            "page": 4,
-            "evidence_file": "evidence/INFY/DOC_4_p4.txt"
-          },
-          {
-            "metric": "FY26 Operating Margin Guidance",
-            "guidance": "Operating margin guidance remains the same as in the past quarter at 20% to 22% for the full year.",
-            "source": "Q2 FY26 Concall Transcript (21-Oct-2025), PDF p. 3 — \"And our operating margin guidance remains the same as in the past quarter at 20% to 22% for the full year.\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_21102025214121_SEfiling_Earningscalltranscript_q2.pdf#page=3",
-            "doc_id": "DOC_4",
-            "page": 3,
-            "evidence_file": "evidence/INFY/DOC_4_p3.txt"
-          }
-        ],
-        "delivered": [
-          {
-            "metric": "FY26 Constant Currency Revenue Growth Guidance",
-            "actual": "Revenues for the quarter grew 2.2% sequentially and 2.9% year-on-year in constant currency terms.",
-            "source": "Q2 FY26 Concall Transcript (21-Oct-2025), PDF p. 3 — \"Our revenues for the quarter grew 2.2% sequentially and 2.9% year-on-year in constant currency terms.\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_21102025214121_SEfiling_Earningscalltranscript_q2.pdf#page=3",
-            "doc_id": "DOC_4",
-            "page": 3,
-            "evidence_file": "evidence/INFY/DOC_4_p3.txt"
-          },
-          {
-            "metric": "FY26 Operating Margin Guidance",
-            "actual": "Operating margin was 21%.",
-            "source": "Q2 FY26 Concall Transcript (21-Oct-2025), PDF p. 3 — \"Our revenues for the quarter grew 2.2% sequentially and 2.9% year-on-year in constant currency terms. Our oper\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_21102025214121_SEfiling_Earningscalltranscript_q2.pdf#page=3",
-            "doc_id": "DOC_4",
-            "page": 3,
-            "evidence_file": "evidence/INFY/DOC_4_p3.txt"
-          }
-        ],
-        "verdict": "beat",
-        "commentary": "Q2 constant currency revenue grew 2.2% sequentially and 2.9% year-on-year, allowing management to raise the lower bound of full-year growth guidance from 1% to 2%, with margins steady at 21%."
       }
     ],
     "credibility_score": "high",
@@ -254,9 +209,32 @@
   "citation_audit": {
     "documents_fetched": 10,
     "pages_actually_read": 264,
-    "verified_claims": 16,
-    "rejected_claims": 0,
-    "rejections_detail": []
+    "verified_claims": 12,
+    "rejected_claims": 2,
+    "rejections_detail": [
+      {
+        "quarter": "Q2 FY26",
+        "type": "guided",
+        "doc_id": "DOC_4",
+        "page": 4,
+        "claim": "Previous guidance was 1% to 3%.",
+        "quote": "The previous guidance was 1% to 3%, and now it is 2% to 3%.",
+        "reasons": [
+          "chronology_violation (guided doc DOC_4 [Q2 FY26] period Q2 FY26 is not strictly earlier than delivered period Q2 FY26)"
+        ]
+      },
+      {
+        "quarter": "Q2 FY26",
+        "type": "guided",
+        "doc_id": "DOC_4",
+        "page": 3,
+        "claim": "Operating margin guidance remains the same as in the past quarter at 20% to 22% for the full year.",
+        "quote": "And our operating margin guidance remains the same as in the past quarter at 20% to 22% for the full year.",
+        "reasons": [
+          "chronology_violation (guided doc DOC_4 [Q2 FY26] period Q2 FY26 is not strictly earlier than delivered period Q2 FY26)"
+        ]
+      }
+    ]
   },
   "model_used": "gemini-3.6-flash",
   "tokens": {

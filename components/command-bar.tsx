@@ -39,15 +39,20 @@ export function CommandBar() {
     setLoading(true);
     setError(null);
     try {
-      const symbol = ticker.replace(/\.(NS|BO)$/, "");
+      const clean = ticker.trim().toUpperCase();
+      const symbol = clean.replace(/\.(NS|BO)$/, "");
+      const normTicker =
+        clean.endsWith(".NS") || clean.endsWith(".BO") ? clean : `${symbol}.NS`;
       const res = await fetch(`/api/research/${symbol}`);
       if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
         if (res.status === 404) {
           throw new Error(
-            `No research generated for ${symbol} yet. Research is only shown once it has been built from fetched annual reports and concall transcripts.`
+            body.error ||
+              `Not pre-computed, run \`python pipeline/generate_research.py ${normTicker}\``
           );
         }
-        throw new Error("Research request failed");
+        throw new Error(body.error || "Research request failed");
       }
       const data = await res.json();
       setResearch(data);
@@ -102,8 +107,12 @@ export function CommandBar() {
               className="flex-1 bg-transparent text-sm text-finn-text placeholder:text-finn-muted outline-none"
               autoFocus
               onKeyDown={(e) => {
-                if (e.key === "Enter" && filtered.length > 0) {
-                  handleSearch(filtered[0].ticker);
+                if (e.key === "Enter") {
+                  if (filtered.length > 0) {
+                    handleSearch(filtered[0].ticker);
+                  } else if (query.trim()) {
+                    handleSearch(query.trim());
+                  }
                 }
               }}
             />
@@ -121,7 +130,7 @@ export function CommandBar() {
 
           {/* Error */}
           {error && (
-            <div className="mx-4 mt-3 px-3 py-2 rounded-lg bg-red-500/10 border border-red-500/20 text-xs text-red-400">
+            <div className="mx-4 mt-3 px-3 py-2 rounded-lg bg-amber-500/10 border border-amber-500/30 text-xs text-amber-300 font-mono">
               {error}
             </div>
           )}
@@ -165,10 +174,21 @@ export function CommandBar() {
                   </button>
                 ))}
               </div>
-              {filtered.length === 0 && (
-                <p className="text-sm text-finn-muted text-center py-8">
-                  No matching companies. Try the NSE ticker symbol.
-                </p>
+              {filtered.length === 0 && query.trim() && (
+                <button
+                  onClick={() => handleSearch(query.trim())}
+                  className="w-full flex items-center justify-between px-3 py-2.5 rounded-lg bg-finn-surface hover:bg-finn-card transition-colors text-left"
+                >
+                  <div>
+                    <span className="text-sm font-medium">
+                      {displayTicker(query.trim().toUpperCase())}
+                    </span>
+                    <span className="text-xs text-finn-muted ml-2">
+                      Lookup ticker ({query.trim().toUpperCase()})
+                    </span>
+                  </div>
+                  <Search className="w-3.5 h-3.5 text-finn-muted" />
+                </button>
               )}
             </div>
           )}

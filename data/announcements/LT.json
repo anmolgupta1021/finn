@@ -7,14 +7,14 @@
     "headline": "Allotment of Securities — Larsen & Toubro Limited has informed the Exchange regarding allotment of 21098 securities pursuant to ESOP/ESPS at its meeting held on October 27, 2026",
     "category": "unclassified",
     "priority": 3,
-    "summary": "Routine ESOP allotment of 21,098 securities.",
+    "summary": "Larsen & Toubro Limited has informed the Exchange regarding allotment of 21098 securities pursuant to ESOP/ESPS at its meeting held on October 27, 2026",
     "source_url": "https://nsearchives.nseindia.com/corporate/PAM_27102026132854_ESOPAllotment27102026.pdf",
     "raw_text": "Larsen & Toubro Limited has informed the Exchange regarding allotment of 21098 securities pursuant to ESOP/ESPS at its meeting held on October 27, 2026",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 177,
-      "out": 50
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -25,13 +25,13 @@
     "headline": "Bagging/Receiving of orders/contracts — Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts",
     "category": "press_release",
     "priority": 1,
-    "summary": "Secured new orders/contracts from domestic/international clients.",
+    "summary": "Larsen & Toubro secured new orders/contracts.",
     "source_url": "https://nsearchives.nseindia.com/corporate/PAM_27102026101631_PressRelease27102026.pdf",
     "raw_text": "Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 177,
+      "in": 158,
       "out": 50
     }
   },
@@ -43,13 +43,13 @@
     "headline": "Bagging/Receiving of orders/contracts — Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts",
     "category": "press_release",
     "priority": 1,
-    "summary": "Secured new orders/contracts across business segments.",
+    "summary": "Larsen & Toubro secured new orders/contracts.",
     "source_url": "https://nsearchives.nseindia.com/corporate/PAM_21102026094637_PressRelease21102026.pdf",
     "raw_text": "Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 177,
+      "in": 158,
       "out": 50
     }
   },
@@ -61,13 +61,13 @@
     "headline": "Bagging/Receiving of orders/contracts — Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts",
     "category": "press_release",
     "priority": 1,
-    "summary": "Secured new orders/contracts in business operations.",
+    "summary": "Larsen & Toubro secured new orders/contracts.",
     "source_url": "https://nsearchives.nseindia.com/corporate/PAM_19102026101805_PressRelease19102026.pdf",
     "raw_text": "Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 177,
+      "in": 158,
       "out": 50
     }
   },
@@ -79,14 +79,14 @@
     "headline": "Analysts/Institutional Investor Meet/Con. Call Updates — Larsen & Toubro Limited has informed the Exchange about Schedule of meet",
     "category": "investor_meetings",
     "priority": 3,
-    "summary": "Schedule of upcoming analysts/institutional investor meetings.",
+    "summary": "Larsen & Toubro Limited has informed the Exchange about Schedule of meet",
     "source_url": "https://nsearchives.nseindia.com/corporate/PAM_16102026170806_Intimation16102026.pdf",
     "raw_text": "Larsen & Toubro Limited has informed the Exchange about Schedule of meet",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 177,
-      "out": 50
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -97,13 +97,108 @@
     "headline": "Certificate under SEBI (Depositories and Participants) Regulations, 2018 — Larsen & Toubro Limited has informed the Exchange about Certificate under SEBI (Depositories and Participants) Regulations, 2018",
     "category": "unclassified",
     "priority": 3,
-    "summary": "Submitted depository compliance certificate under SEBI Regulations.",
+    "summary": "Larsen & Toubro Limited has informed the Exchange about Certificate under SEBI (Depositories and Participants) Regulations, 2018",
     "source_url": "https://nsearchives.nseindia.com/corporate/PAM_12102026183004_Intimation745Sep2026.pdf",
     "raw_text": "Larsen & Toubro Limited has informed the Exchange about Certificate under SEBI (Depositories and Participants) Regulations, 2018",
     "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-lt-94a6126adb",
+    "ticker": "LT.NS",
+    "company_name": "Larsen & Toubro Limited",
+    "timestamp": "2026-10-07T21:29:23+05:30",
+    "headline": "Change in Management — Larsen & Toubro Limited has informed the Exchange about change in Management",
+    "category": "management_change",
+    "priority": 1,
+    "summary": "Dr. C Jayakumar was categorized under Senior Management Personnel pursuant to his promotion as Senior Vice President & Head - Corporate Human Resources effective July 1, 2026.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/PAM_07102026212904_IntimationSRMGT07102026.pdf",
+    "raw_text": "Larsen & Toubro Limited has informed the Exchange about change in Management",
+    "enrichment": {
+      "person_name": "Dr. C Jayakumar",
+      "role": "Senior Vice President & Head - Corporate Human Resources",
+      "action": "joined",
+      "background": "Dr. C. Jayakumar is a distinguished HR leader with over 38 years of experience in strategic HRM and organizational transformation, holding a doctorate in leadership and currently serving as National President of the National HRD Network (Filing p. 2)."
+    },
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 177,
+      "in": 2646,
+      "out": 605
+    }
+  },
+  {
+    "id": "nse-lt-7e03425adf",
+    "ticker": "LT.NS",
+    "company_name": "Larsen & Toubro Limited",
+    "timestamp": "2026-10-07T10:13:23+05:30",
+    "headline": "Bagging/Receiving of orders/contracts — Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts",
+    "category": "press_release",
+    "priority": 1,
+    "summary": "Larsen & Toubro secured new orders/contracts.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/PAM_07102026101304_PressRelease07102026.pdf",
+    "raw_text": "Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 158,
+      "out": 50
+    }
+  },
+  {
+    "id": "nse-lt-5131ab872c",
+    "ticker": "LT.NS",
+    "company_name": "Larsen & Toubro Limited",
+    "timestamp": "2026-10-05T09:35:26+05:30",
+    "headline": "Bagging/Receiving of orders/contracts — Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts",
+    "category": "press_release",
+    "priority": 1,
+    "summary": "Larsen & Toubro secured new orders/contracts.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/PAM_05102026093512_PressRelease05102026.pdf",
+    "raw_text": "Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 158,
+      "out": 50
+    }
+  },
+  {
+    "id": "nse-lt-becec7de4d",
+    "ticker": "LT.NS",
+    "company_name": "Larsen & Toubro Limited",
+    "timestamp": "2026-09-30T15:29:11+05:30",
+    "headline": "General Updates — Larsen & Toubro Limited has informed the Exchange about General Updates",
+    "category": "press_release",
+    "priority": 2,
+    "summary": "Larsen & Toubro provided general updates.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/PAM_30092026152845_IntimationLTMRHL30092026.pdf",
+    "raw_text": "Larsen & Toubro Limited has informed the Exchange about General Updates",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 158,
+      "out": 50
+    }
+  },
+  {
+    "id": "nse-lt-4313117d7a",
+    "ticker": "LT.NS",
+    "company_name": "Larsen & Toubro Limited",
+    "timestamp": "2026-09-30T12:16:57+05:30",
+    "headline": "Bagging/Receiving of orders/contracts — Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts",
+    "category": "press_release",
+    "priority": 1,
+    "summary": "Larsen & Toubro secured new orders/contracts.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/PAM_30092026121641_PressRelease30092026.pdf",
+    "raw_text": "Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 158,
       "out": 50
     }
   }

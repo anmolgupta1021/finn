@@ -1,7 +1,7 @@
 {
   "ticker": "RELIANCE.NS",
   "company_name": "Reliance Industries Limited",
-  "generated_at": "2026-10-27T09:24:35.735428Z",
+  "generated_at": "2026-10-27T12:38:01.685227Z",
   "source_documents": [
     {
       "type": "concall_transcript",
@@ -70,7 +70,7 @@
           {
             "metric": "Fixed Broadband Connects & AirFiber",
             "guidance": "27 million fixed broadband connects including 12.9 million JioAirFiber homes",
-            "source": "Q4 FY26 Concall Transcript (26-Apr-2026), PDF p. 4 — \"27 million fixed broadband connects that was a net addition of almost 10 million during the year and 12.9 mill\"",
+            "source": "Q4 FY26 Concall Transcript (26-Apr-2026), PDF p. 4 — \"27 million fixed broadband connects that was a net addition of almost 10 million during the year and 12.9 million JioAirFiber homes.\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_26042026232750_SE_26042026.pdf#page=4",
             "doc_id": "DOC_2",
             "page": 4,
@@ -81,7 +81,7 @@
           {
             "metric": "Jio 5G Subscriber Base",
             "actual": "285 million 5G users with 73 million additions in the last 12 months",
-            "source": "Q1 FY27 Concall Transcript (19-Jul-2026), PDF p. 5 — \"Out of these, 285 million are 5G users, so which is an addition of 73 million in the last 12 months of 5G user\"",
+            "source": "Q1 FY27 Concall Transcript (19-Jul-2026), PDF p. 5 — \"Out of these, 285 million are 5G users, so which is an addition of 73 million in the last 12 months of 5G users.\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_19072026180618_SE_Transcript.pdf#page=5",
             "doc_id": "DOC_1",
             "page": 5,
@@ -90,7 +90,7 @@
           {
             "metric": "Fixed Broadband Connects & AirFiber",
             "actual": "28.6 million fixed broadband connects with 14 million AirFiber homes",
-            "source": "Q1 FY27 Concall Transcript (19-Jul-2026), PDF p. 5 — \"The home broadband, fixed broadband connects has increased to 28.6 million, out of which 14 million are AirFib\"",
+            "source": "Q1 FY27 Concall Transcript (19-Jul-2026), PDF p. 5 — \"The home broadband, fixed broadband connects has increased to 28.6 million, out of which 14 million are AirFiber homes.\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_19072026180618_SE_Transcript.pdf#page=5",
             "doc_id": "DOC_1",
             "page": 5,
@@ -106,7 +106,7 @@
           {
             "metric": "Jio 5G Subscriber Base",
             "guidance": "253 million plus 5G subscribers on the network",
-            "source": "Q3 FY26 Concall Transcript (18-Jan-2026), PDF p. 5 — \"5G user base has been growing very rapidly and quite well, 253 million plus 5G subscribers as well on our netw\"",
+            "source": "Q3 FY26 Concall Transcript (18-Jan-2026), PDF p. 5 — \"5G user base has been growing very rapidly and quite well, 253 million plus 5G subscribers as well on our network.\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_18012026235015_SE_Transcript.pdf#page=5",
             "doc_id": "DOC_3",
             "page": 5,
@@ -135,7 +135,7 @@
           {
             "metric": "FMCG Revenue",
             "actual": "Full year revenue of Rs.22,000 Crores in 2026 and Q4 revenue of Rs.7350 Crores",
-            "source": "Q4 FY26 Concall Transcript (26-Apr-2026), PDF p. 9 — \"From an FMCG business perspective, we closed our revenue of Rs.22,000 Crores in 2026 and for the Q4 alone, we \"",
+            "source": "Q4 FY26 Concall Transcript (26-Apr-2026), PDF p. 9 — \"From an FMCG business perspective, we closed our revenue of Rs.22,000 Crores in 2026 and for the Q4 alone, we delivered a revenue of Rs.7350 Crores\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_26042026232750_SE_26042026.pdf#page=9",
             "doc_id": "DOC_2",
             "page": 9,

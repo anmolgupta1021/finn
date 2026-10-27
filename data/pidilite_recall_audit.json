@@ -1,0 +1,281 @@
+{
+  "ticker": "PIDILITIND.NS",
+  "total_pdfs_discovered": 10,
+  "total_pages_in_pdfs": 181,
+  "pages_extracted_non_empty": 169,
+  "stage_1_raw_extracted_chars": 443379,
+  "stage_2_after_3200_char_per_page_cap": 441747,
+  "stage_3_after_180000_char_prompt_slice": 180000,
+  "pages_included_in_180k_prompt": 68,
+  "pages_dropped_by_180k_slice": 101,
+  "pages_truncated_by_3200_char_cap": 31,
+  "dropped_docs_summary": "All 5 concall transcripts (DOC_1..DOC_5, 103 pages) were included in the 180k prompt slice, plus DOC_6 p.1-2. The remaining 101 pages (DOC_6 p.3-14 and all of DOC_7..DOC_10, which are the 5 financial results filings) were cut off by corpus[:180000].",
+  "truncated_pages_detail": [
+    {
+      "doc_id": "DOC_2",
+      "page": 16,
+      "raw_chars": 3204,
+      "chars_dropped_on_page": 4
+    },
+    {
+      "doc_id": "DOC_4",
+      "page": 3,
+      "raw_chars": 3202,
+      "chars_dropped_on_page": 2
+    },
+    {
+      "doc_id": "DOC_4",
+      "page": 4,
+      "raw_chars": 3230,
+      "chars_dropped_on_page": 30
+    },
+    {
+      "doc_id": "DOC_4",
+      "page": 6,
+      "raw_chars": 3259,
+      "chars_dropped_on_page": 59
+    },
+    {
+      "doc_id": "DOC_4",
+      "page": 11,
+      "raw_chars": 3395,
+      "chars_dropped_on_page": 195
+    },
+    {
+      "doc_id": "DOC_4",
+      "page": 13,
+      "raw_chars": 3217,
+      "chars_dropped_on_page": 17
+    },
+    {
+      "doc_id": "DOC_4",
+      "page": 14,
+      "raw_chars": 3464,
+      "chars_dropped_on_page": 264
+    },
+    {
+      "doc_id": "DOC_4",
+      "page": 15,
+      "raw_chars": 3228,
+      "chars_dropped_on_page": 28
+    },
+    {
+      "doc_id": "DOC_6",
+      "page": 2,
+      "raw_chars": 3640,
+      "chars_dropped_on_page": 440
+    },
+    {
+      "doc_id": "DOC_6",
+      "page": 6,
+      "raw_chars": 3411,
+      "chars_dropped_on_page": 211
+    },
+    {
+      "doc_id": "DOC_6",
+      "page": 7,
+      "raw_chars": 4300,
+      "chars_dropped_on_page": 1100
+    },
+    {
+      "doc_id": "DOC_6",
+      "page": 14,
+      "raw_chars": 4426,
+      "chars_dropped_on_page": 1226
+    },
+    {
+      "doc_id": "DOC_7",
+      "page": 2,
+      "raw_chars": 4049,
+      "chars_dropped_on_page": 849
+    },
+    {
+      "doc_id": "DOC_7",
+      "page": 3,
+      "raw_chars": 4588,
+      "chars_dropped_on_page": 1388
+    },
+    {
+      "doc_id": "DOC_7",
+      "page": 8,
+      "raw_chars": 3791,
+      "chars_dropped_on_page": 591
+    }
+  ],
+  "guidance_sentences_found_in_transcripts": [
+    {
+      "doc_id": "DOC_1",
+      "page": 3,
+      "in_3200_window": true,
+      "sentence": "VAM consumption in the quarter was at $1,370 as compared to last year $924 and the fourth quarter was in the $800 range."
+    },
+    {
+      "doc_id": "DOC_1",
+      "page": 13,
+      "in_3200_window": true,
+      "sentence": "We are in the range of 2x to 4x, but we are seeing accelerated momentum in the underlying volume growth in some of our categories."
+    },
+    {
+      "doc_id": "DOC_2",
+      "page": 6,
+      "in_3200_window": true,
+      "sentence": "So if the entire company has seen 15% volume growth, will it be fair to say that even the core part, overall Fevicol including the recent innovations past 2 years, that also would have grown high single to double digit, or near double digit?"
+    },
+    {
+      "doc_id": "DOC_2",
+      "page": 7,
+      "in_3200_window": true,
+      "sentence": "We understand that there was a significant jump in operating margin in Q4 probably because we have earlier lower cost inventory, but right now the data suggest that VAM prices have surged, so how do we foresee to navigate the situation?"
+    },
+    {
+      "doc_id": "DOC_2",
+      "page": 8,
+      "in_3200_window": true,
+      "sentence": "But there is on the other extent, the VAM pricing, which I am sure you have already heard from Sandeep, I think it's already hovering around $1,800."
+    },
+    {
+      "doc_id": "DOC_2",
+      "page": 10,
+      "in_3200_window": true,
+      "sentence": "But Percy this is a range of 40% to 50% as our weighted average raw material basket."
+    },
+    {
+      "doc_id": "DOC_2",
+      "page": 12,
+      "in_3200_window": true,
+      "sentence": "As far as we are concerned, at this moment, I would say we have guided a corridor of 20% to 24%."
+    },
+    {
+      "doc_id": "DOC_2",
+      "page": 15,
+      "in_3200_window": true,
+      "sentence": "Our capex tends to be actually 3% to 5% of our revenue turnover."
+    },
+    {
+      "doc_id": "DOC_2",
+      "page": 15,
+      "in_3200_window": true,
+      "sentence": "And as far as our capex philosophy is concerned, there are 3 buckets in which we do capex."
+    },
+    {
+      "doc_id": "DOC_2",
+      "page": 16,
+      "in_3200_window": true,
+      "sentence": "And last year, we would have spent close to INR 570 crores on capex compared to INR 430 crores in the prior year."
+    },
+    {
+      "doc_id": "DOC_2",
+      "page": 16,
+      "in_3200_window": true,
+      "sentence": "Sandeep Batra: So if you look at last year, it would be less than 10% and I'm expressly calling out that if you look at FY '25-26, VAM would be under 10% of our raw material consumption for the company."
+    },
+    {
+      "doc_id": "DOC_2",
+      "page": 19,
+      "in_3200_window": true,
+      "sentence": "Sandeep Batra: VAM for the last quarter was around $840 a tonne, pretty much in line with the previous quarter."
+    },
+    {
+      "doc_id": "DOC_3",
+      "page": 4,
+      "in_3200_window": true,
+      "sentence": "Just for information, VAM consumption in the quarter was at about $830 as compared to $884 in the same period last year."
+    },
+    {
+      "doc_id": "DOC_3",
+      "page": 4,
+      "in_3200_window": true,
+      "sentence": "And despite all that one-offs and increased A&SP spending, our stand-alone EBITDA margins improved by about 24 basis points and stand at 24.5%."
+    },
+    {
+      "doc_id": "DOC_3",
+      "page": 5,
+      "in_3200_window": true,
+      "sentence": "Second is that we have got plans in place to, therefore, bring back our entire B2B back into at least mid-teens, so double digit and mid-teens."
+    },
+    {
+      "doc_id": "DOC_3",
+      "page": 10,
+      "in_3200_window": true,
+      "sentence": "Now the question is, and our desire rate to continue to maintain this growth because for us, the EBITDA corridor which we have shared is 20% to 24%."
+    },
+    {
+      "doc_id": "DOC_3",
+      "page": 15,
+      "in_3200_window": true,
+      "sentence": "What is happening is the penetration of tile adhesive and tile laying is growing pretty fast, at least we believe in high double digits in terms of about 18%, 20%, roughly to that effect."
+    },
+    {
+      "doc_id": "DOC_3",
+      "page": 18,
+      "in_3200_window": true,
+      "sentence": "Pidilite Industries Limited February 04, 2026 or down but VAM today is maybe even less than 10% of our raw material basket."
+    },
+    {
+      "doc_id": "DOC_4",
+      "page": 3,
+      "in_3200_window": true,
+      "sentence": "VAM, which is Vinyl Acetate Monomer, which is our single biggest raw material, the consumption rate in the second quarter was $883 compared to $980 in the second quarter last year."
+    },
+    {
+      "doc_id": "DOC_4",
+      "page": 4,
+      "in_3200_window": true,
+      "sentence": "Sudhanshu Vats: Yes, Sandeep just told you about our VAM numbers, yes, VAM is now below $900."
+    },
+    {
+      "doc_id": "DOC_4",
+      "page": 4,
+      "in_3200_window": true,
+      "sentence": "Basically, what we are seeing for the next 3 to 6 months, specifically VAM we see for it to remain in that range and remain benign."
+    },
+    {
+      "doc_id": "DOC_4",
+      "page": 5,
+      "in_3200_window": true,
+      "sentence": "I think we maintain that our A&SP will be in the band of 3% to 5%."
+    },
+    {
+      "doc_id": "DOC_4",
+      "page": 5,
+      "in_3200_window": true,
+      "sentence": "We stay committed to our corridor of 20% to 24%."
+    },
+    {
+      "doc_id": "DOC_4",
+      "page": 5,
+      "in_3200_window": true,
+      "sentence": "As you saw in first half, we are at the higher end of that corridor, we are actually at about 24%."
+    },
+    {
+      "doc_id": "DOC_4",
+      "page": 8,
+      "in_3200_window": true,
+      "sentence": "We have always called out that we are very comfortable to operate within an EBITDA corridor of 20% to 24%."
+    },
+    {
+      "doc_id": "DOC_4",
+      "page": 9,
+      "in_3200_window": true,
+      "sentence": "Pidilite Industries Limited October 31, 2025 Jinesh Kothari: So sir, no major organic capacity expansion guidance on the line, is it?"
+    },
+    {
+      "doc_id": "DOC_4",
+      "page": 9,
+      "in_3200_window": true,
+      "sentence": "Sandeep Batra: I don't know what you mean by major, but we've always said that our capex will be anywhere between 3% to 5% of sales."
+    },
+    {
+      "doc_id": "DOC_5",
+      "page": 11,
+      "in_3200_window": true,
+      "sentence": "Do you think FY '26 could land at the higher end of your band of 20% to 24%?"
+    },
+    {
+      "doc_id": "DOC_5",
+      "page": 11,
+      "in_3200_window": true,
+      "sentence": "So for the full year if you look at it, and that guidance which we have given, the corridor of 20% to 24%, is the corridor you should look at and you should look at us."
+    }
+  ]
+}

@@ -7,14 +7,14 @@
     "headline": "ESOP/ESOS/ESPS — ICICI Bank Limited has informed the Exchange regarding Allotment of 1063398  Shares.",
     "category": "unclassified",
     "priority": 3,
-    "summary": "Routine ESOP allotment of 1,063,398 shares.",
+    "summary": "ICICI Bank Limited has informed the Exchange regarding Allotment of 1063398  Shares.",
     "source_url": "https://nsearchives.nseindia.com/corporate/ICICIBANK1_27102026103348_Letter_to_exchange.pdf",
     "raw_text": "ICICI Bank Limited has informed the Exchange regarding Allotment of 1063398  Shares.",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 215,
-      "out": 61
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -25,14 +25,14 @@
     "headline": "Credit Rating — ICICI Bank Limited has informed the Exchange about Credit Rating",
     "category": "credit_rating",
     "priority": 2,
-    "summary": "Credit rating update received by the bank.",
+    "summary": "ICICI Bank Limited has informed the Exchange about Credit Rating",
     "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_24102026134600_NSEBSE24102026.pdf",
     "raw_text": "ICICI Bank Limited has informed the Exchange about Credit Rating",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 215,
-      "out": 61
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -43,14 +43,32 @@
     "headline": "Analysts/Institutional Investor Meet/Con. Call Updates — ICICI Bank Limited has informed the Exchange about transcript of the call with media and of earnings call with analysts and investors on the financial results for the quarter and six months ended September 30, 2026",
     "category": "earnings_call",
     "priority": 2,
-    "summary": "Transcript of the media and analyst earnings call for the quarter and six months ended September 30, 2026.",
+    "summary": "ICICI Bank Limited has informed the Exchange about transcript of the call with media and of earnings call with analysts and investors on the financial results for the quarter and six months ended September 30, 2026",
     "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_23102026175603_NSEBSE23102026.pdf",
     "raw_text": "ICICI Bank Limited has informed the Exchange about transcript of the call with media and of earnings call with analysts and investors on the financial results for the quarter and six months ended September 30, 2026",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 215,
-      "out": 61
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-icicibank-42a436a42b",
+    "ticker": "ICICIBANK.NS",
+    "company_name": "ICICI Bank Limited",
+    "timestamp": "2026-10-22T16:45:26+05:30",
+    "headline": "ESOP/ESOS/ESPS — ICICI Bank Limited has informed the Exchange regarding Allotment of 24096  Shares.",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "ICICI Bank Limited has informed the Exchange regarding Allotment of 24096  Shares.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/ICICIBANK1_22102026164514_Lettertoexchange.pdf",
+    "raw_text": "ICICI Bank Limited has informed the Exchange regarding Allotment of 24096  Shares.",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -61,14 +79,32 @@
     "headline": "Analysts/Institutional Investor Meet/Con. Call Updates — ICICI Bank Limited has informed the Exchange about link of audio recording of the call with media and of earnings call with analysts and investors on the financial results for quarter and six months ended September 30, 2026",
     "category": "earnings_call",
     "priority": 2,
-    "summary": "Audio recording link for the media and analyst earnings call for the quarter and six months ended September 30, 2026.",
+    "summary": "ICICI Bank Limited has informed the Exchange about link of audio recording of the call with media and of earnings call with analysts and investors on the financial results for quarter and six months ended September 30, 2026",
     "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_17102026202758_NSEBSE_17102026.pdf",
     "raw_text": "ICICI Bank Limited has informed the Exchange about link of audio recording of the call with media and of earnings call with analysts and investors on the financial results for quarter and six months ended September 30, 2026",
     "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-icicibank-7b27f11a14",
+    "ticker": "ICICIBANK.NS",
+    "company_name": "ICICI Bank Limited",
+    "timestamp": "2026-10-17T16:46:02+05:30",
+    "headline": "Investor Presentation — ICICI Bank Limited has informed the Exchange about Investor Presentation",
+    "category": "investor_meetings",
+    "priority": 2,
+    "summary": "Bank submitted investor presentation to the exchange.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_17102026164525_BSENSE17102026.pdf",
+    "raw_text": "ICICI Bank Limited has informed the Exchange about Investor Presentation",
+    "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 215,
-      "out": 61
+      "in": 189,
+      "out": 58
     }
   },
   {
@@ -90,21 +126,21 @@
     },
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 4768,
-      "out": 231
+      "in": 4742,
+      "out": 228
     }
   },
   {
-    "id": "icicibank-results-icicibank_q2fy27",
+    "id": "nse-icicibank-c7bd72fb33",
     "ticker": "ICICIBANK.NS",
     "company_name": "ICICI Bank Limited",
     "timestamp": "2026-10-17T15:21:44+05:30",
-    "headline": "Outcome of Board Meeting — Unaudited Standalone and Consolidated Financial Results for Q2 FY27 (quarter ended Sep 30, 2026)",
+    "headline": "Outcome of Board Meeting — ICICI Bank Limited has submitted to the Exchange, the unaudited financial results of the Bank (standalone and consolidated) for the quarter and six months ended September 30, 2026.",
     "category": "results",
     "priority": 1,
     "summary": "Q2 FY27 (consolidated): Total income ₹88,161 Cr (+15.8% YoY, +10.6% QoQ); PAT ₹16,333 Cr (+22.3% YoY, +5.8% QoQ). Operating profit (ex-provisions) ₹24,010 Cr (+20.2% YoY).",
     "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_17102026152039_NSEBSE17102026.pdf",
-    "raw_text": "Outcome of Board Meeting — Unaudited Standalone and Consolidated Financial Results for Q2 FY27 (quarter ended Sep 30, 2026)",
+    "raw_text": "ICICI Bank Limited has submitted to the Exchange, the unaudited financial results of the Bank (standalone and consolidated) for the quarter and six months ended September 30, 2026.",
     "enrichment": {
       "status": "ok",
       "quarter": "Q2 FY27",
@@ -151,6 +187,13 @@
         "yoy": 22.28
       },
       "pat_owners": null,
+      "derivation": {
+        "basis_note": "Consolidated Financial Results (PDF p. 13, reported in ₹ crore; Banking Regulation Act Form A/B format).",
+        "revenue_definition": "Bank Total Income = Interest Earned + Other Income = ₹88,161.18 Cr (Q1 FY27: ₹79,689.22 Cr; Q2 FY26: ₹76,146.59 Cr).",
+        "ebitda_formula": "Not applicable (`not_applicable`) for banking companies (interest is an operating item). Operating Profit before Provisions & Contingencies = ₹24,009.97 Cr.",
+        "pbt_basis": "Profit before tax (after provisions & contingencies of ₹818.22 Cr; no exceptional items) = ₹23,191.75 Cr.",
+        "pat_basis": "Consolidated Net Profit for the period (Total Consolidated PAT) = ₹16,333.18 Cr."
+      },
       "validation": {
         "passed": true,
         "flags": []
@@ -161,6 +204,222 @@
     "tokens": {
       "in": 3876,
       "out": 609
+    }
+  },
+  {
+    "id": "nse-icicibank-cab01c7d5b",
+    "ticker": "ICICIBANK.NS",
+    "company_name": "ICICI Bank Limited",
+    "timestamp": "2026-10-15T14:23:05+05:30",
+    "headline": "ESOP/ESOS/ESPS — ICICI Bank Limited has informed the Exchange regarding Allotment of 113464  Shares.",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "ICICI Bank Limited has informed the Exchange regarding Allotment of 113464  Shares.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/ICICIBANK1_15102026142254_Lettertoexchange.pdf",
+    "raw_text": "ICICI Bank Limited has informed the Exchange regarding Allotment of 113464  Shares.",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-icicibank-c1606c0534",
+    "ticker": "ICICIBANK.NS",
+    "company_name": "ICICI Bank Limited",
+    "timestamp": "2026-10-13T10:05:24+05:30",
+    "headline": "ESOP/ESOS/ESPS — ICICI Bank Limited has informed the Exchange regarding Allotment of 749099  Shares.",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "ICICI Bank Limited has informed the Exchange regarding Allotment of 749099  Shares.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/ICICIBANK1_13102026100508_Lettertoexchange.pdf",
+    "raw_text": "ICICI Bank Limited has informed the Exchange regarding Allotment of 749099  Shares.",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-icicibank-e6e7434a84",
+    "ticker": "ICICIBANK.NS",
+    "company_name": "ICICI Bank Limited",
+    "timestamp": "2026-10-12T18:08:35+05:30",
+    "headline": "General Updates — ICICI Bank Limited has informed the Exchange about Call with media on financial results for the quarter and six months ended September 30, 2026.",
+    "category": "press_release",
+    "priority": 2,
+    "summary": "Bank announced a call with media on financial results for the quarter and six months ended September 30, 2026.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_12102026180729_BSENSE_12102026.pdf",
+    "raw_text": "ICICI Bank Limited has informed the Exchange about Call with media on financial results for the quarter and six months ended September 30, 2026.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 189,
+      "out": 58
+    }
+  },
+  {
+    "id": "nse-icicibank-597094864c",
+    "ticker": "ICICIBANK.NS",
+    "company_name": "ICICI Bank Limited",
+    "timestamp": "2026-10-12T18:03:03+05:30",
+    "headline": "Analysts/Institutional Investor Meet/Con. Call Updates — ICICI Bank Limited has informed the Exchange about Earnings call on financial results for the quarter and six months ended September 30, 2026.",
+    "category": "earnings_call",
+    "priority": 2,
+    "summary": "ICICI Bank Limited has informed the Exchange about Earnings call on financial results for the quarter and six months ended September 30, 2026.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_12102026180004_BSENSE_12102026.pdf",
+    "raw_text": "ICICI Bank Limited has informed the Exchange about Earnings call on financial results for the quarter and six months ended September 30, 2026.",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-icicibank-d6290eb6f2",
+    "ticker": "ICICIBANK.NS",
+    "company_name": "ICICI Bank Limited",
+    "timestamp": "2026-10-08T17:56:36+05:30",
+    "headline": "ESOP/ESOS/ESPS — ICICI Bank Limited has informed the Exchange regarding Allotment of 80255  Shares.",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "ICICI Bank Limited has informed the Exchange regarding Allotment of 80255  Shares.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/ICICIBANK1_08102026175523_LETTERTOSTOCKEXCHANGE.pdf",
+    "raw_text": "ICICI Bank Limited has informed the Exchange regarding Allotment of 80255  Shares.",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-icicibank-e9d963edb3",
+    "ticker": "ICICIBANK.NS",
+    "company_name": "ICICI Bank Limited",
+    "timestamp": "2026-10-08T17:37:19+05:30",
+    "headline": "Certificate under SEBI (Depositories and Participants) Regulations, 2018 — ICICI Bank Limited has informed the Exchange about Certificate under Regulation 74(5) of SEBI (Depositories and Participants) Regulations, 2018, for the quarter ended September 30, 2026, received from 3i I",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "ICICI Bank Limited has informed the Exchange about Certificate under Regulation 74(5) of SEBI (Depositories and Participants) Regulations, 2018, for the quarter ended September 30, 2026, received from 3i Infotech Limited, Registrar to an Issue and Share Transfer Agent for bonds /debentures of the Bank.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/ICICIBANK1_08102026173642_Regulation_74_5__Certificate_NSE_BSE_20260930-BONDS.pdf",
+    "raw_text": "ICICI Bank Limited has informed the Exchange about Certificate under Regulation 74(5) of SEBI (Depositories and Participants) Regulations, 2018, for the quarter ended September 30, 2026, received from 3i Infotech Limited, Registrar to an Issue and Share Transfer Agent for bonds /debentures of the Bank.",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-icicibank-b740b3b268",
+    "ticker": "ICICIBANK.NS",
+    "company_name": "ICICI Bank Limited",
+    "timestamp": "2026-10-08T17:25:49+05:30",
+    "headline": "Certificate under SEBI (Depositories and Participants) Regulations, 2018 — ICICI Bank Limited has informed the Exchange about Certificate under Regulation 74(5) of SEBI (Depositories and Participants) Regulations, 2018, for the quarter ended September 30, 2026 received from Kfin ",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "ICICI Bank Limited has informed the Exchange about Certificate under Regulation 74(5) of SEBI (Depositories and Participants) Regulations, 2018, for the quarter ended September 30, 2026 received from Kfin Technologies Limited, Registrar to an Issue and Share Transfer Agent for equity shares of the Bank.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/ICICIBANK1_08102026172408_Regulation_74_5__Certificate_BSE_NSE_20260930-EQUITY.pdf",
+    "raw_text": "ICICI Bank Limited has informed the Exchange about Certificate under Regulation 74(5) of SEBI (Depositories and Participants) Regulations, 2018, for the quarter ended September 30, 2026 received from Kfin Technologies Limited, Registrar to an Issue and Share Transfer Agent for equity shares of the Bank.",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-icicibank-be92f5693e",
+    "ticker": "ICICIBANK.NS",
+    "company_name": "ICICI Bank Limited",
+    "timestamp": "2026-10-06T10:25:00+05:30",
+    "headline": "ESOP/ESOS/ESPS — ICICI Bank Limited has informed the Exchange regarding Allotment of 202836  Shares.",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "ICICI Bank Limited has informed the Exchange regarding Allotment of 202836  Shares.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/ICICIBANK1_06102026102442_Lettertoexchange.pdf",
+    "raw_text": "ICICI Bank Limited has informed the Exchange regarding Allotment of 202836  Shares.",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-icicibank-5f003fbbe0",
+    "ticker": "ICICIBANK.NS",
+    "company_name": "ICICI Bank Limited",
+    "timestamp": "2026-10-02T17:47:37+05:30",
+    "headline": "General Updates — ICICI Bank Limited has informed the Exchange about Disclosure under Regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Routine regulatory disclosure filed under Regulation 30 of SEBI LODR.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_02102026174507_NSEBSE_02102026.pdf",
+    "raw_text": "ICICI Bank Limited has informed the Exchange about Disclosure under Regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 189,
+      "out": 58
+    }
+  },
+  {
+    "id": "nse-icicibank-483db7cbcf",
+    "ticker": "ICICIBANK.NS",
+    "company_name": "ICICI Bank Limited",
+    "timestamp": "2026-10-01T17:02:41+05:30",
+    "headline": "General Updates — ICICI Bank Limited has informed the Exchange about Disclosure under Regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Routine regulatory disclosure filed under Regulation 30 of SEBI LODR.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_01102026170118_BSENSE01102926.pdf",
+    "raw_text": "ICICI Bank Limited has informed the Exchange about Disclosure under Regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 189,
+      "out": 58
+    }
+  },
+  {
+    "id": "nse-icicibank-5e56bd1c78",
+    "ticker": "ICICIBANK.NS",
+    "company_name": "ICICI Bank Limited",
+    "timestamp": "2026-10-01T13:57:13+05:30",
+    "headline": "Copy of Newspaper Publication — ICICI Bank Limited has informed the Exchange about Copy of Newspaper Publication",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "ICICI Bank Limited has informed the Exchange about Copy of Newspaper Publication",
+    "source_url": "https://nsearchives.nseindia.com/corporate/ICICIBANK1_01102026135523_Special_Window_Disclosure_01102026.pdf",
+    "raw_text": "ICICI Bank Limited has informed the Exchange about Copy of Newspaper Publication",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-icicibank-97ae080138",
+    "ticker": "ICICIBANK.NS",
+    "company_name": "ICICI Bank Limited",
+    "timestamp": "2026-09-29T20:10:05+05:30",
+    "headline": "Updates — ICICI Bank Limited has informed the Exchange regarding 'Filing of amendment to the Annual Securities Report filed with Director of Kanto Regional Finance Bureau on September 18, 2026'.",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Bank filed an amendment to the Annual Securities Report with the Director of Kanto Regional Finance Bureau.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_29092026200845_NSEBSE29092026.pdf",
+    "raw_text": "ICICI Bank Limited has informed the Exchange regarding 'Filing of amendment to the Annual Securities Report filed with Director of Kanto Regional Finance Bureau on September 18, 2026'.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 189,
+      "out": 58
     }
   }
 ]

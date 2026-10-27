@@ -7,14 +7,14 @@
     "headline": "Certificate under SEBI (Depositories and Participants) Regulations, 2018 — Bharti Airtel Limited has informed the Exchange about Certificate under Regulation 74(5) of SEBI (Depositories and Participants) Regulations, 2018 for the period from July 01, 2026 to September 30, 2026.",
     "category": "unclassified",
     "priority": 3,
-    "summary": "Routine compliance certificate submitted under SEBI Reg 74(5) for the quarter ended September 30, 2026.",
+    "summary": "Bharti Airtel Limited has informed the Exchange about Certificate under Regulation 74(5) of SEBI (Depositories and Participants) Regulations, 2018 for the period from July 01, 2026 to September 30, 2026.",
     "source_url": "https://nsearchives.nseindia.com/corporate/BHARTIARTL_26102026190028_BhartiAirtelReg74_5_disclosure.pdf",
     "raw_text": "Bharti Airtel Limited has informed the Exchange about Certificate under Regulation 74(5) of SEBI (Depositories and Participants) Regulations, 2018 for the period from July 01, 2026 to September 30, 2026.",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 185,
-      "out": 54
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -24,14 +24,14 @@
     "timestamp": "2026-10-14T16:05:04+05:30",
     "headline": "Action(s) taken or orders passed — Bharti Airtel Limited has informed the Exchange about Action(s) taken or orders passed",
     "category": "litigation",
-    "priority": 2,
-    "summary": "Regulatory or tax action/order received by the company.",
+    "priority": 1,
+    "summary": "Regulatory or tax authority passed an action/order against the company.",
     "source_url": "https://nsearchives.nseindia.com/corporate/BHARTIARTL_14102026160249_BhartiAirtelReg30disclosure.pdf",
     "raw_text": "Bharti Airtel Limited has informed the Exchange about Action(s) taken or orders passed",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 185,
+      "in": 260,
       "out": 54
     }
   },
@@ -43,14 +43,14 @@
     "headline": "Press Release — Bharti Airtel Limited has informed the Exchange regarding a press release dated October 07, 2026, titled \"Airtel offers Free International Roaming on All Postpaid Plans\".",
     "category": "press_release",
     "priority": 2,
-    "summary": "Company announced free international roaming on all postpaid plans.",
+    "summary": "Bharti Airtel Limited has informed the Exchange regarding a press release dated October 07, 2026, titled \"Airtel offers Free International Roaming on All Postpaid Plans\".",
     "source_url": "https://nsearchives.nseindia.com/corporate/BHARTIARTL_07102026110048_BhartiAirtelPR.pdf",
     "raw_text": "Bharti Airtel Limited has informed the Exchange regarding a press release dated October 07, 2026, titled \"Airtel offers Free International Roaming on All Postpaid Plans\".",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 185,
-      "out": 54
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -61,14 +61,14 @@
     "headline": "Press Release — Bharti Airtel Limited has informed the Exchange regarding a press release dated October 05, 2026, titled \"Airtel Business launches IQ Gateway   India s first business communications platform with telco-grade network intelligence for safe enterprise messaging\".",
     "category": "press_release",
     "priority": 2,
-    "summary": "Airtel Business launched IQ Gateway, an enterprise communications platform with telco-grade network intelligence.",
+    "summary": "Bharti Airtel Limited has informed the Exchange regarding a press release dated October 05, 2026, titled \"Airtel Business launches IQ Gateway   India s first business communications platform with telco-grade network intelligence for safe enterprise messaging\".",
     "source_url": "https://nsearchives.nseindia.com/corporate/BHARTIARTL_05102026120416_BhartiAirtelSTXIntimation.pdf",
     "raw_text": "Bharti Airtel Limited has informed the Exchange regarding a press release dated October 05, 2026, titled \"Airtel Business launches IQ Gateway   India s first business communications platform with telco-grade network intelligence for safe enterprise messaging\".",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 185,
-      "out": 54
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -78,14 +78,14 @@
     "timestamp": "2026-10-01T13:00:40+05:30",
     "headline": "Action(s) taken or orders passed — Bharti Airtel Limited has informed the Exchange about Action(s) taken or orders passed",
     "category": "litigation",
-    "priority": 2,
-    "summary": "Regulatory or tax action/order received by the company.",
+    "priority": 1,
+    "summary": "Regulatory or tax authority passed an action/order against the company.",
     "source_url": "https://nsearchives.nseindia.com/corporate/BHARTIARTL_01102026125929_BhartiAirtel-Reg30.pdf",
     "raw_text": "Bharti Airtel Limited has informed the Exchange about Action(s) taken or orders passed",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 185,
+      "in": 260,
       "out": 54
     }
   },
@@ -96,14 +96,14 @@
     "timestamp": "2026-09-29T17:29:24+05:30",
     "headline": "Action(s) taken or orders passed — Bharti Airtel Limited has informed the Exchange about Action(s) taken or orders passed",
     "category": "litigation",
-    "priority": 2,
-    "summary": "Regulatory or tax action/order received by the company.",
+    "priority": 1,
+    "summary": "Regulatory or tax authority passed an action/order against the company.",
     "source_url": "https://nsearchives.nseindia.com/corporate/BHARTIARTL_29092026172859_BhartiAirtel-Reg30disclosure.pdf",
     "raw_text": "Bharti Airtel Limited has informed the Exchange about Action(s) taken or orders passed",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 185,
+      "in": 260,
       "out": 54
     }
   }

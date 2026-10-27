@@ -18,8 +18,8 @@
     },
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 2088,
-      "out": 222
+      "in": 1899,
+      "out": 159
     }
   },
   {
@@ -30,14 +30,14 @@
     "headline": "Updates — NTPC Limited has informed the Exchange regarding ''Clarification on the news item published on the website of AD HOC NEWS dated 20th October 2026 captioned \"NTPC Posts 7.43 Percent Profit Growth; Buyback Sets Date for NTPC stock\".",
     "category": "press_release",
     "priority": 2,
-    "summary": "Company clarified news item regarding profit growth and stock buyback date published on AD HOC NEWS.",
+    "summary": "NTPC clarified news reports regarding 7.43% profit growth and stock buyback date.",
     "source_url": "https://nsearchives.nseindia.com/corporate/NTPC_20102026183417_20261020_NEWSCLARIFICATION_STEX.pdf",
     "raw_text": "NTPC Limited has informed the Exchange regarding ''Clarification on the news item published on the website of AD HOC NEWS dated 20th October 2026 captioned \"NTPC Posts 7.43 Percent Profit Growth; Buyback Sets Date for NTPC stock\".",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 189,
-      "out": 63
+      "in": 222,
+      "out": 64
     }
   },
   {
@@ -59,8 +59,8 @@
     },
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 1247,
-      "out": 194
+      "in": 1280,
+      "out": 195
     }
   },
   {
@@ -71,14 +71,14 @@
     "headline": "Press Release — NTPC Limited has informed the Exchange regarding a press release dated October 15, 2026, titled \"NTPC partners with Africa50 to jointly develop power projects across Africa\".",
     "category": "press_release",
     "priority": 2,
-    "summary": "NTPC partnered with Africa50 to jointly develop power projects across Africa.",
+    "summary": "NTPC Limited has informed the Exchange regarding a press release dated October 15, 2026, titled \"NTPC partners with Africa50 to jointly develop power projects across Africa\".",
     "source_url": "https://nsearchives.nseindia.com/corporate/NTPC_15102026182116_20261015_Pressrelease_STEX.pdf",
     "raw_text": "NTPC Limited has informed the Exchange regarding a press release dated October 15, 2026, titled \"NTPC partners with Africa50 to jointly develop power projects across Africa\".",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 189,
-      "out": 63
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -89,14 +89,68 @@
     "headline": "Certificate under SEBI (Depositories and Participants) Regulations, 2018 — NTPC Limited has informed the Exchange about Certificate under SEBI (Depositories and Participants) Regulations, 2018",
     "category": "unclassified",
     "priority": 3,
-    "summary": "Submitted routine certificate under SEBI (Depositories and Participants) Regulations, 2018.",
+    "summary": "NTPC Limited has informed the Exchange about Certificate under SEBI (Depositories and Participants) Regulations, 2018",
     "source_url": "https://nsearchives.nseindia.com/corporate/NTPC_15102026155106_REGULATION_74_-STX.pdf",
     "raw_text": "NTPC Limited has informed the Exchange about Certificate under SEBI (Depositories and Participants) Regulations, 2018",
     "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-ntpc-c529cd3de7",
+    "ticker": "NTPC.NS",
+    "company_name": "NTPC Limited",
+    "timestamp": "2026-10-12T14:39:50+05:30",
+    "headline": "Copy of Newspaper Publication — NTPC Limited has informed the Exchange about Copy of Newspaper Publication",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "NTPC Limited has informed the Exchange about Copy of Newspaper Publication",
+    "source_url": "https://nsearchives.nseindia.com/corporate/NTPC_12102026143942_20261012_NEWSPAPER_STEX.pdf",
+    "raw_text": "NTPC Limited has informed the Exchange about Copy of Newspaper Publication",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-ntpc-ccc6c699f6",
+    "ticker": "NTPC.NS",
+    "company_name": "NTPC Limited",
+    "timestamp": "2026-10-10T19:34:50+05:30",
+    "headline": "General Updates — NTPC Limited has informed the Exchange about declaration of Commercial Operation of fourth part capacity of 66.18 MW of Kalasar Solar Energy Project, Bikaner, Rajasthan, out of 650 MW of Solar component under 500 MW REMCL RTC Project of NTPC Renewable Energy Lim",
+    "category": "capex",
+    "priority": 1,
+    "summary": "Declared commercial operation of fourth part capacity of 66.18 MW of Kalasar Solar Energy Project in Rajasthan.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/NTPC_10102026193410_20261010_STEX_NGELCOMM.pdf",
+    "raw_text": "NTPC Limited has informed the Exchange about declaration of Commercial Operation of fourth part capacity of 66.18 MW of Kalasar Solar Energy Project, Bikaner, Rajasthan, out of 650 MW of Solar component under 500 MW REMCL RTC Project of NTPC Renewable Energy Limited",
+    "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 189,
-      "out": 63
+      "in": 222,
+      "out": 64
+    }
+  },
+  {
+    "id": "nse-ntpc-05df5656f5",
+    "ticker": "NTPC.NS",
+    "company_name": "NTPC Limited",
+    "timestamp": "2026-10-07T16:19:16+05:30",
+    "headline": "Copy of Newspaper Publication — NTPC Limited has informed the Exchange about Copy of Newspaper Publication",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "NTPC Limited has informed the Exchange about Copy of Newspaper Publication",
+    "source_url": "https://nsearchives.nseindia.com/corporate/NTPC_07102026161723_07102026-Newspaper_Advertisement.pdf",
+    "raw_text": "NTPC Limited has informed the Exchange about Copy of Newspaper Publication",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -118,8 +172,67 @@
     },
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 1178,
-      "out": 212
+      "in": 989,
+      "out": 149
+    }
+  },
+  {
+    "id": "nse-ntpc-1ad6f7eb4c",
+    "ticker": "NTPC.NS",
+    "company_name": "NTPC Limited",
+    "timestamp": "2026-10-01T15:26:29+05:30",
+    "headline": "General Updates — NTPC Limited has informed the Exchange about declaration of Commercial Operation of fourth part capacity of 50 MW solar capacity out of cumulative 300 MW solar component, as part of 200 MW RE Round The Clock (RTC) project capacity located in Rajasthan by a group",
+    "category": "capex",
+    "priority": 1,
+    "summary": "Declared commercial operation of 50 MW solar capacity out of 300 MW component of RE RTC project in Rajasthan.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/NTPC_01102026152404_20261001_STEX_NGELCOMMISSIONING.pdf",
+    "raw_text": "NTPC Limited has informed the Exchange about declaration of Commercial Operation of fourth part capacity of 50 MW solar capacity out of cumulative 300 MW solar component, as part of 200 MW RE Round The Clock (RTC) project capacity located in Rajasthan by a group company of NGEL",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 222,
+      "out": 64
+    }
+  },
+  {
+    "id": "nse-ntpc-24162a273f",
+    "ticker": "NTPC.NS",
+    "company_name": "NTPC Limited",
+    "timestamp": "2026-09-30T13:36:12+05:30",
+    "headline": "Change in Management — NTPC Limited has informed the Exchange about change in Management",
+    "category": "management_change",
+    "priority": 1,
+    "summary": "Shri Vijay Goel ceased to be Executive Director (Senior Management) of NTPC Limited due to superannuation on 30th September 2026.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/NTPC_30092026133444_30092026_Cessation_of_EDs.pdf",
+    "raw_text": "NTPC Limited has informed the Exchange about change in Management",
+    "enrichment": {
+      "person_name": "Shri Vijay Goel",
+      "role": "Executive Director (Senior Management)",
+      "action": "retired",
+      "background": "Shri Vijay Goel ceased to be part of the Senior Management upon superannuating on 30th September 2026. (Filing p. 1)"
+    },
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 858,
+      "out": 126
+    }
+  },
+  {
+    "id": "nse-ntpc-3c318c0968",
+    "ticker": "NTPC.NS",
+    "company_name": "NTPC Limited",
+    "timestamp": "2026-09-30T13:08:07+05:30",
+    "headline": "General Updates — NTPC Limited has informed the Exchange about declaration of Commercial Operation of second and the third part capacity of 73.06 MW and 80.88 MW, respectively, of Kalasar Solar Energy Project, Bikaner, Rajasthan of NTPC Renewable Energy Limited, a step-down subsi",
+    "category": "capex",
+    "priority": 1,
+    "summary": "Declared commercial operation of second and third part capacities of 73.06 MW and 80.88 MW of Kalasar Solar Energy Project.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/NTPC_30092026130754_20260930_STEX_NGELCOMMISSIONING.pdf",
+    "raw_text": "NTPC Limited has informed the Exchange about declaration of Commercial Operation of second and the third part capacity of 73.06 MW and 80.88 MW, respectively, of Kalasar Solar Energy Project, Bikaner, Rajasthan of NTPC Renewable Energy Limited, a step-down subsidiary of NTPC Limited through NGEL.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 222,
+      "out": 64
     }
   }
 ]

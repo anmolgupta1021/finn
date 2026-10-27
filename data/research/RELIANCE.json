@@ -1,0 +1,161 @@
+{
+  "ticker": "RELIANCE.NS",
+  "company_name": "Reliance Industries Limited",
+  "generated_at": "2026-10-27T08:51:09.279463Z",
+  "source_documents": [
+    {
+      "type": "concall_transcript",
+      "quarter": "Q1 FY27",
+      "url": "https://nsearchives.nseindia.com/corporate/kavinavora_19072026180618_SE_Transcript.pdf",
+      "pages": 32
+    },
+    {
+      "type": "concall_transcript",
+      "quarter": "Q4 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/kavinavora_26042026232750_SE_26042026.pdf",
+      "pages": 31
+    },
+    {
+      "type": "concall_transcript",
+      "quarter": "Q3 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/kavinavora_18012026235015_SE_Transcript.pdf",
+      "pages": 38
+    },
+    {
+      "type": "concall_transcript",
+      "quarter": "Q2 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/kavinavora_19102025225511_SE__Transcripts.pdf",
+      "pages": 37
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q1 FY27",
+      "url": "https://nsearchives.nseindia.com/corporate/kavinavora_17072026191923_SE_MR_1.pdf",
+      "pages": 21
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q4 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/kavinavora_24042026193424_SE_24042026_MR.pdf",
+      "pages": 23
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q3 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/kavinavora_16012026192013_MR_file.pdf",
+      "pages": 21
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q2 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/kavinavora_17102025190605_SE_MR.pdf",
+      "pages": 21
+    }
+  ],
+  "narrative_vs_numbers": {
+    "summary": "Reliance Industries demonstrated strong operational execution across its core consumer growth engines, delivering healthy subscriber momentum in Jio (crossing 285 million 5G users in Q1 FY27) and rapid scaling in Retail digital/quick commerce. While macro and geopolitical volatility impacted O2C refining dynamics and short-term retail EBITDA margins, management consistently met or exceeded operational efficiency benchmarks, such as containing KG-D6 field decline to 8% versus 12-14% initial expectations.",
+    "quarters": [
+      {
+        "quarter": "Q3 FY26",
+        "guided": [
+          {
+            "metric": "Retail Quick Commerce Market Position & Order Scale",
+            "guidance": "Targeted on-track progress to become the second largest quick commerce player with a 1.6 million order run rate.",
+            "source": "Q3 FY26 Concall Transcript (18-Jan-2026), p. 3 — \"very much on track to be the second largest QC player\""
+          },
+          {
+            "metric": "KG-D6 Production Decline Rate",
+            "guidance": "Management expected natural field decline in KG-D6 to be in the range of 12% to 14%.",
+            "source": "Q4 FY26 Concall Transcript (26-Apr-2026), p. 19 — \"expected about 12% to 14% decline\""
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "Retail Quick Commerce Market Position & Order Scale",
+            "actual": "Achieved 1.6 million order run rate at quarter end, growing orders 53% QoQ and 360% YoY.",
+            "source": "Q3 FY26 Concall Transcript (18-Jan-2026), p. 9 — \"ended the quarter at 1.6 million. On a quarter-on-quarter basis, the growth was 53%\""
+          },
+          {
+            "metric": "KG-D6 Production Decline Rate",
+            "actual": "Restricted natural production decline to 8%, outperforming internal expectations.",
+            "source": "Q4 FY26 Concall Transcript (26-Apr-2026), p. 19 — \"manage it to 8% decline\""
+          }
+        ],
+        "verdict": "beat",
+        "commentary": "Reliance outperformed internal projections on KG-D6 production decline management while rapidly scaling retail quick commerce orders to achieve its targeted market position."
+      },
+      {
+        "quarter": "Q4 FY26",
+        "guided": [
+          {
+            "metric": "Jio 5G Subscriber Base Expansion",
+            "guidance": "Expanded 5G subscriber base rapidly, targeting continuous conversion to reach 268 million 5G users.",
+            "source": "Q4 FY26 Concall Transcript (26-Apr-2026), p. 4 — \"268 million 5G user base, so that is an addition of 77 million during the year\""
+          },
+          {
+            "metric": "New Energy Battery Manufacturing Capacity",
+            "guidance": "Targeted execution of the first phase 40 GWh BESS and battery cell manufacturing capacity.",
+            "source": "Q4 FY26 Concall Transcript (26-Apr-2026), p. 19 — \"first phase of 40-gigawatt manufacturing of BESS and the battery cell again is progressing\""
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "Jio 5G Subscriber Base Expansion",
+            "actual": "Grew 5G subscriber base further to 285 million users by Q1 FY27 (adding 73 million in 12 months).",
+            "source": "Q1 FY27 Concall Transcript (19-Jul-2026), p. 5 — \"285 million are 5G users\""
+          },
+          {
+            "metric": "New Energy Battery Manufacturing Capacity",
+            "actual": "Reconfirmed timeline to achieve 40 GWh battery cell capacity within the current year.",
+            "source": "Q1 FY27 Concall Transcript (19-Jul-2026), p. 20 — \"We will achieve 40-gigawatt hour capacity this year\""
+          }
+        ],
+        "verdict": "hit",
+        "commentary": "Jio sustained strong subscriber addition momentum on its 5G network, while New Energy giga-factory equipment placement and commissioning progressed as planned."
+      },
+      {
+        "quarter": "Q1 FY27",
+        "guided": [
+          {
+            "metric": "Retail Business 3-Year EBITDA Target",
+            "guidance": "Targeting to double absolute retail EBITDA over a 3-year period through operating leverage and scale.",
+            "source": "Q1 FY27 Concall Transcript (19-Jul-2026), p. 23 — \"looking to double our absolute EBITDA number\""
+          },
+          {
+            "metric": "KG-D6 Gas Price Ceiling Realization",
+            "guidance": "Expected KG-D6 gas ceiling price to trend upwards from $8.9 towards $9.9/MMBtu in the second half.",
+            "source": "Q1 FY27 Concall Transcript (19-Jul-2026), p. 19 — \"currently the ceiling price is $8.9\""
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "Retail Business 3-Year EBITDA Target",
+            "actual": "Delivered Q1 FY27 Retail EBITDA of Rs 6,309 crore with 7.9% margin, accepting short-term margin compression to invest in digital commerce scale.",
+            "source": "Q1 FY27 Concall Transcript (19-Jul-2026), p. 8 — \"EBITDA margin is at 7.9%. It is down 80 bps on a Y-o-Y basis\""
+          },
+          {
+            "metric": "KG-D6 Gas Price Ceiling Realization",
+            "actual": "Realized ceiling price of $8.9/MMBtu in 1H FY27, which was $1.14 lower than the preceding half.",
+            "source": "Q1 FY27 Concall Transcript (19-Jul-2026), p. 18 — \"ceiling price is lower by almost $1.14\""
+          }
+        ],
+        "verdict": "hit",
+        "commentary": "Management committed to a 3-year doubling target for absolute retail EBITDA while absorbing short-term margin impacts to build hyper-local digital infrastructure."
+      }
+    ],
+    "credibility_score": "high",
+    "pattern": "Management maintains a pattern of setting aggressive long-term capacity targets (e.g., doubling Retail EBITDA over 3 years, scaling New Energy battery capacity to 40 GWh) while accepting short-term margin trade-offs to build scale in hyper-growth segments like quick commerce."
+  },
+  "citation_audit": {
+    "documents_fetched": 8,
+    "pages_actually_read": 182,
+    "verified_claims": 12,
+    "rejected_claims": 0
+  },
+  "model_used": "gemini-3.6-flash",
+  "tokens": {
+    "in": 45766,
+    "out": 6089
+  },
+  "cost_estimate_usd": 0.028952
+}

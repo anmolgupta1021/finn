@@ -1,5 +1,123 @@
 [
   {
+    "id": "nse-sunpharma-dd4ff94c87",
+    "ticker": "SUNPHARMA.NS",
+    "company_name": "Sun Pharmaceutical Industries Limited",
+    "timestamp": "2026-10-26T12:30:34+05:30",
+    "headline": "Allotment of Securities — Sun Pharmaceutical Industries Limited has informed the Exchange regarding allotment of 781600 securities pursuant to Non Convertible Securities at its meeting held on October 26, 2026",
+    "category": "fund_raise",
+    "priority": 1,
+    "summary": "Allotted 7,81,600 non-convertible securities.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/SUNSEC_26102026122925_SE_Intimation_of_allotment_of_NCDs_26_Oct_2026.pdf",
+    "raw_text": "Sun Pharmaceutical Industries Limited has informed the Exchange regarding allotment of 781600 securities pursuant to Non Convertible Securities at its meeting held on October 26, 2026",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 167,
+      "out": 54
+    }
+  },
+  {
+    "id": "nse-sunpharma-678bf25674",
+    "ticker": "SUNPHARMA.NS",
+    "company_name": "Sun Pharmaceutical Industries Limited",
+    "timestamp": "2026-10-23T18:01:41+05:30",
+    "headline": "Press Release — Sun Pharmaceutical Industries Limited has informed the Exchange regarding a press release dated October 23, 2026.",
+    "category": "press_release",
+    "priority": 2,
+    "summary": "Issued a corporate press release dated October 23, 2026.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/SUNSEC_23102026180028_SE_Intimation_of_Press_Release_-_ESMO.pdf",
+    "raw_text": "Sun Pharmaceutical Industries Limited has informed the Exchange regarding a press release dated October 23, 2026.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 167,
+      "out": 54
+    }
+  },
+  {
+    "id": "nse-sunpharma-11ea44d53b",
+    "ticker": "SUNPHARMA.NS",
+    "company_name": "Sun Pharmaceutical Industries Limited",
+    "timestamp": "2026-10-20T17:35:31+05:30",
+    "headline": "Press Release — Sun Pharmaceutical Industries Limited has informed the Exchange regarding a press release dated October 20, 2026.",
+    "category": "press_release",
+    "priority": 2,
+    "summary": "Issued a corporate press release dated October 20, 2026.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/SUNSEC_20102026173321_SE_Intimation_of_Press_Release_on_NCCN_Gudelines_Update.pdf",
+    "raw_text": "Sun Pharmaceutical Industries Limited has informed the Exchange regarding a press release dated October 20, 2026.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 167,
+      "out": 54
+    }
+  },
+  {
+    "id": "nse-sunpharma-36e7ac7fd1",
+    "ticker": "SUNPHARMA.NS",
+    "company_name": "Sun Pharmaceutical Industries Limited",
+    "timestamp": "2026-10-13T17:54:34+05:30",
+    "headline": "Credit Rating — Sun Pharmaceutical Industries Limited has informed the Exchange about Credit Rating",
+    "category": "credit_rating",
+    "priority": 2,
+    "summary": "Submitted credit rating information to the Exchange.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/SUNSEC_13102026175414_Intimation_to_SE_-_NCDs_Credit_Ratings.pdf",
+    "raw_text": "Sun Pharmaceutical Industries Limited has informed the Exchange about Credit Rating",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 167,
+      "out": 54
+    }
+  },
+  {
+    "id": "nse-sunpharma-bc4e674ec9",
+    "ticker": "SUNPHARMA.NS",
+    "company_name": "Sun Pharmaceutical Industries Limited",
+    "timestamp": "2026-10-12T20:34:43+05:30",
+    "headline": "Resignation of Director/KMP/SMP — Sun Pharmaceutical Industries Limited has informed the Exchange about Resignation of Director/KMP/SMP",
+    "category": "management_change",
+    "priority": 1,
+    "summary": "Sun Pharmaceutical Industries Limited informed the Exchange about the resignation of a Director/KMP/SMP.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/SUNPHARMA_ROID_100278_KMP_Doc.zip",
+    "raw_text": "Sun Pharmaceutical Industries Limited has informed the Exchange about Resignation of Director/KMP/SMP",
+    "enrichment": {
+      "person_name": null,
+      "role": "Director/KMP/SMP",
+      "action": "resigned",
+      "background": "Sun Pharmaceutical Industries Limited has informed the Exchange about the resignation of a Director/KMP/SMP. (Filing p. 1)"
+    },
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 629,
+      "out": 147
+    }
+  },
+  {
+    "id": "nse-sunpharma-d4a4019dc2",
+    "ticker": "SUNPHARMA.NS",
+    "company_name": "Sun Pharmaceutical Industries Limited",
+    "timestamp": "2026-10-12T20:05:00+05:30",
+    "headline": "Resignation — Resignation of Director of the Company",
+    "category": "management_change",
+    "priority": 1,
+    "summary": "Mr. Gautam Doshi resigned as Non-Executive, Independent Director of Sun Pharmaceutical Industries Limited effective October 12, 2026, due to personal reasons.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/SUNSEC_12102026200413_BMOutcome12October2026.pdf",
+    "raw_text": "Resignation of Director of the Company",
+    "enrichment": {
+      "person_name": "Gautam Doshi",
+      "role": "Non-Executive, Independent Director",
+      "action": "resigned",
+      "background": "Mr. Gautam Doshi has resigned as a Non-Executive, Independent Director of the Company with effect from 12 October 2026, citing personal commitments and reasons. (Filing p. 1)"
+    },
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 1760,
+      "out": 185
+    }
+  },
+  {
     "id": "sunpharma-results-sunpharma_q1fy27",
     "ticker": "SUNPHARMA.NS",
     "company_name": "Sun Pharmaceutical Industries Limited",

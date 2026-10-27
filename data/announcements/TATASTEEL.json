@@ -1,0 +1,110 @@
+[
+  {
+    "id": "nse-tatasteel-9c020e2f8f",
+    "ticker": "TATASTEEL.NS",
+    "company_name": "Tata Steel Limited",
+    "timestamp": "2026-10-15T19:24:44+05:30",
+    "headline": "Amalgamation/Merger — Tata Steel Limited has informed the Exchange about receipt of certified true copy of the Order of the Hon ble National Company Law Tribunal, Mumbai Bench in the matter of the Scheme of Amalgamation of Rujuvalika Investments Limited and Tata Steel Limited and",
+    "category": "M&A",
+    "priority": 1,
+    "summary": "Received certified true copy of NCLT Mumbai Bench order for the amalgamation of Rujuvalika Investments Limited with Tata Steel Limited.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_15102026192421_BSENSE_Signed.pdf",
+    "raw_text": "Tata Steel Limited has informed the Exchange about receipt of certified true copy of the Order of the Hon ble National Company Law Tribunal, Mumbai Bench in the matter of the Scheme of Amalgamation of Rujuvalika Investments Limited and Tata Steel Limited and their respective shareholder",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 185,
+      "out": 59
+    }
+  },
+  {
+    "id": "nse-tatasteel-967c65d217",
+    "ticker": "TATASTEEL.NS",
+    "company_name": "Tata Steel Limited",
+    "timestamp": "2026-10-15T18:11:28+05:30",
+    "headline": "Copy of Newspaper Publication — Tata Steel Limited has informed the Exchange about Copy of Newspaper Publication",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Submitted copy of newspaper publication as required under regulations.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_15102026181041_Reg_30-SE_Release.pdf",
+    "raw_text": "Tata Steel Limited has informed the Exchange about Copy of Newspaper Publication",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 185,
+      "out": 59
+    }
+  },
+  {
+    "id": "nse-tatasteel-b8539ee148",
+    "ticker": "TATASTEEL.NS",
+    "company_name": "Tata Steel Limited",
+    "timestamp": "2026-10-07T21:52:55+05:30",
+    "headline": "Press Release — Tata Steel Limited has informed the Exchange regarding a press release dated October 07, 2026, titled \"Tata Steel: 2QFY2027 Production and Delivery Volumes (Provisional)\".",
+    "category": "press_release",
+    "priority": 2,
+    "summary": "Released provisional production and delivery volumes for 2QFY2027.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_07102026215052_BSENSE.pdf",
+    "raw_text": "Tata Steel Limited has informed the Exchange regarding a press release dated October 07, 2026, titled \"Tata Steel: 2QFY2027 Production and Delivery Volumes (Provisional)\".",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 185,
+      "out": 59
+    }
+  },
+  {
+    "id": "nse-tatasteel-68dabe2146",
+    "ticker": "TATASTEEL.NS",
+    "company_name": "Tata Steel Limited",
+    "timestamp": "2026-10-01T21:04:42+05:30",
+    "headline": "Scheme of Arrangement — Tata Steel Limited has informed the Exchange about Pronouncement of Order by the Hon ble National Company Law Tribunal, Mumbai Bench, approving and sanctioning the Scheme of Amalgamation amongst Tata Steel Limited and Rujuvalika Investments Limited and the",
+    "category": "M&A",
+    "priority": 1,
+    "summary": "NCLT Mumbai Bench pronounced order approving and sanctioning the scheme of amalgamation of Rujuvalika Investments Limited with Tata Steel Limited.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_01102026210329_BSENSE_-_RIL_Order.pdf",
+    "raw_text": "Tata Steel Limited has informed the Exchange about Pronouncement of Order by the Hon ble National Company Law Tribunal, Mumbai Bench, approving and sanctioning the Scheme of Amalgamation amongst Tata Steel Limited and Rujuvalika Investments Limited and their respective shareholders",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 185,
+      "out": 59
+    }
+  },
+  {
+    "id": "nse-tatasteel-92e41b4299",
+    "ticker": "TATASTEEL.NS",
+    "company_name": "Tata Steel Limited",
+    "timestamp": "2026-10-01T21:01:37+05:30",
+    "headline": "Amalgamation/Merger — Tata Steel Limited has informed the Exchange about Pronouncement of Order by the Hon ble National Company Law Tribunal, Mumbai Bench, approving and sanctioning the Scheme of Amalgamation amongst Tata Steel Limited and Rujuvalika Investments Limited and their",
+    "category": "M&A",
+    "priority": 1,
+    "summary": "NCLT Mumbai Bench pronounced order approving and sanctioning the scheme of amalgamation of Rujuvalika Investments Limited with Tata Steel Limited.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_01102026205831_BSENSE_-_RIL_Order.pdf",
+    "raw_text": "Tata Steel Limited has informed the Exchange about Pronouncement of Order by the Hon ble National Company Law Tribunal, Mumbai Bench, approving and sanctioning the Scheme of Amalgamation amongst Tata Steel Limited and Rujuvalika Investments Limited and their respective shareholders",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 185,
+      "out": 59
+    }
+  },
+  {
+    "id": "nse-tatasteel-b79e02c76d",
+    "ticker": "TATASTEEL.NS",
+    "company_name": "Tata Steel Limited",
+    "timestamp": "2026-09-29T18:06:31+05:30",
+    "headline": "Acquisition — Tata Steel Limited has informed the Exchange about acquisition of equity shares in T Steel Holdings Pte. Ltd",
+    "category": "M&A",
+    "priority": 1,
+    "summary": "Acquired additional equity shares in T Steel Holdings Pte. Ltd.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_29092026180406_BSENSE-TSH_funding.pdf",
+    "raw_text": "Tata Steel Limited has informed the Exchange about acquisition of equity shares in T Steel Holdings Pte. Ltd",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 185,
+      "out": 59
+    }
+  }
+]

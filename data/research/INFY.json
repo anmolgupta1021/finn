@@ -1,0 +1,202 @@
+{
+  "ticker": "INFY.NS",
+  "company_name": "Infosys Limited",
+  "generated_at": "2026-10-27T08:50:54.090072Z",
+  "source_documents": [
+    {
+      "type": "concall_transcript",
+      "quarter": "Q1 FY27",
+      "url": "https://nsearchives.nseindia.com/corporate/Infosys_28072026202438_SE_filing_Earnings_call_transcript.pdf",
+      "pages": 48
+    },
+    {
+      "type": "concall_transcript",
+      "quarter": "Q4 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/Infosys_27042026203405_Transcript_April232026_Q4.pdf",
+      "pages": 46
+    },
+    {
+      "type": "concall_transcript",
+      "quarter": "Q3 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/Infosys_19012026222220_SEfiling_Earningscalltranscript_19012026.pdf",
+      "pages": 39
+    },
+    {
+      "type": "concall_transcript",
+      "quarter": "Q2 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/Infosys_21102025214121_SEfiling_Earningscalltranscript_q2.pdf",
+      "pages": 38
+    },
+    {
+      "type": "concall_transcript",
+      "quarter": "Q1 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/Infosys_28072025173504_SEfiling_Earningscalltranscript_28072025.pdf",
+      "pages": 40
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q2 FY27",
+      "url": "https://nsearchives.nseindia.com/corporate/Infosys_23102026160704_BM_Outcome_Oct232026_1.pdf",
+      "pages": 195
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q1 FY27",
+      "url": "https://nsearchives.nseindia.com/corporate/Infosys_23072026161911_Outcome23072026V1_1.pdf",
+      "pages": 193
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q4 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/INFY_30042026200702_Outcome_Final.pdf",
+      "pages": 10
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q3 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/Infosys_14012026160405_BM_Outcome_January142026.pdf",
+      "pages": 201
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q2 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/Infosys_16102025160458_BM_Outcome_Oct162025.pdf",
+      "pages": 198
+    }
+  ],
+  "narrative_vs_numbers": {
+    "summary": "Infosys management demonstrated strong execution across FY26, progressively raising FY26 CC revenue growth guidance from 1.0%-3.0% to 2.0%-3.0% in Q2 and eventually to 3.0%-3.5% in Q3, while delivering 3.1% full-year growth. Operating margins remained remarkably stable, comfortably achieving the guided 20.0%-22.0% band across all quarters (21.0% full-year FY26 and 21.1% in Q1 FY27). However, macro headwinds and client-specific decisions forced an early trim to FY27 revenue guidance from 1.5%-3.5% down to 1.5%-3.0% in Q1 FY27.",
+    "quarters": [
+      {
+        "quarter": "Q2 FY26",
+        "guided": [
+          {
+            "metric": "FY26 Constant Currency Revenue Growth Guidance",
+            "guidance": "Growth between 2% and 3% in constant currency terms for the full year.",
+            "source": "Q2 FY26 Concall Transcript (21-Oct-2025), p. 3 — \"The new guidance is growth between 2% and 3% in constant currency terms for the full year.\""
+          },
+          {
+            "metric": "FY26 Operating Margin Guidance",
+            "guidance": "20% to 22% for the full year.",
+            "source": "Q2 FY26 Concall Transcript (21-Oct-2025), p. 3 — \"operating margin guidance remains the same as in the past quarter at 20% to 22% for the fu\""
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "FY26 Constant Currency Revenue Growth Guidance",
+            "actual": "Q2 FY26 revenue grew 2.2% QoQ and 2.9% YoY in CC terms.",
+            "source": "Q2 FY26 Concall Transcript (21-Oct-2025), p. 3 — \"revenues for the quarter grew 2.2% sequentially and 2.9% year-on-year in constant currency\""
+          },
+          {
+            "metric": "FY26 Operating Margin Guidance",
+            "actual": "Delivered Q2 FY26 operating margin of 21.0%.",
+            "source": "Q2 FY26 Concall Transcript (21-Oct-2025), p. 3 — \"Our operating margin was 21%.\""
+          }
+        ],
+        "verdict": "beat",
+        "commentary": "Management raised the bottom end of its FY26 CC revenue growth guidance from 1.0% to 2.0% following a strong 2.2% QoQ CC growth print, while keeping operating margins firm at 21.0%."
+      },
+      {
+        "quarter": "Q3 FY26",
+        "guided": [
+          {
+            "metric": "FY26 Constant Currency Revenue Growth Guidance",
+            "guidance": "Revised revenue growth guidance to 3% to 3.5% growth in constant currency.",
+            "source": "Q3 FY26 Concall Transcript (19-Jan-2026), p. 4 — \"The new revenue growth guidance for this financial year is 3% to 3.5% growth in constant c\""
+          },
+          {
+            "metric": "FY26 Operating Margin Guidance",
+            "guidance": "20% to 22% operating margin guidance for the financial year.",
+            "source": "Q3 FY26 Concall Transcript (19-Jan-2026), p. 4 — \"Our operating margin guidance for the financial year remains the same at 20% to 22%.\""
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "FY26 Constant Currency Revenue Growth Guidance",
+            "actual": "Q3 CC revenue grew 0.6% QoQ and 1.7% YoY, pushing 9-month CC growth to 2.8%.",
+            "source": "Q3 FY26 Concall Transcript (19-Jan-2026), p. 3 — \"revenue grew 0.6% sequentially and 1.7% year-on-year in constant currency terms.\""
+          },
+          {
+            "metric": "FY26 Operating Margin Guidance",
+            "actual": "Delivered Q3 adjusted operating margin of 21.2%.",
+            "source": "Q3 FY26 Concall Transcript (19-Jan-2026), p. 3 — \"Our adjusted operating margin was 21.2%.\""
+          }
+        ],
+        "verdict": "beat",
+        "commentary": "Strong 9-month execution and large deal momentum led management to upgrade full-year FY26 CC revenue guidance to 3.0%-3.5%, while delivering an adjusted operating margin expansion to 21.2%."
+      },
+      {
+        "quarter": "Q4 FY26",
+        "guided": [
+          {
+            "metric": "FY27 Constant Currency Revenue Growth Guidance",
+            "guidance": "1.5% to 3.5% growth year-on-year in constant currency terms for FY27.",
+            "source": "Q4 FY26 Concall Transcript (27-Apr-2026), p. 4 — \"revenue growth guidance for the financial year 2027 is 1.5% to 3.5% growth year-on-year in\""
+          },
+          {
+            "metric": "FY27 Operating Margin Guidance",
+            "guidance": "20% to 22% operating margin guidance for FY27.",
+            "source": "Q4 FY26 Concall Transcript (27-Apr-2026), p. 4 — \"operating margin guidance for financial year '27 is 20% to 22%.\""
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "FY27 Constant Currency Revenue Growth Guidance",
+            "actual": "Delivered FY26 full-year CC revenue growth of 3.1% YoY, right within the 3.0%-3.5% guided range.",
+            "source": "Q4 FY26 Concall Transcript (27-Apr-2026), p. 4 — \"growth of 3.1% for the full year in constant currency terms.\""
+          },
+          {
+            "metric": "FY27 Operating Margin Guidance",
+            "actual": "Delivered FY26 full-year operating margin of 21.0%, perfectly centered in the 20%-22% band.",
+            "source": "Q4 FY26 Concall Transcript (27-Apr-2026), p. 7 — \"the full year margins is at 21%.\""
+          }
+        ],
+        "verdict": "hit",
+        "commentary": "Infosys fully delivered on its upgraded FY26 expectations, achieving 3.1% CC revenue growth and 21.0% operating margin, while setting initial FY27 guidance at 1.5%-3.5% CC growth."
+      },
+      {
+        "quarter": "Q1 FY27",
+        "guided": [
+          {
+            "metric": "FY27 Constant Currency Revenue Growth Guidance",
+            "guidance": "Lowered FY27 guidance band to 1.5% to 3% Y-on-Y growth in constant currency terms.",
+            "source": "Q1 FY27 Concall Transcript (28-Jul-2026), p. 6 — \"changing our revenue growth guidance to 1.5% to 3% Y-on-Y growth in constant currency term\""
+          },
+          {
+            "metric": "FY27 Operating Margin Guidance",
+            "guidance": "Operating margin guidance maintained at 20% to 22%.",
+            "source": "Q1 FY27 Concall Transcript (28-Jul-2026), p. 6 — \"operating margin guidance remains the same at 20% to 22% operating margin.\""
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "FY27 Constant Currency Revenue Growth Guidance",
+            "actual": "Q1 FY27 CC revenue growth came in at 2.4% YoY and 1.0% QoQ.",
+            "source": "Q1 FY27 Concall Transcript (28-Jul-2026), p. 5 — \"revenue growth for Q1 was at 2.4% Y-on-Y and 1% Q-on-Q in constant currency terms.\""
+          },
+          {
+            "metric": "FY27 Operating Margin Guidance",
+            "actual": "Delivered Q1 FY27 operating margin of 21.1%.",
+            "source": "Q1 FY27 Concall Transcript (28-Jul-2026), p. 5 — \"operating margin at 21.1%\""
+          }
+        ],
+        "verdict": "miss",
+        "commentary": "Management lowered the top end of its FY27 CC revenue guidance band from 3.5% to 3.0% due to persistent macro uncertainty and a one-off client decision impact, though operating margin held steady at 21.1%."
+      }
+    ],
+    "credibility_score": "high",
+    "pattern": "Management consistently maintains strict operating margin discipline within the 20.0%-22.0% corridor through cost optimization programs like Project Maximus. Revenue guidance is typically adjusted pragmatically as quarter-by-quarter visibility evolves, narrowing or trimming upper bands when macro conditions or volume conversions soften."
+  },
+  "citation_audit": {
+    "documents_fetched": 10,
+    "pages_actually_read": 264,
+    "verified_claims": 16,
+    "rejected_claims": 0
+  },
+  "model_used": "gemini-3.6-flash",
+  "tokens": {
+    "in": 46084,
+    "out": 5797
+  },
+  "cost_estimate_usd": 0.028318
+}

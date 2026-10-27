@@ -1,5 +1,113 @@
 [
   {
+    "id": "nse-maruti-048fad0172",
+    "ticker": "MARUTI.NS",
+    "company_name": "Maruti Suzuki India Limited",
+    "timestamp": "2026-10-27T13:18:06+05:30",
+    "headline": "Acquisition — Maruti Suzuki India Limited has informed the Exchange about Incorporation of Wholly Owned Subsidiary",
+    "category": "M&A",
+    "priority": 1,
+    "summary": "Incorporation of a wholly owned subsidiary by Maruti Suzuki India Limited.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/MARUTI_27102026131704_Letter_to_Exchange.pdf",
+    "raw_text": "Maruti Suzuki India Limited has informed the Exchange about Incorporation of Wholly Owned Subsidiary",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 177,
+      "out": 55
+    }
+  },
+  {
+    "id": "nse-maruti-df88f5d31b",
+    "ticker": "MARUTI.NS",
+    "company_name": "Maruti Suzuki India Limited",
+    "timestamp": "2026-10-24T10:25:13+05:30",
+    "headline": "Press Release — Maruti Suzuki India Limited has informed the Exchange regarding a press release dated October 24, 2026, titled \"Maruti Suzuki VICTORIS AURUM Edition Launched to Celebrate 1 Year of Record Sales Success\".",
+    "category": "press_release",
+    "priority": 2,
+    "summary": "Maruti Suzuki launches 'VICTORIS AURUM Edition' to celebrate 1 year of record sales.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/MARUTI_24102026102410_STxIntimation_VictorisAURUM_24Oct2026.pdf",
+    "raw_text": "Maruti Suzuki India Limited has informed the Exchange regarding a press release dated October 24, 2026, titled \"Maruti Suzuki VICTORIS AURUM Edition Launched to Celebrate 1 Year of Record Sales Success\".",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 177,
+      "out": 55
+    }
+  },
+  {
+    "id": "nse-maruti-0ec9454a6c",
+    "ticker": "MARUTI.NS",
+    "company_name": "Maruti Suzuki India Limited",
+    "timestamp": "2026-10-21T15:39:05+05:30",
+    "headline": "Analysts/Institutional Investor Meet/Con. Call Updates — Maruti Suzuki India Limited has informed the Exchange about Schedule of meet",
+    "category": "investor_meetings",
+    "priority": 3,
+    "summary": "Schedule of analysts/institutional investor meet/conference call updates.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/MARUTIASHISH_21102026153744_STxIntimation_EarningsCall_27Oct2026.pdf",
+    "raw_text": "Maruti Suzuki India Limited has informed the Exchange about Schedule of meet",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 177,
+      "out": 55
+    }
+  },
+  {
+    "id": "nse-maruti-14f1ef8966",
+    "ticker": "MARUTI.NS",
+    "company_name": "Maruti Suzuki India Limited",
+    "timestamp": "2026-10-15T19:13:00+05:30",
+    "headline": "Action(s) taken or orders passed — Maruti Suzuki India Limited has informed the Exchange about Action(s) taken or orders passed",
+    "category": "litigation",
+    "priority": 2,
+    "summary": "Intimation regarding regulatory action(s) taken or orders passed against the company.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/MARUTI_15102026191103_Intimation_15102026.pdf",
+    "raw_text": "Maruti Suzuki India Limited has informed the Exchange about Action(s) taken or orders passed",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 177,
+      "out": 55
+    }
+  },
+  {
+    "id": "nse-maruti-8dc3100773",
+    "ticker": "MARUTI.NS",
+    "company_name": "Maruti Suzuki India Limited",
+    "timestamp": "2026-10-12T16:16:31+05:30",
+    "headline": "General Updates — Maruti Suzuki India Limited has informed the Exchange about Intimation under Regulation 30 of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "General compliance intimation under Regulation 30 of SEBI LODR Regulations.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/MARUTIASHISH_12102026161252_STxIntimation_CCI_12Oct2026.pdf",
+    "raw_text": "Maruti Suzuki India Limited has informed the Exchange about Intimation under Regulation 30 of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 177,
+      "out": 55
+    }
+  },
+  {
+    "id": "nse-maruti-9e88b71983",
+    "ticker": "MARUTI.NS",
+    "company_name": "Maruti Suzuki India Limited",
+    "timestamp": "2026-10-01T12:59:33+05:30",
+    "headline": "Press Release — Maruti Suzuki India Limited has informed the Exchange regarding a press release dated October 01, 2026, titled \"Maruti Suzuki sales in September 2026\".",
+    "category": "press_release",
+    "priority": 2,
+    "summary": "Release of monthly sales data for September 2026.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/MARUTI_01102026125916_Sales.pdf",
+    "raw_text": "Maruti Suzuki India Limited has informed the Exchange regarding a press release dated October 01, 2026, titled \"Maruti Suzuki sales in September 2026\".",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 177,
+      "out": 55
+    }
+  },
+  {
     "id": "maruti-results-maruti_q1fy27",
     "ticker": "MARUTI.NS",
     "company_name": "Maruti Suzuki India Limited",

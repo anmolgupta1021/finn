@@ -1,5 +1,100 @@
 [
   {
+    "id": "nse-hdfcbank-739500c7a2",
+    "ticker": "HDFCBANK.NS",
+    "company_name": "HDFC Bank Limited",
+    "timestamp": "2026-10-27T08:02:54+05:30",
+    "headline": "General Updates — HDFC Bank Limited has informed the Exchange regarding disclosure under Regulation 30 and other applicable regulations of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Change in Managing Director and Chief Executive Officer of the",
+    "category": "management_change",
+    "priority": 1,
+    "summary": "Anup Bagchi assumed charge as MD & CEO effective October 27, 2026, succeeding Sashidhar Jagdishan upon completion of his tenure.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/HDFCBANK_27102026080232_SEIntimation_appt_of_AB.pdf",
+    "raw_text": "HDFC Bank Limited has informed the Exchange regarding disclosure under Regulation 30 and other applicable regulations of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 - Change in Managing Director and Chief Executive Officer of the Bank",
+    "enrichment": {
+      "person_name": "Anup Bagchi",
+      "role": "Managing Director and Chief Executive Officer",
+      "action": "joined",
+      "background": "Mr. Anup Bagchi has assumed charge as MD & CEO of the Bank effective October 27, 2026, succeeding Mr. Sashidhar Jagdishan whose tenure concluded at the close of business hours on October 26, 2026. (Filing p. 1)"
+    },
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 1584,
+      "out": 206
+    }
+  },
+  {
+    "id": "nse-hdfcbank-523845507c",
+    "ticker": "HDFCBANK.NS",
+    "company_name": "HDFC Bank Limited",
+    "timestamp": "2026-10-24T22:27:22+05:30",
+    "headline": "ESOP/ESOS/ESPS — HDFC Bank Limited has informed the Exchange regarding Grant of 1302379  Options.",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Grant of 1,302,379 options under ESOP/ESOS.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/HDFCBANK_24102026222634_SE_Intimation_grant_of_ESOPs.pdf",
+    "raw_text": "HDFC Bank Limited has informed the Exchange regarding Grant of 1302379  Options.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 191,
+      "out": 56
+    }
+  },
+  {
+    "id": "nse-hdfcbank-d9dac6f514",
+    "ticker": "HDFCBANK.NS",
+    "company_name": "HDFC Bank Limited",
+    "timestamp": "2026-10-23T22:50:22+05:30",
+    "headline": "Analysts/Institutional Investor Meet/Con. Call Updates — HDFC Bank Limited has informed the Exchange about Transcript",
+    "category": "earnings_call",
+    "priority": 2,
+    "summary": "Submission of transcript for analysts/institutional investor meet/conference call.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/HDFCBANK_23102026224657_SEintimationTranscriptofearningscall17oct2026.pdf",
+    "raw_text": "HDFC Bank Limited has informed the Exchange about Transcript",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 191,
+      "out": 56
+    }
+  },
+  {
+    "id": "nse-hdfcbank-7a7be420be",
+    "ticker": "HDFCBANK.NS",
+    "company_name": "HDFC Bank Limited",
+    "timestamp": "2026-10-22T13:57:50+05:30",
+    "headline": "ESOP/ESOS/ESPS — HDFC Bank Limited has informed the Exchange regarding Allotment of 9138522  Shares.",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Allotment of 9,138,522 shares pursuant to ESOP/ESOS.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/HDFCBANK_22102026135701_SELetterESOP22102026.pdf",
+    "raw_text": "HDFC Bank Limited has informed the Exchange regarding Allotment of 9138522  Shares.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 191,
+      "out": 56
+    }
+  },
+  {
+    "id": "nse-hdfcbank-97b519fffb",
+    "ticker": "HDFCBANK.NS",
+    "company_name": "HDFC Bank Limited",
+    "timestamp": "2026-10-21T11:52:36+05:30",
+    "headline": "Shareholders meeting — HDFC Bank Limited has informed the Exchange regarding Notice of Postal Ballot",
+    "category": "postal_ballot",
+    "priority": 2,
+    "summary": "Notice of Postal Ballot sent to shareholders.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/HDFCBANK3_21102026115151_SEIntimationPostalBallotNoticeOct2026.pdf",
+    "raw_text": "HDFC Bank Limited has informed the Exchange regarding Notice of Postal Ballot",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 191,
+      "out": 56
+    }
+  },
+  {
     "id": "hdfcbank-results-hdfcbank_q2fy27",
     "ticker": "HDFCBANK.NS",
     "company_name": "HDFC Bank Limited",

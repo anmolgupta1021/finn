@@ -1,0 +1,110 @@
+[
+  {
+    "id": "nse-tmpv-13c755f563",
+    "ticker": "TMPV.NS",
+    "company_name": "Tata Motors Passenger Vehicles Limited",
+    "timestamp": "2026-10-12T15:58:49+05:30",
+    "headline": "Press Release — Tata Motors Passenger Vehicles Limited has informed the Exchange regarding a press release dated October 12, 2026, titled \"Stellantis and Tata Motors Passenger Vehicles Broaden Strategic Partnership to include Advanced Technology and Product Collaboration\".",
+    "category": "press_release",
+    "priority": 1,
+    "summary": "Stellantis and Tata Motors Passenger Vehicles broaden strategic partnership to include advanced technology and product collaboration.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/TATAMOTORSSJS_12102026155833_NSEBSETraverse.pdf",
+    "raw_text": "Tata Motors Passenger Vehicles Limited has informed the Exchange regarding a press release dated October 12, 2026, titled \"Stellantis and Tata Motors Passenger Vehicles Broaden Strategic Partnership to include Advanced Technology and Product Collaboration\".",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 188,
+      "out": 57
+    }
+  },
+  {
+    "id": "nse-tmpv-08738188ba",
+    "ticker": "TMPV.NS",
+    "company_name": "Tata Motors Passenger Vehicles Limited",
+    "timestamp": "2026-10-06T15:12:21+05:30",
+    "headline": "General Updates — Tata Motors Passenger Vehicles Limited has informed the Exchange about SIAM Report   July to September 2026.",
+    "category": "press_release",
+    "priority": 2,
+    "summary": "Company submitted the SIAM Report for July to September 2026.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/TATAMOTORSSJS_06102026151209_NSEBSESIAM.pdf",
+    "raw_text": "Tata Motors Passenger Vehicles Limited has informed the Exchange about SIAM Report   July to September 2026.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 188,
+      "out": 57
+    }
+  },
+  {
+    "id": "nse-tmpv-342d27481c",
+    "ticker": "TMPV.NS",
+    "company_name": "Tata Motors Passenger Vehicles Limited",
+    "timestamp": "2026-10-05T18:00:01+05:30",
+    "headline": "Certificate under SEBI (Depositories and Participants) Regulations, 2018 — Tata Motors Passenger Vehicles Limited has informed the Exchange about Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Submitted certificate under SEBI (Depositories and Participants) Regulations, 2018.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/TATAMOTORSSJS_05102026175945_NSEBSEReg74.pdf",
+    "raw_text": "Tata Motors Passenger Vehicles Limited has informed the Exchange about Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 188,
+      "out": 57
+    }
+  },
+  {
+    "id": "nse-tmpv-ff0ab68ade",
+    "ticker": "TMPV.NS",
+    "company_name": "Tata Motors Passenger Vehicles Limited",
+    "timestamp": "2026-10-03T16:27:00+05:30",
+    "headline": "Press Release — Tata Motors Passenger Vehicles Limited has informed the Exchange regarding a press release dated October 03, 2026, titled \"Jaguar Land Rover Automotive plc ( JLR ) reports its Wholesale and Retail Sales for Q2 FY27\".",
+    "category": "press_release",
+    "priority": 1,
+    "summary": "Jaguar Land Rover Automotive plc reports its wholesale and retail sales for Q2 FY27.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/TATAMOTORSSJS_03102026162550_NSEBSEJLR.pdf",
+    "raw_text": "Tata Motors Passenger Vehicles Limited has informed the Exchange regarding a press release dated October 03, 2026, titled \"Jaguar Land Rover Automotive plc ( JLR ) reports its Wholesale and Retail Sales for Q2 FY27\".",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 188,
+      "out": 57
+    }
+  },
+  {
+    "id": "nse-tmpv-679d541ba4",
+    "ticker": "TMPV.NS",
+    "company_name": "Tata Motors Passenger Vehicles Limited",
+    "timestamp": "2026-10-01T13:17:14+05:30",
+    "headline": "Press Release — Tata Motors Passenger Vehicles Limited has informed the Exchange regarding a press release dated October 01, 2026, titled \"Tata Motors Passenger Vehicles Limited (formerly Tata Motors Limited) total sales in Q2 FY27\".",
+    "category": "press_release",
+    "priority": 1,
+    "summary": "Tata Motors Passenger Vehicles Limited reports total sales figures for Q2 FY27.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/TATAMOTORSSJS_01102026131705_NSEBSEQ2FY27.pdf",
+    "raw_text": "Tata Motors Passenger Vehicles Limited has informed the Exchange regarding a press release dated October 01, 2026, titled \"Tata Motors Passenger Vehicles Limited (formerly Tata Motors Limited) total sales in Q2 FY27\".",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 188,
+      "out": 57
+    }
+  },
+  {
+    "id": "nse-tmpv-2fa3de5b2d",
+    "ticker": "TMPV.NS",
+    "company_name": "Tata Motors Passenger Vehicles Limited",
+    "timestamp": "2026-09-29T21:41:21+05:30",
+    "headline": "News Verification — The Exchange has sought clarification from Tata Motors Passenger Vehicles Limited with respect to recent news item captioned Tata Chemicals, TMPV shares fall up to 3% after Trusts' proposal dims Tata Sons' listing hopes.  The response from the Company is attac",
+    "category": "press_release",
+    "priority": 2,
+    "summary": "Submitted response to exchange clarification regarding news on Trusts' proposal and share price movement.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/TATAMOTORSSJS_29092026214058_NSE_PVRumourVerification.pdf",
+    "raw_text": "The Exchange has sought clarification from Tata Motors Passenger Vehicles Limited with respect to recent news item captioned Tata Chemicals, TMPV shares fall up to 3% after Trusts' proposal dims Tata Sons' listing hopes.  The response from the Company is attached.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 188,
+      "out": 57
+    }
+  }
+]

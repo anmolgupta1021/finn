@@ -1,5 +1,100 @@
 [
   {
+    "id": "nse-icicibank-e71c63045e",
+    "ticker": "ICICIBANK.NS",
+    "company_name": "ICICI Bank Limited",
+    "timestamp": "2026-10-27T10:34:04+05:30",
+    "headline": "ESOP/ESOS/ESPS — ICICI Bank Limited has informed the Exchange regarding Allotment of 1063398  Shares.",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Routine ESOP allotment of 1,063,398 shares.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/ICICIBANK1_27102026103348_Letter_to_exchange.pdf",
+    "raw_text": "ICICI Bank Limited has informed the Exchange regarding Allotment of 1063398  Shares.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 215,
+      "out": 61
+    }
+  },
+  {
+    "id": "nse-icicibank-f3289b664b",
+    "ticker": "ICICIBANK.NS",
+    "company_name": "ICICI Bank Limited",
+    "timestamp": "2026-10-24T13:46:13+05:30",
+    "headline": "Credit Rating — ICICI Bank Limited has informed the Exchange about Credit Rating",
+    "category": "credit_rating",
+    "priority": 2,
+    "summary": "Credit rating update received by the bank.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_24102026134600_NSEBSE24102026.pdf",
+    "raw_text": "ICICI Bank Limited has informed the Exchange about Credit Rating",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 215,
+      "out": 61
+    }
+  },
+  {
+    "id": "nse-icicibank-f34b3e441e",
+    "ticker": "ICICIBANK.NS",
+    "company_name": "ICICI Bank Limited",
+    "timestamp": "2026-10-23T18:00:27+05:30",
+    "headline": "Analysts/Institutional Investor Meet/Con. Call Updates — ICICI Bank Limited has informed the Exchange about transcript of the call with media and of earnings call with analysts and investors on the financial results for the quarter and six months ended September 30, 2026",
+    "category": "earnings_call",
+    "priority": 2,
+    "summary": "Transcript of the media and analyst earnings call for the quarter and six months ended September 30, 2026.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_23102026175603_NSEBSE23102026.pdf",
+    "raw_text": "ICICI Bank Limited has informed the Exchange about transcript of the call with media and of earnings call with analysts and investors on the financial results for the quarter and six months ended September 30, 2026",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 215,
+      "out": 61
+    }
+  },
+  {
+    "id": "nse-icicibank-9454de4e4e",
+    "ticker": "ICICIBANK.NS",
+    "company_name": "ICICI Bank Limited",
+    "timestamp": "2026-10-17T20:35:19+05:30",
+    "headline": "Analysts/Institutional Investor Meet/Con. Call Updates — ICICI Bank Limited has informed the Exchange about link of audio recording of the call with media and of earnings call with analysts and investors on the financial results for quarter and six months ended September 30, 2026",
+    "category": "earnings_call",
+    "priority": 2,
+    "summary": "Audio recording link for the media and analyst earnings call for the quarter and six months ended September 30, 2026.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_17102026202758_NSEBSE_17102026.pdf",
+    "raw_text": "ICICI Bank Limited has informed the Exchange about link of audio recording of the call with media and of earnings call with analysts and investors on the financial results for quarter and six months ended September 30, 2026",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 215,
+      "out": 61
+    }
+  },
+  {
+    "id": "nse-icicibank-510b92e351",
+    "ticker": "ICICIBANK.NS",
+    "company_name": "ICICI Bank Limited",
+    "timestamp": "2026-10-17T15:28:05+05:30",
+    "headline": "Outcome of Board Meeting — ICICI Bank Limited has informed the Exchange that the Board at its meeting held today, inter alia, approved the filing of an application with RBI seeking its approval for the continuation of Mr. Pradeep Kumar Sinha as a Non-executive Part-time Chairpers",
+    "category": "management_change",
+    "priority": 1,
+    "summary": "ICICI Bank's board approved seeking RBI approval for the continuation of Pradeep Kumar Sinha as Non-executive Part-time Chairperson from July 1, 2027 till February 16, 2029.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_17102026152608_NSEBSE17102026.pdf",
+    "raw_text": "ICICI Bank Limited has informed the Exchange that the Board at its meeting held today, inter alia, approved the filing of an application with RBI seeking its approval for the continuation of Mr. Pradeep Kumar Sinha as a Non-executive Part-time Chairperson of the Bank for a further period from July 1, 2027 till February 16, 2029 which is within his tenure as Independent Director approved by the Board and shareholders. This information is being filed in continuation of the disclosures filed by the Bank on February 17, 2024 and May 24, 2024.",
+    "enrichment": {
+      "person_name": "Pradeep Kumar Sinha",
+      "role": "Non-executive Part-time Chairperson",
+      "action": "joined",
+      "background": "The Board approved filing an application with the RBI seeking approval for the continuation of Mr. Pradeep Kumar Sinha as Non-executive Part-time Chairperson from July 1, 2027 till February 16, 2029, within his tenure as Independent Director approved by the Board and shareholders (Filing p. 1)."
+    },
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 4768,
+      "out": 231
+    }
+  },
+  {
     "id": "icicibank-results-icicibank_q2fy27",
     "ticker": "ICICIBANK.NS",
     "company_name": "ICICI Bank Limited",

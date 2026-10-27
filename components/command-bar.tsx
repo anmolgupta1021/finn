@@ -9,12 +9,13 @@ import { ResearchPanel } from "@/components/research/research-panel";
 // Quick-pick list only. Research availability is decided by the API (404 = not
 // generated yet); nothing here claims research exists.
 const SUGGESTIONS = [
-  { ticker: "RELIANCE.NS", label: "Reliance Industries" },
-  { ticker: "INFY.NS", label: "Infosys" },
+  { ticker: "INFY.NS", label: "Infosys · 5 transcripts + 5 results filings" },
+  { ticker: "RELIANCE.NS", label: "Reliance Industries · 5 transcripts + 5 results filings" },
+  { ticker: "TCS.NS", label: "TCS · 5 transcripts + 5 results filings" },
+  { ticker: "ICICIBANK.NS", label: "ICICI Bank · 5 transcripts + 5 results filings" },
+  { ticker: "ETERNAL.NS", label: "Eternal (formerly Zomato) · 5 transcripts + 5 results filings" },
   { ticker: "HDFCBANK.NS", label: "HDFC Bank" },
-  { ticker: "TCS.NS", label: "TCS" },
   { ticker: "BAJFINANCE.NS", label: "Bajaj Finance" },
-  { ticker: "ETERNAL.NS", label: "Eternal (formerly Zomato)" },
   { ticker: "ITC.NS", label: "ITC" },
 ];
 

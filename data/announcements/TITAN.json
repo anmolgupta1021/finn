@@ -1,0 +1,92 @@
+[
+  {
+    "id": "nse-titan-e37f868334",
+    "ticker": "TITAN.NS",
+    "company_name": "Titan Company Limited",
+    "timestamp": "2026-10-23T19:58:53+05:30",
+    "headline": "Analysts/Institutional Investor Meet/Con. Call Updates — Titan Company Limited has informed the Exchange about Earnings call for Q2 and half year ended FY 2026-27",
+    "category": "earnings_call",
+    "priority": 2,
+    "summary": "Titan Company has scheduled an earnings call for Q2 and half-year ended FY 2026-27.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/TITAN_23102026195704_SEQ2FY27EarningCall.pdf",
+    "raw_text": "Titan Company Limited has informed the Exchange about Earnings call for Q2 and half year ended FY 2026-27",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 188,
+      "out": 56
+    }
+  },
+  {
+    "id": "nse-titan-5d6e6f25cf",
+    "ticker": "TITAN.NS",
+    "company_name": "Titan Company Limited",
+    "timestamp": "2026-10-19T16:11:44+05:30",
+    "headline": "General Updates — Titan Company Limited has informed the Exchange about Redemption of Commercial Paper",
+    "category": "fund_raise",
+    "priority": 2,
+    "summary": "Titan Company announced the redemption of Commercial Paper.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/TITAN_19102026161128_SECPRedemption16102026.pdf",
+    "raw_text": "Titan Company Limited has informed the Exchange about Redemption of Commercial Paper",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 188,
+      "out": 56
+    }
+  },
+  {
+    "id": "nse-titan-12116631a1",
+    "ticker": "TITAN.NS",
+    "company_name": "Titan Company Limited",
+    "timestamp": "2026-10-13T10:23:55+05:30",
+    "headline": "Certificate under SEBI (Depositories and Participants) Regulations, 2018 — Titan Company Limited has informed the Exchange about Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Submitted certificate under SEBI (Depositories and Participants) Regulations, 2018.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/TITAN_13102026102335_SERegulation745.pdf",
+    "raw_text": "Titan Company Limited has informed the Exchange about Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 188,
+      "out": 56
+    }
+  },
+  {
+    "id": "nse-titan-646366f49e",
+    "ticker": "TITAN.NS",
+    "company_name": "Titan Company Limited",
+    "timestamp": "2026-10-08T16:12:50+05:30",
+    "headline": "Updates — Titan Company Limited has informed the Exchange regarding 'Redemption of Commercial Paper'.",
+    "category": "fund_raise",
+    "priority": 2,
+    "summary": "Titan Company announced the redemption of Commercial Paper.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/TITAN_08102026161235_SECPRedemption08102026.pdf",
+    "raw_text": "Titan Company Limited has informed the Exchange regarding 'Redemption of Commercial Paper'.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 188,
+      "out": 56
+    }
+  },
+  {
+    "id": "nse-titan-dc521b46fb",
+    "ticker": "TITAN.NS",
+    "company_name": "Titan Company Limited",
+    "timestamp": "2026-10-06T18:22:46+05:30",
+    "headline": "Updates — Titan Company Limited has informed the Exchange regarding 'Quarterly Update   Q2 FY 2026-27'.",
+    "category": "press_release",
+    "priority": 2,
+    "summary": "Titan Company released its quarterly business update for Q2 FY 2026-27.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/TITAN_06102026182232_Q2update202627.pdf",
+    "raw_text": "Titan Company Limited has informed the Exchange regarding 'Quarterly Update   Q2 FY 2026-27'.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 188,
+      "out": 56
+    }
+  }
+]

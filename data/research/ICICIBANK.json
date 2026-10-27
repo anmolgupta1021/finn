@@ -1,0 +1,162 @@
+{
+  "ticker": "ICICIBANK.NS",
+  "company_name": "ICICI Bank Limited",
+  "generated_at": "2026-10-27T08:51:39.674049Z",
+  "source_documents": [
+    {
+      "type": "concall_transcript",
+      "quarter": "Q2 FY27",
+      "url": "https://nsearchives.nseindia.com/corporate/ICICI2022_23102026175603_NSEBSE23102026.pdf",
+      "pages": 42
+    },
+    {
+      "type": "concall_transcript",
+      "quarter": "Q1 FY27",
+      "url": "https://nsearchives.nseindia.com/corporate/ICICI2022_23072026185521_NSEBSE.pdf",
+      "pages": 43
+    },
+    {
+      "type": "concall_transcript",
+      "quarter": "Q4 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/ICICI2022_24042026135323_NSEBSE_24042026.pdf",
+      "pages": 47
+    },
+    {
+      "type": "concall_transcript",
+      "quarter": "Q3 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/ICICI2022_22012026172959_NSEBSE.pdf",
+      "pages": 47
+    },
+    {
+      "type": "concall_transcript",
+      "quarter": "Q2 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/ICICI2022_24102025180135_NSEBSE.pdf",
+      "pages": 41
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q2 FY27",
+      "url": "https://nsearchives.nseindia.com/corporate/ICICI2022_17102026152608_NSEBSE17102026.pdf",
+      "pages": 32
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q1 FY27",
+      "url": "https://nsearchives.nseindia.com/corporate/ICICI2022_21082026105810_NSEBSE_21082026.pdf",
+      "pages": 1
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q4 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/ICICI2022_29062026162405_NSEBSE_29062026_.pdf",
+      "pages": 3
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q3 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/ICICI2022_28022026112310_NSEBSE_28022026.pdf",
+      "pages": 1
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q2 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/ICICI2022_18102025145409_BSENSE.pdf",
+      "pages": 28
+    }
+  ],
+  "narrative_vs_numbers": {
+    "summary": "ICICI Bank has demonstrated exceptional execution, particularly in its FCNR(B) mobilization where it garnered $18 billion, significantly exceeding the 'momentum' anticipated in Q1 FY27. Management has consistently maintained or expanded NIMs (peaking at 4.36% in Q1 FY27) despite guiding for range-bound performance, while keeping credit costs significantly below the 50bps threshold.",
+    "quarters": [
+      {
+        "quarter": "Q2 FY27",
+        "guided": [
+          {
+            "metric": "FCNR(B) Deposit Mobilization",
+            "guidance": "Management expected momentum to pick up following the RBI swap facility announcement.",
+            "source": "Q1 FY27 Concall Transcript (23-Jul-2026), p. 6 — \"We do expect the momentum to pick up as we go along and, of course, we are committed to ma\""
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "FCNR(B) Deposit Mobilization",
+            "actual": "$18 billion USD in gross FCNR(B) deposits mobilized.",
+            "source": "Q2 FY27 Concall Transcript (23-Oct-2026), p. 3 — \"The Bank has mobilised gross FCNR (B) deposits of about $18 billion, pursuant to Reserve B\""
+          }
+        ],
+        "verdict": "beat",
+        "commentary": "The bank significantly outperformed its FCNR mobilization narrative, securing $18 billion in deposits, which drove a 30% YoY loan growth despite the expected NIM dilution."
+      },
+      {
+        "quarter": "Q1 FY27",
+        "guided": [
+          {
+            "metric": "Net Interest Margin (NIM)",
+            "guidance": "NIM was expected to remain range-bound for the fiscal year.",
+            "source": "Q4 FY26 Concall Transcript (24-Apr-2026), p. 8 — \"We do expect NIMs to be range-bound in FY27.\""
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "Net Interest Margin (NIM)",
+            "actual": "4.36%",
+            "source": "Q1 FY27 Concall Transcript (23-Jul-2026), p. 3 — \"Net interest margin was 4.36% in Q1-2027 compared to 4.32% in Q4-2026\""
+          }
+        ],
+        "verdict": "beat",
+        "commentary": "NIM expanded to 4.36%, exceeding the 'range-bound' guidance provided in the previous quarter, supported by income tax refunds and term deposit repricing."
+      },
+      {
+        "quarter": "Q4 FY26",
+        "guided": [
+          {
+            "metric": "Credit Cost and Provisions",
+            "guidance": "Management aimed to maximize PBT through risk-calibrated growth, implying stable asset quality.",
+            "source": "Q3 FY26 Concall Transcript (22-Jan-2026), p. 7 — \"Our focus is to maximize PBT in a risk calibrated fashion, and that is what we will contin\""
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "Credit Cost and Provisions",
+            "actual": "₹96 crore (0.03% of average advances).",
+            "source": "Q4 FY26 Concall Transcript (24-Apr-2026), p. 3 — \"Provisions (excluding provision for tax) were ₹96 crore in Q4-2026 reflecting healthy asse\""
+          }
+        ],
+        "verdict": "beat",
+        "commentary": "Provisions dropped by 89% sequentially to just ₹96 crore, far outperforming the risk-calibrated PBT growth narrative due to high recoveries from written-off accounts."
+      },
+      {
+        "quarter": "Q3 FY26",
+        "guided": [
+          {
+            "metric": "Regulatory Compliance Provisioning",
+            "guidance": "RBI directed a standard asset provision of ₹1,283 crore for non-compliant agri-PSL facilities.",
+            "source": "Q3 FY26 Concall Transcript (22-Jan-2026), p. 3 — \"RBI has directed the Bank to make a standard asset provision of ₹1,283 crore in respect of\""
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "Regulatory Compliance Provisioning",
+            "actual": "₹1,283 crore provisioned as directed.",
+            "source": "Q3 FY26 Concall Transcript (22-Jan-2026), p. 3 — \"RBI has directed the Bank to make a standard asset provision of ₹1,283 crore... The Bank h\""
+          }
+        ],
+        "verdict": "hit",
+        "commentary": "Management complied with a specific RBI directive to provide ₹1,283 crore for an agricultural portfolio, accurately reflecting the one-time regulatory hit in the P&L."
+      }
+    ],
+    "credibility_score": "high",
+    "pattern": "Management exhibits a pattern of conservative margin and growth guidance ('range-bound') while leveraging ecosystem-led execution to deliver positive surprises in loan expansion and deposit mobilization."
+  },
+  "citation_audit": {
+    "documents_fetched": 10,
+    "pages_actually_read": 185,
+    "verified_claims": 8,
+    "rejected_claims": 0
+  },
+  "model_used": "gemini-3-flash-preview",
+  "tokens": {
+    "in": 48609,
+    "out": 6129
+  },
+  "cost_estimate_usd": 0.029905
+}

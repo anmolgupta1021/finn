@@ -161,6 +161,12 @@ export interface ResearchData {
   generated_at: string;
   source_documents: SourceDocument[];
   narrative_vs_numbers: NarrativeVsNumbers;
+  citation_audit?: {
+    documents_fetched: number;
+    pages_actually_read: number;
+    verified_claims: number;
+    rejected_claims: number;
+  };
   financial_snapshot?: Record<string, unknown>;
   cash_quality?: Record<string, unknown>;
   bull_bear?: { bull: string; bear: string };

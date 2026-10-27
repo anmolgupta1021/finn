@@ -139,8 +139,12 @@ export function ResearchPanel({
 
   const tabs = [
     { id: "narrative" as const, label: "Narrative vs Numbers", icon: Target },
-    { id: "snapshot" as const, label: "Snapshot", icon: BarChart3 },
-    { id: "bull_bear" as const, label: "Bull / Bear", icon: Scale },
+    ...(data.financial_snapshot
+      ? [{ id: "snapshot" as const, label: "Snapshot", icon: BarChart3 }]
+      : []),
+    ...(data.bull_bear
+      ? [{ id: "bull_bear" as const, label: "Bull / Bear", icon: Scale }]
+      : []),
   ];
 
   return (
@@ -218,25 +222,48 @@ export function ResearchPanel({
               ))}
             </div>
 
-            {/* Sources */}
-            <div className="finn-section-title mt-4">Sources</div>
-            <div className="space-y-1">
-              {data.source_documents?.map((doc, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-2 text-xs text-finn-muted"
-                >
-                  <FileText className="w-3 h-3 flex-shrink-0" />
-                  <span>
-                    {doc.type === "annual_report"
-                      ? `Annual Report ${doc.year}`
-                      : `Concall Transcript ${doc.quarter}`}
-                  </span>
-                  {doc.pages && (
-                    <span className="text-2xs">({doc.pages} pages)</span>
-                  )}
-                </div>
-              ))}
+            {/* Sources & Citation Audit */}
+            <div className="flex items-center justify-between mt-4">
+              <div className="finn-section-title mb-0">
+                Primary Sources ({data.source_documents?.length ?? 0})
+              </div>
+              {data.citation_audit && (
+                <span className="text-2xs font-mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded">
+                  {data.citation_audit.pages_actually_read}pp read ·{" "}
+                  {data.citation_audit.verified_claims} cited ·{" "}
+                  {data.citation_audit.rejected_claims} rejected
+                </span>
+              )}
+            </div>
+            <div className="space-y-1.5">
+              {data.source_documents?.map((doc, i) => {
+                const label =
+                  doc.type === "annual_report"
+                    ? `Annual Report ${doc.year || ""}`
+                    : doc.type === "results_filing"
+                    ? `Results Filing ${doc.quarter || ""}`
+                    : `Concall Transcript ${doc.quarter || ""}`;
+                return (
+                  <a
+                    key={i}
+                    href={doc.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between gap-2 text-xs text-finn-muted hover:text-finn-accent transition-colors bg-finn-surface/60 px-2.5 py-1.5 rounded-lg"
+                  >
+                    <div className="flex items-center gap-2 min-w-0">
+                      <FileText className="w-3.5 h-3.5 flex-shrink-0 text-finn-accent" />
+                      <span className="truncate">{label.trim()}</span>
+                      {doc.pages && (
+                        <span className="text-2xs font-mono flex-shrink-0">
+                          ({doc.pages}p)
+                        </span>
+                      )}
+                    </div>
+                    <ArrowUpRight className="w-3 h-3 flex-shrink-0" />
+                  </a>
+                );
+              })}
             </div>
 
             {/* Model info */}

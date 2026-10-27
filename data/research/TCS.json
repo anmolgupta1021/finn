@@ -1,0 +1,202 @@
+{
+  "ticker": "TCS.NS",
+  "company_name": "Tata Consultancy Services Limited",
+  "generated_at": "2026-10-27T08:51:24.889435Z",
+  "source_documents": [
+    {
+      "type": "concall_transcript",
+      "quarter": "Q2 FY27",
+      "url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14102026155941_SEInt14102026_signed.pdf",
+      "pages": 29
+    },
+    {
+      "type": "concall_transcript",
+      "quarter": "Q1 FY27",
+      "url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_15072026193646_SEInt15072026_Signed.pdf",
+      "pages": 25
+    },
+    {
+      "type": "concall_transcript",
+      "quarter": "Q4 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14042026200132_SEInt14042026_signed.pdf",
+      "pages": 35
+    },
+    {
+      "type": "concall_transcript",
+      "quarter": "Q3 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_16012026163741_Signed_SEIntimation.pdf",
+      "pages": 33
+    },
+    {
+      "type": "concall_transcript",
+      "quarter": "Q2 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_23122025195649_Signed_SEInt_letter.pdf",
+      "pages": 32
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q2 FY27",
+      "url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_08102026153124_Post_BM_SE_Letter_fin.pdf",
+      "pages": 22
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q1 FY27",
+      "url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_09072026155158_Post_BM_SE_Lettersigned.pdf",
+      "pages": 16
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q4 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_09042026155026_SE_Outcome_signed.pdf",
+      "pages": 25
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q3 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_28022026190358_SE_Stat_Auditors_Final_signed.pdf",
+      "pages": 3
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q2 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_10122025211214_SE_disclosure_Finalsigned.pdf",
+      "pages": 7
+    }
+  ],
+  "narrative_vs_numbers": {
+    "summary": "TCS has demonstrated exceptional execution in scaling its AI narrative into tangible numbers, growing annualized AI revenue from $1.5 billion to $3.1 billion within four quarters. However, management has consistently missed its aspirational operating margin floor of 26%, with margins currently stalled at 24% due to aggressive 'investments for growth' and subcontractor costs.",
+    "quarters": [
+      {
+        "quarter": "Q2 FY27",
+        "guided": [
+          {
+            "metric": "Manufacturing Vertical Recovery",
+            "guidance": "Manufacturing, we believe will turn around in Q2",
+            "source": "Q1 FY27 Concall Transcript (15-Jul-2026), p. 17 — \"Manufacturing, we believe will turn around in Q2\""
+          },
+          {
+            "metric": "Operating Margin Trajectory",
+            "guidance": "We want to exit at 25% plus and strive to achieve it sooner rather than later.",
+            "source": "Q1 FY27 Concall Transcript (15-Jul-2026), p. 23 — \"We want to exit at 25% plus and strive to achieve it sooner rather than later.\""
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "Manufacturing Vertical Recovery",
+            "actual": "3.1% sequential growth in constant currency.",
+            "source": "Q2 FY27 Concall Transcript (14-Oct-2026), p. 3 — \"Manufacturing and Technology and Services each grew 3.1%.\""
+          },
+          {
+            "metric": "Operating Margin Trajectory",
+            "actual": "24.0%",
+            "source": "Q2 FY27 Concall Transcript (14-Oct-2026), p. 5 — \"Our operating margins remained stable sequentially at 24%.\""
+          }
+        ],
+        "verdict": "hit",
+        "commentary": "Management successfully delivered the promised turnaround in Manufacturing (3.1% growth) and sustained AI revenue scaling, though margins remained flat at 24%, failing to 'inch up' as previously suggested."
+      },
+      {
+        "quarter": "Q1 FY27",
+        "guided": [
+          {
+            "metric": "H1 FY27 Growth Outlook",
+            "guidance": "We are also expecting a stronger 1H. Our planning assumption is along those lines only.",
+            "source": "Q4 FY26 Concall Transcript (14-Apr-2026), p. 23 — \"We are also expecting a stronger 1H.\""
+          },
+          {
+            "metric": "AI Revenue Scaling",
+            "guidance": "US$2.3 billion on an annualized basis (as of Q4 FY26).",
+            "source": "Q4 FY26 Concall Transcript (14-Apr-2026), p. 4 — \"momentum we see in our AI Services... standing at US$2.3 billion on an annualized basis.\""
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "H1 FY27 Growth Outlook",
+            "actual": "2.2% sequential growth (₹72,275 crore).",
+            "source": "Q1 FY27 Concall Transcript (15-Jul-2026), p. 3 — \"Our Q1 revenue stood at ₹72,275 crore, growing 2.2% sequentially\""
+          },
+          {
+            "metric": "AI Revenue Scaling",
+            "actual": "$2.6 billion annualized (13.6% QoQ growth).",
+            "source": "Q1 FY27 Concall Transcript (15-Jul-2026), p. 3 — \"AI services revenue continues to accelerate. At the end of Q1 FY27, it stands at $2.6 bill\""
+          }
+        ],
+        "verdict": "hit",
+        "commentary": "Delivered on the promise of a 'stronger 1H' with 2.2% sequential growth, although margins took a significant 130 bps hit due to wage increments."
+      },
+      {
+        "quarter": "Q4 FY26",
+        "guided": [
+          {
+            "metric": "Operating Margin Target",
+            "guidance": "make all efforts to climb towards 26%.",
+            "source": "Q3 FY26 Concall Transcript (16-Jan-2026), p. 23 — \"make all efforts to climb towards 26%.\""
+          },
+          {
+            "metric": "AI Revenue Momentum",
+            "guidance": "US$1.8 billion in annualized revenue (as of Q3 FY26).",
+            "source": "Q3 FY26 Concall Transcript (16-Jan-2026), p. 4 — \"Our AI services now generate US$1.8 billion in annualized revenue\""
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "Operating Margin Target",
+            "actual": "25.3%",
+            "source": "Q4 FY26 Concall Transcript (14-Apr-2026), p. 6 — \"Our Q4 operating margin stood at 25.3%, a sequential increase of 10 basis points.\""
+          },
+          {
+            "metric": "AI Revenue Momentum",
+            "actual": "$2.3 billion annualized.",
+            "source": "Q4 FY26 Concall Transcript (14-Apr-2026), p. 8 — \"In Q4, our annualized AI revenues surpassed $2.3 billion\""
+          }
+        ],
+        "verdict": "beat",
+        "commentary": "Achieved the highest operating margin in four years (25.3%) and secured three mega deals, validating the 'Lead with AI' strategy."
+      },
+      {
+        "quarter": "Q3 FY26",
+        "guided": [
+          {
+            "metric": "AI Revenue Base (Analyst Day)",
+            "guidance": "US$1.5 billion annualized.",
+            "source": "Q3 FY26 Concall Transcript (16-Jan-2026), p. 21 — \"Analyst Day, we had reported US$1.5 billion annualized\""
+          },
+          {
+            "metric": "International Market Growth",
+            "guidance": "aspiration that we would make every effort... to grow better than FY '25 in FY '26",
+            "source": "Q3 FY26 Concall Transcript (16-Jan-2026), p. 23 — \"ensure that we grow better than FY '25 in FY '26 in the international market.\""
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "AI Revenue Base (Analyst Day)",
+            "actual": "$1.8 billion annualized (17.3% QoQ growth).",
+            "source": "Q3 FY26 Concall Transcript (16-Jan-2026), p. 4 — \"AI services now generate US$1.8 billion in annualized revenue and is growing at 17.3% QoQ\""
+          },
+          {
+            "metric": "International Market Growth",
+            "actual": "0.4% sequential growth in constant currency.",
+            "source": "Q3 FY26 Concall Transcript (16-Jan-2026), p. 3 — \"Our International services revenues grew by 0.4% sequentially in constant currency.\""
+          }
+        ],
+        "verdict": "hit",
+        "commentary": "Successfully maintained stable margins despite wage hike impacts and significantly accelerated AI revenue from the $1.5B base reported at Analyst Day."
+      }
+    ],
+    "credibility_score": "high",
+    "pattern": "Management maintains a conservative stance by refusing formal revenue guidance while providing optimistic directional commentary on vertical recoveries (e.g., Manufacturing and Life Sciences) which they generally deliver, albeit with a persistent lag in margin expansion."
+  },
+  "citation_audit": {
+    "documents_fetched": 10,
+    "pages_actually_read": 193,
+    "verified_claims": 16,
+    "rejected_claims": 0
+  },
+  "model_used": "gemini-3-flash-preview",
+  "tokens": {
+    "in": 45609,
+    "out": 3561
+  },
+  "cost_estimate_usd": 0.022585
+}

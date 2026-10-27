@@ -1,5 +1,113 @@
 [
   {
+    "id": "nse-reliance-8df0663618",
+    "ticker": "RELIANCE.NS",
+    "company_name": "Reliance Industries Limited",
+    "timestamp": "2026-10-24T21:48:04+05:30",
+    "headline": "General Updates — Initial Public Offer of Jio Platforms Limited",
+    "category": "fund_raise",
+    "priority": 1,
+    "summary": "Update regarding the Initial Public Offer of Jio Platforms Limited.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/PVIVINMA_24102026214355_RIL_SE_241026.pdf",
+    "raw_text": "Initial Public Offer of Jio Platforms Limited",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 160,
+      "out": 50
+    }
+  },
+  {
+    "id": "nse-reliance-dce018de71",
+    "ticker": "RELIANCE.NS",
+    "company_name": "Reliance Industries Limited",
+    "timestamp": "2026-10-21T22:44:39+05:30",
+    "headline": "Updates — Please find attached a media statement issued by the Company.",
+    "category": "press_release",
+    "priority": 2,
+    "summary": "Company issued a media statement.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_21102026224413_SE_21102026.pdf",
+    "raw_text": "Please find attached a media statement issued by the Company.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 160,
+      "out": 50
+    }
+  },
+  {
+    "id": "nse-reliance-df315e6886",
+    "ticker": "RELIANCE.NS",
+    "company_name": "Reliance Industries Limited",
+    "timestamp": "2026-10-21T20:43:30+05:30",
+    "headline": "Credit Rating — Reliance Industries Limited has informed the Exchange about Credit Rating",
+    "category": "credit_rating",
+    "priority": 2,
+    "summary": "Exchange informed regarding credit rating update.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/PVIVINMA_21102026204310_SE_ICRA.pdf",
+    "raw_text": "Reliance Industries Limited has informed the Exchange about Credit Rating",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 160,
+      "out": 50
+    }
+  },
+  {
+    "id": "nse-reliance-f22c556b2e",
+    "ticker": "RELIANCE.NS",
+    "company_name": "Reliance Industries Limited",
+    "timestamp": "2026-10-14T20:12:49+05:30",
+    "headline": "General Updates — Proposed Initial Public Offer of Jio Platforms Limited.",
+    "category": "fund_raise",
+    "priority": 1,
+    "summary": "Proposed Initial Public Offer of Jio Platforms Limited.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_14102026201111_RIL_SE_14102026_.pdf",
+    "raw_text": "Proposed Initial Public Offer of Jio Platforms Limited.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 160,
+      "out": 50
+    }
+  },
+  {
+    "id": "nse-reliance-0b93f386fc",
+    "ticker": "RELIANCE.NS",
+    "company_name": "Reliance Industries Limited",
+    "timestamp": "2026-10-14T18:35:12+05:30",
+    "headline": "General Updates — Proposed Initial Public Offer of Jio Platforms Limited - filing of the Red Herring Prospectus.",
+    "category": "fund_raise",
+    "priority": 1,
+    "summary": "Filing of the Red Herring Prospectus for the proposed Initial Public Offer of Jio Platforms Limited.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_14102026183404_RIL_SE14102026.pdf",
+    "raw_text": "Proposed Initial Public Offer of Jio Platforms Limited - filing of the Red Herring Prospectus.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 160,
+      "out": 50
+    }
+  },
+  {
+    "id": "nse-reliance-f1f63e46ef",
+    "ticker": "RELIANCE.NS",
+    "company_name": "Reliance Industries Limited",
+    "timestamp": "2026-10-07T22:36:08+05:30",
+    "headline": "Action(s) taken or orders passed — Disclosure under Regulation 30 of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015 is attached.",
+    "category": "litigation",
+    "priority": 2,
+    "summary": "Disclosure of regulatory or tax order under Regulation 30.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/PVIVINMA_07102026223504_RIL_SEletter07102026.pdf",
+    "raw_text": "Disclosure under Regulation 30 of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015 is attached.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 160,
+      "out": 50
+    }
+  },
+  {
     "id": "reliance-results-reliance_q1fy27",
     "ticker": "RELIANCE.NS",
     "company_name": "Reliance Industries Limited",

@@ -1,0 +1,125 @@
+[
+  {
+    "id": "nse-ntpc-d342156877",
+    "ticker": "NTPC.NS",
+    "company_name": "NTPC Limited",
+    "timestamp": "2026-10-23T17:23:49+05:30",
+    "headline": "Appointment — NTPC Limited has informed the Exchange regarding Appointment of Mr Shri Diwakar Nath Misra as Non- Executive Director of the company w.e.f. October 23, 2026.",
+    "category": "management_change",
+    "priority": 1,
+    "summary": "Shri Diwakar Nath Misra assumed charge as Additional Director (Government Nominee Director) on the Board of NTPC Limited effective October 23, 2026.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/NTPC_23102026172037_20261023_APPOINTMENTOFGOIDIRECTOR.pdf",
+    "raw_text": "NTPC Limited has informed the Exchange regarding Appointment of Mr Shri Diwakar Nath Misra as Non- Executive Director of the company w.e.f. October 23, 2026.",
+    "enrichment": {
+      "person_name": "Shri Diwakar Nath Misra",
+      "role": "Non-Executive Director (Government Nominee Director)",
+      "action": "joined",
+      "background": "Shri Diwakar Nath Misra is a 2000 batch IAS officer of the Assam-Meghalaya cadre, currently serving as Additional Secretary, Ministry of Power, with over two decades of administrative experience across power, finance, commerce, petroleum, and public administration. (Filing p. 2)"
+    },
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 2088,
+      "out": 222
+    }
+  },
+  {
+    "id": "nse-ntpc-5a8295341d",
+    "ticker": "NTPC.NS",
+    "company_name": "NTPC Limited",
+    "timestamp": "2026-10-20T18:36:10+05:30",
+    "headline": "Updates — NTPC Limited has informed the Exchange regarding ''Clarification on the news item published on the website of AD HOC NEWS dated 20th October 2026 captioned \"NTPC Posts 7.43 Percent Profit Growth; Buyback Sets Date for NTPC stock\".",
+    "category": "press_release",
+    "priority": 2,
+    "summary": "Company clarified news item regarding profit growth and stock buyback date published on AD HOC NEWS.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/NTPC_20102026183417_20261020_NEWSCLARIFICATION_STEX.pdf",
+    "raw_text": "NTPC Limited has informed the Exchange regarding ''Clarification on the news item published on the website of AD HOC NEWS dated 20th October 2026 captioned \"NTPC Posts 7.43 Percent Profit Growth; Buyback Sets Date for NTPC stock\".",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 189,
+      "out": 63
+    }
+  },
+  {
+    "id": "nse-ntpc-0ee9b6b789",
+    "ticker": "NTPC.NS",
+    "company_name": "NTPC Limited",
+    "timestamp": "2026-10-19T16:19:47+05:30",
+    "headline": "General Updates — NTPC Limited has informed the Exchange about Appointment of Shri Diwakar Nath Misra, Additional Secretary, Ministry of Power as Govt. Nominee Director on the Board of the Company.",
+    "category": "management_change",
+    "priority": 1,
+    "summary": "Shri Diwakar Nath Misra has been appointed as a Government Nominee Director on the Board of the Company, effective October 19, 2026.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/NTPC_19102026161940_20261019_STEX_APPOINTMENTOFGOINOMINEE.pdf",
+    "raw_text": "NTPC Limited has informed the Exchange about Appointment of Shri Diwakar Nath Misra, Additional Secretary, Ministry of Power as Govt. Nominee Director on the Board of the Company.",
+    "enrichment": {
+      "person_name": "Shri Diwakar Nath Misra",
+      "role": "Govt. Nominee Director",
+      "action": "joined",
+      "background": "Shri Diwakar Nath Misra serves as Additional Secretary, Ministry of Power, and has been appointed as a Government Nominee Director on the Board of the Company. (Filing p. 1)"
+    },
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 1247,
+      "out": 194
+    }
+  },
+  {
+    "id": "nse-ntpc-6b18104bd1",
+    "ticker": "NTPC.NS",
+    "company_name": "NTPC Limited",
+    "timestamp": "2026-10-15T18:21:24+05:30",
+    "headline": "Press Release — NTPC Limited has informed the Exchange regarding a press release dated October 15, 2026, titled \"NTPC partners with Africa50 to jointly develop power projects across Africa\".",
+    "category": "press_release",
+    "priority": 2,
+    "summary": "NTPC partnered with Africa50 to jointly develop power projects across Africa.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/NTPC_15102026182116_20261015_Pressrelease_STEX.pdf",
+    "raw_text": "NTPC Limited has informed the Exchange regarding a press release dated October 15, 2026, titled \"NTPC partners with Africa50 to jointly develop power projects across Africa\".",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 189,
+      "out": 63
+    }
+  },
+  {
+    "id": "nse-ntpc-848ad3bef1",
+    "ticker": "NTPC.NS",
+    "company_name": "NTPC Limited",
+    "timestamp": "2026-10-15T15:51:16+05:30",
+    "headline": "Certificate under SEBI (Depositories and Participants) Regulations, 2018 — NTPC Limited has informed the Exchange about Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Submitted routine certificate under SEBI (Depositories and Participants) Regulations, 2018.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/NTPC_15102026155106_REGULATION_74_-STX.pdf",
+    "raw_text": "NTPC Limited has informed the Exchange about Certificate under SEBI (Depositories and Participants) Regulations, 2018",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 189,
+      "out": 63
+    }
+  },
+  {
+    "id": "nse-ntpc-c8ce30c9bf",
+    "ticker": "NTPC.NS",
+    "company_name": "NTPC Limited",
+    "timestamp": "2026-10-05T20:47:00+05:30",
+    "headline": "Cessation — NTPC Limited has informed the Exchange regarding Cessation of  Shri Piyush Singh as Non- Executive Director of the company w.e.f. October 05, 2026.",
+    "category": "management_change",
+    "priority": 1,
+    "summary": "Shri Piyush Singh ceased to be Government Nominee Director of NTPC Limited w.e.f. October 5, 2026, consequent upon relieving from his duties in the Ministry of Power.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/NTPC_05102026203959_20261005_Cessation_of_Director.pdf",
+    "raw_text": "NTPC Limited has informed the Exchange regarding Cessation of  Shri Piyush Singh as Non- Executive Director of the company w.e.f. October 05, 2026.",
+    "enrichment": {
+      "person_name": "Shri Piyush Singh",
+      "role": "Government Nominee Director",
+      "action": "resigned",
+      "background": "Shri Piyush Singh ceased to be Government Nominee Director of NTPC Limited consequent upon relieving from his duties in Ministry of Power w.e.f. October 5, 2026. (Filing p. 1)"
+    },
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 1178,
+      "out": 212
+    }
+  }
+]

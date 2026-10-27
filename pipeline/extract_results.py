@@ -80,6 +80,8 @@ def call_gemini_multimodal(
 
     cached = get_cached(chash, task)
     if cached is not None:
+        if isinstance(cached, list) and cached and isinstance(cached[0], dict):
+            cached = cached[0]
         model_used = cached.get("_meta_model", "gemini-3.5-flash-lite")
         meta_tok = cached.get("_meta_tokens") or {"in": 0, "out": 0}
         log_llm_call(task, ticker, model_used, 0, 0, chash, cache_hit=True)
@@ -116,7 +118,7 @@ def call_gemini_multimodal(
             url, data=body, headers={"Content-Type": "application/json"}
         )
         try:
-            with urllib.request.urlopen(req, timeout=45) as resp:
+            with urllib.request.urlopen(req, timeout=120) as resp:
                 raw = json.loads(resp.read().decode("utf-8"))
             text = raw["candidates"][0]["content"]["parts"][0]["text"]
             usage = raw.get("usageMetadata", {})
@@ -126,6 +128,8 @@ def call_gemini_multimodal(
             )
             actual_model = raw.get("modelVersion", model_name)
             parsed = json.loads(text)
+            if isinstance(parsed, list) and parsed and isinstance(parsed[0], dict):
+                parsed = parsed[0]
             if isinstance(parsed, dict):
                 parsed["_meta_model"] = actual_model
                 parsed["_meta_tokens"] = {"in": tokens_in, "out": tokens_out}

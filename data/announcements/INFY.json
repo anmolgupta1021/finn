@@ -1,5 +1,59 @@
 [
   {
+    "id": "nse-infy-f0aa120de5",
+    "ticker": "INFY.NS",
+    "company_name": "Infosys Limited",
+    "timestamp": "2026-10-24T19:43:00+05:30",
+    "headline": "Copy of Newspaper Publication — Infosys Limited has informed the Exchange about Copy of Newspaper Publication",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Infosys submitted a copy of a newspaper publication as per routine compliance.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_24102026194244_Financials_newspaper_ad_SE_filing.pdf",
+    "raw_text": "Infosys Limited has informed the Exchange about Copy of Newspaper Publication",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 189,
+      "out": 59
+    }
+  },
+  {
+    "id": "nse-infy-ed5483713e",
+    "ticker": "INFY.NS",
+    "company_name": "Infosys Limited",
+    "timestamp": "2026-10-23T20:07:11+05:30",
+    "headline": "Updates — Infosys Limited has informed the Exchange regarding 'Report of auditors on financial statements for the quarter and half year ended September 30, 2026 withUDIN'.",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Audited financial results report with UDIN submitted for the quarter and half year ended September 30, 2026.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_23102026200652_SE_filing_Auditors_report_with_UDIN.pdf",
+    "raw_text": "Infosys Limited has informed the Exchange regarding 'Report of auditors on financial statements for the quarter and half year ended September 30, 2026 withUDIN'.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 189,
+      "out": 59
+    }
+  },
+  {
+    "id": "nse-infy-efb52f7c68",
+    "ticker": "INFY.NS",
+    "company_name": "Infosys Limited",
+    "timestamp": "2026-10-23T16:10:52+05:30",
+    "headline": "Record Date — Infosys Limited has informed the Exchange that Record date for the purpose of Dividend  is 03-Nov-2026.",
+    "category": "dividend",
+    "priority": 1,
+    "summary": "Fixed November 03, 2026, as the record date for the dividend.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_23102026160926_BM_Outcome_Oct232026_1.pdf",
+    "raw_text": "Infosys Limited has informed the Exchange that Record date for the purpose of Dividend  is 03-Nov-2026.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 189,
+      "out": 59
+    }
+  },
+  {
     "id": "infy-results-infy_q2fy27",
     "ticker": "INFY.NS",
     "company_name": "Infosys Limited",
@@ -72,6 +126,42 @@
     "tokens": {
       "in": 4588,
       "out": 603
+    }
+  },
+  {
+    "id": "nse-infy-2a40007d3c",
+    "ticker": "INFY.NS",
+    "company_name": "Infosys Limited",
+    "timestamp": "2026-10-19T15:40:54+05:30",
+    "headline": "Updates — Infosys Limited has informed the Exchange regarding 'Infosys to Announce Second Quarter Results on October 23, 2026'.",
+    "category": "earnings_call",
+    "priority": 2,
+    "summary": "Intimation of second quarter financial results announcement scheduled for October 23, 2026.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_19102026154028_PR_19102026.pdf",
+    "raw_text": "Infosys Limited has informed the Exchange regarding 'Infosys to Announce Second Quarter Results on October 23, 2026'.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 189,
+      "out": 59
+    }
+  },
+  {
+    "id": "nse-infy-b936b0ac68",
+    "ticker": "INFY.NS",
+    "company_name": "Infosys Limited",
+    "timestamp": "2026-10-19T15:34:02+05:30",
+    "headline": "Updates — Infosys Limited has informed the Exchange regarding 'Infosys and Truist Strengthen Strategic Collaboration to Build a Global Capability Center in India'.",
+    "category": "press_release",
+    "priority": 2,
+    "summary": "Infosys and Truist strengthened strategic collaboration to establish a Global Capability Center in India.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_19102026153335_PR_19102026_2.pdf",
+    "raw_text": "Infosys Limited has informed the Exchange regarding 'Infosys and Truist Strengthen Strategic Collaboration to Build a Global Capability Center in India'.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 189,
+      "out": 59
     }
   }
 ]

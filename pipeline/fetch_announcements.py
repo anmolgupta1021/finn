@@ -14,8 +14,9 @@ from config import (
     ANNOUNCEMENT_CATEGORIES, CATEGORY_PRIORITY,
 )
 
-# BSE scrip codes — mapped from NSE tickers
-# These are the BSE security codes needed for the BSE API
+# BSE scrip codes — mapped from NSE tickers.
+# UNVERIFIED: these were written from memory, not looked up. Slice 1 must
+# confirm each against BSE before use (TMPV in particular, post-demerger).
 TICKER_BSE_CODES = {
     "RELIANCE.NS": "500325",
     "TCS.NS": "532540",
@@ -25,7 +26,7 @@ TICKER_BSE_CODES = {
     "HINDUNILVR.NS": "500696",
     "BHARTIARTL.NS": "532454",
     "LT.NS": "500510",
-    "TATAMOTORS.NS": "500570",
+    "TMPV.NS": "500570",  # unverified post-demerger
     "SUNPHARMA.NS": "524715",
     "MARUTI.NS": "532500",
     "TITAN.NS": "500114",
@@ -33,7 +34,7 @@ TICKER_BSE_CODES = {
     "TATASTEEL.NS": "500470",
     "NTPC.NS": "532555",
     "BAJFINANCE.NS": "500034",
-    "ZOMATO.NS": "543320",
+    "ETERNAL.NS": "543320",  # unverified post-rename
     "ITC.NS": "500875",
 }
 

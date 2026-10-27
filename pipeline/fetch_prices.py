@@ -5,12 +5,48 @@ Outputs: data/prices/{TICKER}.json
 Computes: daily change %, 20-day average volume, volume ratio (vol / 20d avg).
 """
 
+from __future__ import annotations
+
 import yfinance as yf
 import pandas as pd
 from datetime import datetime, timedelta
 from config import (
-    ALL_TICKERS, PRICES_DIR, save_json, ticker_symbol, PORTFOLIO_TICKERS
+    ALL_TICKERS, PRICES_DIR, save_json, ticker_symbol, PORTFOLIO_TICKERS,
+    VOL_WINDOW, GAP_GUARD_PCT, KNOWN_CORPORATE_ACTIONS,
 )
+
+
+def _volume_guard(hist: pd.DataFrame, ticker: str) -> pd.Series:
+    """
+    For each row, return None if the volume average is trustworthy, else a
+    short reason string. The window checked is the VOL_WINDOW sessions before
+    the row plus the row itself.
+    """
+    gap = hist["Close"].pct_change().abs().mul(100) > GAP_GUARD_PCT
+    split = hist["Stock Splits"].fillna(0) != 0 if "Stock Splits" in hist else gap & False
+    known = pd.Series(False, index=hist.index)
+    for d in KNOWN_CORPORATE_ACTIONS.get(ticker, []):
+        known |= hist.index.strftime("%Y-%m-%d") == d
+
+    w = VOL_WINDOW + 1
+    gap_w = gap.rolling(w, min_periods=1).max().astype(bool)
+    split_w = split.rolling(w, min_periods=1).max().astype(bool)
+    known_w = known.rolling(w, min_periods=1).max().astype(bool)
+    short = pd.Series(range(len(hist)), index=hist.index) < VOL_WINDOW
+
+    reasons = []
+    for i in range(len(hist)):
+        if short.iloc[i]:
+            reasons.append(f"fewer than {VOL_WINDOW} prior sessions")
+        elif known_w.iloc[i]:
+            reasons.append("known corporate action in window")
+        elif split_w.iloc[i]:
+            reasons.append("split/bonus in window")
+        elif gap_w.iloc[i]:
+            reasons.append(f">{GAP_GUARD_PCT:.0f}% overnight gap in window (possible corporate action)")
+        else:
+            reasons.append(None)
+    return pd.Series(reasons, index=hist.index)
 
 
 def fetch_prices(tickers: list[str] = None, days: int = 90) -> dict:
@@ -25,16 +61,26 @@ def fetch_prices(tickers: list[str] = None, days: int = 90) -> dict:
         print(f"📈 Fetching prices for {ticker}...")
         try:
             stock = yf.Ticker(ticker)
-            hist = stock.history(period=f"{days}d")
+            hist = stock.history(period=f"{days}d", actions=True)
 
             if hist.empty:
                 print(f"  ⚠️  No data for {ticker}")
                 continue
 
-            # Compute 20-day SMA of volume
-            hist["vol_sma20"] = hist["Volume"].rolling(window=20).mean()
+            # EOD only: during market hours yfinance returns today's partial
+            # bar. Drop it until NSE has closed (15:30 IST; 16:00 for safety).
+            now_ist = pd.Timestamp.now(tz="Asia/Kolkata")
+            last_day = hist.index[-1].tz_convert("Asia/Kolkata").date() if hist.index.tz else hist.index[-1].date()
+            if last_day == now_ist.date() and now_ist.hour < 16:
+                hist = hist.iloc[:-1]
+                print(f"  ⏳ Dropped partial intraday bar for {last_day}")
+
+            # Average of the PRIOR 20 sessions (today excluded, so a spike
+            # doesn't dilute its own baseline).
+            hist["vol_sma20"] = hist["Volume"].shift(1).rolling(window=VOL_WINDOW).mean()
             hist["vol_ratio"] = (hist["Volume"] / hist["vol_sma20"]).round(2)
             hist["change_pct"] = hist["Close"].pct_change().mul(100).round(2)
+            hist["vol_guard"] = _volume_guard(hist, ticker)
 
             history = []
             for date, row in hist.iterrows():
@@ -47,6 +93,8 @@ def fetch_prices(tickers: list[str] = None, days: int = 90) -> dict:
                     "volume": int(row["Volume"]),
                     "change_pct": row["change_pct"] if pd.notna(row["change_pct"]) else 0,
                     "vol_ratio": row["vol_ratio"] if pd.notna(row["vol_ratio"]) else None,
+                    # Non-null = volume ratio is unreliable for this day; don't alert on it.
+                    "vol_guard": row["vol_guard"],
                 })
 
             # Current snapshot
@@ -57,6 +105,7 @@ def fetch_prices(tickers: list[str] = None, days: int = 90) -> dict:
                 "change_pct": latest.get("change_pct"),
                 "volume": latest.get("volume"),
                 "vol_ratio": latest.get("vol_ratio"),
+                "vol_guard": latest.get("vol_guard"),
                 "market_cap": info.get("marketCap"),
                 "name": info.get("longName", info.get("shortName", ticker_symbol(ticker))),
                 "sector": info.get("sector", "Unknown"),
@@ -104,8 +153,18 @@ def detect_alerts(tickers: list[str] = None,
 
         latest = data["history"][-1]
 
-        # Volume alert
-        if latest.get("vol_ratio") and latest["vol_ratio"] >= vol_threshold:
+        # Volume alert — suppressed (with a visible note) if the window is unreliable
+        if latest.get("vol_guard"):
+            alerts.append({
+                "ticker": ticker,
+                "type": "volume_unreliable",
+                "value": latest.get("vol_ratio"),
+                "threshold": vol_threshold,
+                "message": f"Volume check paused: {latest['vol_guard']}",
+                "date": latest["date"],
+                "close": latest["close"],
+            })
+        elif latest.get("vol_ratio") and latest["vol_ratio"] >= vol_threshold:
             alerts.append({
                 "ticker": ticker,
                 "type": "volume_spike",

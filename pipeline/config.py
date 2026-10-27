@@ -4,6 +4,8 @@ FINN Pipeline — Shared configuration and utilities.
 All pipeline scripts import from here for consistent paths, tickers, and helpers.
 """
 
+from __future__ import annotations
+
 import os
 import json
 import hashlib
@@ -27,13 +29,25 @@ for d in [PRICES_DIR, ANN_DIR, RESEARCH_DIR, DOCS_DIR]:
 # ─── Portfolio ───────────────────────────────────────────────────────────────
 PORTFOLIO_TICKERS = [
     "RELIANCE.NS", "TCS.NS", "HDFCBANK.NS", "INFY.NS", "ICICIBANK.NS",
-    "HINDUNILVR.NS", "BHARTIARTL.NS", "LT.NS", "TATAMOTORS.NS", "SUNPHARMA.NS",
+    "HINDUNILVR.NS", "BHARTIARTL.NS", "LT.NS", "TMPV.NS", "SUNPHARMA.NS",
     "MARUTI.NS", "TITAN.NS", "ASIANPAINT.NS", "TATASTEEL.NS", "NTPC.NS",
 ]
+# TMPV.NS replaces TATAMOTORS.NS (no longer quoted after the Tata Motors demerger).
 
-ADHOC_TICKERS = ["BAJFINANCE.NS", "ZOMATO.NS", "ITC.NS"]
+ADHOC_TICKERS = ["BAJFINANCE.NS", "ETERNAL.NS", "ITC.NS"]
+# ETERNAL.NS replaces ZOMATO.NS (company renamed; old symbol returns no data).
 
 ALL_TICKERS = PORTFOLIO_TICKERS + ADHOC_TICKERS
+
+# ─── Volume-average guard ────────────────────────────────────────────────────
+# A corporate action (demerger, split, bonus) inside the 20-day window makes
+# "volume vs 20-day average" meaningless. fetch_prices.py flags such windows
+# automatically (short history, recorded split, or an overnight gap beyond
+# GAP_GUARD_PCT). Known actions can also be listed here manually as
+# {"TICKER.NS": ["YYYY-MM-DD", ...]} — only add dates verified from a filing.
+VOL_WINDOW = 20
+GAP_GUARD_PCT = 20.0
+KNOWN_CORPORATE_ACTIONS: dict[str, list[str]] = {}
 
 # Ticker → BSE scrip code mapping (needed for BSE API)
 # Will be populated by fetch_announcements.py

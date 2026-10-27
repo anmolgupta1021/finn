@@ -36,9 +36,20 @@ function SectionHeader({
   );
 }
 
+function EmptyState({ title, body }: { title: string; body: string }) {
+  return (
+    <section className="px-4 mb-4">
+      <div className="rounded-xl border border-dashed border-finn-border p-4">
+        <div className="text-xs font-semibold text-finn-text">{title}</div>
+        <p className="text-xs text-finn-muted mt-1 leading-relaxed">{body}</p>
+      </div>
+    </section>
+  );
+}
+
 export function BriefingPage({ digest }: { digest: DigestData }) {
   const [showRoutine, setShowRoutine] = useState(false);
-  const [windowLabel] = useState("24h");
+  const windowLabel = digest.window;
 
   const now = new Date();
   const greeting =
@@ -59,7 +70,7 @@ export function BriefingPage({ digest }: { digest: DigestData }) {
   });
 
   const materialCount = digest.material.length;
-  const alertCount = digest.alerts.length;
+  const alertCount = digest.alerts.filter((a) => a.type !== "volume_unreliable").length;
 
   return (
     <div className="min-h-screen pb-20">
@@ -87,34 +98,58 @@ export function BriefingPage({ digest }: { digest: DigestData }) {
           </div>
         </div>
 
-        {/* Window selector pill */}
-        <div className="flex items-center gap-1.5 mt-1">
+        {/* Window + data freshness */}
+        <div className="flex items-center gap-1.5 mt-1 flex-wrap">
           <Clock className="w-3 h-3 text-finn-muted" />
           <span className="text-2xs text-finn-muted">Last {windowLabel}</span>
           <span className="text-2xs text-finn-muted">·</span>
-          <span className="text-2xs text-finn-accent">
-            {materialCount} material
-            {materialCount !== 1 ? "s" : ""}
+          <span className="text-2xs text-finn-muted">
+            {digest.prices_as_of ? `EOD prices ${digest.prices_as_of}` : "no price data"}
           </span>
+          {digest.announcements_ingested && (
+            <>
+              <span className="text-2xs text-finn-muted">·</span>
+              <span className="text-2xs text-finn-accent">{materialCount} material</span>
+            </>
+          )}
         </div>
       </header>
 
       {/* ─── Portfolio Strip ─── */}
-      <div className="px-3 mb-3">
-        <PortfolioStrip tickers={digest.portfolio_summary} />
-      </div>
+      {digest.portfolio_summary.length > 0 ? (
+        <div className="px-3 mb-3">
+          <PortfolioStrip tickers={digest.portfolio_summary} />
+        </div>
+      ) : (
+        <EmptyState
+          title="No price data yet"
+          body="Run pipeline/fetch_prices.py to pull end-of-day prices from Yahoo Finance."
+        />
+      )}
+      {digest.missing_prices.length > 0 && (
+        <p className="px-4 -mt-2 mb-3 text-2xs text-finn-muted">
+          No price data for: {digest.missing_prices.join(", ")}
+        </p>
+      )}
 
       {/* ─── Alerts ─── */}
-      {digest.alerts.length > 0 && (
+      {digest.portfolio_summary.length > 0 && (
         <section className="px-4 mb-4">
-          <SectionHeader
-            icon={Zap}
-            title="ALERTS"
-            count={digest.alerts.length}
-            color="text-amber-400"
-          />
-          <AlertsBanner alerts={digest.alerts} />
+          <SectionHeader icon={Zap} title="ALERTS" count={digest.alerts.length} color="text-amber-400" />
+          {digest.alerts.length > 0 ? (
+            <AlertsBanner alerts={digest.alerts} />
+          ) : (
+            <p className="text-xs text-finn-muted">No price or volume thresholds crossed on the last session.</p>
+          )}
         </section>
+      )}
+
+      {/* ─── Filings: honest empty state until the announcement pipeline has run ─── */}
+      {!digest.announcements_ingested && (
+        <EmptyState
+          title="No filings ingested yet"
+          body="The BSE announcement pipeline hasn't produced data for this window. Filings will appear here, ranked by materiality, once it runs. Nothing on this screen is placeholder content."
+        />
       )}
 
       {/* ─── What Matters ─── */}

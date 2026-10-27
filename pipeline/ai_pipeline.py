@@ -10,6 +10,8 @@ Uses Gemini for:
 Every call is cached by content hash and logged for cost tracking.
 """
 
+from __future__ import annotations
+
 import json
 import os
 import google.generativeai as genai

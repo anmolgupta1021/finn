@@ -6,14 +6,16 @@ import { cn, displayTicker } from "@/lib/utils";
 import type { ResearchData } from "@/lib/types";
 import { ResearchPanel } from "@/components/research/research-panel";
 
+// Quick-pick list only. Research availability is decided by the API (404 = not
+// generated yet); nothing here claims research exists.
 const SUGGESTIONS = [
-  { ticker: "RELIANCE.NS", label: "Reliance Industries", hasResearch: true },
-  { ticker: "INFY.NS", label: "Infosys", hasResearch: true },
-  { ticker: "ZOMATO.NS", label: "Zomato", hasResearch: true },
-  { ticker: "TCS.NS", label: "TCS", hasResearch: false },
-  { ticker: "HDFCBANK.NS", label: "HDFC Bank", hasResearch: false },
-  { ticker: "BAJFINANCE.NS", label: "Bajaj Finance", hasResearch: false },
-  { ticker: "ITC.NS", label: "ITC", hasResearch: false },
+  { ticker: "RELIANCE.NS", label: "Reliance Industries" },
+  { ticker: "INFY.NS", label: "Infosys" },
+  { ticker: "HDFCBANK.NS", label: "HDFC Bank" },
+  { ticker: "TCS.NS", label: "TCS" },
+  { ticker: "BAJFINANCE.NS", label: "Bajaj Finance" },
+  { ticker: "ETERNAL.NS", label: "Eternal (formerly Zomato)" },
+  { ticker: "ITC.NS", label: "ITC" },
 ];
 
 export function CommandBar() {
@@ -38,8 +40,12 @@ export function CommandBar() {
       const symbol = ticker.replace(/\.(NS|BO)$/, "");
       const res = await fetch(`/api/research/${symbol}`);
       if (!res.ok) {
-        const data = await res.json();
-        throw new Error(data.error || "Research not available");
+        if (res.status === 404) {
+          throw new Error(
+            `No research generated for ${symbol} yet. Research is only shown once it has been built from fetched annual reports and concall transcripts.`
+          );
+        }
+        throw new Error("Research request failed");
       }
       const data = await res.json();
       setResearch(data);

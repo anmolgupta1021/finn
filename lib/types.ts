@@ -34,6 +34,8 @@ export interface PricePoint {
   volume: number;
   change_pct: number;
   vol_ratio: number | null;
+  /** Non-null when the 20-day volume baseline is unreliable (e.g. corporate action in window). */
+  vol_guard?: string | null;
 }
 
 export interface Announcement {
@@ -95,7 +97,7 @@ export interface ManagementEnrichment {
 
 export interface Alert {
   ticker: string;
-  type: "volume_spike" | "price_move";
+  type: "volume_spike" | "price_move" | "volume_unreliable";
   value: number;
   threshold: number;
   message: string;
@@ -155,6 +157,9 @@ export interface SourceDocument {
 export interface DigestData {
   generated_at: string;
   window: string;
+  prices_as_of: string | null;
+  missing_prices: string[];
+  announcements_ingested: boolean;
   material: Announcement[];
   notable: Announcement[];
   routine: Announcement[];

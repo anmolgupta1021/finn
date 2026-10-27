@@ -77,6 +77,21 @@ def content_hash(text: str) -> str:
     return hashlib.sha256(text.encode()).hexdigest()[:16]
 
 
+# Official Gemini API list prices (USD per 1M tokens) for cost-equivalent tracking
+MODEL_PRICING_PER_1M = {
+    "gemini-3.5-flash-lite": {"in": 0.10, "out": 0.40},
+    "gemini-3.1-flash-lite": {"in": 0.10, "out": 0.40},
+    "gemini-3.6-flash": {"in": 0.30, "out": 2.50},
+    "gemini-3.5-flash": {"in": 0.30, "out": 2.50},
+    "gemini-3-flash-preview": {"in": 0.30, "out": 2.50},
+}
+
+
+def estimate_cost_usd(model: str, tokens_in: int, tokens_out: int) -> float:
+    rates = MODEL_PRICING_PER_1M.get(model, {"in": 0.10, "out": 0.40})
+    return round((tokens_in * rates["in"] + tokens_out * rates["out"]) / 1_000_000, 6)
+
+
 def log_llm_call(
     task: str,
     ticker: str,
@@ -87,6 +102,7 @@ def log_llm_call(
     cache_hit: bool,
 ) -> None:
     """Append an LLM call record to the cost log."""
+    list_cost = 0.0 if cache_hit else estimate_cost_usd(model, tokens_in, tokens_out)
     entry = {
         "timestamp": datetime.utcnow().isoformat() + "Z",
         "task": task,
@@ -96,7 +112,9 @@ def log_llm_call(
         "tokens_out": tokens_out,
         "content_hash": chash,
         "cache_hit": cache_hit,
-        "cost_usd": 0.00,  # Free tier
+        "free_tier": True,
+        "cost_usd": 0.00,
+        "paid_tier_equivalent_usd": list_cost,
     }
     log = []
     if LLM_LOG.exists():

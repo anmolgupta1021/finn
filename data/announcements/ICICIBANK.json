@@ -1,0 +1,71 @@
+[
+  {
+    "id": "icicibank-results-icicibank_q2fy27",
+    "ticker": "ICICIBANK.NS",
+    "company_name": "ICICI Bank Limited",
+    "timestamp": "2026-10-17T15:21:44+05:30",
+    "headline": "Outcome of Board Meeting — Unaudited Standalone and Consolidated Financial Results for Q2 FY27 (quarter ended Sep 30, 2026)",
+    "category": "results",
+    "priority": 1,
+    "summary": "Q2 FY27 (consolidated): Total income ₹88,161 Cr (+15.8% YoY, +10.6% QoQ); PAT ₹16,333 Cr (+22.3% YoY, +5.8% QoQ). Operating profit (ex-provisions) ₹24,010 Cr (+20.2% YoY).",
+    "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_17102026152039_NSEBSE17102026.pdf",
+    "raw_text": "Outcome of Board Meeting — Unaudited Standalone and Consolidated Financial Results for Q2 FY27 (quarter ended Sep 30, 2026)",
+    "enrichment": {
+      "status": "ok",
+      "quarter": "Q2 FY27",
+      "basis": "consolidated",
+      "entity_type": "bank",
+      "reported_unit": "crore",
+      "normalised_unit": "crore",
+      "source_page": 13,
+      "vision_used": false,
+      "ebitda_status": "not_applicable",
+      "revenue_label": "Total Income",
+      "period_ended": {
+        "current": "2026-09-30",
+        "previous": "2026-06-30",
+        "year_ago": "2025-09-30"
+      },
+      "revenue": {
+        "value": 88161.18,
+        "previous_quarter": 79689.22,
+        "year_ago_quarter": 76146.59,
+        "qoq": 10.63,
+        "yoy": 15.78
+      },
+      "ebitda": null,
+      "operating_profit_ex_provisions": {
+        "value": 24009.97,
+        "previous_quarter": 22604.33,
+        "year_ago_quarter": 19973.89,
+        "qoq": 6.22,
+        "yoy": 20.21
+      },
+      "pbt": {
+        "value": 23191.75,
+        "previous_quarter": 21373.61,
+        "year_ago_quarter": 19126.33,
+        "qoq": 8.51,
+        "yoy": 21.26
+      },
+      "pat": {
+        "value": 16333.18,
+        "previous_quarter": 15440.06,
+        "year_ago_quarter": 13357.06,
+        "qoq": 5.78,
+        "yoy": 22.28
+      },
+      "pat_owners": null,
+      "validation": {
+        "passed": true,
+        "flags": []
+      },
+      "highlights": "Basis: Consolidated · Unit normalised from ₹ crore · Page 13 · Bank format (EBITDA N/A)"
+    },
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 3876,
+      "out": 609
+    }
+  }
+]

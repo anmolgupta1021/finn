@@ -74,16 +74,39 @@ export type AnnouncementCategory =
   | "unclassified";
 
 export interface ResultsEnrichment {
+  status?: "ok" | "corrupted_pdf" | "no_statement_page_found";
+  error?: string;
   quarter?: string;
+  basis?: "consolidated" | "standalone";
+  entity_type?: "corporate" | "bank";
+  reported_unit?: string;
+  normalised_unit?: string;
+  source_page?: number;
+  vision_used?: boolean;
+  ebitda_status?: "not_applicable" | "reported" | "derived_from_schedule_iii";
+  revenue_label?: string;
+  period_ended?: {
+    current?: string;
+    previous?: string;
+    year_ago?: string;
+  };
   revenue?: MetricWithChange;
-  ebitda?: MetricWithChange;
+  ebitda?: MetricWithChange | null;
+  operating_profit_ex_provisions?: MetricWithChange | null;
   pbt?: MetricWithChange;
   pat?: MetricWithChange;
+  pat_owners?: MetricWithChange | null;
+  validation?: {
+    passed: boolean;
+    flags: string[];
+  };
   highlights?: string;
 }
 
 export interface MetricWithChange {
   value: number;
+  previous_quarter?: number | null;
+  year_ago_quarter?: number | null;
   qoq: number | null;
   yoy: number | null;
 }

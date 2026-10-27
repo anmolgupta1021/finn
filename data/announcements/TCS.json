@@ -1,0 +1,77 @@
+[
+  {
+    "id": "tcs-results-tcs_q2fy27",
+    "ticker": "TCS.NS",
+    "company_name": "Tata Consultancy Services Limited",
+    "timestamp": "2026-10-08T15:40:12+05:30",
+    "headline": "Outcome of Board Meeting — Audited Consolidated and Standalone Interim Financial Results for Q2 FY27 (quarter ended Sep 30, 2026)",
+    "category": "results",
+    "priority": 1,
+    "summary": "Q2 FY27 (consolidated): Revenue ₹73,188 Cr (+11.2% YoY, +1.3% QoQ); Operating EBITDA ₹18,815 Cr (+4.7% YoY, margin 25.7%); PAT ₹13,934 Cr (+14.9% YoY, +3.8% QoQ).",
+    "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_08102026153124_Post_BM_SE_Letter_fin.pdf",
+    "raw_text": "Outcome of Board Meeting — Audited Consolidated and Standalone Interim Financial Results for Q2 FY27 (quarter ended Sep 30, 2026)",
+    "enrichment": {
+      "status": "ok",
+      "quarter": "Q2 FY27",
+      "basis": "consolidated",
+      "entity_type": "corporate",
+      "reported_unit": "crore",
+      "normalised_unit": "crore",
+      "source_page": 8,
+      "vision_used": false,
+      "ebitda_status": "derived_from_schedule_iii",
+      "revenue_label": "Revenue from Operations",
+      "period_ended": {
+        "current": "2026-09-30",
+        "previous": "2026-06-30",
+        "year_ago": "2025-09-30"
+      },
+      "revenue": {
+        "value": 73188.0,
+        "previous_quarter": 72275.0,
+        "year_ago_quarter": 65799.0,
+        "qoq": 1.26,
+        "yoy": 11.23
+      },
+      "ebitda": {
+        "value": 18815.0,
+        "previous_quarter": 18556.0,
+        "year_ago_quarter": 17978.0,
+        "qoq": 1.4,
+        "yoy": 4.66
+      },
+      "operating_profit_ex_provisions": null,
+      "pbt": {
+        "value": 18638.0,
+        "previous_quarter": 17944.0,
+        "year_ago_quarter": 16068.0,
+        "qoq": 3.87,
+        "yoy": 15.99
+      },
+      "pat": {
+        "value": 13934.0,
+        "previous_quarter": 13420.0,
+        "year_ago_quarter": 12131.0,
+        "qoq": 3.83,
+        "yoy": 14.86
+      },
+      "pat_owners": {
+        "value": 13884.0,
+        "previous_quarter": 13349.0,
+        "year_ago_quarter": 12075.0,
+        "qoq": 4.01,
+        "yoy": 14.98
+      },
+      "validation": {
+        "passed": true,
+        "flags": []
+      },
+      "highlights": "Basis: Consolidated · Normalised from ₹ crore (Page 8) · EBITDA derived from schedule iii"
+    },
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 3300,
+      "out": 611
+    }
+  }
+]

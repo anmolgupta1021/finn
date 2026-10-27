@@ -1,0 +1,77 @@
+[
+  {
+    "id": "itc-results-itc_q1fy27",
+    "ticker": "ITC.NS",
+    "company_name": "ITC Limited",
+    "timestamp": "2026-07-31T16:31:22+05:30",
+    "headline": "Outcome of Board Meeting — Unaudited Standalone and Consolidated Financial Results for Q1 FY27 (quarter ended Jun 30, 2026)",
+    "category": "results",
+    "priority": 1,
+    "summary": "Q1 FY27 (consolidated): Revenue ₹29,523 Cr (+27.6% YoY, +23.9% QoQ); Operating EBITDA ₹5,181 Cr (-24.0% YoY, margin 17.5%); PAT ₹4,509 Cr (-15.6% YoY, -17.6% QoQ).",
+    "source_url": "https://nsearchives.nseindia.com/corporate/ITC_31072026162945_Results.pdf",
+    "raw_text": "Outcome of Board Meeting — Unaudited Standalone and Consolidated Financial Results for Q1 FY27 (quarter ended Jun 30, 2026)",
+    "enrichment": {
+      "status": "ok",
+      "quarter": "Q1 FY27",
+      "basis": "consolidated",
+      "entity_type": "corporate",
+      "reported_unit": "crore",
+      "normalised_unit": "crore",
+      "source_page": 6,
+      "vision_used": false,
+      "ebitda_status": "derived_from_schedule_iii",
+      "revenue_label": "Revenue from Operations",
+      "period_ended": {
+        "current": "2026-06-30",
+        "previous": "2026-03-31",
+        "year_ago": "2025-06-30"
+      },
+      "revenue": {
+        "value": 29523.3,
+        "previous_quarter": 23821.48,
+        "year_ago_quarter": 23129.35,
+        "qoq": 23.94,
+        "yoy": 27.64
+      },
+      "ebitda": {
+        "value": 5180.86,
+        "previous_quarter": 6924.23,
+        "year_ago_quarter": 6816.47,
+        "qoq": -25.18,
+        "yoy": -23.99
+      },
+      "operating_profit_ex_provisions": null,
+      "pbt": {
+        "value": 5860.85,
+        "previous_quarter": 7172.62,
+        "year_ago_quarter": 7128.01,
+        "qoq": -18.29,
+        "yoy": -17.78
+      },
+      "pat": {
+        "value": 4508.79,
+        "previous_quarter": 5469.74,
+        "year_ago_quarter": 5343.41,
+        "qoq": -17.57,
+        "yoy": -15.62
+      },
+      "pat_owners": {
+        "value": 4394.13,
+        "previous_quarter": 5387.97,
+        "year_ago_quarter": 5244.2,
+        "qoq": -18.45,
+        "yoy": -16.21
+      },
+      "validation": {
+        "passed": true,
+        "flags": []
+      },
+      "highlights": "Basis: Consolidated · Normalised from ₹ crore (Page 6) · EBITDA derived from schedule iii"
+    },
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 3126,
+      "out": 675
+    }
+  }
+]

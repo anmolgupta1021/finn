@@ -1,0 +1,24 @@
+[
+  {
+    "id": "hdfcbank-results-hdfcbank_q2fy27",
+    "ticker": "HDFCBANK.NS",
+    "company_name": "HDFC Bank Limited",
+    "timestamp": "2026-10-17T13:56:22+05:30",
+    "headline": "Outcome of Board Meeting — Financial Results for Q2 FY27 (quarter ended Sep 30, 2026)",
+    "category": "results",
+    "priority": 1,
+    "summary": "Q2 FY27 results filed on NSE, but upstream PDF (HDFCBANK_Q2FY27.pdf) is truncated on nsearchives.nseindia.com (PdfminerException: Unexpected EOF). Extraction skipped rather than guessing numbers.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/HDFCBANK_17102026135520_OutcomeofBMResults_17oct2026.pdf",
+    "raw_text": "Outcome of Board Meeting — Financial Results for Q2 FY27 (quarter ended Sep 30, 2026)",
+    "enrichment": {
+      "status": "corrupted_pdf",
+      "error": "PdfminerException: Unexpected EOF",
+      "highlights": "Upstream PDF failed integrity check (983,040 bytes served vs 1,193,121 bytes in Linearized header)."
+    },
+    "model_used": null,
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  }
+]

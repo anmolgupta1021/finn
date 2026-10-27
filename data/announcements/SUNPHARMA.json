@@ -1,0 +1,71 @@
+[
+  {
+    "id": "sunpharma-results-sunpharma_q1fy27",
+    "ticker": "SUNPHARMA.NS",
+    "company_name": "Sun Pharmaceutical Industries Limited",
+    "timestamp": "2026-07-31T14:30:19+05:30",
+    "headline": "Outcome of Board Meeting — Unaudited Standalone and Consolidated Financial Results for Q1 FY27 (quarter ended Jun 30, 2026)",
+    "category": "results",
+    "priority": 1,
+    "summary": "Q1 FY27 (consolidated): Revenue ₹15,300 Cr (+10.5% YoY, +4.7% QoQ); Operating EBITDA ₹4,418 Cr (+2.7% YoY, margin 28.9%); PAT ₹2,895 Cr (+27.0% YoY, +6.7% QoQ).",
+    "source_url": "https://nsearchives.nseindia.com/corporate/SUNSEC_31072026142955_BMOutcomewithannexures31072026.pdf",
+    "raw_text": "Outcome of Board Meeting — Unaudited Standalone and Consolidated Financial Results for Q1 FY27 (quarter ended Jun 30, 2026)",
+    "enrichment": {
+      "status": "ok",
+      "quarter": "Q1 FY27",
+      "basis": "consolidated",
+      "entity_type": "corporate",
+      "reported_unit": "million",
+      "normalised_unit": "crore",
+      "source_page": 10,
+      "vision_used": false,
+      "ebitda_status": "derived_from_schedule_iii",
+      "revenue_label": "Revenue from Operations",
+      "period_ended": {
+        "current": "2026-06-30",
+        "previous": "2026-03-31",
+        "year_ago": "2025-06-30"
+      },
+      "revenue": {
+        "value": 15299.88,
+        "previous_quarter": 14611.79,
+        "year_ago_quarter": 13851.4,
+        "qoq": 4.71,
+        "yoy": 10.46
+      },
+      "ebitda": {
+        "value": 4417.67,
+        "previous_quarter": 3954.2,
+        "year_ago_quarter": 4301.66,
+        "qoq": 11.72,
+        "yoy": 2.7
+      },
+      "operating_profit_ex_provisions": null,
+      "pbt": {
+        "value": 4098.81,
+        "previous_quarter": 3551.34,
+        "year_ago_quarter": 3172.77,
+        "qoq": 15.42,
+        "yoy": 29.19
+      },
+      "pat": {
+        "value": 2894.79,
+        "previous_quarter": 2714.03,
+        "year_ago_quarter": 2278.63,
+        "qoq": 6.66,
+        "yoy": 27.04
+      },
+      "pat_owners": null,
+      "validation": {
+        "passed": true,
+        "flags": []
+      },
+      "highlights": "Basis: Consolidated · Normalised from ₹ million (Page 10) · EBITDA derived from schedule iii"
+    },
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 3243,
+      "out": 653
+    }
+  }
+]

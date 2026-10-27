@@ -45,42 +45,130 @@ const CATEGORY_LABELS: Record<string, string> = {
 
 function ResultsCard({ announcement }: { announcement: Announcement }) {
   const e = announcement.enrichment as ResultsEnrichment;
-  if (!e?.revenue) return null;
+  if (!e) return null;
 
-  const metrics = [
-    { label: "Revenue", data: e.revenue },
-    { label: "EBITDA", data: e.ebitda },
+  if (e.status && e.status !== "ok") {
+    return (
+      <div className="mt-2 rounded-lg border border-amber-500/30 bg-amber-500/10 p-2.5 text-2xs">
+        <div className="font-semibold text-amber-300">
+          Extraction skipped ({e.status.replace(/_/g, " ")})
+        </div>
+        {e.error && <div className="text-finn-muted mt-0.5 font-mono">{e.error}</div>}
+        {e.highlights && <div className="text-finn-muted mt-1">{e.highlights}</div>}
+      </div>
+    );
+  }
+
+  if (!e.revenue) return null;
+
+  const isBank = e.entity_type === "bank" || e.ebitda_status === "not_applicable";
+  const unitNote =
+    e.reported_unit && e.reported_unit !== "crore"
+      ? `₹ Cr (from ₹ ${e.reported_unit})`
+      : "₹ Cr";
+
+  const rows: {
+    label: string;
+    data?: ResultsEnrichment["revenue"] | null;
+    naNote?: string;
+  }[] = [
+    { label: e.revenue_label || "Revenue", data: e.revenue },
+    isBank
+      ? { label: "EBITDA", data: null, naNote: "N/A (Bank format)" }
+      : { label: "Operating EBITDA", data: e.ebitda },
+    ...(isBank && e.operating_profit_ex_provisions
+      ? [{ label: "Op. Profit (ex-prov)", data: e.operating_profit_ex_provisions }]
+      : []),
     { label: "PBT", data: e.pbt },
     { label: "PAT", data: e.pat },
-  ].filter((m) => m.data);
+  ];
 
   return (
-    <div className="mt-2">
-      {e.quarter && (
-        <div className="text-2xs text-finn-muted mb-1.5">{e.quarter}</div>
-      )}
-      <div className="grid grid-cols-2 gap-x-4 gap-y-1.5">
-        {metrics.map((m) => {
-          const yoyChange = formatChange(m.data?.yoy);
-          return (
-            <div key={m.label} className="flex items-baseline justify-between">
-              <span className="text-xs text-finn-muted">{m.label}</span>
-              <div className="flex items-baseline gap-1.5">
-                <span className="text-xs font-medium font-mono">
-                  {m.data ? formatIndianCurrency(m.data.value) : "—"}
-                </span>
-                <span
-                  className={cn("text-2xs font-mono", yoyChange.className)}
-                >
-                  {yoyChange.text}
+    <div className="mt-2.5 border-t border-finn-border pt-2">
+      {/* Metadata badges */}
+      <div className="flex items-center justify-between gap-1.5 flex-wrap mb-2">
+        <div className="flex items-center gap-1.5 flex-wrap">
+          {e.quarter && (
+            <span className="text-2xs font-semibold text-finn-text bg-finn-bg px-1.5 py-0.5 rounded">
+              {e.quarter}
+            </span>
+          )}
+          {e.basis && (
+            <span className="text-2xs uppercase tracking-wider font-medium text-finn-accent bg-finn-accent/10 px-1.5 py-0.5 rounded">
+              {e.basis}
+            </span>
+          )}
+          <span className="text-2xs text-finn-muted font-mono">{unitNote}</span>
+        </div>
+        {e.validation && (
+          <span
+            className={cn(
+              "text-2xs font-mono px-1.5 py-0.5 rounded",
+              e.validation.passed
+                ? "text-emerald-400 bg-emerald-500/10"
+                : "text-amber-400 bg-amber-500/10"
+            )}
+          >
+            {e.validation.passed
+              ? `Verified · p.${e.source_page ?? "?"}`
+              : `Flags (${e.validation.flags.length})`}
+          </span>
+        )}
+      </div>
+
+      {/* Metrics table: Metric | Value (₹ Cr) | YoY | QoQ */}
+      <div className="rounded-lg bg-finn-bg/70 p-2 space-y-1.5">
+        <div className="grid grid-cols-12 text-[10px] text-finn-muted uppercase tracking-wider pb-1 border-b border-finn-border/60">
+          <span className="col-span-5">Metric</span>
+          <span className="col-span-3 text-right">Current</span>
+          <span className="col-span-2 text-right">YoY</span>
+          <span className="col-span-2 text-right">QoQ</span>
+        </div>
+        {rows.map((r) => {
+          if (r.naNote) {
+            return (
+              <div
+                key={r.label}
+                className="grid grid-cols-12 items-baseline text-xs py-0.5"
+              >
+                <span className="col-span-5 text-finn-muted">{r.label}</span>
+                <span className="col-span-7 text-right text-2xs font-mono text-finn-muted italic">
+                  {r.naNote}
                 </span>
               </div>
+            );
+          }
+          if (!r.data) return null;
+          const yoy = formatChange(r.data.yoy);
+          const qoq = formatChange(r.data.qoq);
+          return (
+            <div
+              key={r.label}
+              className="grid grid-cols-12 items-baseline text-xs py-0.5"
+            >
+              <span className="col-span-5 text-finn-muted truncate pr-1">
+                {r.label}
+              </span>
+              <span className="col-span-3 text-right font-mono font-medium">
+                {formatIndianCurrency(r.data.value)}
+              </span>
+              <span
+                className={cn("col-span-2 text-right text-2xs font-mono", yoy.className)}
+              >
+                {yoy.text}
+              </span>
+              <span
+                className={cn("col-span-2 text-right text-2xs font-mono", qoq.className)}
+              >
+                {qoq.text}
+              </span>
             </div>
           );
         })}
       </div>
+
       {e.highlights && (
-        <p className="text-2xs text-finn-muted mt-2 leading-relaxed border-t border-finn-border pt-1.5">
+        <p className="text-2xs text-finn-muted mt-2 leading-relaxed">
           {e.highlights}
         </p>
       )}

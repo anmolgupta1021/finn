@@ -47,9 +47,33 @@ function EmptyState({ title, body }: { title: string; body: string }) {
   );
 }
 
-export function BriefingPage({ digest }: { digest: DigestData }) {
+const WINDOW_OPTIONS = [
+  { label: "24h", hours: 24 },
+  { label: "14d", hours: 24 * 14 },
+  { label: "30d", hours: 24 * 30 },
+  { label: "120d", hours: 24 * 120 },
+];
+
+export function BriefingPage({ digest: initialDigest }: { digest: DigestData }) {
+  const [digest, setDigest] = useState<DigestData>(initialDigest);
+  const [selectedHours, setSelectedHours] = useState<number>(24);
+  const [loadingWindow, setLoadingWindow] = useState(false);
   const [showRoutine, setShowRoutine] = useState(false);
   const windowLabel = digest.window;
+
+  async function handleWindowChange(hours: number) {
+    setSelectedHours(hours);
+    setLoadingWindow(true);
+    try {
+      const res = await fetch(`/api/digest?hours=${hours}`);
+      if (res.ok) {
+        const nextDigest = (await res.json()) as DigestData;
+        setDigest(nextDigest);
+      }
+    } finally {
+      setLoadingWindow(false);
+    }
+  }
 
   const now = new Date();
   const greeting =
@@ -99,19 +123,39 @@ export function BriefingPage({ digest }: { digest: DigestData }) {
         </div>
 
         {/* Window + data freshness */}
-        <div className="flex items-center gap-1.5 mt-1 flex-wrap">
-          <Clock className="w-3 h-3 text-finn-muted" />
-          <span className="text-2xs text-finn-muted">Last {windowLabel}</span>
-          <span className="text-2xs text-finn-muted">·</span>
-          <span className="text-2xs text-finn-muted">
-            {digest.prices_as_of ? `EOD prices ${digest.prices_as_of}` : "no price data"}
-          </span>
-          {digest.announcements_ingested && (
-            <>
-              <span className="text-2xs text-finn-muted">·</span>
-              <span className="text-2xs text-finn-accent">{materialCount} material</span>
-            </>
-          )}
+        <div className="flex items-center justify-between gap-2 mt-1.5 flex-wrap">
+          <div className="flex items-center gap-1.5 flex-wrap">
+            <Clock className="w-3 h-3 text-finn-muted" />
+            <span className="text-2xs text-finn-muted">
+              {loadingWindow ? "Loading…" : `Window ${windowLabel}`}
+            </span>
+            <span className="text-2xs text-finn-muted">·</span>
+            <span className="text-2xs text-finn-muted">
+              {digest.prices_as_of ? `EOD prices ${digest.prices_as_of}` : "no price data"}
+            </span>
+            {materialCount > 0 && (
+              <>
+                <span className="text-2xs text-finn-muted">·</span>
+                <span className="text-2xs text-finn-accent">{materialCount} material</span>
+              </>
+            )}
+          </div>
+          <div className="flex items-center gap-1 bg-finn-surface rounded-lg p-0.5 border border-finn-border">
+            {WINDOW_OPTIONS.map((opt) => (
+              <button
+                key={opt.hours}
+                onClick={() => handleWindowChange(opt.hours)}
+                className={cn(
+                  "px-2 py-0.5 rounded text-2xs font-mono transition-colors",
+                  selectedHours === opt.hours
+                    ? "bg-finn-accent text-white font-semibold"
+                    : "text-finn-muted hover:text-finn-text"
+                )}
+              >
+                {opt.label}
+              </button>
+            ))}
+          </div>
         </div>
       </header>
 
@@ -144,13 +188,19 @@ export function BriefingPage({ digest }: { digest: DigestData }) {
         </section>
       )}
 
-      {/* ─── Filings: honest empty state until the announcement pipeline has run ─── */}
-      {!digest.announcements_ingested && (
-        <EmptyState
-          title="No filings ingested yet"
-          body="The BSE announcement pipeline hasn't produced data for this window. Filings will appear here, ranked by materiality, once it runs. Nothing on this screen is placeholder content."
-        />
-      )}
+      {/* ─── Filings: honest empty state when window has 0 announcements ─── */}
+      {digest.material.length === 0 &&
+        digest.notable.length === 0 &&
+        digest.routine.length === 0 && (
+          <EmptyState
+            title={`No portfolio filings in the last ${windowLabel}`}
+            body={
+              digest.announcements_ingested
+                ? "Zero corporate filings occurred inside this lookback window. Switch the window selector above to 14d, 30d, or 120d to inspect ingested Q2/Q1 FY27 results filings."
+                : "The announcement pipeline hasn't produced data yet. Nothing on this screen is placeholder content."
+            }
+          />
+        )}
 
       {/* ─── What Matters ─── */}
       {digest.material.length > 0 && (

@@ -1,0 +1,77 @@
+[
+  {
+    "id": "reliance-results-reliance_q1fy27",
+    "ticker": "RELIANCE.NS",
+    "company_name": "Reliance Industries Limited",
+    "timestamp": "2026-07-17T19:07:44+05:30",
+    "headline": "Outcome of Board Meeting — Unaudited Consolidated and Standalone Financial Results for Q1 FY27 (quarter ended Jun 30, 2026)",
+    "category": "results",
+    "priority": 1,
+    "summary": "Q1 FY27 (consolidated): Revenue ₹311,850 Cr (+25.4% YoY, +4.4% QoQ); Operating EBITDA ₹47,517 Cr (+10.8% YoY, margin 15.2%); PAT ₹23,196 Cr (-24.6% YoY, +12.7% QoQ).",
+    "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_17072026190726_SE_FR_1.pdf",
+    "raw_text": "Outcome of Board Meeting — Unaudited Consolidated and Standalone Financial Results for Q1 FY27 (quarter ended Jun 30, 2026)",
+    "enrichment": {
+      "status": "ok",
+      "quarter": "Q1 FY27",
+      "basis": "consolidated",
+      "entity_type": "corporate",
+      "reported_unit": "crore",
+      "normalised_unit": "crore",
+      "source_page": 9,
+      "vision_used": true,
+      "ebitda_status": "derived_from_schedule_iii",
+      "revenue_label": "Revenue from Operations",
+      "period_ended": {
+        "current": "2026-06-30",
+        "previous": "2026-03-31",
+        "year_ago": "2025-06-30"
+      },
+      "revenue": {
+        "value": 311850.0,
+        "previous_quarter": 298621.0,
+        "year_ago_quarter": 248660.0,
+        "qoq": 4.43,
+        "yoy": 25.41
+      },
+      "ebitda": {
+        "value": 47517.0,
+        "previous_quarter": 44141.0,
+        "year_ago_quarter": 42905.0,
+        "qoq": 7.65,
+        "yoy": 10.75
+      },
+      "operating_profit_ex_provisions": null,
+      "pbt": {
+        "value": 30630.0,
+        "previous_quarter": 27195.0,
+        "year_ago_quarter": 37146.0,
+        "qoq": 12.63,
+        "yoy": -17.54
+      },
+      "pat": {
+        "value": 23196.0,
+        "previous_quarter": 20589.0,
+        "year_ago_quarter": 30783.0,
+        "qoq": 12.66,
+        "yoy": -24.65
+      },
+      "pat_owners": {
+        "value": 20946.0,
+        "previous_quarter": 16971.0,
+        "year_ago_quarter": 26994.0,
+        "qoq": 23.42,
+        "yoy": -22.4
+      },
+      "validation": {
+        "passed": true,
+        "flags": []
+      },
+      "highlights": "Basis: Consolidated · Normalised from ₹ crore (Page 9 via vision) · EBITDA derived from schedule iii"
+    },
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 3397,
+      "out": 580
+    }
+  }
+]

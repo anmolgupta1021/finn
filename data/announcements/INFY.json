@@ -1,0 +1,77 @@
+[
+  {
+    "id": "infy-results-infy_q2fy27",
+    "ticker": "INFY.NS",
+    "company_name": "Infosys Limited",
+    "timestamp": "2026-10-23T16:08:26+05:30",
+    "headline": "Outcome of Board Meeting — Audited Consolidated and Standalone Financial Results for Q2 FY27 (quarter ended Sep 30, 2026)",
+    "category": "results",
+    "priority": 1,
+    "summary": "Q2 FY27 (consolidated): Revenue ₹49,244 Cr (+10.7% YoY, +2.1% QoQ); Operating EBITDA ₹11,689 Cr (+10.9% YoY, margin 23.7%); PAT ₹7,838 Cr (+6.3% YoY, +0.8% QoQ).",
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_23102026160704_BM_Outcome_Oct232026_1.pdf",
+    "raw_text": "Outcome of Board Meeting — Audited Consolidated and Standalone Financial Results for Q2 FY27 (quarter ended Sep 30, 2026)",
+    "enrichment": {
+      "status": "ok",
+      "quarter": "Q2 FY27",
+      "basis": "consolidated",
+      "entity_type": "corporate",
+      "reported_unit": "crore",
+      "normalised_unit": "crore",
+      "source_page": 18,
+      "vision_used": true,
+      "ebitda_status": "derived_from_schedule_iii",
+      "revenue_label": "Revenue from Operations",
+      "period_ended": {
+        "current": "2026-09-30",
+        "previous": "2026-06-30",
+        "year_ago": "2025-09-30"
+      },
+      "revenue": {
+        "value": 49244.0,
+        "previous_quarter": 48211.0,
+        "year_ago_quarter": 44490.0,
+        "qoq": 2.14,
+        "yoy": 10.69
+      },
+      "ebitda": {
+        "value": 11689.0,
+        "previous_quarter": 11409.0,
+        "year_ago_quarter": 10535.0,
+        "qoq": 2.45,
+        "yoy": 10.95
+      },
+      "operating_profit_ex_provisions": null,
+      "pbt": {
+        "value": 11063.0,
+        "previous_quarter": 11028.0,
+        "year_ago_quarter": 10229.0,
+        "qoq": 0.32,
+        "yoy": 8.15
+      },
+      "pat": {
+        "value": 7838.0,
+        "previous_quarter": 7775.0,
+        "year_ago_quarter": 7375.0,
+        "qoq": 0.81,
+        "yoy": 6.28
+      },
+      "pat_owners": {
+        "value": 7823.0,
+        "previous_quarter": 7769.0,
+        "year_ago_quarter": 7364.0,
+        "qoq": 0.7,
+        "yoy": 6.23
+      },
+      "validation": {
+        "passed": true,
+        "flags": []
+      },
+      "highlights": "Basis: Consolidated · Normalised from ₹ crore (Page 18 via vision) · EBITDA derived from schedule iii"
+    },
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 4588,
+      "out": 603
+    }
+  }
+]

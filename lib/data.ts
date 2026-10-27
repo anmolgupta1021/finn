@@ -109,12 +109,15 @@ export function getDigest(windowHours = 24): DigestData {
   const announcements: Announcement[] = [];
   const missingPrices: string[] = [];
   let pricesAsOf: string | null = null;
+  let totalOnDisk = 0;
 
   const cutoff = Date.now() - windowHours * 3600 * 1000;
 
   for (const s of held) {
     const p = getPrices(s.ticker);
-    const anns = getAnnouncements(s.ticker).filter((a) => {
+    const allTickerAnns = getAnnouncements(s.ticker);
+    totalOnDisk += allTickerAnns.length;
+    const anns = allTickerAnns.filter((a) => {
       const t = Date.parse(a.timestamp);
       return Number.isNaN(t) || t >= cutoff;
     });
@@ -138,12 +141,17 @@ export function getDigest(windowHours = 24): DigestData {
 
   announcements.sort((a, b) => a.priority - b.priority || b.timestamp.localeCompare(a.timestamp));
 
+  const windowLabel =
+    windowHours >= 24 && windowHours % 24 === 0
+      ? `${windowHours / 24}d`
+      : `${windowHours}h`;
+
   return {
     generated_at: new Date().toISOString(),
-    window: `${windowHours}h`,
+    window: windowLabel,
     prices_as_of: pricesAsOf,
     missing_prices: missingPrices,
-    announcements_ingested: announcements.length > 0,
+    announcements_ingested: totalOnDisk > 0,
     material: announcements.filter((a) => a.priority === 1),
     notable: announcements.filter((a) => a.priority === 2),
     routine: announcements.filter((a) => a.priority === 3),

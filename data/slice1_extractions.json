@@ -1,0 +1,920 @@
+[
+  {
+    "status": "ok",
+    "ticker": "ICICIBANK.NS",
+    "company_name": "ICICI Bank Limited",
+    "pdf_file": "ICICIBANK_Q2FY27.pdf",
+    "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_17102026152039_NSEBSE17102026.pdf",
+    "source_page": 13,
+    "vision_used": false,
+    "basis": "consolidated",
+    "entity_type": "bank",
+    "reported_unit": "crore",
+    "normalised_unit": "crore",
+    "quarter": "Q2 FY27",
+    "period_ended": {
+      "current": "2026-09-30",
+      "previous": "2026-06-30",
+      "year_ago": "2025-09-30"
+    },
+    "ebitda_status": "not_applicable",
+    "revenue_label": "Total Income",
+    "revenue": {
+      "value": 88161.18,
+      "previous_quarter": 79689.22,
+      "year_ago_quarter": 76146.59,
+      "qoq": 10.63,
+      "yoy": 15.78
+    },
+    "ebitda": null,
+    "operating_profit_ex_provisions": {
+      "value": 24009.97,
+      "previous_quarter": 22604.33,
+      "year_ago_quarter": 19973.89,
+      "qoq": 6.22,
+      "yoy": 20.21
+    },
+    "pbt": {
+      "value": 23191.75,
+      "previous_quarter": 21373.61,
+      "year_ago_quarter": 19126.33,
+      "qoq": 8.51,
+      "yoy": 21.26
+    },
+    "pat": {
+      "value": 16333.18,
+      "previous_quarter": 15440.06,
+      "year_ago_quarter": 13357.06,
+      "qoq": 5.78,
+      "yoy": 22.28
+    },
+    "pat_owners": null,
+    "raw_in_reported_unit": {
+      "unit": "crore",
+      "revenue": {
+        "current": 88161.18,
+        "previous": 79689.22,
+        "year_ago": 76146.59
+      },
+      "total_expenses": {
+        "current": null,
+        "previous": null,
+        "year_ago": null
+      },
+      "finance_costs": {
+        "current": null,
+        "previous": null,
+        "year_ago": null
+      },
+      "depreciation_amortisation": {
+        "current": null,
+        "previous": null,
+        "year_ago": null
+      },
+      "operating_profit_before_provisions": {
+        "current": 24009.97,
+        "previous": 22604.33,
+        "year_ago": 19973.89
+      },
+      "ebitda_in_reported_unit": {
+        "current": null,
+        "previous": null,
+        "year_ago": null
+      },
+      "pbt": {
+        "current": 23191.75,
+        "previous": 21373.61,
+        "year_ago": 19126.33
+      },
+      "pat": {
+        "current": 16333.18,
+        "previous": 15440.06,
+        "year_ago": 13357.06
+      },
+      "pat_owners": {
+        "current": null,
+        "previous": null,
+        "year_ago": null
+      }
+    },
+    "validation": {
+      "passed": true,
+      "flags": []
+    },
+    "summary": "Q2 FY27 (consolidated): Total income ₹88,161 Cr (+15.8% YoY, +10.6% QoQ); PAT ₹16,333 Cr (+22.3% YoY, +5.8% QoQ). Operating profit (ex-provisions) ₹24,010 Cr (+20.2% YoY).",
+    "highlights": "Basis: Consolidated · Unit normalised from ₹ crore · Page 13 · Bank format (EBITDA N/A)",
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 3876,
+      "out": 609
+    },
+    "paid_tier_equivalent_usd": 0.000631
+  },
+  {
+    "status": "ok",
+    "ticker": "INFY.NS",
+    "company_name": "Infosys Limited",
+    "pdf_file": "INFY_Q2FY27.pdf",
+    "source_url": "https://nsearchives.nseindia.com/corporate/Infosys_23102026160704_BM_Outcome_Oct232026_1.pdf",
+    "source_page": 18,
+    "vision_used": true,
+    "basis": "consolidated",
+    "entity_type": "corporate",
+    "reported_unit": "crore",
+    "normalised_unit": "crore",
+    "quarter": "Q2 FY27",
+    "period_ended": {
+      "current": "2026-09-30",
+      "previous": "2026-06-30",
+      "year_ago": "2025-09-30"
+    },
+    "ebitda_status": "derived_from_schedule_iii",
+    "revenue_label": "Revenue from Operations",
+    "revenue": {
+      "value": 49244.0,
+      "previous_quarter": 48211.0,
+      "year_ago_quarter": 44490.0,
+      "qoq": 2.14,
+      "yoy": 10.69
+    },
+    "ebitda": {
+      "value": 11689.0,
+      "previous_quarter": 11409.0,
+      "year_ago_quarter": 10535.0,
+      "qoq": 2.45,
+      "yoy": 10.95
+    },
+    "operating_profit_ex_provisions": null,
+    "pbt": {
+      "value": 11063.0,
+      "previous_quarter": 11028.0,
+      "year_ago_quarter": 10229.0,
+      "qoq": 0.32,
+      "yoy": 8.15
+    },
+    "pat": {
+      "value": 7838.0,
+      "previous_quarter": 7775.0,
+      "year_ago_quarter": 7375.0,
+      "qoq": 0.81,
+      "yoy": 6.28
+    },
+    "pat_owners": {
+      "value": 7823.0,
+      "previous_quarter": 7769.0,
+      "year_ago_quarter": 7364.0,
+      "qoq": 0.7,
+      "yoy": 6.23
+    },
+    "raw_in_reported_unit": {
+      "unit": "crore",
+      "revenue": {
+        "current": 49244,
+        "previous": 48211,
+        "year_ago": 44490
+      },
+      "total_expenses": {
+        "current": 39029,
+        "previous": 38167,
+        "year_ago": 35243
+      },
+      "finance_costs": {
+        "current": 115,
+        "previous": 119,
+        "year_ago": 106
+      },
+      "depreciation_amortisation": {
+        "current": 1359,
+        "previous": 1246,
+        "year_ago": 1182
+      },
+      "operating_profit_before_provisions": {
+        "current": null,
+        "previous": null,
+        "year_ago": null
+      },
+      "ebitda_in_reported_unit": {
+        "current": 11689.0,
+        "previous": 11409.0,
+        "year_ago": 10535.0
+      },
+      "pbt": {
+        "current": 11063,
+        "previous": 11028,
+        "year_ago": 10229
+      },
+      "pat": {
+        "current": 7838,
+        "previous": 7775,
+        "year_ago": 7375
+      },
+      "pat_owners": {
+        "current": 7823,
+        "previous": 7769,
+        "year_ago": 7364
+      }
+    },
+    "validation": {
+      "passed": true,
+      "flags": []
+    },
+    "summary": "Q2 FY27 (consolidated): Revenue ₹49,244 Cr (+10.7% YoY, +2.1% QoQ); Operating EBITDA ₹11,689 Cr (+10.9% YoY, margin 23.7%); PAT ₹7,838 Cr (+6.3% YoY, +0.8% QoQ).",
+    "highlights": "Basis: Consolidated · Normalised from ₹ crore (Page 18 via vision) · EBITDA derived from schedule iii",
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 4588,
+      "out": 603
+    },
+    "paid_tier_equivalent_usd": 0.0007
+  },
+  {
+    "status": "ok",
+    "ticker": "TCS.NS",
+    "company_name": "Tata Consultancy Services Limited",
+    "pdf_file": "TCS_Q2FY27.pdf",
+    "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_08102026153124_Post_BM_SE_Letter_fin.pdf",
+    "source_page": 8,
+    "vision_used": false,
+    "basis": "consolidated",
+    "entity_type": "corporate",
+    "reported_unit": "crore",
+    "normalised_unit": "crore",
+    "quarter": "Q2 FY27",
+    "period_ended": {
+      "current": "2026-09-30",
+      "previous": "2026-06-30",
+      "year_ago": "2025-09-30"
+    },
+    "ebitda_status": "derived_from_schedule_iii",
+    "revenue_label": "Revenue from Operations",
+    "revenue": {
+      "value": 73188.0,
+      "previous_quarter": 72275.0,
+      "year_ago_quarter": 65799.0,
+      "qoq": 1.26,
+      "yoy": 11.23
+    },
+    "ebitda": {
+      "value": 18815.0,
+      "previous_quarter": 18556.0,
+      "year_ago_quarter": 17978.0,
+      "qoq": 1.4,
+      "yoy": 4.66
+    },
+    "operating_profit_ex_provisions": null,
+    "pbt": {
+      "value": 18638.0,
+      "previous_quarter": 17944.0,
+      "year_ago_quarter": 16068.0,
+      "qoq": 3.87,
+      "yoy": 15.99
+    },
+    "pat": {
+      "value": 13934.0,
+      "previous_quarter": 13420.0,
+      "year_ago_quarter": 12131.0,
+      "qoq": 3.83,
+      "yoy": 14.86
+    },
+    "pat_owners": {
+      "value": 13884.0,
+      "previous_quarter": 13349.0,
+      "year_ago_quarter": 12075.0,
+      "qoq": 4.01,
+      "yoy": 14.98
+    },
+    "raw_in_reported_unit": {
+      "unit": "crore",
+      "revenue": {
+        "current": 73188,
+        "previous": 72275,
+        "year_ago": 65799
+      },
+      "total_expenses": {
+        "current": 55887,
+        "previous": 55231,
+        "year_ago": 49463
+      },
+      "finance_costs": {
+        "current": 252,
+        "previous": 273,
+        "year_ago": 229
+      },
+      "depreciation_amortisation": {
+        "current": 1262,
+        "previous": 1239,
+        "year_ago": 1413
+      },
+      "operating_profit_before_provisions": {
+        "current": null,
+        "previous": null,
+        "year_ago": null
+      },
+      "ebitda_in_reported_unit": {
+        "current": 18815.0,
+        "previous": 18556.0,
+        "year_ago": 17978.0
+      },
+      "pbt": {
+        "current": 18638,
+        "previous": 17944,
+        "year_ago": 16068
+      },
+      "pat": {
+        "current": 13934,
+        "previous": 13420,
+        "year_ago": 12131
+      },
+      "pat_owners": {
+        "current": 13884,
+        "previous": 13349,
+        "year_ago": 12075
+      }
+    },
+    "validation": {
+      "passed": true,
+      "flags": []
+    },
+    "summary": "Q2 FY27 (consolidated): Revenue ₹73,188 Cr (+11.2% YoY, +1.3% QoQ); Operating EBITDA ₹18,815 Cr (+4.7% YoY, margin 25.7%); PAT ₹13,934 Cr (+14.9% YoY, +3.8% QoQ).",
+    "highlights": "Basis: Consolidated · Normalised from ₹ crore (Page 8) · EBITDA derived from schedule iii",
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 3300,
+      "out": 611
+    },
+    "paid_tier_equivalent_usd": 0.000574
+  },
+  {
+    "status": "ok",
+    "ticker": "RELIANCE.NS",
+    "company_name": "Reliance Industries Limited",
+    "pdf_file": "RELIANCE_Q1FY27.pdf",
+    "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_17072026190726_SE_FR_1.pdf",
+    "source_page": 9,
+    "vision_used": true,
+    "basis": "consolidated",
+    "entity_type": "corporate",
+    "reported_unit": "crore",
+    "normalised_unit": "crore",
+    "quarter": "Q1 FY27",
+    "period_ended": {
+      "current": "2026-06-30",
+      "previous": "2026-03-31",
+      "year_ago": "2025-06-30"
+    },
+    "ebitda_status": "derived_from_schedule_iii",
+    "revenue_label": "Revenue from Operations",
+    "revenue": {
+      "value": 311850.0,
+      "previous_quarter": 298621.0,
+      "year_ago_quarter": 248660.0,
+      "qoq": 4.43,
+      "yoy": 25.41
+    },
+    "ebitda": {
+      "value": 47517.0,
+      "previous_quarter": 44141.0,
+      "year_ago_quarter": 42905.0,
+      "qoq": 7.65,
+      "yoy": 10.75
+    },
+    "operating_profit_ex_provisions": null,
+    "pbt": {
+      "value": 30630.0,
+      "previous_quarter": 27195.0,
+      "year_ago_quarter": 37146.0,
+      "qoq": 12.63,
+      "yoy": -17.54
+    },
+    "pat": {
+      "value": 23196.0,
+      "previous_quarter": 20589.0,
+      "year_ago_quarter": 30783.0,
+      "qoq": 12.66,
+      "yoy": -24.65
+    },
+    "pat_owners": {
+      "value": 20946.0,
+      "previous_quarter": 16971.0,
+      "year_ago_quarter": 26994.0,
+      "qoq": 23.42,
+      "yoy": -22.4
+    },
+    "raw_in_reported_unit": {
+      "unit": "crore",
+      "revenue": {
+        "current": 311850,
+        "previous": 298621,
+        "year_ago": 248660
+      },
+      "total_expenses": {
+        "current": 287770,
+        "previous": 275873,
+        "year_ago": 226633
+      },
+      "finance_costs": {
+        "current": 8337,
+        "previous": 6585,
+        "year_ago": 7036
+      },
+      "depreciation_amortisation": {
+        "current": 15100,
+        "previous": 14808,
+        "year_ago": 13842
+      },
+      "operating_profit_before_provisions": null,
+      "ebitda_in_reported_unit": {
+        "current": 47517.0,
+        "previous": 44141.0,
+        "year_ago": 42905.0
+      },
+      "pbt": {
+        "current": 30630,
+        "previous": 27195,
+        "year_ago": 37146
+      },
+      "pat": {
+        "current": 23196,
+        "previous": 20589,
+        "year_ago": 30783
+      },
+      "pat_owners": {
+        "current": 20946,
+        "previous": 16971,
+        "year_ago": 26994
+      }
+    },
+    "validation": {
+      "passed": true,
+      "flags": []
+    },
+    "summary": "Q1 FY27 (consolidated): Revenue ₹311,850 Cr (+25.4% YoY, +4.4% QoQ); Operating EBITDA ₹47,517 Cr (+10.8% YoY, margin 15.2%); PAT ₹23,196 Cr (-24.6% YoY, +12.7% QoQ).",
+    "highlights": "Basis: Consolidated · Normalised from ₹ crore (Page 9 via vision) · EBITDA derived from schedule iii",
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 3397,
+      "out": 580
+    },
+    "paid_tier_equivalent_usd": 0.000572
+  },
+  {
+    "status": "ok",
+    "ticker": "SUNPHARMA.NS",
+    "company_name": "Sun Pharmaceutical Industries Limited",
+    "pdf_file": "SUNPHARMA_Q1FY27.pdf",
+    "source_url": "https://nsearchives.nseindia.com/corporate/SUNSEC_31072026142955_BMOutcomewithannexures31072026.pdf",
+    "source_page": 10,
+    "vision_used": false,
+    "basis": "consolidated",
+    "entity_type": "corporate",
+    "reported_unit": "million",
+    "normalised_unit": "crore",
+    "quarter": "Q1 FY27",
+    "period_ended": {
+      "current": "2026-06-30",
+      "previous": "2026-03-31",
+      "year_ago": "2025-06-30"
+    },
+    "ebitda_status": "derived_from_schedule_iii",
+    "revenue_label": "Revenue from Operations",
+    "revenue": {
+      "value": 15299.88,
+      "previous_quarter": 14611.79,
+      "year_ago_quarter": 13851.4,
+      "qoq": 4.71,
+      "yoy": 10.46
+    },
+    "ebitda": {
+      "value": 4417.67,
+      "previous_quarter": 3954.2,
+      "year_ago_quarter": 4301.66,
+      "qoq": 11.72,
+      "yoy": 2.7
+    },
+    "operating_profit_ex_provisions": null,
+    "pbt": {
+      "value": 4098.81,
+      "previous_quarter": 3551.34,
+      "year_ago_quarter": 3172.77,
+      "qoq": 15.42,
+      "yoy": 29.19
+    },
+    "pat": {
+      "value": 2894.79,
+      "previous_quarter": 2714.03,
+      "year_ago_quarter": 2278.63,
+      "qoq": 6.66,
+      "yoy": 27.04
+    },
+    "pat_owners": null,
+    "raw_in_reported_unit": {
+      "unit": "million",
+      "revenue": {
+        "current": 152998.8,
+        "previous": 146117.9,
+        "year_ago": 138514.0
+      },
+      "total_expenses": {
+        "current": 117206.0,
+        "previous": 115189.5,
+        "year_ago": 103250.9
+      },
+      "finance_costs": {
+        "current": 996.7,
+        "previous": 858.9,
+        "year_ago": 748.0
+      },
+      "depreciation_amortisation": {
+        "current": 7387.2,
+        "previous": 7754.7,
+        "year_ago": 7005.5
+      },
+      "operating_profit_before_provisions": {
+        "current": null,
+        "previous": null,
+        "year_ago": null
+      },
+      "ebitda_in_reported_unit": {
+        "current": 44176.7,
+        "previous": 39542.0,
+        "year_ago": 43016.6
+      },
+      "pbt": {
+        "current": 40988.1,
+        "previous": 35513.4,
+        "year_ago": 31727.7
+      },
+      "pat": {
+        "current": 28947.9,
+        "previous": 27140.3,
+        "year_ago": 22786.3
+      },
+      "pat_owners": {
+        "current": null,
+        "previous": null,
+        "year_ago": null
+      }
+    },
+    "validation": {
+      "passed": true,
+      "flags": []
+    },
+    "summary": "Q1 FY27 (consolidated): Revenue ₹15,300 Cr (+10.5% YoY, +4.7% QoQ); Operating EBITDA ₹4,418 Cr (+2.7% YoY, margin 28.9%); PAT ₹2,895 Cr (+27.0% YoY, +6.7% QoQ).",
+    "highlights": "Basis: Consolidated · Normalised from ₹ million (Page 10) · EBITDA derived from schedule iii",
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 3243,
+      "out": 653
+    },
+    "paid_tier_equivalent_usd": 0.000585
+  },
+  {
+    "status": "ok",
+    "ticker": "MARUTI.NS",
+    "company_name": "Maruti Suzuki India Limited",
+    "pdf_file": "MARUTI_Q1FY27.pdf",
+    "source_url": "https://nsearchives.nseindia.com/corporate/MARUTI_31072026163813_QuickResults_Q1_FY2026_27.pdf",
+    "source_page": 4,
+    "vision_used": true,
+    "basis": "consolidated",
+    "entity_type": "corporate",
+    "reported_unit": "million",
+    "normalised_unit": "crore",
+    "quarter": "Q1 FY27",
+    "period_ended": {
+      "current": "2026-06-30",
+      "previous": "2026-03-31",
+      "year_ago": "2025-06-30"
+    },
+    "ebitda_status": "derived_from_schedule_iii",
+    "revenue_label": "Revenue from Operations",
+    "revenue": {
+      "value": 52469.8,
+      "previous_quarter": 52462.5,
+      "year_ago_quarter": 38605.2,
+      "qoq": 0.01,
+      "yoy": 35.91
+    },
+    "ebitda": {
+      "value": 4313.3,
+      "previous_quarter": 6158.3,
+      "year_ago_quarter": 4622.6,
+      "qoq": -29.96,
+      "yoy": -6.69
+    },
+    "operating_profit_ex_provisions": null,
+    "pbt": {
+      "value": 4441.2,
+      "previous_quarter": 4918.4,
+      "year_ago_quarter": 4943.5,
+      "qoq": -9.7,
+      "yoy": -10.16
+    },
+    "pat": {
+      "value": 3446.9,
+      "previous_quarter": 3659.0,
+      "year_ago_quarter": 3792.4,
+      "qoq": -5.8,
+      "yoy": -9.11
+    },
+    "pat_owners": {
+      "value": 3446.9,
+      "previous_quarter": 3659.0,
+      "year_ago_quarter": 3792.4,
+      "qoq": -5.8,
+      "yoy": -9.11
+    },
+    "raw_in_reported_unit": {
+      "unit": "million",
+      "revenue": {
+        "current": 524698,
+        "previous": 524625,
+        "year_ago": 386052
+      },
+      "total_expenses": {
+        "current": 500003,
+        "previous": 481253,
+        "year_ago": 355854
+      },
+      "finance_costs": {
+        "current": 635,
+        "previous": 730,
+        "year_ago": 468
+      },
+      "depreciation_amortisation": {
+        "current": 17803,
+        "previous": 17481,
+        "year_ago": 15560
+      },
+      "operating_profit_before_provisions": null,
+      "ebitda_in_reported_unit": {
+        "current": 43133.0,
+        "previous": 61583.0,
+        "year_ago": 46226.0
+      },
+      "pbt": {
+        "current": 44412,
+        "previous": 49184,
+        "year_ago": 49435
+      },
+      "pat": {
+        "current": 34469,
+        "previous": 36590,
+        "year_ago": 37924
+      },
+      "pat_owners": {
+        "current": 34469,
+        "previous": 36590,
+        "year_ago": 37924
+      }
+    },
+    "validation": {
+      "passed": true,
+      "flags": []
+    },
+    "summary": "Q1 FY27 (consolidated): Revenue ₹52,470 Cr (+35.9% YoY, +0.0% QoQ); Operating EBITDA ₹4,313 Cr (-6.7% YoY, margin 8.2%); PAT ₹3,447 Cr (-9.1% YoY, -5.8% QoQ).",
+    "highlights": "Basis: Consolidated · Normalised from ₹ million (Page 4 via vision) · EBITDA derived from schedule iii",
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 4154,
+      "out": 577
+    },
+    "paid_tier_equivalent_usd": 0.000646
+  },
+  {
+    "status": "ok",
+    "ticker": "ITC.NS",
+    "company_name": "ITC Limited",
+    "pdf_file": "ITC_Q1FY27.pdf",
+    "source_url": "https://nsearchives.nseindia.com/corporate/ITC_31072026162945_Results.pdf",
+    "source_page": 6,
+    "vision_used": false,
+    "basis": "consolidated",
+    "entity_type": "corporate",
+    "reported_unit": "crore",
+    "normalised_unit": "crore",
+    "quarter": "Q1 FY27",
+    "period_ended": {
+      "current": "2026-06-30",
+      "previous": "2026-03-31",
+      "year_ago": "2025-06-30"
+    },
+    "ebitda_status": "derived_from_schedule_iii",
+    "revenue_label": "Revenue from Operations",
+    "revenue": {
+      "value": 29523.3,
+      "previous_quarter": 23821.48,
+      "year_ago_quarter": 23129.35,
+      "qoq": 23.94,
+      "yoy": 27.64
+    },
+    "ebitda": {
+      "value": 5180.86,
+      "previous_quarter": 6924.23,
+      "year_ago_quarter": 6816.47,
+      "qoq": -25.18,
+      "yoy": -23.99
+    },
+    "operating_profit_ex_provisions": null,
+    "pbt": {
+      "value": 5860.85,
+      "previous_quarter": 7172.62,
+      "year_ago_quarter": 7128.01,
+      "qoq": -18.29,
+      "yoy": -17.78
+    },
+    "pat": {
+      "value": 4508.79,
+      "previous_quarter": 5469.74,
+      "year_ago_quarter": 5343.41,
+      "qoq": -17.57,
+      "yoy": -15.62
+    },
+    "pat_owners": {
+      "value": 4394.13,
+      "previous_quarter": 5387.97,
+      "year_ago_quarter": 5244.2,
+      "qoq": -18.45,
+      "yoy": -16.21
+    },
+    "raw_in_reported_unit": {
+      "unit": "crore",
+      "revenue": {
+        "current": 29523.3,
+        "previous": 23821.48,
+        "year_ago": 23129.35
+      },
+      "total_expenses": {
+        "current": 24809.95,
+        "previous": 17348.38,
+        "year_ago": 16752.31
+      },
+      "finance_costs": {
+        "current": 39.78,
+        "previous": 29.18,
+        "year_ago": 16.47
+      },
+      "depreciation_amortisation": {
+        "current": 427.73,
+        "previous": 421.95,
+        "year_ago": 422.96
+      },
+      "operating_profit_before_provisions": {
+        "current": null,
+        "previous": null,
+        "year_ago": null
+      },
+      "ebitda_in_reported_unit": {
+        "current": 5180.86,
+        "previous": 6924.23,
+        "year_ago": 6816.47
+      },
+      "pbt": {
+        "current": 5860.85,
+        "previous": 7172.62,
+        "year_ago": 7128.01
+      },
+      "pat": {
+        "current": 4508.79,
+        "previous": 5469.74,
+        "year_ago": 5343.41
+      },
+      "pat_owners": {
+        "current": 4394.13,
+        "previous": 5387.97,
+        "year_ago": 5244.2
+      }
+    },
+    "validation": {
+      "passed": true,
+      "flags": []
+    },
+    "summary": "Q1 FY27 (consolidated): Revenue ₹29,523 Cr (+27.6% YoY, +23.9% QoQ); Operating EBITDA ₹5,181 Cr (-24.0% YoY, margin 17.5%); PAT ₹4,509 Cr (-15.6% YoY, -17.6% QoQ).",
+    "highlights": "Basis: Consolidated · Normalised from ₹ crore (Page 6) · EBITDA derived from schedule iii",
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 3126,
+      "out": 675
+    },
+    "paid_tier_equivalent_usd": 0.000583
+  },
+  {
+    "status": "ok",
+    "ticker": "PAGEIND.NS",
+    "company_name": "Page Industries Limited",
+    "pdf_file": "PAGEIND_Q1FY27.pdf",
+    "source_url": "https://nsearchives.nseindia.com/corporate/PAGEIND_13082026143650_RESULTS30JUNE2026.pdf",
+    "source_page": 2,
+    "vision_used": false,
+    "basis": "standalone",
+    "entity_type": "corporate",
+    "reported_unit": "lakh",
+    "normalised_unit": "crore",
+    "quarter": "Q1 FY27",
+    "period_ended": {
+      "current": "2026-06-30",
+      "previous": "2026-03-31",
+      "year_ago": "2025-06-30"
+    },
+    "ebitda_status": "derived_from_schedule_iii",
+    "revenue_label": "Revenue from Operations",
+    "revenue": {
+      "value": 1420.45,
+      "previous_quarter": 1252.6,
+      "year_ago_quarter": 1316.56,
+      "qoq": 13.4,
+      "yoy": 7.89
+    },
+    "ebitda": {
+      "value": 289.0,
+      "previous_quarter": 260.55,
+      "year_ago_quarter": 294.69,
+      "qoq": 10.92,
+      "yoy": -1.93
+    },
+    "operating_profit_ex_provisions": null,
+    "pbt": {
+      "value": 258.57,
+      "previous_quarter": 237.8,
+      "year_ago_quarter": 270.21,
+      "qoq": 8.73,
+      "yoy": -4.31
+    },
+    "pat": {
+      "value": 192.81,
+      "previous_quarter": 178.73,
+      "year_ago_quarter": 200.8,
+      "qoq": 7.88,
+      "yoy": -3.98
+    },
+    "pat_owners": null,
+    "raw_in_reported_unit": {
+      "unit": "lakh",
+      "revenue": {
+        "current": 142044.53,
+        "previous": 125259.94,
+        "year_ago": 131656.11
+      },
+      "total_expenses": {
+        "current": 117248.86,
+        "previous": 103196.47,
+        "year_ago": 106115.48
+      },
+      "finance_costs": {
+        "current": 1243.33,
+        "previous": 1188.05,
+        "year_ago": 1265.97
+      },
+      "depreciation_amortisation": {
+        "current": 2861.33,
+        "previous": 2803.83,
+        "year_ago": 2662.38
+      },
+      "operating_profit_before_provisions": {
+        "current": null,
+        "previous": null,
+        "year_ago": null
+      },
+      "ebitda_in_reported_unit": {
+        "current": 28900.33,
+        "previous": 26055.35,
+        "year_ago": 29468.98
+      },
+      "pbt": {
+        "current": 25857.13,
+        "previous": 23780.13,
+        "year_ago": 27021.44
+      },
+      "pat": {
+        "current": 19280.62,
+        "previous": 17873.04,
+        "year_ago": 20079.62
+      },
+      "pat_owners": {
+        "current": null,
+        "previous": null,
+        "year_ago": null
+      }
+    },
+    "validation": {
+      "passed": true,
+      "flags": []
+    },
+    "summary": "Q1 FY27 (standalone): Revenue ₹1,420 Cr (+7.9% YoY, +13.4% QoQ); Operating EBITDA ₹289 Cr (-1.9% YoY, margin 20.3%); PAT ₹193 Cr (-4.0% YoY, +7.9% QoQ).",
+    "highlights": "Basis: Standalone · Normalised from ₹ lakh (Page 2) · EBITDA derived from schedule iii",
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 2915,
+      "out": 680
+    },
+    "paid_tier_equivalent_usd": 0.000563
+  },
+  {
+    "status": "corrupted_pdf",
+    "ticker": "HDFCBANK.NS",
+    "company_name": "HDFC Bank Limited",
+    "pdf_file": "HDFCBANK_Q2FY27.pdf",
+    "source_url": "https://nsearchives.nseindia.com/corporate/HDFCBANK_17102026135520_OutcomeofBMResults_17oct2026.pdf",
+    "error": "PdfminerException: Unexpected EOF"
+  }
+]

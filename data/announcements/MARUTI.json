@@ -1,5 +1,23 @@
 [
   {
+    "id": "nse-maruti-a33a4928f5",
+    "ticker": "MARUTI.NS",
+    "company_name": "Maruti Suzuki India Limited",
+    "timestamp": "2026-10-27T20:30:49+05:30",
+    "headline": "General Updates — Maruti Suzuki India Limited has informed the Exchange about Audio Recording of the investors' call held on 27th October 2026.",
+    "category": "earnings_call",
+    "priority": 2,
+    "summary": "Audio recording of investor call held on 27th October 2026 submitted to the Exchange.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/MARUTIASHISH_27102026202705_SubmissionofAudioRecordings.pdf",
+    "raw_text": "Maruti Suzuki India Limited has informed the Exchange about Audio Recording of the investors' call held on 27th October 2026.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 160,
+      "out": 53
+    }
+  },
+  {
     "id": "nse-maruti-8e63e5b049",
     "ticker": "MARUTI.NS",
     "company_name": "Maruti Suzuki India Limited",
@@ -7,14 +25,14 @@
     "headline": "Investor Presentation — Maruti Suzuki India Limited has informed the Exchange about Investor Presentation",
     "category": "investor_meetings",
     "priority": 2,
-    "summary": "Company submitted investor presentation to the exchange.",
+    "summary": "Investor presentation submitted to the Exchange.",
     "source_url": "https://nsearchives.nseindia.com/corporate/MARUTI_27102026154352_STxIntimation_InvestorPresentation_27Oct2026.pdf",
     "raw_text": "Maruti Suzuki India Limited has informed the Exchange about Investor Presentation",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 173,
-      "out": 50
+      "in": 160,
+      "out": 53
     }
   },
   {
@@ -43,78 +61,96 @@
     "headline": "Outcome of Board Meeting — Maruti Suzuki India Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
     "category": "results",
     "priority": 1,
-    "summary": "Q1 FY27 (consolidated): Revenue ₹52,470 Cr (+35.9% YoY, +0.0% QoQ); Operating EBITDA ₹4,313 Cr (-6.7% YoY, margin 8.2%); PAT ₹3,447 Cr (-9.1% YoY, -5.8% QoQ).",
+    "summary": "Q2 FY27 (consolidated): Revenue ₹53,356 Cr (+26.0% YoY, +1.7% QoQ); EBITDA (derived) ₹4,764 Cr (-6.3% YoY, margin 8.9%); PAT ₹2,466 Cr (-26.4% YoY, -28.4% QoQ).",
     "source_url": "https://nsearchives.nseindia.com/corporate/MARUTI_27102026152412_QuickResults_27Oct2026_signed.pdf",
     "raw_text": "Maruti Suzuki India Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
     "enrichment": {
       "status": "ok",
-      "quarter": "Q1 FY27",
+      "quarter": "Q2 FY27",
       "basis": "consolidated",
       "entity_type": "corporate",
       "reported_unit": "million",
       "normalised_unit": "crore",
-      "source_page": 4,
+      "source_page": 6,
       "vision_used": true,
-      "ebitda_status": "derived_from_schedule_iii",
+      "ebitda_status": "derived",
       "revenue_label": "Revenue from Operations",
       "period_ended": {
-        "current": "2026-06-30",
-        "previous": "2026-03-31",
-        "year_ago": "2025-06-30"
+        "current": "2026-09-30",
+        "previous": "2026-06-30",
+        "year_ago": "2025-09-30"
+      },
+      "column_order": {
+        "col_1_header": "September 30, 2026",
+        "col_2_header": "June 30, 2026",
+        "col_3_header": "September 30, 2025",
+        "current_col": "Col 1",
+        "previous_col": "Col 2",
+        "year_ago_col": "Col 3"
+      },
+      "row_labels": {
+        "revenue": "Total Revenue from operations",
+        "total_expenses": "Total expenses",
+        "finance_costs": "Finance costs",
+        "depreciation_amortisation": "Depreciation and amortisation expenses",
+        "operating_profit_before_provisions": null,
+        "pbt": "Profit before tax (III-IV+V+VI)",
+        "pat": "Profit for the period (VII-VIII)",
+        "pat_owners": "Profit for the period attributable to : Owners of the Company"
       },
       "revenue": {
-        "value": 52469.8,
-        "previous_quarter": 52462.5,
-        "year_ago_quarter": 38605.2,
-        "qoq": 0.01,
-        "yoy": 35.91
+        "value": 53355.5,
+        "previous_quarter": 52469.8,
+        "year_ago_quarter": 42344.2,
+        "qoq": 1.69,
+        "yoy": 26.0
       },
       "ebitda": {
-        "value": 4313.3,
-        "previous_quarter": 6158.3,
-        "year_ago_quarter": 4622.6,
-        "qoq": -29.96,
-        "yoy": -6.69
+        "value": 4764.1,
+        "previous_quarter": 4313.3,
+        "year_ago_quarter": 5086.0,
+        "qoq": 10.45,
+        "yoy": -6.33
       },
       "operating_profit_ex_provisions": null,
       "pbt": {
-        "value": 4441.2,
-        "previous_quarter": 4918.4,
-        "year_ago_quarter": 4943.5,
-        "qoq": -9.7,
-        "yoy": -10.16
+        "value": 3219.1,
+        "previous_quarter": 4441.2,
+        "year_ago_quarter": 4339.3,
+        "qoq": -27.52,
+        "yoy": -25.82
       },
       "pat": {
-        "value": 3446.9,
-        "previous_quarter": 3659.0,
-        "year_ago_quarter": 3792.4,
-        "qoq": -5.8,
-        "yoy": -9.11
+        "value": 2466.1,
+        "previous_quarter": 3446.9,
+        "year_ago_quarter": 3349.0,
+        "qoq": -28.45,
+        "yoy": -26.36
       },
       "pat_owners": {
-        "value": 3446.9,
-        "previous_quarter": 3659.0,
-        "year_ago_quarter": 3792.4,
-        "qoq": -5.8,
-        "yoy": -9.11
+        "value": 2466.1,
+        "previous_quarter": 3446.9,
+        "year_ago_quarter": 3349.0,
+        "qoq": -28.45,
+        "yoy": -26.36
       },
       "derivation": {
-        "basis_note": "Statement of Consolidated Unaudited Financial Results (PDF p. 4 via vision, reported in ₹ Million; normalised ÷10 to ₹ crore).",
-        "revenue_definition": "Total Revenue from Operations (Net Sales + Operating Income) = ₹5,24,698 Mn ÷ 10 = ₹52,469.80 Cr.",
-        "ebitda_formula": "Operating Profit (Revenue ₹5,24,698 Mn − Total Expenses ₹5,00,003 Mn = ₹24,695 Mn) + Finance Costs (₹635 Mn) + Depreciation & Amortisation (₹17,803 Mn) = ₹43,133 Mn ÷ 10 = ₹4,313.30 Cr (8.22% margin).",
-        "pbt_basis": "Profit Before Tax (including Share of Profit of Associates; no exceptional items) = ₹44,412 Mn ÷ 10 = ₹4,441.20 Cr.",
-        "pat_basis": "Total Consolidated Profit for the period = ₹34,469 Mn ÷ 10 = ₹3,446.90 Cr (100% attributable to owners of the company: ₹3,446.90 Cr)."
+        "basis_note": "Consolidated Statement of Financial Results (PDF p. 6 via vision, reported in ₹ million, normalised ×0.1 to ₹ crore). Columns L→R: Col 1='September 30, 2026', Col 2='June 30, 2026', Col 3='September 30, 2025' (mapped Current=Col 1, Previous=Col 2, Year-Ago=Col 3).",
+        "revenue_definition": "Printed row 'Total Revenue from operations' (Net of GST) (excludes Other Income of ₹413.60 Cr) = ₹53,355.50 Cr (Prev Q: ₹52,469.80 Cr; Year-ago Q: ₹42,344.20 Cr).",
+        "ebitda_formula": "Derived (`derived`): Operating Profit (Revenue ₹53,355.50 Cr − Total Expenses ₹50,619.00 Cr + Finance Costs ₹67.70 Cr = ₹2,804.20 Cr) + D&A (₹1,959.90 Cr) = ₹4,764.10 Cr (8.93% margin; Prev Q: ₹4,313.30 Cr; Year-ago Q: ₹5,086.00 Cr).",
+        "pbt_basis": "Printed row 'Profit before tax (III-IV+V+VI)' (no current-quarter exceptional items) = ₹3,219.10 Cr (Prev Q: ₹4,441.20 Cr; Year-ago Q: ₹4,339.30 Cr).",
+        "pat_basis": "Printed row 'Profit for the period (VII-VIII)' = ₹2,466.10 Cr (Prev Q: ₹3,446.90 Cr; Year-ago Q: ₹3,349.00 Cr)."
       },
       "validation": {
         "passed": true,
         "flags": []
       },
-      "highlights": "Basis: Consolidated · Normalised from ₹ million (Page 4 via vision) · EBITDA derived from schedule iii"
+      "highlights": "Basis: Consolidated · Normalised from ₹ million (Page 6 via vision) · EBITDA derived"
     },
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 4154,
-      "out": 577
+      "in": 5227,
+      "out": 1038
     }
   },
   {
@@ -179,14 +215,14 @@
     "headline": "Action(s) taken or orders passed — Maruti Suzuki India Limited has informed the Exchange about Action(s) taken or orders passed",
     "category": "litigation",
     "priority": 2,
-    "summary": "Regulatory or tax order passed against the company.",
+    "summary": "Regulatory action or order passed against the company.",
     "source_url": "https://nsearchives.nseindia.com/corporate/MARUTI_15102026191103_Intimation_15102026.pdf",
     "raw_text": "Maruti Suzuki India Limited has informed the Exchange about Action(s) taken or orders passed",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 173,
-      "out": 50
+      "in": 160,
+      "out": 53
     }
   },
   {
@@ -213,16 +249,16 @@
     "company_name": "Maruti Suzuki India Limited",
     "timestamp": "2026-10-12T16:16:31+05:30",
     "headline": "General Updates — Maruti Suzuki India Limited has informed the Exchange about Intimation under Regulation 30 of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015",
-    "category": "press_release",
-    "priority": 2,
-    "summary": "General update and disclosure made under Regulation 30.",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Routine regulatory intimation under Regulation 30 of SEBI LODR Regulations.",
     "source_url": "https://nsearchives.nseindia.com/corporate/MARUTIASHISH_12102026161252_STxIntimation_CCI_12Oct2026.pdf",
     "raw_text": "Maruti Suzuki India Limited has informed the Exchange about Intimation under Regulation 30 of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 173,
-      "out": 50
+      "in": 160,
+      "out": 53
     }
   },
   {
@@ -251,14 +287,14 @@
     "headline": "General Updates — Maruti Suzuki India Limited has informed the Exchange about Maruti Suzuki Production Volume: September 2026",
     "category": "press_release",
     "priority": 2,
-    "summary": "Production volume figures released for September 2026.",
+    "summary": "Monthly production volume data released for September 2026.",
     "source_url": "https://nsearchives.nseindia.com/corporate/MARUTI_01102026133208_Production_Oct2026.pdf",
     "raw_text": "Maruti Suzuki India Limited has informed the Exchange about Maruti Suzuki Production Volume: September 2026",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 173,
-      "out": 50
+      "in": 160,
+      "out": 53
     }
   },
   {
@@ -287,14 +323,14 @@
     "headline": "Action(s) taken or orders passed — Maruti Suzuki India Limited has informed the Exchange about Action(s) taken or orders passed",
     "category": "litigation",
     "priority": 2,
-    "summary": "Regulatory or tax order passed against the company.",
+    "summary": "Regulatory action or order passed against the company.",
     "source_url": "https://nsearchives.nseindia.com/corporate/MARUTIASHISH_30092026171404_STxIntimation_IncomeTaxPenaltyOrder_30Sep2026.pdf",
     "raw_text": "Maruti Suzuki India Limited has informed the Exchange about Action(s) taken or orders passed",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 173,
-      "out": 50
+      "in": 160,
+      "out": 53
     }
   },
   {
@@ -326,98 +362,16 @@
     "company_name": "Maruti Suzuki India Limited",
     "timestamp": "2026-09-28T17:06:21+05:30",
     "headline": "General Updates — Maruti Suzuki India Limited has informed the Exchange about Intimation under Regulation 30 of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015",
-    "category": "press_release",
-    "priority": 2,
-    "summary": "General update and disclosure made under Regulation 30.",
+    "category": "unclassified",
+    "priority": 3,
+    "summary": "Routine regulatory intimation under Regulation 30 of SEBI LODR Regulations.",
     "source_url": "https://nsearchives.nseindia.com/corporate/MARUTI_28092026170516_STxIntimation_28Sep2026.pdf",
     "raw_text": "Maruti Suzuki India Limited has informed the Exchange about Intimation under Regulation 30 of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 173,
-      "out": 50
-    }
-  },
-  {
-    "id": "nse-maruti-slice1-q1fy27",
-    "ticker": "MARUTI.NS",
-    "company_name": "Maruti Suzuki India Limited",
-    "timestamp": "2026-06-30T16:00:00+05:30",
-    "headline": "Outcome of Board Meeting — Q1 FY27 Financial Results (Consolidated)",
-    "category": "results",
-    "priority": 1,
-    "summary": "Q1 FY27 (consolidated): Revenue ₹52,470 Cr (+35.9% YoY, +0.0% QoQ); Operating EBITDA ₹4,313 Cr (-6.7% YoY, margin 8.2%); PAT ₹3,447 Cr (-9.1% YoY, -5.8% QoQ).",
-    "source_url": "https://nsearchives.nseindia.com/corporate/MARUTI_31072026163813_QuickResults_Q1_FY2026_27.pdf",
-    "raw_text": "Q1 FY27 (consolidated): Revenue ₹52,470 Cr (+35.9% YoY, +0.0% QoQ); Operating EBITDA ₹4,313 Cr (-6.7% YoY, margin 8.2%); PAT ₹3,447 Cr (-9.1% YoY, -5.8% QoQ).",
-    "enrichment": {
-      "status": "ok",
-      "quarter": "Q1 FY27",
-      "basis": "consolidated",
-      "entity_type": "corporate",
-      "reported_unit": "million",
-      "normalised_unit": "crore",
-      "source_page": 4,
-      "vision_used": true,
-      "ebitda_status": "derived_from_schedule_iii",
-      "revenue_label": "Revenue from Operations",
-      "period_ended": {
-        "current": "2026-06-30",
-        "previous": "2026-03-31",
-        "year_ago": "2025-06-30"
-      },
-      "revenue": {
-        "value": 52469.8,
-        "previous_quarter": 52462.5,
-        "year_ago_quarter": 38605.2,
-        "qoq": 0.01,
-        "yoy": 35.91
-      },
-      "ebitda": {
-        "value": 4313.3,
-        "previous_quarter": 6158.3,
-        "year_ago_quarter": 4622.6,
-        "qoq": -29.96,
-        "yoy": -6.69
-      },
-      "operating_profit_ex_provisions": null,
-      "pbt": {
-        "value": 4441.2,
-        "previous_quarter": 4918.4,
-        "year_ago_quarter": 4943.5,
-        "qoq": -9.7,
-        "yoy": -10.16
-      },
-      "pat": {
-        "value": 3446.9,
-        "previous_quarter": 3659.0,
-        "year_ago_quarter": 3792.4,
-        "qoq": -5.8,
-        "yoy": -9.11
-      },
-      "pat_owners": {
-        "value": 3446.9,
-        "previous_quarter": 3659.0,
-        "year_ago_quarter": 3792.4,
-        "qoq": -5.8,
-        "yoy": -9.11
-      },
-      "derivation": {
-        "basis_note": "Statement of Consolidated Unaudited Financial Results (PDF p. 4 via vision, reported in ₹ Million; normalised ÷10 to ₹ crore).",
-        "revenue_definition": "Total Revenue from Operations (Net Sales + Operating Income) = ₹5,24,698 Mn ÷ 10 = ₹52,469.80 Cr.",
-        "ebitda_formula": "Operating Profit (Revenue ₹5,24,698 Mn − Total Expenses ₹5,00,003 Mn = ₹24,695 Mn) + Finance Costs (₹635 Mn) + Depreciation & Amortisation (₹17,803 Mn) = ₹43,133 Mn ÷ 10 = ₹4,313.30 Cr (8.22% margin).",
-        "pbt_basis": "Profit Before Tax (including Share of Profit of Associates; no exceptional items) = ₹44,412 Mn ÷ 10 = ₹4,441.20 Cr.",
-        "pat_basis": "Total Consolidated Profit for the period = ₹34,469 Mn ÷ 10 = ₹3,446.90 Cr (100% attributable to owners of the company: ₹3,446.90 Cr)."
-      },
-      "validation": {
-        "passed": true,
-        "flags": []
-      },
-      "highlights": "Basis: Consolidated · Normalised from ₹ million (Page 4 via vision) · EBITDA derived from schedule iii"
-    },
-    "model_used": "gemini-3.5-flash-lite",
-    "tokens": {
-      "in": 4154,
-      "out": 577
+      "in": 160,
+      "out": 53
     }
   }
 ]

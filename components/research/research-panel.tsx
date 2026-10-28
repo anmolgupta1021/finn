@@ -81,8 +81,8 @@ function QuarterCard({ quarter }: { quarter: QuarterAnalysis }) {
                 <div className="text-2xs font-medium text-finn-accent">
                   {g.metric}
                 </div>
-                <div className="grid grid-cols-2 gap-2 text-xs">
-                  <div>
+                <div className="grid grid-cols-1 min-[380px]:grid-cols-2 gap-2 text-xs">
+                  <div className="min-w-0 break-words [overflow-wrap:anywhere]">
                     <span className="text-2xs text-finn-muted block">
                       Guided
                     </span>
@@ -103,7 +103,7 @@ function QuarterCard({ quarter }: { quarter: QuarterAnalysis }) {
                     )}
                   </div>
                   {delivered && (
-                    <div>
+                    <div className="min-w-0 break-words [overflow-wrap:anywhere]">
                       <span className="text-2xs text-finn-muted block">
                         Delivered
                       </span>
@@ -188,13 +188,13 @@ export function ResearchPanel({
       </div>
 
       {/* Tabs */}
-      <div className="flex border-b border-finn-border px-4">
+      <div className="flex border-b border-finn-border px-4 overflow-x-auto">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
             className={cn(
-              "flex items-center gap-1 px-3 py-2 text-xs font-medium border-b-2 transition-colors",
+              "flex items-center gap-1 px-3 py-2 text-xs font-medium border-b-2 transition-colors whitespace-nowrap flex-shrink-0",
               activeTab === tab.id
                 ? "border-finn-accent text-finn-accent"
                 : "border-transparent text-finn-muted hover:text-finn-text"
@@ -207,7 +207,7 @@ export function ResearchPanel({
       </div>
 
       {/* Content */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-3">
+      <div className="flex-1 overflow-y-auto overflow-x-hidden p-4 space-y-3 min-w-0">
         {activeTab === "narrative" && (
           <>
             {/* Verdict summary */}
@@ -225,7 +225,7 @@ export function ResearchPanel({
                   {nvn.credibility_score}
                 </span>
               </div>
-              <p className="text-sm leading-snug">{nvn.summary}</p>
+              <p className="text-sm leading-snug break-words [overflow-wrap:anywhere]">{nvn.summary}</p>
               {nvn.pattern && (
                 <p className="text-xs text-finn-muted mt-2 pt-2 border-t border-finn-border leading-relaxed">
                   <span className="font-medium text-finn-accent">
@@ -245,7 +245,7 @@ export function ResearchPanel({
             </div>
 
             {/* Sources & Citation Audit */}
-            <div className="flex items-center justify-between mt-4">
+            <div className="flex items-center justify-between gap-2 flex-wrap mt-4">
               <div className="finn-section-title mb-0">
                 Primary Sources ({data.source_documents?.length ?? 0})
               </div>

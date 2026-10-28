@@ -1,20 +1,56 @@
 [
   {
+    "id": "nse-reliance-39f1261a5f",
+    "ticker": "RELIANCE.NS",
+    "company_name": "Reliance Industries Limited",
+    "timestamp": "2026-10-27T22:11:29+05:30",
+    "headline": "General Updates — Trading in equity shares of Jio Platforms Limited (JPL) will commence from October 28, 2026.Further, a meeting of board of directors of JPL is scheduled to be held on Friday, October 30, 2026, inter alia, to consider and approve the standalone and consolidated u",
+    "category": "investor_meetings",
+    "priority": 3,
+    "summary": "Trading in equity shares of Jio Platforms Limited (JPL) will commence from October 28, 2026.Further, a meeting of board of directors of JPL is scheduled to be held on Friday, October 30, 2026, inter alia, to consider and approve the standalone and consolidated unaudited financial results of JPL for the quarter and half year ended September 30, 2026.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_27102026220855_RIL_SELETTER_271026.pdf",
+    "raw_text": "Trading in equity shares of Jio Platforms Limited (JPL) will commence from October 28, 2026.Further, a meeting of board of directors of JPL is scheduled to be held on Friday, October 30, 2026, inter alia, to consider and approve the standalone and consolidated unaudited financial results of JPL for the quarter and half year ended September 30, 2026.",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-reliance-1b6ba3faae",
+    "ticker": "RELIANCE.NS",
+    "company_name": "Reliance Industries Limited",
+    "timestamp": "2026-10-27T19:17:10+05:30",
+    "headline": "Analysts/Institutional Investor Meet/Con. Call Updates — The meeting of the Board of Directors of the Company is scheduled on October 30, 2026, inter alia, to consider and approve a. the standalone and consolidated unaudited financial results of the Company for the quarter and ha",
+    "category": "investor_meetings",
+    "priority": 3,
+    "summary": "The meeting of the Board of Directors of the Company is scheduled on October 30, 2026, inter alia, to consider and approve a. the standalone and consolidated unaudited financial results of the Company for the quarter and half year ended September 30, 2026; and b. raising of funds by way of issuance of listed, secured / unsecured, redeemable non-convertible debentures on private placement basis, in one or more tranches. The Company will hold an analyst meet, post the Board Meeting, to discuss the financial results for the quarter and half year ended September 30, 2026.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_27102026191700_SE_27102026.pdf",
+    "raw_text": "The meeting of the Board of Directors of the Company is scheduled on October 30, 2026, inter alia, to consider and approve a. the standalone and consolidated unaudited financial results of the Company for the quarter and half year ended September 30, 2026; and b. raising of funds by way of issuance of listed, secured / unsecured, redeemable non-convertible debentures on private placement basis, in one or more tranches. The Company will hold an analyst meet, post the Board Meeting, to discuss the financial results for the quarter and half year ended September 30, 2026.",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
     "id": "nse-reliance-8df0663618",
     "ticker": "RELIANCE.NS",
     "company_name": "Reliance Industries Limited",
     "timestamp": "2026-10-24T21:48:04+05:30",
     "headline": "General Updates — Initial Public Offer of Jio Platforms Limited",
-    "category": "fund_raise",
+    "category": "press_release",
     "priority": 1,
-    "summary": "Updates regarding the Initial Public Offer (IPO) of Jio Platforms Limited.",
+    "summary": "Initial Public Offer of Jio Platforms Limited update announced.",
     "source_url": "https://nsearchives.nseindia.com/corporate/PVIVINMA_24102026214355_RIL_SE_241026.pdf",
     "raw_text": "Initial Public Offer of Jio Platforms Limited",
     "enrichment": {},
-    "model_used": "gemini-3.6-flash",
+    "model_used": "gemini-3.5-flash-lite",
     "tokens": {
       "in": 170,
-      "out": 259
+      "out": 56
     }
   },
   {
@@ -25,14 +61,14 @@
     "headline": "Updates — Please find attached a media statement issued by the Company.",
     "category": "press_release",
     "priority": 2,
-    "summary": "Reliance Industries Limited issued a media statement.",
+    "summary": "Media statement issued by the Company.",
     "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_21102026224413_SE_21102026.pdf",
     "raw_text": "Please find attached a media statement issued by the Company.",
     "enrichment": {},
-    "model_used": "gemini-3.6-flash",
+    "model_used": "gemini-3.5-flash-lite",
     "tokens": {
       "in": 170,
-      "out": 259
+      "out": 56
     }
   },
   {
@@ -113,16 +149,16 @@
     "company_name": "Reliance Industries Limited",
     "timestamp": "2026-10-14T20:12:49+05:30",
     "headline": "General Updates — Proposed Initial Public Offer of Jio Platforms Limited.",
-    "category": "fund_raise",
+    "category": "press_release",
     "priority": 1,
-    "summary": "Update regarding the proposed Initial Public Offer (IPO) of Jio Platforms Limited.",
+    "summary": "Proposed Initial Public Offer of Jio Platforms Limited announced.",
     "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_14102026201111_RIL_SE_14102026_.pdf",
     "raw_text": "Proposed Initial Public Offer of Jio Platforms Limited.",
     "enrichment": {},
-    "model_used": "gemini-3.6-flash",
+    "model_used": "gemini-3.5-flash-lite",
     "tokens": {
       "in": 170,
-      "out": 259
+      "out": 56
     }
   },
   {
@@ -131,16 +167,16 @@
     "company_name": "Reliance Industries Limited",
     "timestamp": "2026-10-14T18:35:12+05:30",
     "headline": "General Updates — Proposed Initial Public Offer of Jio Platforms Limited - filing of the Red Herring Prospectus.",
-    "category": "fund_raise",
+    "category": "press_release",
     "priority": 1,
-    "summary": "Filing of the Red Herring Prospectus for the proposed Initial Public Offer of Jio Platforms Limited.",
+    "summary": "Red Herring Prospectus filed for the proposed Initial Public Offer of Jio Platforms Limited.",
     "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_14102026183404_RIL_SE14102026.pdf",
     "raw_text": "Proposed Initial Public Offer of Jio Platforms Limited - filing of the Red Herring Prospectus.",
     "enrichment": {},
-    "model_used": "gemini-3.6-flash",
+    "model_used": "gemini-3.5-flash-lite",
     "tokens": {
       "in": 170,
-      "out": 259
+      "out": 56
     }
   },
   {
@@ -151,14 +187,14 @@
     "headline": "Action(s) taken or orders passed — Disclosure under Regulation 30 of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015 is attached.",
     "category": "litigation",
     "priority": 2,
-    "summary": "Disclosure under Regulation 30 regarding regulatory action or order passed.",
+    "summary": "Regulatory order or action disclosed under Regulation 30.",
     "source_url": "https://nsearchives.nseindia.com/corporate/PVIVINMA_07102026223504_RIL_SEletter07102026.pdf",
     "raw_text": "Disclosure under Regulation 30 of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015 is attached.",
     "enrichment": {},
-    "model_used": "gemini-3.6-flash",
+    "model_used": "gemini-3.5-flash-lite",
     "tokens": {
       "in": 170,
-      "out": 259
+      "out": 56
     }
   },
   {
@@ -169,14 +205,14 @@
     "headline": "Allotment of Securities — We wish to inform that the Company has today allotted 13,00,000 Unsecured, Redeemable, Non-Convertible Debentures (\"NCDs\") of the face value of Rs. 1,00,000 each (\"PPD Series R\"), issued on private placement basis.",
     "category": "fund_raise",
     "priority": 1,
-    "summary": "Allotted 13,00,000 Unsecured Redeemable Non-Convertible Debentures (PPD Series R) of face value ₹1,00,000 each on a private placement basis.",
+    "summary": "Allotted 13,00,000 Unsecured, Redeemable, Non-Convertible Debentures aggregating to Rs. 13,000 crores on private placement.",
     "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_01102026150203_SE_01102026.pdf",
     "raw_text": "We wish to inform that the Company has today allotted 13,00,000 Unsecured, Redeemable, Non-Convertible Debentures (\"NCDs\") of the face value of Rs. 1,00,000 each (\"PPD Series R\"), issued on private placement basis.",
     "enrichment": {},
-    "model_used": "gemini-3.6-flash",
+    "model_used": "gemini-3.5-flash-lite",
     "tokens": {
       "in": 170,
-      "out": 259
+      "out": 56
     }
   },
   {
@@ -195,88 +231,6 @@
     "tokens": {
       "in": 0,
       "out": 0
-    }
-  },
-  {
-    "id": "nse-reliance-slice1-q1fy27",
-    "ticker": "RELIANCE.NS",
-    "company_name": "Reliance Industries Limited",
-    "timestamp": "2026-06-30T16:00:00+05:30",
-    "headline": "Outcome of Board Meeting — Q1 FY27 Financial Results (Consolidated)",
-    "category": "results",
-    "priority": 1,
-    "summary": "Q1 FY27 (consolidated): Revenue ₹311,850 Cr (+25.4% YoY, +4.4% QoQ); Operating EBITDA ₹47,517 Cr (+10.8% YoY, margin 15.2%); PAT ₹23,196 Cr (-24.6% YoY, +12.7% QoQ).",
-    "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_17072026190726_SE_FR_1.pdf",
-    "raw_text": "Q1 FY27 (consolidated): Revenue ₹311,850 Cr (+25.4% YoY, +4.4% QoQ); Operating EBITDA ₹47,517 Cr (+10.8% YoY, margin 15.2%); PAT ₹23,196 Cr (-24.6% YoY, +12.7% QoQ).",
-    "enrichment": {
-      "status": "ok",
-      "quarter": "Q1 FY27",
-      "basis": "consolidated",
-      "entity_type": "corporate",
-      "reported_unit": "crore",
-      "normalised_unit": "crore",
-      "source_page": 9,
-      "vision_used": true,
-      "ebitda_status": "derived_from_schedule_iii",
-      "revenue_label": "Revenue from Operations",
-      "period_ended": {
-        "current": "2026-06-30",
-        "previous": "2026-03-31",
-        "year_ago": "2025-06-30"
-      },
-      "revenue": {
-        "value": 311850.0,
-        "previous_quarter": 298621.0,
-        "year_ago_quarter": 248660.0,
-        "qoq": 4.43,
-        "yoy": 25.41
-      },
-      "ebitda": {
-        "value": 47517.0,
-        "previous_quarter": 44141.0,
-        "year_ago_quarter": 42905.0,
-        "qoq": 7.65,
-        "yoy": 10.75
-      },
-      "operating_profit_ex_provisions": null,
-      "pbt": {
-        "value": 30630.0,
-        "previous_quarter": 27195.0,
-        "year_ago_quarter": 37146.0,
-        "qoq": 12.63,
-        "yoy": -17.54
-      },
-      "pat": {
-        "value": 23196.0,
-        "previous_quarter": 20589.0,
-        "year_ago_quarter": 30783.0,
-        "qoq": 12.66,
-        "yoy": -24.65
-      },
-      "pat_owners": {
-        "value": 20946.0,
-        "previous_quarter": 16971.0,
-        "year_ago_quarter": 26994.0,
-        "qoq": 23.42,
-        "yoy": -22.4
-      },
-      "derivation": {
-        "basis_note": "Statement of Consolidated Unaudited Financial Results (PDF p. 9 via vision, reported in ₹ crore).",
-        "revenue_definition": "Revenue from Operations (Net of GST/Excise) = ₹3,11,850 Cr.",
-        "ebitda_formula": "Operating Profit (Revenue ₹3,11,850 Cr − Total Expenses ₹2,87,770 Cr = ₹24,080 Cr) + Finance Costs (₹8,337 Cr) + Depreciation, Depletion & Amortisation (₹15,100 Cr) = ₹47,517 Cr (15.24% margin).",
-        "pbt_basis": "Profit Before Tax (after Share of Profit of Associates/JVs; no exceptional items in Q1 FY27) = ₹30,630 Cr.",
-        "pat_basis": "Total Consolidated Profit for the period = ₹23,196 Cr (Profit attributable to Owners of the Company = ₹20,946 Cr; Non-controlling interest = ₹2,250 Cr)."
-      },
-      "validation": {
-        "passed": true,
-        "flags": []
-      },
-      "highlights": "Basis: Consolidated · Normalised from ₹ crore (Page 9 via vision) · EBITDA derived from schedule iii"
-    },
-    "model_used": "gemini-3.5-flash-lite",
-    "tokens": {
-      "in": 3397,
-      "out": 580
     }
   }
 ]

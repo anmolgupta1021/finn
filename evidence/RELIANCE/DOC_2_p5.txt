@@ -1,0 +1,51 @@
+TICKER: RELIANCE.NS
+DOCUMENT_ID: DOC_2
+DOCUMENT_TITLE: Q4 FY26 Concall Transcript (26-Apr-2026)
+PDF_PAGE: 5 (of 31)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/kavinavora_26042026232750_SE_26042026.pdf#page=5
+========================================================================
+
+automations, energy optimization, for example, is being done on our network and we should
+see good results coming out of these in the next few quarters. We have done some network
+innovations. Again, as you all know, we manage our own network, the core has been
+completely developed by us, we do a lot of innovation on the radio as well. We have been
+able to work on some proprietary beam form cell design, which helps us improve coverage
+and capacity, especially in specific locations. So, if there is a match in a stadium or there is
+a high traffic zone, we are able to now enhance capacity, which has always been a challenge
+area for operators, and we have been able to come up with our own proprietary solutions to
+address improve customer experience in these situations.
+Distribution strategy, on the 5G side working with OEMs to see how we can improve the
+experience for users as it take new devices, same attachment, etc., and you will hear about
+some of this in the market, leveraging our distribution as a digital gateway for digital platforms
+and services coming into the country, be it Gemini, be it JioHotstar, that continues to be a
+focus area, helps us improve our customer attraction, customer engagement and also gets
+us some more revenues, which is always welcome and also helps us in getting improving
+our ARPUs.
+On the customer experience side, you would have seen some recent third party reports,
+which have all rated us as the best network, multiple awards including download speed 1.8
+times competition, 99.9% time on network and a very important metric which is 5G coverage
+experience, where third party results are showing that our users are able to access 5G
+services most of the time they are on the network. So, converting network leadership to
+premium subscriber engagement and I think just more customer engagement, just more
+traction with customers as they remain on the network. Homes continues to be a priority for
+us, we had a good year, we have now reached 27 million subscribers, almost 10 million net
+adds during the last 12 months, and 75% of those coming through AirFiber, which is working
+at scale, working really well. Last time I had spoken about the non-line-of-sight deployment
+that we had started doing and that is now working on the ground and in practical and with
+some of these things when you deploy in the field is when you sometimes which face some
+challenges and you need to appropriately adjust. We have done those, we have been through
+that, and this now further expands the addressable market from our point of view, where
+there were situations where line of sight was becoming a restricting factor for us. With this
+now working at scale and we have started upgrading the hardware in most cases, this is
+enabling us to now connect more sites and more premises with this new technology. So, we
+are very optimistic about this working at scale and will help us increase the run rate, increase
+the acquisition rate even more. On the bunch of activities, a lot of initiatives we have taken
+on the quality and assurance side, rapid technician onboarding very important because now
+that we were working at a scale where 25 to 30, and there are days when we are adding 50
+to 60,000 homes in a day you need to have scaled technical manpower on the ground and
+therefore, this rapid technician onboarding is a very important consideration from our point
+of view, which we have been able to do.
+One day installation, over 90% of the installations are happening within 24 hours, of course
+we will strive will target to take this closer to 100% and most of the times the limiting factor
+again becomes the availability of a technician. It is not about the network or the infrastructure
+© Reliance Industries Limited 2020 4

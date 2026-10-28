@@ -1,0 +1,43 @@
+TICKER: ETERNAL.NS
+DOCUMENT_ID: DOC_2
+DOCUMENT_TITLE: Q4 FY26 Concall Transcript (06-May-2026)
+PDF_PAGE: 3 (of 18)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/ZOMATO_06052026135430_TranscriptfilingsignedApril2026.pdf#page=3
+========================================================================
+
+Moderator: Ladies and gentlemen, a very good evening, and welcome to Eternal Limited's Q4FY26
+earnings conference call. From Eternal's management team, we have with us today
+Albinder Singh Dhindsa, Akshant Goyal and Kunal Swarup.
+Before we begin, a few quick announcements for the attendees. Anything said on this
+call, which reflects outlook for the future, or which could be construed as a forward-
+looking statement, may involve risks and uncertainties. Such statements or comments
+are not guarantees of future performance, and actual results may differ from those
+statements.
+Additionally, please note that this earnings call is scheduled for a duration of 45 minutes,
+and we will be starting directly with the Q&A section of the call. If you wish to ask a
+question, please use the raise hand feature available on your Zoom dashboard. We will
+announce your name on the call and unmute your line, post which you can proceed with
+your question. We will wait for a minute while the question queue assembles.
+The first question is from the line of Gaurav Malhotra from Axis. Please go ahead.
+Gaurav Malhotra: Hi, thank you for the opportunity. I had three questions. First question is on the overall
+EBITDA guidance or indication of $1 billion by FY29. Now we do know that food delivery is
+sort of at a steady clip and it's also growing at 19-20%. We do know about District
+EBITDA guidance of FY30. If I just sort of strip it back, and we know the NOV growth
+CAGR of 60% for quick commerce, then the implied margin for quick commerce comes
+to around, say, roughly 3-3.5%, give or take. Is that the number which we are expecting
+from a margin perspective in the next three to four years?
+Akshant Goyal: Hi, Gaurav. Broadly the math is fine. We're not giving any specific guidance, and
+therefore the numbers could move a little bit depending on how things pan out. But, the
+way you did the math is broadly in line with how we're thinking about it.
+Gaurav Malhotra: Okay, thank you. Just two more quick questions. We see that your fixed cost in quick
+commerce has been sort of flattish this quarter and yet the MTU numbers have been
+quite strong. Just wanted to get a sense as to how to reconcile these two numbers.
+The second question is on the dark stores. I remember you had mentioned that maybe
+you'll pick up the additions in this quarter, but sort of flattish again. Just wanted to get a
+sense on the dark store guidance of 3,000 by March. These are the only two questions.
+Akshant Goyal: Gaurav, MTU additions remain strong because we continue to spend on marketing for
+new customer acquisition. So those spends haven't come down in the last quarter and
+hence the overall fixed cost remains in line with the previous quarter and the MTU
+addition also remains strong. We feel a lot of our competitors in the market have pulled
+back on this so we're seeing extremely low cost of customer acquisition and we,
+Page 2 of 17

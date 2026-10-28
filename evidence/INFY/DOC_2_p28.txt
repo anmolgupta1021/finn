@@ -1,0 +1,42 @@
+TICKER: INFY.NS
+DOCUMENT_ID: DOC_2
+DOCUMENT_TITLE: Q4 FY26 Concall Transcript (27-Apr-2026)
+PDF_PAGE: 28 (of 46)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/Infosys_27042026203405_Transcript_April232026_Q4.pdf#page=28
+========================================================================
+
+programs. We are seeing increasing momentum in AI-driven initiatives, particularly around
+productivity, automation and platform-led modernization initiatives.
+Let me start with the key highlights for the year and the quarter.
+1. FY26 revenues crossed $20 bn and grew 3.1% in constant currency terms, within the
+upgraded guidance band given in January. This was after lower third-party costs which was
+down by 1% as percentage of revenue and 0.7% reduction in onsite mix. Acquisitions
+contributed about 70 bps on full year growth.
+2. For FY26, Communications, Manufacturing vertical and Europe geography grew more than
+double the company average, led by ramp-up of the large deal wins. Additionally, FS and
+EURS grew above the company average in constant currency terms.
+3. Volumes for the year were flattish, growth was led by increase in realization thanks to Project
+Maximus.
+4. Adjusted operating margin was stable at 21%. Gains from currency and Maximus were
+reinvested in talent, AI and sales and marketing.
+5. Q4 revenues grew by 4.1% year-on-year. Sequentially, revenues declined 1.3% in constant
+currency due to seasonality and slower decision making in the month of March.
+6. Growth in Q4 was broad-based across major geographies. Communications, EURS and LS
+vertical grew well above the company average on a year-on-year basis in constant currency
+terms.
+7. Q4 operating margins stood at 20.9%, down 0.3% sequentially, adjusted for the Labor Code
+impact in Q3.
+8. Onsite mix further reduced to 22.8% from 23.1% in Q3.
+9. Utilization, excluding trainees, was 83% in Q4 and 84.4% in FY26. Utilization, including
+trainees, was at 81.1% for FY26 reflecting the investment made towards creating future
+capacity.
+10. Strong focus on collections aided by technology interventions helped us reduce DSO,
+including unbilled net of unearned to 78, which is the lowest in seven years.
+11. Reported EPS in INR terms grew 23.8% Y-o-Y in Q4 and 11% in FY26. EPS adjusted for
+income tax orders and the Labor Code grew double digit for the year at 13.9% in Q4 and
+12.1% for the full year in INR terms.
+12. Free cash flow adjusted for the Labor Code and income tax refunds stood at $3.5 bn for FY
+and $882 mn for Q4. Adjusted free cash as a percentage of net profit continue to be well
+above 100% at 106% for FY26 and 111% for Q4.
+4
+External Document © 2026 Infosys Limited

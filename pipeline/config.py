@@ -34,7 +34,7 @@ PORTFOLIO_TICKERS = [
 ]
 # TMPV.NS replaces TATAMOTORS.NS (no longer quoted after the Tata Motors demerger).
 
-ADHOC_TICKERS = ["BAJFINANCE.NS", "ETERNAL.NS", "ITC.NS"]
+ADHOC_TICKERS = ["BAJFINANCE.NS", "ETERNAL.NS", "ITC.NS", "PIDILITIND.NS"]
 # ETERNAL.NS replaces ZOMATO.NS (company renamed; old symbol returns no data).
 
 ALL_TICKERS = PORTFOLIO_TICKERS + ADHOC_TICKERS
@@ -81,6 +81,8 @@ def content_hash(text: str) -> str:
 MODEL_PRICING_PER_1M = {
     "gemini-3.5-flash-lite": {"in": 0.10, "out": 0.40},
     "gemini-3.1-flash-lite": {"in": 0.10, "out": 0.40},
+    "gemini-3.8-flash": {"in": 0.30, "out": 2.50},
+    "gemini-3.7-flash": {"in": 0.30, "out": 2.50},
     "gemini-3.6-flash": {"in": 0.30, "out": 2.50},
     "gemini-3.5-flash": {"in": 0.30, "out": 2.50},
     "gemini-3-flash-preview": {"in": 0.30, "out": 2.50},

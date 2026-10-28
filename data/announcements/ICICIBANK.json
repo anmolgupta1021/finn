@@ -157,6 +157,24 @@
         "previous": "2026-06-30",
         "year_ago": "2025-09-30"
       },
+      "column_order": {
+        "col_1_header": "September 30, 2026",
+        "col_2_header": "June 30, 2026",
+        "col_3_header": "September 30, 2025",
+        "current_col": "Col 1",
+        "previous_col": "Col 2",
+        "year_ago_col": "Col 3"
+      },
+      "row_labels": {
+        "revenue": "TOTAL INCOME",
+        "total_expenses": null,
+        "finance_costs": null,
+        "depreciation_amortisation": null,
+        "operating_profit_before_provisions": "OPERATING PROFIT BEFORE PROVISIONS AND CONTINGENCIES",
+        "pbt": "PROFIT FROM ORDINARY ACTIVITIES BEFORE TAX AND MINORITY INTEREST",
+        "pat": "NET PROFIT FOR THE PERIOD",
+        "pat_owners": null
+      },
       "revenue": {
         "value": 88161.18,
         "previous_quarter": 79689.22,
@@ -188,11 +206,11 @@
       },
       "pat_owners": null,
       "derivation": {
-        "basis_note": "Consolidated Financial Results (PDF p. 13, reported in ₹ crore; Banking Regulation Act Form A/B format).",
-        "revenue_definition": "Bank Total Income = Interest Earned + Other Income = ₹88,161.18 Cr (Q1 FY27: ₹79,689.22 Cr; Q2 FY26: ₹76,146.59 Cr).",
-        "ebitda_formula": "Not applicable (`not_applicable`) for banking companies (interest is an operating item). Operating Profit before Provisions & Contingencies = ₹24,009.97 Cr.",
-        "pbt_basis": "Profit before tax (after provisions & contingencies of ₹818.22 Cr; no exceptional items) = ₹23,191.75 Cr.",
-        "pat_basis": "Consolidated Net Profit for the period (Total Consolidated PAT) = ₹16,333.18 Cr."
+        "basis_note": "Consolidated Statement of Financial Results (PDF p. 13, reported in ₹ crore). Columns L→R: Col 1='September 30, 2026', Col 2='June 30, 2026', Col 3='September 30, 2025' (mapped Current=Col 1, Previous=Col 2, Year-Ago=Col 3).",
+        "revenue_definition": "Printed row 'TOTAL INCOME' (Bank Total Income = Interest Earned + Other Income) = ₹88,161.18 Cr (Prev Q: ₹79,689.22 Cr; Year-ago Q: ₹76,146.59 Cr).",
+        "ebitda_formula": "Not applicable (`not_applicable`) for banking companies under Banking Regulation Act Form B. Printed row 'OPERATING PROFIT BEFORE PROVISIONS AND CONTINGENCIES' = ₹24,009.97 Cr (Prev Q: ₹22,604.33 Cr; Year-ago Q: ₹19,973.89 Cr).",
+        "pbt_basis": "Printed row 'PROFIT FROM ORDINARY ACTIVITIES BEFORE TAX AND MINORITY INTEREST' (no current-quarter exceptional items) = ₹23,191.75 Cr (Prev Q: ₹21,373.61 Cr; Year-ago Q: ₹19,126.33 Cr).",
+        "pat_basis": "Printed row 'NET PROFIT FOR THE PERIOD' = ₹16,333.18 Cr (Prev Q: ₹15,440.06 Cr; Year-ago Q: ₹13,357.06 Cr)."
       },
       "validation": {
         "passed": true,
@@ -202,8 +220,8 @@
     },
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 3876,
-      "out": 609
+      "in": 4636,
+      "out": 1058
     }
   },
   {

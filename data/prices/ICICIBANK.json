@@ -2,14 +2,14 @@
   "ticker": "ICICIBANK.NS",
   "name": "ICICI Bank Limited",
   "sector": "Financial Services",
-  "fetched_at": "2026-10-27T07:05:29.301205Z",
+  "fetched_at": "2026-10-27T17:35:26.224695Z",
   "current": {
-    "price": 1403.0,
-    "change_pct": 0.63,
-    "volume": 7936076,
-    "vol_ratio": 0.63,
+    "price": 1386.9,
+    "change_pct": -1.15,
+    "volume": 15877198,
+    "vol_ratio": 1.27,
     "vol_guard": null,
-    "market_cap": 9948026109952,
+    "market_cap": 9957359484928,
     "name": "ICICI Bank Limited",
     "sector": "Financial Services",
     "industry": "Banks - Regional"
@@ -992,6 +992,17 @@
       "volume": 7936076,
       "change_pct": 0.63,
       "vol_ratio": 0.63,
+      "vol_guard": null
+    },
+    {
+      "date": "2026-10-27",
+      "open": 1400.9,
+      "high": 1400.9,
+      "low": 1377.6,
+      "close": 1386.9,
+      "volume": 15877198,
+      "change_pct": -1.15,
+      "vol_ratio": 1.27,
       "vol_guard": null
     }
   ]

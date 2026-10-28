@@ -34,9 +34,9 @@ __pycache__/
 .venv/
 pipeline/.venv/
 
-# LLM cache and bulk multi-quarter research PDF cache (regenerable via generate_research.py)
+# Raw PDF documents and cache (PDFs are downloaded on-demand by pipeline or committed as text evidence)
 data/.llm_cache/
-data/documents/research/
+data/documents/
 
 # keep data fixtures
 !data/*.json

@@ -91,13 +91,22 @@ export interface ResultsEnrichment {
   normalised_unit?: string;
   source_page?: number;
   vision_used?: boolean;
-  ebitda_status?: "not_applicable" | "reported" | "derived_from_schedule_iii";
+  ebitda_status?: "not_applicable" | "reported" | "derived" | "derived_from_schedule_iii";
   revenue_label?: string;
   period_ended?: {
     current?: string;
     previous?: string;
     year_ago?: string;
   };
+  column_order?: {
+    col_1_header?: string;
+    col_2_header?: string;
+    col_3_header?: string;
+    current_col?: string;
+    previous_col?: string;
+    year_ago_col?: string;
+  };
+  row_labels?: Record<string, string | null>;
   revenue?: MetricWithChange;
   ebitda?: MetricWithChange | null;
   operating_profit_ex_provisions?: MetricWithChange | null;
@@ -129,12 +138,14 @@ export interface ManagementEnrichment {
 
 export interface Alert {
   ticker: string;
-  type: "volume_spike" | "price_move" | "volume_unreliable";
+  type: "volume_spike" | "price_move" | "volume_unreliable" | "material_announcement";
   value: number;
   threshold: number;
   message: string;
   date: string;
   close: number;
+  category?: AnnouncementCategory;
+  source_url?: string;
 }
 
 export interface NarrativeVsNumbers {
@@ -210,6 +221,7 @@ export interface DigestData {
   notable: Announcement[];
   routine: Announcement[];
   alerts: Alert[];
+  alert_config: AlertConfig;
   portfolio_summary: PortfolioTicker[];
 }
 

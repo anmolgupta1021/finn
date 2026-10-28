@@ -1,0 +1,365 @@
+{
+  "ticker": "BAJFINANCE.NS",
+  "company_name": "Bajaj Finance Limited",
+  "generated_at": "2026-10-28T05:03:38.496237Z",
+  "source_documents": [
+    {
+      "type": "concall_transcript",
+      "quarter": "Q2 FY27",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_23102026145254_BFL_Investor_Call_outcome_Transcript_for_filing.pdf",
+      "pages": 20,
+      "pages_selected": 8,
+      "selected_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        9,
+        12,
+        13
+      ]
+    },
+    {
+      "type": "concall_transcript",
+      "quarter": "Q1 FY27",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_04082026181739_BFL_Investor_Call_outcome_Transcript.pdf",
+      "pages": 23,
+      "pages_selected": 10,
+      "selected_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        20,
+        23
+      ]
+    },
+    {
+      "type": "concall_transcript",
+      "quarter": "Q4 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_04052026191931_BFL_Investor_Call_outcome_Transcript.pdf",
+      "pages": 19,
+      "pages_selected": 8,
+      "selected_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "type": "concall_transcript",
+      "quarter": "Q3 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_07022026151022_BFL_Investor_Call_outcome_Transcript.pdf",
+      "pages": 13,
+      "pages_selected": 8,
+      "selected_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        10,
+        13
+      ]
+    },
+    {
+      "type": "concall_transcript",
+      "quarter": "Q2 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_13112025183447_BFLInvestorCalloutcomeTranscriptforupload.pdf",
+      "pages": 19,
+      "pages_selected": 9,
+      "selected_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        14,
+        15,
+        19
+      ]
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q2 FY27",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_19102026172017_BMOutcome_19102026.pdf",
+      "pages": 48,
+      "pages_selected": 3,
+      "selected_page_numbers": [
+        2,
+        4,
+        14
+      ]
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q1 FY27",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_30072026151503_Financials_set_Final.pdf",
+      "pages": 28,
+      "pages_selected": 3,
+      "selected_page_numbers": [
+        2,
+        4,
+        10
+      ]
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q4 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_29042026170516_SEIntimationRRB.pdf",
+      "pages": 1,
+      "pages_selected": 1,
+      "selected_page_numbers": [
+        1
+      ]
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q3 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_03022026170438_BMOutcome_03022026_final.pdf",
+      "pages": 31,
+      "pages_selected": 2,
+      "selected_page_numbers": [
+        4,
+        11
+      ]
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q2 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_10112025171200_OutcomeQ2FY2026.pdf",
+      "pages": 49,
+      "pages_selected": 3,
+      "selected_page_numbers": [
+        4,
+        14,
+        27
+      ]
+    }
+  ],
+  "page_selection_stats": {
+    "strategy": "prepared_remarks_and_keyword_qa_plus_pnl_results_pages",
+    "transcript_char_budget_per_quarter": 20000,
+    "results_char_budget_per_quarter": 8000,
+    "total_pdf_pages_available": 251,
+    "pages_selected": 55,
+    "pages_dropped": 196,
+    "corpus_chars_sent": 133229
+  },
+  "narrative_vs_numbers": {
+    "summary": "Bajaj Finance demonstrated exceptional operational execution across FY26 and the first half of FY27, consistently meeting or outperforming its strategic forecasts. The franchise exceeded growth expectations by accelerating AUM expansion to 26.5% in Q2 FY27 against guided corridors of 20% to 24%, while maintaining cost of funds below projected levels (achieving 7.41% exit in Q4 FY26 vs 7.55% to 7.60% guided). Credit discipline was strictly preserved, holding provision coverage firmly at the guided 60% mark while prudently winding down higher-risk portfolios.",
+    "quarters": [
+      {
+        "quarter": "Q2 FY27",
+        "guided": [
+          {
+            "metric": "Provision Coverage Ratio (PCR)",
+            "guidance": "60%",
+            "source": "Q1 FY27 Concall Transcript (04-Aug-2026), PDF p. 5 — \"Provision coverage is at 60%. We'll continue to hold there structurally.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_04082026181739_BFL_Investor_Call_outcome_Transcript.pdf#page=5",
+            "doc_id": "DOC_2",
+            "page": 5,
+            "evidence_file": "evidence/BAJFINANCE/DOC_2_p5.txt"
+          },
+          {
+            "metric": "AUM Growth",
+            "guidance": "20% to 24%",
+            "source": "Q4 FY26 Concall Transcript (04-May-2026), PDF p. 7 — \"In terms of AUM, we're confident of a 20% to 24% AUM growth, aided by new businesses that we've launched\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_04052026191931_BFL_Investor_Call_outcome_Transcript.pdf#page=7",
+            "doc_id": "DOC_3",
+            "page": 7,
+            "evidence_file": "evidence/BAJFINANCE/DOC_3_p7.txt"
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "Provision Coverage Ratio (PCR)",
+            "actual": "60% (GNPA and NNPA at 1.06 and 42 basis points)",
+            "source": "Q2 FY27 Concall Transcript (23-Oct-2026), PDF p. 5 — \"PCR remained pretty strong at 60%. GNPA and NNPA came in at 1.06 and 42 basis points.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_23102026145254_BFL_Investor_Call_outcome_Transcript_for_filing.pdf#page=5",
+            "doc_id": "DOC_1",
+            "page": 5,
+            "evidence_file": "evidence/BAJFINANCE/DOC_1_p5.txt"
+          },
+          {
+            "metric": "AUM Growth",
+            "actual": "26.5% to INR 5,84,624 crores (net AUM addition of INR 38,000 crores)",
+            "source": "Q2 FY27 Concall Transcript (23-Oct-2026), PDF p. 3 — \"grew by 26.5% to INR 5,84,624 crores, delivering net AUM addition of close to INR 38,000 crores in the quarter.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_23102026145254_BFL_Investor_Call_outcome_Transcript_for_filing.pdf#page=3",
+            "doc_id": "DOC_1",
+            "page": 3,
+            "evidence_file": "evidence/BAJFINANCE/DOC_1_p3.txt"
+          }
+        ],
+        "verdict": "beat",
+        "commentary": "AUM growth accelerated to 26.5%, comfortably exceeding earlier annual guidance of 20% to 24%, while balance sheet resilience was preserved with provision coverage holding exactly at 60%."
+      },
+      {
+        "quarter": "Q1 FY27",
+        "guided": [
+          {
+            "metric": "Return on Assets (ROA)",
+            "guidance": "4.4% to 4.6%",
+            "source": "Q4 FY26 Concall Transcript (04-May-2026), PDF p. 8 — \"ROA came in as of fourth quarter at 4.6%. We continue to guide for 4.4% to 4.6%.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_04052026191931_BFL_Investor_Call_outcome_Transcript.pdf#page=8",
+            "doc_id": "DOC_3",
+            "page": 8,
+            "evidence_file": "evidence/BAJFINANCE/DOC_3_p8.txt"
+          },
+          {
+            "metric": "Customer Franchise Addition",
+            "guidance": "15 - 17 million",
+            "source": "Q4 FY26 Concall Transcript (04-May-2026), PDF p. 7 — \"In terms of customer franchise, we continue to be confident of adding 15 - 17 million new customers in FY27.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_04052026191931_BFL_Investor_Call_outcome_Transcript.pdf#page=7",
+            "doc_id": "DOC_3",
+            "page": 7,
+            "evidence_file": "evidence/BAJFINANCE/DOC_3_p7.txt"
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "Return on Assets (ROA)",
+            "actual": "4.7% (with ROE at 20.4% and Opex to NTI at 33.4%)",
+            "source": "Q1 FY27 Concall Transcript (04-Aug-2026), PDF p. 4 — \"ROA came in at 4.7% and ROE at 20.4%. Opex to NTI came in at 33.4%, marginally higher than last year.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_04082026181739_BFL_Investor_Call_outcome_Transcript.pdf#page=4",
+            "doc_id": "DOC_2",
+            "page": 4,
+            "evidence_file": "evidence/BAJFINANCE/DOC_2_p4.txt"
+          },
+          {
+            "metric": "Customer Franchise Addition",
+            "actual": "5 million (with INR37,000 crores of AUM added)",
+            "source": "Q1 FY27 Concall Transcript (04-Aug-2026), PDF p. 4 — \"We added 5 million new customers. AUM, we added a record INR37,000 crores of AUM in a quarter.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_04082026181739_BFL_Investor_Call_outcome_Transcript.pdf#page=4",
+            "doc_id": "DOC_2",
+            "page": 4,
+            "evidence_file": "evidence/BAJFINANCE/DOC_2_p4.txt"
+          }
+        ],
+        "verdict": "beat",
+        "commentary": "Return on Assets reached 4.7%, surpassing the guided range of 4.4% to 4.6%, backed by strong franchise customer additions of 5 million in a single quarter."
+      },
+      {
+        "quarter": "Q4 FY26",
+        "guided": [
+          {
+            "metric": "Cost of Funds",
+            "guidance": "between 7.55% to 7.60%",
+            "source": "Q3 FY26 Concall Transcript (07-Feb-2026), PDF p. 4 — \"We're likely to be between 7.55% to 7.60% in terms of cost of funds as we exit the year.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_07022026151022_BFL_Investor_Call_outcome_Transcript.pdf#page=4",
+            "doc_id": "DOC_4",
+            "page": 4,
+            "evidence_file": "evidence/BAJFINANCE/DOC_4_p4.txt"
+          },
+          {
+            "metric": "Customer Franchise Addition",
+            "guidance": "17 to 18 million",
+            "source": "Q3 FY26 Concall Transcript (07-Feb-2026), PDF p. 4 — \"We now expect 17 to 18 million customers to be added to the franchise in FY '26.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_07022026151022_BFL_Investor_Call_outcome_Transcript.pdf#page=4",
+            "doc_id": "DOC_4",
+            "page": 4,
+            "evidence_file": "evidence/BAJFINANCE/DOC_4_p4.txt"
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "Cost of Funds",
+            "actual": "7.41% (improved by 4 basis points in Q4)",
+            "source": "Q4 FY26 Concall Transcript (04-May-2026), PDF p. 4 — \"Cost of funds improved by 4 basis points in Q4 and came in at 7.41%. NIM remained steady.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_04052026191931_BFL_Investor_Call_outcome_Transcript.pdf#page=4",
+            "doc_id": "DOC_3",
+            "page": 4,
+            "evidence_file": "evidence/BAJFINANCE/DOC_3_p4.txt"
+          },
+          {
+            "metric": "Customer Franchise Addition",
+            "actual": "17.5 million (along with 52.5 million loans booked)",
+            "source": "Q4 FY26 Concall Transcript (04-May-2026), PDF p. 7 — \"Overall, last year, we booked 52.5 million loans and added 17.5 million new customers on a full year basis.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_04052026191931_BFL_Investor_Call_outcome_Transcript.pdf#page=7",
+            "doc_id": "DOC_3",
+            "page": 7,
+            "evidence_file": "evidence/BAJFINANCE/DOC_3_p7.txt"
+          }
+        ],
+        "verdict": "beat",
+        "commentary": "Cost of funds improved beyond expectations to exit at 7.41% versus the targeted 7.55% to 7.60%, while annual customer acquisition achieved 17.5 million, right in the guided corridor."
+      },
+      {
+        "quarter": "Q3 FY26",
+        "guided": [
+          {
+            "metric": "Cost of Funds",
+            "guidance": "between 7.5% to 7.55%",
+            "source": "Q2 FY26 Concall Transcript (13-Nov-2025), PDF p. 4 — \"For FY '26, we expect cost of funds to be in the region of overall full year to be between 7.5% to 7.55%.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_13112025183447_BFLInvestorCalloutcomeTranscriptforupload.pdf#page=4",
+            "doc_id": "DOC_5",
+            "page": 4,
+            "evidence_file": "evidence/BAJFINANCE/DOC_5_p4.txt"
+          },
+          {
+            "metric": "MSME Portfolio Growth",
+            "guidance": "10-12%",
+            "source": "Q2 FY26 Concall Transcript (13-Nov-2025), PDF p. 4 — \"We now expect MSME business to grow in the current full fiscal by 10-12% only.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_13112025183447_BFLInvestorCalloutcomeTranscriptforupload.pdf#page=4",
+            "doc_id": "DOC_5",
+            "page": 4,
+            "evidence_file": "evidence/BAJFINANCE/DOC_5_p4.txt"
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "Cost of Funds",
+            "actual": "7.45% (sequential improvement of 7 basis points)",
+            "source": "Q3 FY26 Concall Transcript (07-Feb-2026), PDF p. 4 — \"Cost of funds came in at 7.45%. It is an improvement of 7 basis points sequentially\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_07022026151022_BFL_Investor_Call_outcome_Transcript.pdf#page=4",
+            "doc_id": "DOC_4",
+            "page": 4,
+            "evidence_file": "evidence/BAJFINANCE/DOC_4_p4.txt"
+          },
+          {
+            "metric": "MSME Portfolio Growth",
+            "actual": "11% in quarter 3",
+            "source": "Q3 FY26 Concall Transcript (07-Feb-2026), PDF p. 4 — \"MSME business, that's something that you'll see, which has grown in this -- in quarter 3 only by 11%.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_07022026151022_BFL_Investor_Call_outcome_Transcript.pdf#page=4",
+            "doc_id": "DOC_4",
+            "page": 4,
+            "evidence_file": "evidence/BAJFINANCE/DOC_4_p4.txt"
+          }
+        ],
+        "verdict": "beat",
+        "commentary": "Cost of funds improved to 7.45%, beating full-year expectations, while intentional MSME portfolio pruning aligned perfectly with the 10-12% growth target."
+      }
+    ],
+    "credibility_score": "high",
+    "pattern": "Management routinely guides with conservative benchmark ranges and delivers at or above the upper end, using positive operational variance to fortify the balance sheet through voluntary macroeconomic provisions."
+  },
+  "citation_audit": {
+    "documents_fetched": 10,
+    "total_pdf_pages_available": 251,
+    "pages_actually_read": 55,
+    "pages_dropped": 196,
+    "verified_claims": 16,
+    "rejected_claims": 0,
+    "rejections_detail": []
+  },
+  "model_used": "gemini-3.8-flash",
+  "tokens": {
+    "in": 48086,
+    "out": 16269,
+    "out_candidates": 2068,
+    "out_thoughts": 14201
+  },
+  "cost_estimate_usd": 0.055098
+}

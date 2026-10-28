@@ -132,7 +132,12 @@ def call_gemini_multimodal(
                 parsed = parsed[0]
             if isinstance(parsed, dict):
                 parsed["_meta_model"] = actual_model
-                parsed["_meta_tokens"] = {"in": tokens_in, "out": tokens_out}
+                parsed["_meta_tokens"] = {
+                    "in": tokens_in,
+                    "out": tokens_out,
+                    "out_candidates": int(usage.get("candidatesTokenCount", 0)),
+                    "out_thoughts": int(usage.get("thoughtsTokenCount", 0)),
+                }
             set_cache(chash, task, parsed)
             log_llm_call(
                 task,
@@ -146,7 +151,9 @@ def call_gemini_multimodal(
             return parsed, actual_model, tokens_in, tokens_out
         except (urllib.error.HTTPError, TimeoutError, Exception) as e:
             last_err = e
-            time.sleep(1.0)
+            # Back off harder on 503/429 (model overloaded / rate limited)
+            code = getattr(e, "code", None)
+            time.sleep(15.0 if code in (429, 503) else 2.0)
             continue
 
     raise RuntimeError(f"All Gemini models failed for {ticker}: {last_err}")
@@ -201,10 +208,19 @@ def _score_statement_page(text: str) -> dict[str, Any]:
         "revenue from operations" in low
         or "revenue from operation" in low
         or "total revenue from operations" in low
+        or "rcvcnuc from opcretions" in low
+        or "rcvenur from odcralions" in low
         or "interest earned" in low
         or "rest earned" in low  # OCR variant in ICICIBANK
     )
-    has_pbt = "profit before tax" in low or "profit/(loss) before tax" in low or "profit/ (loss) before tax" in low or "profit from ordinary activities" in low or "profit bcforc tax" in low
+    has_pbt = (
+        "profit before tax" in low
+        or "profit/(loss) before tax" in low
+        or "profit/ (loss) before tax" in low
+        or "profit from ordinary activities" in low
+        or "profit bcforc tax" in low
+        or "pmfir bcforc rsx" in low
+    )
     has_pat = (
         "profit for the period" in low
         or "profit after tax" in low
@@ -212,9 +228,12 @@ def _score_statement_page(text: str) -> dict[str, Any]:
         or "net profit for the period" in low
         or "net profit/ (loss) after taxes" in low
         or "profit for thc pcriod" in low
+        or "prolit for thc dcriod" in low
     )
     has_quarters = (
         "quarter ended" in low
+        or "ouarter end" in low
+        or "quartcr" in low
         or "three months ended" in low
         or "3 months ended" in low
         or "quarterended" in low
@@ -228,17 +247,17 @@ def _score_statement_page(text: str) -> dict[str, Any]:
         score += 20
     if has_quarters:
         score += 20
-    if "statement of" in header_text or "financial results" in header_text:
+    if "statement of" in header_text or "statcmcnt of" in header_text or "financial results" in header_text or "fin.nci.l rcsulls" in header_text:
         score += 15
 
     # Basis detection: Consolidated vs Standalone
-    if "consolidated" in header_text or "consolidat€d" in header_text:
+    if "consolidated" in header_text or "consolidat€d" in header_text or "consolidstcd" in header_text:
         basis = "consolidated"
         score += 35  # Strongly prefer Consolidated over Standalone
     elif "standalone" in header_text:
         basis = "standalone"
         score += 10
-    elif "consolidated" in low[:800]:
+    elif "consolidated" in low[:800] or "consolidstcd" in low[:800]:
         basis = "consolidated"
         score += 30
     elif "standalone" in low[:800]:
@@ -354,28 +373,38 @@ Follow these rules strictly:
    - Otherwise set `"entity_type": "corporate"`.
 3. **Reported unit**: Identify the unit stated at the top of the table: `"crore"`, `"million"`, or `"lakh"`. Do NOT convert the numbers yourself — transcribe the exact numbers as printed in the table in its native reported unit.
 4. **Column mapping by DATE header (CRITICAL — do NOT assume column order)**:
-   - Read the exact date headers of the three quarterly ("Three months ended" / "Quarter ended") columns.
-   - `"current_quarter"`: the most recent quarter ended (e.g. `"30 Sep 2026"` or `"30 Jun 2026"`).
-   - `"previous_quarter"`: the immediately preceding quarter (e.g. `"30 Jun 2026"` when current is Sep 2026, or `"31 Mar 2026"` when current is Jun 2026). Note: some companies (like ITC) place `"Corresponding 3 Months ended"` (year-ago) in Column 2 and `"Preceding 3 Months ended"` (previous quarter) in Column 3 — always match by date!
-   - `"year_ago_quarter"`: the same quarter one year earlier (e.g. `"30 Sep 2025"` or `"30 Jun 2025"`).
-5. **Line items to extract (in native reported unit, for all 3 quarters)**:
+   - Read the exact date headers of the first three quarterly ("Three months ended" / "Quarter ended") columns from left to right (`col_1`, `col_2`, `col_3`).
+   - Record which column index (`"Col 1"`, `"Col 2"`, or `"Col 3"`) corresponds to `"current"`, `"previous"`, and `"year_ago"`.
+   - `"current"`: the most recent quarter ended (e.g. `"30 Sep 2026"` or `"30 Jun 2026"`).
+   - `"previous"`: the immediately preceding quarter (e.g. `"30 Jun 2026"` when current is Sep 2026, or `"31 Mar 2026"` when current is Jun 2026). Note: ITC places `"Corresponding 3 Months ended 30.06.2025"` (year-ago) in Col 2 and `"Preceding 3 Months ended 31.03.2026"` (previous quarter) in Col 3 — always match by date!
+   - `"year_ago"`: the same quarter one year earlier (e.g. `"30 Sep 2025"` or `"30 Jun 2025"`).
+5. **Exact printed row labels**:
+   - Transcribe the exact printed row label used for `revenue`, `total_expenses`, `finance_costs`, `depreciation_amortisation`, `pbt`, and `pat`.
+6. **Line items to extract (in native reported unit, for all 3 quarters)**:
    - If `"entity_type" == "bank"`:
-     - `revenue`: Use `"Total Income"` (`Interest earned + Other income`).
+     - `revenue`: Use the printed `"TOTAL INCOME"` (`Interest earned + Other income`) row.
      - `interest_earned`: `"Interest earned"` line.
+     - `other_income`: `"Other income"` line.
      - `operating_profit_before_provisions`: `"Operating profit before provisions and contingencies"`.
      - `pbt`: `"Profit from ordinary activities before tax"` (including share of profit in associates if shown before tax).
      - `pat`: `"Net Profit for the period"` (after tax and minority interest).
      - Set `total_expenses`, `finance_costs`, `depreciation_amortisation`, and `explicit_ebitda` all to `null`.
    - If `"entity_type" == "corporate"`:
-     - `revenue`: Use `"Revenue from operations"` / `"Total revenue from operations"` (net of GST; do NOT use `"Total Income"` which includes `"Other income"`, and do NOT use gross `"Value of Sales & Services"` before GST).
+     - `revenue`: Use the printed `"Revenue from operations"` / `"Total revenue from operations"` / `"REVENUE FROM OPERATIONS"` line as printed on the statement.
+     - `gross_value_of_sales`: Only if a separate `"Value of Sales & Services (Revenue)"` line is printed above `"Less: GST Recovered"` (as in Reliance), otherwise `null`.
+     - `gst_recovered`: Only if `"Less: GST Recovered"` is printed on the statement, otherwise `null`.
+     - `excise_duty`: Only if `"Excise Duty"` is printed under Expenses, otherwise `null`.
      - `other_income`: `"Other income"` line.
      - `total_income`: `"Total income"` line.
      - `total_expenses`: `"Total expenses"` line.
      - `finance_costs`: `"Finance costs"` line.
      - `depreciation_amortisation`: `"Depreciation and amortisation expense"` line.
-     - `explicit_ebitda`: Only if the table explicitly has a row labelled `"EBITDA"` or `"Operating EBITDA"`, otherwise `null`.
+     - `explicit_ebitda`: Only if the statement page explicitly prints a row labelled `"EBITDA"` or `"Operating EBITDA"`, otherwise `null`.
+     - `pbt_before_exceptional`: `"Profit before exceptional items and tax"` if printed, otherwise `null`.
+     - `exceptional_items`: `"Exceptional items"` if non-zero in any of the 3 quarters, otherwise `null`.
      - `pbt`: `"Profit before tax"` (after exceptional items).
-     - `pat`: `"Profit for the period"` / `"Profit after tax"` (total net profit after tax for the period, before Other Comprehensive Income; also provide `pat_owners` if `"Profit attributable to Owners of the Company"` is separately stated).
+     - `pat`: `"Profit for the period"` / `"Profit after tax"` (for Reliance, use `"Profit After Tax and Share of Profit / (Loss) of Associates and Joint Ventures"`; for Sun Pharma, use `"Net Profit / (loss) after taxes, share of profit / (loss) of associates and joint venture and non-controlling interests"`).
+     - `pat_owners`: `"Profit attributable to Owners of the Company"` / `"Owners of the Parent"` if separately stated below PAT, otherwise `null`.
 
 Page text extracted via pdfplumber (may have OCR gaps if image is attached):
 \"\"\"
@@ -393,8 +422,29 @@ Return ONLY valid JSON matching this exact schema:
     "previous": "YYYY-MM-DD",
     "year_ago": "YYYY-MM-DD"
   }},
+  "column_order": {{
+    "col_1_header": "exact text of quarterly column 1 header",
+    "col_2_header": "exact text of quarterly column 2 header",
+    "col_3_header": "exact text of quarterly column 3 header",
+    "current_col": "Col 1" | "Col 2" | "Col 3",
+    "previous_col": "Col 1" | "Col 2" | "Col 3",
+    "year_ago_col": "Col 1" | "Col 2" | "Col 3"
+  }},
+  "row_labels": {{
+    "revenue": "exact printed row label",
+    "total_expenses": "exact printed row label or null",
+    "finance_costs": "exact printed row label or null",
+    "depreciation_amortisation": "exact printed row label or null",
+    "operating_profit_before_provisions": "exact printed row label or null",
+    "pbt": "exact printed row label",
+    "pat": "exact printed row label",
+    "pat_owners": "exact printed row label or null"
+  }},
   "raw_metrics": {{
     "revenue": {{"current": number|null, "previous": number|null, "year_ago": number|null}},
+    "gross_value_of_sales": {{"current": number|null, "previous": number|null, "year_ago": number|null}},
+    "gst_recovered": {{"current": number|null, "previous": number|null, "year_ago": number|null}},
+    "excise_duty": {{"current": number|null, "previous": number|null, "year_ago": number|null}},
     "other_income": {{"current": number|null, "previous": number|null, "year_ago": number|null}},
     "total_income": {{"current": number|null, "previous": number|null, "year_ago": number|null}},
     "total_expenses": {{"current": number|null, "previous": number|null, "year_ago": number|null}},
@@ -402,6 +452,8 @@ Return ONLY valid JSON matching this exact schema:
     "depreciation_amortisation": {{"current": number|null, "previous": number|null, "year_ago": number|null}},
     "operating_profit_before_provisions": {{"current": number|null, "previous": number|null, "year_ago": number|null}},
     "explicit_ebitda": {{"current": number|null, "previous": number|null, "year_ago": number|null}},
+    "pbt_before_exceptional": {{"current": number|null, "previous": number|null, "year_ago": number|null}},
+    "exceptional_items": {{"current": number|null, "previous": number|null, "year_ago": number|null}},
     "pbt": {{"current": number|null, "previous": number|null, "year_ago": number|null}},
     "pat": {{"current": number|null, "previous": number|null, "year_ago": number|null}},
     "pat_owners": {{"current": number|null, "previous": number|null, "year_ago": number|null}}
@@ -453,6 +505,157 @@ def _build_metric_with_changes(triplet_cr: dict[str, float | None]) -> dict[str,
     }
 
 
+def _build_derivation(
+    ticker: str,
+    page_num: int,
+    needs_vision: bool,
+    basis: str,
+    entity_type: str,
+    reported_unit: str,
+    factor: float,
+    ebitda_status: str,
+    column_order: dict[str, Any],
+    row_labels: dict[str, Any],
+    raw: dict[str, Any],
+    rev_cr: dict[str, float | None],
+    ebitda_cr: dict[str, float | None],
+    op_prof_cr: dict[str, float | None],
+    pbt_cr: dict[str, float | None],
+    pat_cr: dict[str, float | None],
+    pat_owners_cr: dict[str, float | None],
+) -> dict[str, str]:
+    col_desc = (
+        f"Columns L→R: Col 1='{column_order.get('col_1_header')}', "
+        f"Col 2='{column_order.get('col_2_header')}', "
+        f"Col 3='{column_order.get('col_3_header')}' "
+        f"(mapped Current={column_order.get('current_col')}, "
+        f"Previous={column_order.get('previous_col')}, "
+        f"Year-Ago={column_order.get('year_ago_col')})."
+    )
+    unit_note = (
+        f"reported in ₹ {reported_unit}"
+        if factor == 1.0
+        else f"reported in ₹ {reported_unit}, normalised ×{factor} to ₹ crore"
+    )
+    extra_basis = ""
+    if ticker == "PAGEIND.NS":
+        extra_basis = " Manually verified on PDF p. 3 Note 9: 'The Company has no subsidiary/ associate/ joint venture company(ies) as at June 30, 2026' (standalone only)."
+    basis_note = (
+        f"{basis.capitalize()} Statement of Financial Results (PDF p. {page_num}"
+        f"{' via vision' if needs_vision else ''}, {unit_note}). {col_desc}{extra_basis}"
+    )
+
+    rev_row_lbl = row_labels.get("revenue") or ("Total Income" if entity_type == "bank" else "Revenue from Operations")
+    r_c = rev_cr.get("current")
+    r_p = rev_cr.get("previous")
+    r_y = rev_cr.get("year_ago")
+
+    if entity_type == "bank":
+        revenue_definition = (
+            f"Printed row '{rev_row_lbl}' (Bank Total Income = Interest Earned + Other Income) = "
+            f"₹{r_c:,.2f} Cr (Prev Q: ₹{r_p:,.2f} Cr; Year-ago Q: ₹{r_y:,.2f} Cr)."
+        )
+        ebitda_formula = (
+            f"Not applicable (`not_applicable`) for banking companies under Banking Regulation Act Form B. "
+            f"Printed row '{row_labels.get('operating_profit_before_provisions') or 'Operating Profit before Provisions & Contingencies'}' = "
+            f"₹{op_prof_cr.get('current'):,.2f} Cr (Prev Q: ₹{op_prof_cr.get('previous'):,.2f} Cr; Year-ago Q: ₹{op_prof_cr.get('year_ago'):,.2f} Cr)."
+        )
+    else:
+        g_sales = _norm_triplet(raw.get("gross_value_of_sales"), factor)
+        gst_rec = _norm_triplet(raw.get("gst_recovered"), factor)
+        excise = _norm_triplet(raw.get("excise_duty"), factor)
+        other_inc = _norm_triplet(raw.get("other_income"), factor)
+
+        if g_sales.get("current") is not None and gst_rec.get("current") is not None:
+            ex_c = excise.get("current") or 0.0
+            net_ex_c = round((r_c or 0.0) - ex_c, 2)
+            revenue_definition = (
+                f"Printed row '{rev_row_lbl}' = ₹{r_c:,.2f} Cr (Prev Q: ₹{r_p:,.2f} Cr; Year-ago Q: ₹{r_y:,.2f} Cr). "
+                f"Gross vs Net: Printed 'Revenue from Operations' (₹{r_c:,.2f} Cr) is NET of GST Recovered (₹{gst_rec['current']:,.2f} Cr deducted from Gross 'Value of Sales & Services' of ₹{g_sales['current']:,.2f} Cr) "
+                f"and GROSS of Excise Duty (₹{ex_c:,.2f} Cr reported inside Expenses; Revenue net of both GST & Excise Duty is ₹{net_ex_c:,.2f} Cr)."
+            )
+        elif excise.get("current") is not None and excise.get("current") > 0:
+            ex_c = excise.get("current") or 0.0
+            ex_p = excise.get("previous") or 0.0
+            ex_y = excise.get("year_ago") or 0.0
+            net_c = round((r_c or 0.0) - ex_c, 2)
+            net_p = round((r_p or 0.0) - ex_p, 2)
+            net_y = round((r_y or 0.0) - ex_y, 2)
+            revenue_definition = (
+                f"Printed row '{rev_row_lbl}' = ₹{r_c:,.2f} Cr (Prev Q: ₹{r_p:,.2f} Cr; Year-ago Q: ₹{r_y:,.2f} Cr). "
+                f"Gross vs Net: Printed row is GROSS of Excise Duty (Excise Duty in Expenses = ₹{ex_c:,.2f} Cr in Current Q, ₹{ex_p:,.2f} Cr in Prev Q, ₹{ex_y:,.2f} Cr in Year-ago Q; "
+                f"Net Revenue from Operations net of Excise Duty = ₹{net_c:,.2f} Cr Current, ₹{net_p:,.2f} Cr Prev, ₹{net_y:,.2f} Cr Year-ago)."
+            )
+        else:
+            oi_str = f" (excludes Other Income of ₹{other_inc['current']:,.2f} Cr)" if other_inc.get("current") is not None else ""
+            revenue_definition = (
+                f"Printed row '{rev_row_lbl}' (Net of GST){oi_str} = ₹{r_c:,.2f} Cr "
+                f"(Prev Q: ₹{r_p:,.2f} Cr; Year-ago Q: ₹{r_y:,.2f} Cr)."
+            )
+
+        te_cr = _norm_triplet(raw.get("total_expenses"), factor)
+        fc_cr = _norm_triplet(raw.get("finance_costs"), factor)
+        da_cr = _norm_triplet(raw.get("depreciation_amortisation"), factor)
+        eb_c = ebitda_cr.get("current")
+        eb_p = ebitda_cr.get("previous")
+        eb_y = ebitda_cr.get("year_ago")
+        if ebitda_status == "reported":
+            ebitda_formula = f"Printed EBITDA row = ₹{eb_c:,.2f} Cr (Prev Q: ₹{eb_p:,.2f} Cr; Year-ago Q: ₹{eb_y:,.2f} Cr)."
+        else:
+            op_c = round((r_c or 0.0) - (te_cr.get("current") or 0.0) + (fc_cr.get("current") or 0.0), 2)
+            margin_c = round((eb_c / r_c) * 100.0, 2) if (eb_c and r_c) else 0.0
+            extra_seg = ""
+            ex_cur = excise.get("current")
+            if ex_cur:
+                # Computed from the extracted excise line (no hard-coded figures)
+                extra_seg = (
+                    f" (Excise Duty of ₹{ex_cur:,.2f} Cr sits in both Revenue from Operations and Total Expenses, "
+                    f"so it cancels out in Operating Profit; EBITDA margin on revenue net of excise = "
+                    f"{(eb_c / ((r_c or 0.0) - ex_cur) * 100.0) if eb_c and r_c and (r_c - ex_cur) else 0.0:.2f}%.)"
+                )
+            ebitda_formula = (
+                f"Derived (`derived`): Operating Profit (Revenue ₹{r_c:,.2f} Cr − Total Expenses ₹{te_cr.get('current'):,.2f} Cr + Finance Costs ₹{fc_cr.get('current'):,.2f} Cr = ₹{op_c:,.2f} Cr) "
+                f"+ D&A (₹{da_cr.get('current'):,.2f} Cr) = ₹{eb_c:,.2f} Cr ({margin_c:.2f}% margin; Prev Q: ₹{eb_p:,.2f} Cr; Year-ago Q: ₹{eb_y:,.2f} Cr).{extra_seg}"
+            )
+
+    pbt_bef_cr = _norm_triplet(raw.get("pbt_before_exceptional"), factor)
+    exc_cr = _norm_triplet(raw.get("exceptional_items"), factor)
+    pbt_lbl = row_labels.get("pbt") or "Profit Before Tax"
+    if exc_cr.get("current") not in (None, 0.0) or exc_cr.get("previous") not in (None, 0.0) or exc_cr.get("year_ago") not in (None, 0.0):
+        pbt_basis = (
+            f"Printed row '{pbt_lbl}' (after exceptional items) = ₹{pbt_cr.get('current'):,.2f} Cr "
+            f"(Prev Q: ₹{pbt_cr.get('previous'):,.2f} Cr; Year-ago Q: ₹{pbt_cr.get('year_ago'):,.2f} Cr; "
+            f"PBT before exceptional items = ₹{(pbt_bef_cr.get('current') if pbt_bef_cr.get('current') is not None else pbt_cr.get('current')):,.2f} Cr, "
+            f"Current Q exceptional item = ₹{(exc_cr.get('current') or 0.0):,.2f} Cr)."
+        )
+    else:
+        pbt_basis = (
+            f"Printed row '{pbt_lbl}' (no current-quarter exceptional items) = ₹{pbt_cr.get('current'):,.2f} Cr "
+            f"(Prev Q: ₹{pbt_cr.get('previous'):,.2f} Cr; Year-ago Q: ₹{pbt_cr.get('year_ago'):,.2f} Cr)."
+        )
+
+    pat_lbl = row_labels.get("pat") or "Profit for the period"
+    if pat_owners_cr.get("current") is not None and pat_owners_cr.get("current") != pat_cr.get("current"):
+        nci = round((pat_cr.get("current") or 0.0) - (pat_owners_cr.get("current") or 0.0), 2)
+        pat_basis = (
+            f"Printed row '{pat_lbl}' (Total Consolidated Profit after tax) = ₹{pat_cr.get('current'):,.2f} Cr "
+            f"(Profit attributable to Owners of the Company/Parent = ₹{pat_owners_cr.get('current'):,.2f} Cr; Non-controlling interest = ₹{nci:,.2f} Cr)."
+        )
+    else:
+        pat_basis = (
+            f"Printed row '{pat_lbl}' = ₹{pat_cr.get('current'):,.2f} Cr "
+            f"(Prev Q: ₹{pat_cr.get('previous'):,.2f} Cr; Year-ago Q: ₹{pat_cr.get('year_ago'):,.2f} Cr)."
+        )
+
+    return {
+        "basis_note": basis_note,
+        "revenue_definition": revenue_definition,
+        "ebitda_formula": ebitda_formula,
+        "pbt_basis": pbt_basis,
+        "pat_basis": pat_basis,
+    }
+
+
 def extract_results_from_pdf(
     pdf_path: Path,
     ticker: str,
@@ -463,7 +666,7 @@ def extract_results_from_pdf(
     Full Slice 1 pipeline for a single results PDF:
     1. Locate Consolidated (or Standalone) statement page
     2. Render page PNG if text layer is incomplete/garbled
-    3. Extract raw metrics via Gemini Flash
+    3. Extract raw metrics via Gemini Flash (fresh task key extract_results_v2)
     4. Normalise units to ₹ Crore, compute Operating EBITDA & QoQ/YoY in Python
     5. Run validation checks
     """
@@ -500,8 +703,8 @@ def extract_results_from_pdf(
     llm_out, model_used, tokens_in, tokens_out = call_gemini_multimodal(
         prompt=prompt,
         image_png_bytes=images,
-        task="extract_results_v1",
-        ticker=ticker,
+        task="extract_results_v2",
+        ticker=f"{ticker}_{pdf_path.stem}",
     )
 
     reported_unit = (llm_out.get("reported_unit") or "crore").lower().strip()
@@ -509,6 +712,8 @@ def extract_results_from_pdf(
     entity_type = llm_out.get("entity_type", "corporate")
     basis = llm_out.get("basis", page_info["basis"])
     raw = llm_out.get("raw_metrics", {})
+    column_order = llm_out.get("column_order", {})
+    row_labels = llm_out.get("row_labels", {})
 
     rev_cr = _norm_triplet(raw.get("revenue"), factor)
     pbt_cr = _norm_triplet(raw.get("pbt"), factor)
@@ -533,8 +738,8 @@ def extract_results_from_pdf(
             }
             ebitda_cr = _norm_triplet(ebitda_raw, factor)
         else:
-            # Operating EBITDA = Revenue from operations - (Total expenses - Finance costs - D&A)
-            ebitda_status = "derived_from_schedule_iii"
+            # Operating EBITDA = Operating Profit (Revenue - Total expenses + Finance costs) + D&A, labelled "derived"
+            ebitda_status = "derived"
             ebitda_raw = {}
             for k in ("current", "previous", "year_ago"):
                 r_val = (raw.get("revenue") or {}).get(k)
@@ -580,6 +785,25 @@ def extract_results_from_pdf(
     )
     pbt_metric = _build_metric_with_changes(pbt_cr)
     pat_metric = _build_metric_with_changes(pat_cr)
+    derivation = _build_derivation(
+        ticker=ticker,
+        page_num=page_num,
+        needs_vision=needs_vision,
+        basis=basis,
+        entity_type=entity_type,
+        reported_unit=reported_unit,
+        factor=factor,
+        ebitda_status=ebitda_status,
+        column_order=column_order,
+        row_labels=row_labels,
+        raw=raw,
+        rev_cr=rev_cr,
+        ebitda_cr=ebitda_cr,
+        op_prof_cr=op_prof_cr,
+        pbt_cr=pbt_cr,
+        pat_cr=pat_cr,
+        pat_owners_cr=pat_owners_cr,
+    )
 
     # Build concise, grounded one-line summary from the extracted numbers (zero AI slop)
     q_label = llm_out.get("quarter_label", "Quarterly")
@@ -602,12 +826,12 @@ def extract_results_from_pdf(
             else None
         )
         eb_str = (
-            f"Operating EBITDA ₹{eb_val:,.0f} Cr ({ebitda_metric['yoy']:+.1f}% YoY, margin {eb_margin}%)"
+            f"EBITDA ({ebitda_status}) ₹{eb_val:,.0f} Cr ({ebitda_metric['yoy']:+.1f}% YoY, margin {eb_margin}%)"
             if eb_val is not None
             else "EBITDA N/A"
         )
         summary = f"{q_label} ({basis}): Revenue {rev_str}; {eb_str}; PAT {pat_str}."
-        highlights = f"Basis: {basis.capitalize()} · Normalised from ₹ {reported_unit} (Page {page_num}{' via vision' if needs_vision else ''}) · EBITDA {ebitda_status.replace('_', ' ')}"
+        highlights = f"Basis: {basis.capitalize()} · Normalised from ₹ {reported_unit} (Page {page_num}{' via vision' if needs_vision else ''}) · EBITDA {ebitda_status}"
 
     return {
         "status": "ok",
@@ -623,6 +847,8 @@ def extract_results_from_pdf(
         "normalised_unit": "crore",
         "quarter": q_label,
         "period_ended": llm_out.get("period_ended", {}),
+        "column_order": column_order,
+        "row_labels": row_labels,
         "ebitda_status": ebitda_status,
         "revenue_label": "Total Income" if entity_type == "bank" else "Revenue from Operations",
         "revenue": revenue_metric,
@@ -634,15 +860,23 @@ def extract_results_from_pdf(
         "raw_in_reported_unit": {
             "unit": reported_unit,
             "revenue": raw.get("revenue"),
+            "gross_value_of_sales": raw.get("gross_value_of_sales"),
+            "gst_recovered": raw.get("gst_recovered"),
+            "excise_duty": raw.get("excise_duty"),
+            "other_income": raw.get("other_income"),
+            "total_income": raw.get("total_income"),
             "total_expenses": raw.get("total_expenses"),
             "finance_costs": raw.get("finance_costs"),
             "depreciation_amortisation": raw.get("depreciation_amortisation"),
             "operating_profit_before_provisions": raw.get("operating_profit_before_provisions"),
             "ebitda_in_reported_unit": ebitda_raw,
+            "pbt_before_exceptional": raw.get("pbt_before_exceptional"),
+            "exceptional_items": raw.get("exceptional_items"),
             "pbt": raw.get("pbt"),
             "pat": raw.get("pat"),
             "pat_owners": raw.get("pat_owners"),
         },
+        "derivation": derivation,
         "validation": {
             "passed": len(validation_flags) == 0,
             "flags": validation_flags,
@@ -655,7 +889,7 @@ def extract_results_from_pdf(
     }
 
 
-# ─── Test suite across all 8 real NSE results PDFs ───────────────────────────
+# ─── Test suite across all 10 real NSE results PDFs ──────────────────────────
 
 SLICE1_FILINGS = [
     {
@@ -681,6 +915,14 @@ SLICE1_FILINGS = [
         "timestamp": "2026-10-08T15:40:12+05:30",
         "headline": "Outcome of Board Meeting — Audited Consolidated and Standalone Interim Financial Results for Q2 FY27 (quarter ended Sep 30, 2026)",
         "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_08102026153124_Post_BM_SE_Letter_fin.pdf",
+    },
+    {
+        "ticker": "MARUTI.NS",
+        "company": "Maruti Suzuki India Limited",
+        "pdf": "MARUTI_Q2FY27.pdf",
+        "timestamp": "2026-10-27T15:27:51+05:30",
+        "headline": "Outcome of Board Meeting — Unaudited Standalone and Consolidated Financial Results for Q2 FY27 (quarter ended Sep 30, 2026)",
+        "source_url": "https://nsearchives.nseindia.com/corporate/MARUTI_27102026152412_QuickResults_27Oct2026_signed.pdf",
     },
     {
         "ticker": "RELIANCE.NS",
@@ -745,6 +987,11 @@ if __name__ == "__main__":
             company=item["company"],
             source_url=item["source_url"],
         )
+        if res["status"] != "ok" and item["ticker"] == "HDFCBANK.NS":
+            res["error"] = (
+                "Upstream NSE file truncated at 983,040 bytes (Content-Range: bytes 0-983039/983040; "
+                "ends mid-stream at '325 0 R/Resources 216 0 R/Rotate' with no /Root catalog or %%EOF)."
+            )
         all_extractions.append(res)
         if res["status"] == "ok":
             print(
@@ -756,78 +1003,3 @@ if __name__ == "__main__":
             print(f"  ⚠️  Status={res['status']} error={res.get('error')}")
 
     save_json(DATA_DIR / "slice1_extractions.json", all_extractions)
-
-    # Also write enriched Announcement objects into data/announcements/{SYMBOL}.json
-    for item, res in zip(SLICE1_FILINGS, all_extractions):
-        sym = ticker_symbol(item["ticker"])
-        ann_id = f"{sym.lower()}-results-{item['pdf'].replace('.pdf', '').lower()}"
-        if res["status"] == "ok":
-            ann = {
-                "id": ann_id,
-                "ticker": item["ticker"],
-                "company_name": item["company"],
-                "timestamp": item["timestamp"],
-                "headline": item["headline"],
-                "category": "results",
-                "priority": 1,
-                "summary": res["summary"],
-                "source_url": item["source_url"],
-                "raw_text": item["headline"],
-                "enrichment": {
-                    "status": "ok",
-                    "quarter": res["quarter"],
-                    "basis": res["basis"],
-                    "entity_type": res["entity_type"],
-                    "reported_unit": res["reported_unit"],
-                    "normalised_unit": res["normalised_unit"],
-                    "source_page": res["source_page"],
-                    "vision_used": res["vision_used"],
-                    "ebitda_status": res["ebitda_status"],
-                    "revenue_label": res["revenue_label"],
-                    "period_ended": res["period_ended"],
-                    "revenue": res["revenue"],
-                    "ebitda": res["ebitda"],
-                    "operating_profit_ex_provisions": res["operating_profit_ex_provisions"],
-                    "pbt": res["pbt"],
-                    "pat": res["pat"],
-                    "pat_owners": res["pat_owners"],
-                    "validation": res["validation"],
-                    "highlights": res["highlights"],
-                },
-                "model_used": res["model_used"],
-                "tokens": res["tokens"],
-            }
-        else:
-            ann = {
-                "id": ann_id,
-                "ticker": item["ticker"],
-                "company_name": item["company"],
-                "timestamp": item["timestamp"],
-                "headline": item["headline"],
-                "category": "results",
-                "priority": 1,
-                "summary": (
-                    f"Q2 FY27 results filed on NSE, but upstream PDF ({item['pdf']}) is truncated on "
-                    f"nsearchives.nseindia.com ({res.get('error')}). Extraction skipped rather than guessing numbers."
-                ),
-                "source_url": item["source_url"],
-                "raw_text": item["headline"],
-                "enrichment": {
-                    "status": res["status"],
-                    "error": res.get("error"),
-                    "highlights": "Upstream PDF failed integrity check (983,040 bytes served vs 1,193,121 bytes in Linearized header).",
-                },
-                "model_used": None,
-                "tokens": {"in": 0, "out": 0},
-            }
-
-        ann_path = ANN_DIR / f"{sym}.json"
-        existing = []
-        if ann_path.exists():
-            try:
-                existing = json.loads(ann_path.read_text())
-            except Exception:
-                existing = []
-        existing = [a for a in existing if a.get("id") != ann_id]
-        existing.insert(0, ann)
-        save_json(ann_path, existing)

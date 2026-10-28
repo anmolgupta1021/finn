@@ -2,14 +2,14 @@
   "ticker": "RELIANCE.NS",
   "name": "Reliance Industries Limited",
   "sector": "Energy",
-  "fetched_at": "2026-10-27T07:05:24.310729Z",
+  "fetched_at": "2026-10-27T17:35:18.055853Z",
   "current": {
-    "price": 1201.8,
-    "change_pct": 0.99,
-    "volume": 7490515,
-    "vol_ratio": 0.49,
+    "price": 1196.2,
+    "change_pct": -0.47,
+    "volume": 13064086,
+    "vol_ratio": 0.87,
     "vol_guard": null,
-    "market_cap": 16169951035392,
+    "market_cap": 16187542994944,
     "name": "Reliance Industries Limited",
     "sector": "Energy",
     "industry": "Oil & Gas Refining & Marketing"
@@ -992,6 +992,17 @@
       "volume": 7490515,
       "change_pct": 0.99,
       "vol_ratio": 0.49,
+      "vol_guard": null
+    },
+    {
+      "date": "2026-10-27",
+      "open": 1195.0,
+      "high": 1202.6,
+      "low": 1184.0,
+      "close": 1196.2,
+      "volume": 13064086,
+      "change_pct": -0.47,
+      "vol_ratio": 0.87,
       "vol_guard": null
     }
   ]

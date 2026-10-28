@@ -2,14 +2,14 @@
   "ticker": "ITC.NS",
   "name": "ITC Limited",
   "sector": "Consumer Defensive",
-  "fetched_at": "2026-10-27T07:05:44.145211Z",
+  "fetched_at": "2026-10-27T17:35:53.102755Z",
   "current": {
-    "price": 260.5,
-    "change_pct": 1.01,
-    "volume": 15094338,
-    "vol_ratio": 0.72,
+    "price": 260.0,
+    "change_pct": -0.19,
+    "volume": 27552705,
+    "vol_ratio": 1.28,
     "vol_guard": null,
-    "market_cap": 3233860026368,
+    "market_cap": 3258297352192,
     "name": "ITC Limited",
     "sector": "Consumer Defensive",
     "industry": "Tobacco"
@@ -992,6 +992,17 @@
       "volume": 15094338,
       "change_pct": 1.01,
       "vol_ratio": 0.72,
+      "vol_guard": null
+    },
+    {
+      "date": "2026-10-27",
+      "open": 259.4,
+      "high": 260.15,
+      "low": 255.4,
+      "close": 260.0,
+      "volume": 27552705,
+      "change_pct": -0.19,
+      "vol_ratio": 1.28,
       "vol_guard": null
     }
   ]

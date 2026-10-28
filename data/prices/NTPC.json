@@ -2,14 +2,14 @@
   "ticker": "NTPC.NS",
   "name": "NTPC Limited",
   "sector": "Utilities",
-  "fetched_at": "2026-10-27T07:05:40.714220Z",
+  "fetched_at": "2026-10-27T17:35:48.245142Z",
   "current": {
-    "price": 300.0,
-    "change_pct": 0.67,
-    "volume": 6215343,
-    "vol_ratio": 0.71,
+    "price": 301.8,
+    "change_pct": 0.6,
+    "volume": 11860835,
+    "vol_ratio": 1.37,
     "vol_guard": null,
-    "market_cap": 2969119490048,
+    "market_cap": 2926453981184,
     "name": "NTPC Limited",
     "sector": "Utilities",
     "industry": "Utilities - Regulated Electric"
@@ -992,6 +992,17 @@
       "volume": 6215343,
       "change_pct": 0.67,
       "vol_ratio": 0.71,
+      "vol_guard": null
+    },
+    {
+      "date": "2026-10-27",
+      "open": 299.95,
+      "high": 307.0,
+      "low": 299.75,
+      "close": 301.8,
+      "volume": 11860835,
+      "change_pct": 0.6,
+      "vol_ratio": 1.37,
       "vol_guard": null
     }
   ]

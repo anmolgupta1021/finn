@@ -1,0 +1,41 @@
+TICKER: ETERNAL.NS
+DOCUMENT_ID: DOC_5
+DOCUMENT_TITLE: Q1 FY26 Concall Transcript (25-Jul-2025)
+PDF_PAGE: 7 (of 18)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/ZOMATO_25072025223203_TranscriptfilingsignedJuly2025.pdf#page=7
+========================================================================
+
+Akshant Goyal: See, Manish, that number is not important for us because it's a function of the weighted
+average of mature stores and new expansion. So directionally, as you can see, the
+margins have improved from -2.4% to -1.8% in this quarter. What we are saying is we
+expect that projection to continue, subject to competitive intensity remaining the same.
+So from here on, how long therefore, does that take to cross 0 is a function of how fast
+we're able to expand, and expansion also is not fully in our control because it's dependent
+on various external factors. So, we're not keen to give that number - also because I don't
+think it matters eventually. Parts of our business, as I mentioned, are already at 2.5%
+margin. So, the rest of the business catching up is a function of time.
+Manish Adukia: Thank you for taking my questions. All the best.
+Akshant Goyal: Thank you.
+Moderator: Thank you. Next question is from the line of Aditya Soman from CLSA. Please go ahead.
+Aditya Soman: Hi. So, first question, in your ROCE calculation on Blinkit, you've laid out the assumption
+of about 18 days of working capital. Now this is significantly lower than retail or
+traditional retailers like DMart. Is this because you do not have to maintain as much shelf
+inventory? Or is it just that your models allow you to minimize inventory just because you
+have a just-in-time model and can move much faster? Or does this mean that some of
+the inventory will still stay off the books?
+Albinder Singh Dhindsa: I don't think Aditya it's a like-to-like comparison with something like a DMart because for
+one of the largest categories, for example, general merchandise, they typically have
+much higher days of inventory, and that is owing to the way that they also source these
+items. So, I don't think that you can make that like-for-like assumption.
+However, because of the way that we replenish and the frequency at which we are
+actually able to move products in our supply chain, we are structurally better off than
+most retailers that you would see across categories in the days of cover that we need to
+have, in order to make sure that there is good availability for customers.
+Aditya Soman: Fair. No, that's clear. And then secondly, I mean, in your statement on competition,
+you've also mentioned that there's a clear trend for you at least that speed, assortment
+and customer support are almost more important than price. So, does this mean that we
+are seeing the segmentation of the market as we've seen everywhere in the world with
+sort of players like Reliance or DMart going after value and Blinkit effectively filling the
+gap in India for the convenience channels as we just don't have any supermarkets or
+convenience stores here?
+Page 6 of 17

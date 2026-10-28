@@ -1,0 +1,47 @@
+TICKER: RELIANCE.NS
+DOCUMENT_ID: DOC_4
+DOCUMENT_TITLE: Q2 FY26 Concall Transcript (19-Oct-2025)
+PDF_PAGE: 5 (of 37)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/kavinavora_19102025225511_SE__Transcripts.pdf#page=5
+========================================================================
+
+platforms at scale. Our ability to operate at population scale, once again, over 500 million
+consumers that we hit in this previous quarter. We closed at 506 million. Homes, we have
+crossed 22 million and growing rapidly.
+Enterprises, which is also, is growing fairly rapidly. So, we have got these platforms and
+technologies or solutions which are working at scale across all of these categories. And we
+are developing end-to-end control over the value chain, which will help us, which has already
+helped us in keeping the cost in control, keeping the whole development cycle in control,
+being able to bring out new functionalities at an agility which is better than what you see
+global operators being able to do, and taking this full stack approach which also helps us now
+possibly taking some of these technologies and platforms to other places as well. So that is
+a theme that we are very focused on, and we have been working on and we have
+demonstrated that repeatedly and we are continuing to demonstrate that across our business
+at scale. All of which gets us market leadership in mobility and home solutions.
+Number one in connectivity, 506 million subscribers at the end of the quarter. 8.3 million net
+additions during the quarter. Our chairman announced the 500 million subscribers in his AGM
+speech towards the end of August, and we have been growing since then as well. 234 million
+of these subscribers are 5G users. 21 million net additions in 5G users in this quarter as well.
+On homes, we have been making fairly steady and rapid progress. 23 million fixed broadband
+connected premises, 3 million net adds in this quarter. So, our million a month kind of run
+rate has sustained over a period of time, and it is now picking up more. And out of these 23
+million, nine and a half million are Jio Air Fiber homes using different technologies that we
+have spoken about, which makes us the world's largest fixed broadband service provider,
+wireless fixed broadband service provider, bigger than Verizon and T - Mobile which have
+had a much earlier start. All of this translates into market leadership in financial terms as well.
+36,000 Crores plus revenue, 45% of revenue market share in the connectivity business, 52%
+EBITDA margin for JPL.
+Of course, the connectivity business has a much higher EBITDA margin. So strong quarter
+with 18% year-on-year EBITDA growth and sustained leadership in connectivity.
+On mobility, one of the interesting things that we are observing is the uptake in data
+consumption and traffic in the non-urban areas, basically Tier 3, Tier 4 rural areas. Pan-India
+5G site traffic has grown 2x in the last year, but rural sites have shown higher growth. So, the
+uptake is actually quite healthy there, which is very positive for us because one, that shows
+that there is demand coming in from all geographies, all places, all segments of customers,
+and who are now consuming more and more. So, devices propagation and penetration is
+better. And they are finding use cases to use the 5G. And two, in many of these areas, we
+are really the only 5G service provider at this point in time. So, we have a healthy lead in that
+sense as well.
+On the network technology side, we have such high 5G consumption, both on the number of
+subscribers and the data consumption itself. We have clearly demonstrated the most efficient
+© Reliance Industries Limited 2020 4

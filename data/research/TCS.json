@@ -1,256 +1,283 @@
 {
   "ticker": "TCS.NS",
   "company_name": "Tata Consultancy Services Limited",
-  "generated_at": "2026-10-27T12:38:17.705513Z",
+  "generated_at": "2026-10-28T04:52:40.208421Z",
   "source_documents": [
     {
       "type": "concall_transcript",
       "quarter": "Q2 FY27",
       "url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14102026155941_SEInt14102026_signed.pdf",
-      "pages": 29
+      "pages": 29,
+      "pages_selected": 12,
+      "selected_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        16,
+        21,
+        26,
+        27,
+        28,
+        29
+      ]
     },
     {
       "type": "concall_transcript",
       "quarter": "Q1 FY27",
       "url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_15072026193646_SEInt15072026_Signed.pdf",
-      "pages": 25
+      "pages": 25,
+      "pages_selected": 11,
+      "selected_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        13,
+        23,
+        25
+      ]
     },
     {
       "type": "concall_transcript",
       "quarter": "Q4 FY26",
       "url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14042026200132_SEInt14042026_signed.pdf",
-      "pages": 35
+      "pages": 35,
+      "pages_selected": 13,
+      "selected_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        14,
+        26,
+        30,
+        34,
+        35
+      ]
     },
     {
       "type": "concall_transcript",
       "quarter": "Q3 FY26",
       "url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_16012026163741_Signed_SEIntimation.pdf",
-      "pages": 33
+      "pages": 33,
+      "pages_selected": 14,
+      "selected_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        21,
+        23,
+        24,
+        27,
+        32,
+        33
+      ]
     },
     {
       "type": "concall_transcript",
       "quarter": "Q2 FY26",
       "url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_23122025195649_Signed_SEInt_letter.pdf",
-      "pages": 32
+      "pages": 32,
+      "pages_selected": 8,
+      "selected_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        25,
+        27
+      ]
     },
     {
       "type": "results_filing",
       "quarter": "Q2 FY27",
       "url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_08102026153124_Post_BM_SE_Letter_fin.pdf",
-      "pages": 22
+      "pages": 22,
+      "pages_selected": 3,
+      "selected_page_numbers": [
+        1,
+        8,
+        17
+      ]
     },
     {
       "type": "results_filing",
       "quarter": "Q1 FY27",
       "url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_09072026155158_Post_BM_SE_Lettersigned.pdf",
-      "pages": 16
+      "pages": 16,
+      "pages_selected": 3,
+      "selected_page_numbers": [
+        1,
+        8,
+        14
+      ]
     },
     {
       "type": "results_filing",
       "quarter": "Q4 FY26",
       "url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_09042026155026_SE_Outcome_signed.pdf",
-      "pages": 25
+      "pages": 25,
+      "pages_selected": 3,
+      "selected_page_numbers": [
+        1,
+        9,
+        19
+      ]
     },
     {
       "type": "results_filing",
       "quarter": "Q3 FY26",
       "url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_28022026190358_SE_Stat_Auditors_Final_signed.pdf",
-      "pages": 3
+      "pages": 3,
+      "pages_selected": 2,
+      "selected_page_numbers": [
+        1,
+        2
+      ]
     },
     {
       "type": "results_filing",
       "quarter": "Q2 FY26",
       "url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_10122025211214_SE_disclosure_Finalsigned.pdf",
-      "pages": 7
+      "pages": 7,
+      "pages_selected": 3,
+      "selected_page_numbers": [
+        1,
+        2,
+        3
+      ]
     }
   ],
+  "page_selection_stats": {
+    "strategy": "prepared_remarks_and_keyword_qa_plus_pnl_results_pages",
+    "transcript_char_budget_per_quarter": 20000,
+    "results_char_budget_per_quarter": 8000,
+    "total_pdf_pages_available": 227,
+    "pages_selected": 72,
+    "pages_dropped": 155,
+    "corpus_chars_sent": 139747
+  },
   "narrative_vs_numbers": {
-    "summary": "TCS consistently over-delivered on its AI revenue acceleration narrative, expanding annualized AI revenue from $1.8 billion in Q3 FY26 to $3.1 billion in Q2 FY27. However, management missed its margin expansion targets, as operating margins dropped to 24% in Q1 FY27 and remained flat at 24% in Q2 FY27 against a stated target to inch toward 25% plus.",
+    "summary": "TCS management demonstrated high predictability on deal flow and cost impacts, beating full-year order book expectations with $40.7B in TCV against an expected US$38- 39 billion, while accurately forecasting Q1 FY27 wage hike headwinds at 170 bps within the guided 150 to 200 basis points range. However, sequential margin recovery stalled in Q2 FY27 at 24% as operational leverage was offset by strategic reinvestments in subcontractors and talent, trailing the aspirational 25% plus exit trajectory.",
     "quarters": [
       {
-        "quarter": "Q3 FY26",
+        "quarter": "Q2 FY27",
         "guided": [
           {
-            "metric": "AI Project Engagements",
-            "guidance": "Over 5,000 AI projects executed across clients",
-            "source": "Q2 FY26 Concall Transcript (23-Dec-2025), PDF p. 4 — \"By now, we have done more than 5,000 projects. And if you look ask us, like all of you\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_23122025195649_Signed_SEInt_letter.pdf#page=4",
-            "doc_id": "DOC_5",
-            "page": 4,
-            "evidence_file": "evidence/TCS/DOC_5_p4.txt"
+            "metric": "Operating Margin Trajectory",
+            "guidance": "Management stated an intention to inch up through the quarter and aim to exit at 25% plus.",
+            "source": "Q1 FY27 Concall Transcript (15-Jul-2026), PDF p. 23 — \"Ashwin, usually, we take a big headwind upfront in Q1, and we inch up through the quarter. We want to exit at 25% plus\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_15072026193646_SEInt15072026_Signed.pdf#page=23",
+            "doc_id": "DOC_2",
+            "page": 23,
+            "evidence_file": "evidence/TCS/DOC_2_p23.txt"
           }
         ],
         "delivered": [
           {
-            "metric": "AI Project Engagements",
-            "actual": "Annualized AI revenue reached US$1.8 billion, growing 17.3% QoQ in constant currency",
-            "source": "Q3 FY26 Concall Transcript (16-Jan-2026), PDF p. 4 — \"Our AI services now generate US$1.8 billion in annualized revenue and is growing at 17.3% QoQ in constant currency.\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_16012026163741_Signed_SEIntimation.pdf#page=4",
-            "doc_id": "DOC_4",
-            "page": 4,
-            "evidence_file": "evidence/TCS/DOC_4_p4.txt"
+            "metric": "Operating Margin Trajectory",
+            "actual": "Operating margins remained stable sequentially at 24%.",
+            "source": "Q2 FY27 Concall Transcript (14-Oct-2026), PDF p. 5 — \"Our operating margins remained stable sequentially at 24%. Consistent with our philosophy to drive long-term profitable growth, we continued to prioritize investments for growth.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14102026155941_SEInt14102026_signed.pdf#page=5",
+            "doc_id": "DOC_1",
+            "page": 5,
+            "evidence_file": "evidence/TCS/DOC_1_p5.txt"
+          }
+        ],
+        "verdict": "miss",
+        "commentary": "Operating margins remained flat sequentially at 24% instead of expanding toward the aspirational 25% plus level, driven by deliberate investments in niche talent and subcontractor costs."
+      },
+      {
+        "quarter": "Q1 FY27",
+        "guided": [
+          {
+            "metric": "Wage Hike Margin Headwind",
+            "guidance": "Management guided that the impact of wage increments would be in the range of 150 to 200 basis points.",
+            "source": "Q4 FY26 Concall Transcript (14-Apr-2026), PDF p. 30 — \"what we have seen in the past annual increment cycle, which had been in the range of 150 to 200 basis points.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14042026200132_SEInt14042026_signed.pdf#page=30",
+            "doc_id": "DOC_3",
+            "page": 30,
+            "evidence_file": "evidence/TCS/DOC_3_p30.txt"
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "Wage Hike Margin Headwind",
+            "actual": "Annual increments for the global workforce impacted margins by 170 bps.",
+            "source": "Q1 FY27 Concall Transcript (15-Jul-2026), PDF p. 5 — \"In Q1, we rolled out annual increments for our global workforce, which impacted margins by 170 bps.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_15072026193646_SEInt15072026_Signed.pdf#page=5",
+            "doc_id": "DOC_2",
+            "page": 5,
+            "evidence_file": "evidence/TCS/DOC_2_p5.txt"
           }
         ],
         "verdict": "hit",
-        "commentary": "TCS delivered stable operating margins of 25.2% while rapidly scaling its AI engagements, bringing annualized AI services revenue to $1.8 billion."
+        "commentary": "The operating margin impact from global workforce wage increments landed at 170 bps, well within management's prior projected band of 150 to 200 basis points."
       },
       {
         "quarter": "Q4 FY26",
         "guided": [
           {
-            "metric": "Operating Margin Band",
-            "guidance": "Targeting to inch closer to 26% to 28% band",
-            "source": "Q3 FY26 Concall Transcript (16-Jan-2026), PDF p. 23 — \"while we will not shy away from making investments, we want to inch closer to our 26% to 28% band\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_16012026163741_Signed_SEIntimation.pdf#page=23",
+            "metric": "Full Year Order Book TCV",
+            "guidance": "Management stated that the order book would be somewhere closer to about US$38- 39 billion for the year.",
+            "source": "Q3 FY26 Concall Transcript (16-Jan-2026), PDF p. 27 — \"If this trend continues, we will be somewhere closer to about US$38- 39 billion for the year, which will be one of the highest.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_16012026163741_Signed_SEIntimation.pdf#page=27",
             "doc_id": "DOC_4",
-            "page": 23,
-            "evidence_file": "evidence/TCS/DOC_4_p23.txt"
-          },
-          {
-            "metric": "Annualized AI Revenue",
-            "guidance": "Prior run-rate of US$1.8 billion growing at 17.3% QoQ",
-            "source": "Q3 FY26 Concall Transcript (16-Jan-2026), PDF p. 4 — \"Our AI services now generate US$1.8 billion in annualized revenue and is growing at 17.3% QoQ in constant currency.\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_16012026163741_Signed_SEIntimation.pdf#page=4",
-            "doc_id": "DOC_4",
-            "page": 4,
-            "evidence_file": "evidence/TCS/DOC_4_p4.txt"
+            "page": 27,
+            "evidence_file": "evidence/TCS/DOC_4_p27.txt"
           }
         ],
         "delivered": [
           {
-            "metric": "Operating Margin Band",
-            "actual": "Operating margin stood at 25.3%, an increase of 10 basis points sequentially",
-            "source": "Q4 FY26 Concall Transcript (14-Apr-2026), PDF p. 6 — \"Our Q4 operating margin stood at 25.3%, a sequential increase of 10 basis points.\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14042026200132_SEInt14042026_signed.pdf#page=6",
+            "metric": "Full Year Order Book TCV",
+            "actual": "TCS delivered a strong $40.7B in TCV including 5 mega deals.",
+            "source": "Q4 FY26 Concall Transcript (14-Apr-2026), PDF p. 5 — \"we delivered a strong $40.7B in TCV including 5 mega deals. We maintained a strong focus on execution\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14042026200132_SEInt14042026_signed.pdf#page=5",
             "doc_id": "DOC_3",
-            "page": 6,
-            "evidence_file": "evidence/TCS/DOC_3_p6.txt"
-          },
-          {
-            "metric": "Annualized AI Revenue",
-            "actual": "Annualized AI revenue reached US$2.3 billion",
-            "source": "Q4 FY26 Concall Transcript (14-Apr-2026), PDF p. 4 — \"Fourth is the momentum we see in our AI Services, which continued to accelerate impressively, standing at US$2.3 billion on an annualized basis.\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14042026200132_SEInt14042026_signed.pdf#page=4",
-            "doc_id": "DOC_3",
-            "page": 4,
-            "evidence_file": "evidence/TCS/DOC_3_p4.txt"
-          }
-        ],
-        "verdict": "hit",
-        "commentary": "TCS expanded operating margin by 10 basis points to 25.3% while accelerating AI annualized revenue to $2.3 billion."
-      },
-      {
-        "quarter": "Q1 FY27",
-        "guided": [
-          {
-            "metric": "Annualized AI Revenue",
-            "guidance": "Prior run-rate of US$2.3 billion on an annualized basis",
-            "source": "Q4 FY26 Concall Transcript (14-Apr-2026), PDF p. 4 — \"Fourth is the momentum we see in our AI Services, which continued to accelerate impressively, standing at US$2.3 billion on an annualized basis.\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14042026200132_SEInt14042026_signed.pdf#page=4",
-            "doc_id": "DOC_3",
-            "page": 4,
-            "evidence_file": "evidence/TCS/DOC_3_p4.txt"
-          }
-        ],
-        "delivered": [
-          {
-            "metric": "Annualized AI Revenue",
-            "actual": "Annualized AI revenue reached $2.6 billion, up 13.6% QoQ",
-            "source": "Q1 FY27 Concall Transcript (15-Jul-2026), PDF p. 3 — \"At the end of Q1 FY27, it stands at $2.6 billion in annualized revenue, which is up 13.6% QoQ.\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_15072026193646_SEInt15072026_Signed.pdf#page=3",
-            "doc_id": "DOC_2",
-            "page": 3,
-            "evidence_file": "evidence/TCS/DOC_2_p3.txt"
-          }
-        ],
-        "verdict": "miss",
-        "commentary": "Margins fell by 130 bps to 24% due to wage increments, falling short of management's 25% exit goal, though AI revenue maintained strong upward momentum to $2.6 billion."
-      },
-      {
-        "quarter": "Q2 FY27",
-        "guided": [
-          {
-            "metric": "Operating Margin Target",
-            "guidance": "Striving to exit at 25% plus",
-            "source": "Q1 FY27 Concall Transcript (15-Jul-2026), PDF p. 23 — \"We want to exit at 25% plus and strive to achieve it sooner rather than later.\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_15072026193646_SEInt15072026_Signed.pdf#page=23",
-            "doc_id": "DOC_2",
-            "page": 23,
-            "evidence_file": "evidence/TCS/DOC_2_p23.txt"
-          },
-          {
-            "metric": "Annualized AI Revenue",
-            "guidance": "Prior run-rate of $2.6 billion, up 13.6% QoQ",
-            "source": "Q1 FY27 Concall Transcript (15-Jul-2026), PDF p. 3 — \"At the end of Q1 FY27, it stands at $2.6 billion in annualized revenue, which is up 13.6% QoQ.\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_15072026193646_SEInt15072026_Signed.pdf#page=3",
-            "doc_id": "DOC_2",
-            "page": 3,
-            "evidence_file": "evidence/TCS/DOC_2_p3.txt"
-          }
-        ],
-        "delivered": [
-          {
-            "metric": "Operating Margin Target",
-            "actual": "Operating margin remained stable sequentially at 24%",
-            "source": "Q2 FY27 Concall Transcript (14-Oct-2026), PDF p. 5 — \"Our operating margins remained stable sequentially at 24%. Consistent with our philosophy to drive long-term profitable growth\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14102026155941_SEInt14102026_signed.pdf#page=5",
-            "doc_id": "DOC_1",
             "page": 5,
-            "evidence_file": "evidence/TCS/DOC_1_p5.txt"
-          },
-          {
-            "metric": "Annualized AI Revenue",
-            "actual": "Annualized AI revenue reached $3.1 billion, crossing 10% of overall revenue",
-            "source": "Q2 FY27 Concall Transcript (14-Oct-2026), PDF p. 4 — \"Annualized AI revenue reached $3.1 billion and crossed 10% of our overall revenue.\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/TCS_CORPCS_14102026155941_SEInt14102026_signed.pdf#page=4",
-            "doc_id": "DOC_1",
-            "page": 4,
-            "evidence_file": "evidence/TCS/DOC_1_p4.txt"
+            "evidence_file": "evidence/TCS/DOC_3_p5.txt"
           }
         ],
-        "verdict": "miss",
-        "commentary": "Operating margins remained stagnant at 24% as strategic subcontractor and bench investments absorbed operating gains, missing the 25% benchmark despite AI revenue surging to $3.1 billion."
+        "verdict": "beat",
+        "commentary": "Full-year order book closed at $40.7B in TCV supported by 5 mega deals, outperforming management's prior run-rate expectation of US$38- 39 billion."
       }
     ],
     "credibility_score": "medium",
-    "pattern": "Management reliably outperforms on strategic top-line AI monetization and deal velocity but faces persistent margin drag from upfront wage hikes, subcontractor expenses, and strategic capacity investments."
+    "pattern": "Management routinely delivers or beats on large deal conversions and models labor cost cycles accurately, but consistently absorbs margin upside by reinvesting operational tailwinds into bench capacity and strategic capabilities."
   },
   "citation_audit": {
     "documents_fetched": 10,
-    "pages_actually_read": 193,
-    "verified_claims": 12,
-    "rejected_claims": 2,
-    "rejections_detail": [
-      {
-        "quarter": "Q3 FY26",
-        "type": "guided",
-        "doc_id": "DOC_4",
-        "page": 23,
-        "claim": "Aspiration to inch closer to 26% to 28% band",
-        "quote": "while we will not shy away from making investments, we want to inch closer to our 26% to 28% band",
-        "reasons": [
-          "chronology_violation (guided doc DOC_4 [Q3 FY26] period Q3 FY26 is not strictly earlier than delivered period Q3 FY26)"
-        ]
-      },
-      {
-        "quarter": "Q1 FY27",
-        "type": "guided",
-        "doc_id": "DOC_3",
-        "page": 23,
-        "claim": "Aspiration to exit at 25% plus",
-        "quote": "We want to exit at 25% plus and strive to achieve it sooner rather than later.",
-        "reasons": [
-          "quote_not_on_page (segment 'we want to exit at 25% plus and strive to achieve it sooner ' not found on DOC_3 p.23)",
-          "quote_numbers_missing_on_page (['25'] not on DOC_3 p.23)",
-          "claim_numbers_missing_on_page (['25'] in claim 'Aspiration to exit at 25% plus' not on DOC_3 p.23)"
-        ]
-      }
-    ]
+    "total_pdf_pages_available": 227,
+    "pages_actually_read": 72,
+    "pages_dropped": 155,
+    "verified_claims": 6,
+    "rejected_claims": 0,
+    "rejections_detail": []
   },
-  "model_used": "gemini-3.6-flash",
+  "model_used": "gemini-3.8-flash",
   "tokens": {
-    "in": 46332,
-    "out": 11835
+    "in": 43289,
+    "out": 15300,
+    "out_candidates": 1065,
+    "out_thoughts": 14235
   },
-  "cost_estimate_usd": 0.043487
+  "cost_estimate_usd": 0.051237
 }

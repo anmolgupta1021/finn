@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PortfolioStrip } from "@/components/briefing/portfolio-strip";
 import { AnnouncementCard } from "@/components/briefing/announcement-card";
 import { AlertsBanner } from "@/components/briefing/alerts-banner";
+import { AlertSettingsPanel, loadStoredAlertConfig } from "@/components/briefing/alert-settings";
 import { CommandBar } from "@/components/command-bar";
-import type { DigestData } from "@/lib/types";
+import type { AlertConfig, DigestData } from "@/lib/types";
 import {
   ChevronDown,
   ChevronUp,
@@ -49,23 +50,38 @@ function EmptyState({ title, body }: { title: string; body: string }) {
 
 const WINDOW_OPTIONS = [
   { label: "24h", hours: 24 },
-  { label: "14d", hours: 24 * 14 },
+  { label: "3d", hours: 24 * 3 },
+  { label: "7d", hours: 24 * 7 },
   { label: "30d", hours: 24 * 30 },
-  { label: "120d", hours: 24 * 120 },
 ];
 
-export function BriefingPage({ digest: initialDigest }: { digest: DigestData }) {
+export function BriefingPage({
+  digest: initialDigest,
+  initialHours = 24,
+  initialResearch = null,
+}: {
+  digest: DigestData;
+  initialHours?: number;
+  initialResearch?: import("@/lib/types").ResearchData | null;
+}) {
   const [digest, setDigest] = useState<DigestData>(initialDigest);
-  const [selectedHours, setSelectedHours] = useState<number>(24);
+  const [selectedHours, setSelectedHours] = useState<number>(initialHours);
   const [loadingWindow, setLoadingWindow] = useState(false);
   const [showRoutine, setShowRoutine] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
+  const [alertConfig, setAlertConfig] = useState<AlertConfig>(initialDigest.alert_config);
   const windowLabel = digest.window;
 
-  async function handleWindowChange(hours: number) {
-    setSelectedHours(hours);
+  async function refetch(hours: number, cfg: AlertConfig) {
     setLoadingWindow(true);
     try {
-      const res = await fetch(`/api/digest?hours=${hours}`);
+      const qs = new URLSearchParams({
+        hours: String(hours),
+        vol: String(cfg.volume_threshold),
+        price: String(cfg.price_move_pct),
+        cats: cfg.watched_categories.join(","),
+      });
+      const res = await fetch(`/api/digest?${qs.toString()}`);
       if (res.ok) {
         const nextDigest = (await res.json()) as DigestData;
         setDigest(nextDigest);
@@ -73,6 +89,28 @@ export function BriefingPage({ digest: initialDigest }: { digest: DigestData }) 
     } finally {
       setLoadingWindow(false);
     }
+  }
+
+  // Apply persisted settings on first load
+  useEffect(() => {
+    const stored = loadStoredAlertConfig();
+    if (stored) {
+      const merged: AlertConfig = { ...initialDigest.alert_config, ...stored };
+      setAlertConfig(merged);
+      refetch(24, merged);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  async function handleWindowChange(hours: number) {
+    setSelectedHours(hours);
+    await refetch(hours, alertConfig);
+  }
+
+  async function handleSaveSettings(cfg: AlertConfig) {
+    setAlertConfig(cfg);
+    setShowSettings(false);
+    await refetch(selectedHours, cfg);
   }
 
   const now = new Date();
@@ -108,16 +146,24 @@ export function BriefingPage({ digest: initialDigest }: { digest: DigestData }) 
             </p>
           </div>
           <div className="flex items-center gap-2">
-            {alertCount > 0 && (
-              <div className="relative">
-                <Bell className="w-5 h-5 text-finn-muted" />
-                <span className="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-red-500 text-white text-[8px] font-bold flex items-center justify-center">
+            <div className="relative" aria-label={`${alertCount} alerts`}>
+              <Bell className="w-5 h-5 text-finn-muted" />
+              {alertCount > 0 && (
+                <span className="absolute -top-1.5 -right-1.5 min-w-[16px] h-4 px-1 rounded-full bg-red-500 text-white text-[9px] font-bold flex items-center justify-center">
                   {alertCount}
                 </span>
-              </div>
-            )}
-            <button className="w-7 h-7 rounded-full bg-finn-surface flex items-center justify-center">
-              <Settings className="w-3.5 h-3.5 text-finn-muted" />
+              )}
+            </div>
+            <button
+              onClick={() => setShowSettings((s) => !s)}
+              aria-label="Alert settings"
+              aria-expanded={showSettings}
+              className={cn(
+                "w-7 h-7 rounded-full flex items-center justify-center",
+                showSettings ? "bg-finn-accent" : "bg-finn-surface"
+              )}
+            >
+              <Settings className={cn("w-3.5 h-3.5", showSettings ? "text-white" : "text-finn-muted")} />
             </button>
           </div>
         </div>
@@ -159,6 +205,14 @@ export function BriefingPage({ digest: initialDigest }: { digest: DigestData }) 
         </div>
       </header>
 
+      {showSettings && (
+        <AlertSettingsPanel
+          config={alertConfig}
+          onSave={handleSaveSettings}
+          onClose={() => setShowSettings(false)}
+        />
+      )}
+
       {/* ─── Portfolio Strip ─── */}
       {digest.portfolio_summary.length > 0 ? (
         <div className="px-3 mb-3">
@@ -183,7 +237,10 @@ export function BriefingPage({ digest: initialDigest }: { digest: DigestData }) 
           {digest.alerts.length > 0 ? (
             <AlertsBanner alerts={digest.alerts} />
           ) : (
-            <p className="text-xs text-finn-muted">No price or volume thresholds crossed on the last session.</p>
+            <p className="text-xs text-finn-muted">
+              No thresholds crossed in the {windowLabel} window (volume ≥{alertConfig.volume_threshold}×, price ≥±
+              {alertConfig.price_move_pct}%, {alertConfig.watched_categories.length} watched filing types).
+            </p>
           )}
         </section>
       )}
@@ -196,7 +253,7 @@ export function BriefingPage({ digest: initialDigest }: { digest: DigestData }) 
             title={`No portfolio filings in the last ${windowLabel}`}
             body={
               digest.announcements_ingested
-                ? "Zero corporate filings occurred inside this lookback window. Switch the window selector above to 14d, 30d, or 120d to inspect ingested Q2/Q1 FY27 results filings."
+                ? "No portfolio filings landed inside this window. Widen it to 3d, 7d or 30d (the ingestion window is 30 days)."
                 : "The announcement pipeline hasn't produced data yet. Nothing on this screen is placeholder content."
             }
           />
@@ -268,7 +325,7 @@ export function BriefingPage({ digest: initialDigest }: { digest: DigestData }) 
       )}
 
       {/* ─── Command Bar (Pull mode) ─── */}
-      <CommandBar />
+      <CommandBar initialResearch={initialResearch} />
     </div>
   );
 }

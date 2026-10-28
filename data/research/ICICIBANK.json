@@ -1,133 +1,199 @@
 {
   "ticker": "ICICIBANK.NS",
   "company_name": "ICICI Bank Limited",
-  "generated_at": "2026-10-27T12:38:32.030087Z",
+  "generated_at": "2026-10-28T04:54:35.637565Z",
   "source_documents": [
     {
       "type": "concall_transcript",
       "quarter": "Q2 FY27",
       "url": "https://nsearchives.nseindia.com/corporate/ICICI2022_23102026175603_NSEBSE23102026.pdf",
-      "pages": 42
+      "pages": 42,
+      "pages_selected": 8,
+      "selected_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        10,
+        18
+      ]
     },
     {
       "type": "concall_transcript",
       "quarter": "Q1 FY27",
       "url": "https://nsearchives.nseindia.com/corporate/ICICI2022_23072026185521_NSEBSE.pdf",
-      "pages": 43
+      "pages": 43,
+      "pages_selected": 9,
+      "selected_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        17,
+        26,
+        28
+      ]
     },
     {
       "type": "concall_transcript",
       "quarter": "Q4 FY26",
       "url": "https://nsearchives.nseindia.com/corporate/ICICI2022_24042026135323_NSEBSE_24042026.pdf",
-      "pages": 47
+      "pages": 47,
+      "pages_selected": 8,
+      "selected_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        12,
+        27
+      ]
     },
     {
       "type": "concall_transcript",
       "quarter": "Q3 FY26",
       "url": "https://nsearchives.nseindia.com/corporate/ICICI2022_22012026172959_NSEBSE.pdf",
-      "pages": 47
+      "pages": 47,
+      "pages_selected": 9,
+      "selected_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        10,
+        28,
+        30
+      ]
     },
     {
       "type": "concall_transcript",
       "quarter": "Q2 FY26",
       "url": "https://nsearchives.nseindia.com/corporate/ICICI2022_24102025180135_NSEBSE.pdf",
-      "pages": 41
+      "pages": 41,
+      "pages_selected": 10,
+      "selected_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        22,
+        24,
+        25,
+        26
+      ]
     },
     {
       "type": "results_filing",
       "quarter": "Q2 FY27",
       "url": "https://nsearchives.nseindia.com/corporate/ICICI2022_17102026152608_NSEBSE17102026.pdf",
-      "pages": 32
+      "pages": 32,
+      "pages_selected": 3,
+      "selected_page_numbers": [
+        2,
+        3,
+        13
+      ]
     },
     {
       "type": "results_filing",
       "quarter": "Q1 FY27",
       "url": "https://nsearchives.nseindia.com/corporate/ICICI2022_21082026105810_NSEBSE_21082026.pdf",
-      "pages": 1
+      "pages": 1,
+      "pages_selected": 1,
+      "selected_page_numbers": [
+        1
+      ]
     },
     {
       "type": "results_filing",
       "quarter": "Q4 FY26",
       "url": "https://nsearchives.nseindia.com/corporate/ICICI2022_29062026162405_NSEBSE_29062026_.pdf",
-      "pages": 3
+      "pages": 3,
+      "pages_selected": 2,
+      "selected_page_numbers": [
+        1,
+        2
+      ]
     },
     {
       "type": "results_filing",
       "quarter": "Q3 FY26",
       "url": "https://nsearchives.nseindia.com/corporate/ICICI2022_28022026112310_NSEBSE_28022026.pdf",
-      "pages": 1
+      "pages": 1,
+      "pages_selected": 1,
+      "selected_page_numbers": [
+        1
+      ]
     },
     {
       "type": "results_filing",
       "quarter": "Q2 FY26",
       "url": "https://nsearchives.nseindia.com/corporate/ICICI2022_18102025145409_BSENSE.pdf",
-      "pages": 28
+      "pages": 28,
+      "pages_selected": 3,
+      "selected_page_numbers": [
+        2,
+        3,
+        10
+      ]
     }
   ],
+  "page_selection_stats": {
+    "strategy": "prepared_remarks_and_keyword_qa_plus_pnl_results_pages",
+    "transcript_char_budget_per_quarter": 20000,
+    "results_char_budget_per_quarter": 8000,
+    "total_pdf_pages_available": 285,
+    "pages_selected": 54,
+    "pages_dropped": 231,
+    "corpus_chars_sent": 126024
+  },
   "narrative_vs_numbers": {
-    "summary": "ICICI Bank demonstrated strong operational execution across Q3 FY26 to Q2 FY27, maintaining net interest margins near 4.18% to 4.36% and expanding overall loan growth to 30.0% year-on-year in Q2 FY27. Management successfully executed strategic initiatives, such as mobilizing $18 billion in gross FCNR (B) deposits, while keeping credit costs contained despite a one-time ₹1,283 crore PSL standard asset provision in Q3 FY26.",
+    "summary": "ICICI Bank demonstrated strong operational consistency across FY26 and early FY27, delivering stable net interest margins near 4.30% in Q3-2026 and 4.36% in Q1-2027 before seeing compression to 4.18% in Q2-2027 due to large-scale FCNR(B) deposit mobilization. Management maintained disciplined balance sheet buffers, preserving ₹1,283 crore in required regulatory agricultural provisions without dipping into contingency reserves.",
     "quarters": [
       {
         "quarter": "Q2 FY27",
         "guided": [
           {
-            "metric": "Net Interest Margin Trajectory",
-            "guidance": "Management expected NIM in FY27 to be range-bound with slight dilution from FCNR(B) deposit programme.",
+            "metric": "Net Interest Margin Outlook",
+            "guidance": "Management stated that expectation of NIM is that, in FY27, it should be range-bound assuming no rate movements.",
             "source": "Q1 FY27 Concall Transcript (23-Jul-2026), PDF p. 5 — \"Our expectation of NIM is that, in FY27, it should be range-bound assuming no rate movements.\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_23072026185521_NSEBSE.pdf#page=5",
             "doc_id": "DOC_2",
             "page": 5,
             "evidence_file": "evidence/ICICIBANK/DOC_2_p5.txt"
-          },
-          {
-            "metric": "FCNR(B) Deposit Mobilisation",
-            "guidance": "Management expected momentum in FCNR(B) deposit mobilization to pick up.",
-            "source": "Q1 FY27 Concall Transcript (23-Jul-2026), PDF p. 6 — \"We do expect the momentum to pick up as we go along and, of course, we are committed to make this initiative of RBI, a success.\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_23072026185521_NSEBSE.pdf#page=6",
-            "doc_id": "DOC_2",
-            "page": 6,
-            "evidence_file": "evidence/ICICIBANK/DOC_2_p6.txt"
           }
         ],
         "delivered": [
           {
-            "metric": "Net Interest Margin Trajectory",
-            "actual": "Net interest margin was 4.18% in Q2-2027 compared to 4.36% in Q1-2027.",
-            "source": "Q2 FY27 Concall Transcript (23-Oct-2026), PDF p. 3 — \"Net interest margin was 4.18% in Q2-2027 compared to 4.36% in Q1-2027.\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_23102026175603_NSEBSE23102026.pdf#page=3",
+            "metric": "Net Interest Margin Outlook",
+            "actual": "The NIM was 4.18% for this quarter compared to 4.36% in the previous quarter.",
+            "source": "Q2 FY27 Concall Transcript (23-Oct-2026), PDF p. 5 — \"The NIM was 4.18% for this quarter compared to 4.36% in the previous quarter.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_23102026175603_NSEBSE23102026.pdf#page=5",
             "doc_id": "DOC_1",
-            "page": 3,
-            "evidence_file": "evidence/ICICIBANK/DOC_1_p3.txt"
-          },
-          {
-            "metric": "FCNR(B) Deposit Mobilisation",
-            "actual": "The Bank mobilised gross FCNR (B) deposits of about $18 billion.",
-            "source": "Q2 FY27 Concall Transcript (23-Oct-2026), PDF p. 3 — \"The Bank has mobilised gross FCNR (B) deposits of about $18 billion, pursuant to Reserve Bank of India’s swap facility\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_23102026175603_NSEBSE23102026.pdf#page=3",
-            "doc_id": "DOC_1",
-            "page": 3,
-            "evidence_file": "evidence/ICICIBANK/DOC_1_p3.txt"
+            "page": 5,
+            "evidence_file": "evidence/ICICIBANK/DOC_1_p5.txt"
           }
         ],
-        "verdict": "beat",
-        "commentary": "ICICI Bank outperformed on deposit mobilization by garnering $18 billion in gross FCNR (B) deposits, while NIM moderated to 4.18% in Q2-2027 from 4.36% in Q1-2027 due to FCNR dilution as anticipated."
+        "verdict": "miss",
+        "commentary": "Net interest margin contracted sequentially to 4.18% from 4.36% in the prior quarter, slipping below the guided range-bound trajectory due to FCNR(B) dilution and retail term deposit repricing."
       },
       {
         "quarter": "Q1 FY27",
         "guided": [
           {
             "metric": "Net Interest Margin Trajectory",
-            "guidance": "Management expected NIMs to be range-bound in FY27.",
-            "source": "Q4 FY26 Concall Transcript (24-Apr-2026), PDF p. 8 — \"We do expect NIMs to be range-bound in FY27. From our perspective, we continue to focus on risk-calibrated operating profit\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_24042026135323_NSEBSE_24042026.pdf#page=8",
-            "doc_id": "DOC_3",
-            "page": 8,
-            "evidence_file": "evidence/ICICIBANK/DOC_3_p8.txt"
-          },
-          {
-            "metric": "Loan Growth Strategy",
-            "guidance": "Management aimed to leverage liquidity and capital for risk-calibrated growth across good quality customers.",
-            "source": "Q4 FY26 Concall Transcript (24-Apr-2026), PDF p. 8 — \"As the Indian economy continues to grow, we do have the liquidity, and the capital to leverage our franchise\"",
+            "guidance": "Management stated that they expect NIMs to be range-bound in FY27 despite developments in domestic economy, liquidity, and competitive intensity.",
+            "source": "Q4 FY26 Concall Transcript (24-Apr-2026), PDF p. 8 — \"including geopolitical developments on the domestic economy, liquidity, deposit rates, and of course, competitive intensity. We do expect NIMs to be range-bound in FY27.\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_24042026135323_NSEBSE_24042026.pdf#page=8",
             "doc_id": "DOC_3",
             "page": 8,
@@ -143,92 +209,84 @@
             "doc_id": "DOC_2",
             "page": 3,
             "evidence_file": "evidence/ICICIBANK/DOC_2_p3.txt"
-          },
-          {
-            "metric": "Loan Growth Strategy",
-            "actual": "The total loan portfolio grew by 19.6% year-on-year and 5.0% quarter-on-quarter at June 30, 2026.",
-            "source": "Q1 FY27 Concall Transcript (23-Jul-2026), PDF p. 3 — \"The total loan portfolio grew by 19.6% year-on-year and 5.0% quarter-on-quarter at June 30, 2026\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_23072026185521_NSEBSE.pdf#page=3",
-            "doc_id": "DOC_2",
-            "page": 3,
-            "evidence_file": "evidence/ICICIBANK/DOC_2_p3.txt"
           }
         ],
         "verdict": "beat",
-        "commentary": "NIM expanded sequentially to 4.36% in Q1-2027 from 4.32% in Q4-2026, while total loan portfolio grew strongly by 19.6% year-on-year."
+        "commentary": "Net interest margin expanded to 4.36% from 4.32% in Q4-2026, beating the range-bound outlook with support from income tax refunds and term deposit repricing."
       },
       {
         "quarter": "Q4 FY26",
         "guided": [
           {
-            "metric": "Net Interest Margin",
-            "guidance": "Management expected NIMs to remain more or less range bound.",
-            "source": "Q3 FY26 Concall Transcript (22-Jan-2026), PDF p. 8 — \"Looking ahead, we do expect NIMs to remain more or less range bound, reflecting the repricing of the external benchmarks on loans\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_22012026172959_NSEBSE.pdf#page=8",
+            "metric": "Regulatory PSL Provision Retention",
+            "guidance": "Management guided that this additional standard asset provision will continue until the loans are repaid or renewed in conformity with the PSL classification guidelines.",
+            "source": "Q3 FY26 Concall Transcript (22-Jan-2026), PDF p. 3 — \"This additional standard asset provision will continue until the loans are repaid or renewed in conformity with the PSL classification guidelines.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_22012026172959_NSEBSE.pdf#page=3",
             "doc_id": "DOC_4",
-            "page": 8,
-            "evidence_file": "evidence/ICICIBANK/DOC_4_p8.txt"
-          },
-          {
-            "metric": "Normalized Provisions",
-            "guidance": "Excluding the additional standard asset provision, total provisions were ₹1,273 crore or 7.3% of core operating profit and 0.36% of average advances.",
-            "source": "Q3 FY26 Concall Transcript (22-Jan-2026), PDF p. 4 — \"Excluding the additional standard asset provision, the total provisions were ₹1,273 crore or 7.3% of core operating profit and 0.36% of average advances\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_22012026172959_NSEBSE.pdf#page=4",
-            "doc_id": "DOC_4",
-            "page": 4,
-            "evidence_file": "evidence/ICICIBANK/DOC_4_p4.txt"
+            "page": 3,
+            "evidence_file": "evidence/ICICIBANK/DOC_4_p3.txt"
           }
         ],
         "delivered": [
           {
-            "metric": "Net Interest Margin",
-            "actual": "Net interest margin was 4.32% in Q4-2026 compared to 4.30% in Q3-2026.",
-            "source": "Q4 FY26 Concall Transcript (24-Apr-2026), PDF p. 3 — \"Net interest margin was 4.32% in Q4-2026 compared to 4.30% in Q3-2026\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_24042026135323_NSEBSE_24042026.pdf#page=3",
+            "metric": "Regulatory PSL Provision Retention",
+            "actual": "Management confirmed holding the standard asset provisions which we had made of about ₹1,283 crore, as directed by RBI, on the agri-loan in the last quarter.",
+            "source": "Q4 FY26 Concall Transcript (24-Apr-2026), PDF p. 12 — \"the standard asset provisions which we had made of about ₹1,283 crore, as directed by RBI, on the agri-loan in the last quarter.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_24042026135323_NSEBSE_24042026.pdf#page=12",
             "doc_id": "DOC_3",
-            "page": 3,
-            "evidence_file": "evidence/ICICIBANK/DOC_3_p3.txt"
-          },
-          {
-            "metric": "Normalized Provisions",
-            "actual": "Provisions excluding tax were ₹96 crore in Q4-2026 reflecting healthy asset quality.",
-            "source": "Q4 FY26 Concall Transcript (24-Apr-2026), PDF p. 3 — \"Provisions (excluding provision for tax) were ₹96 crore in Q4-2026 reflecting healthy asset quality and higher recoveries and write-backs.\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_24042026135323_NSEBSE_24042026.pdf#page=3",
-            "doc_id": "DOC_3",
-            "page": 3,
-            "evidence_file": "evidence/ICICIBANK/DOC_3_p3.txt"
+            "page": 12,
+            "evidence_file": "evidence/ICICIBANK/DOC_3_p12.txt"
           }
         ],
-        "verdict": "beat",
-        "commentary": "NIM remained steady at 4.32% in Q4-2026, while provisions dropped sharply to ₹96 crore in Q4-2026 supported by corporate recoveries."
+        "verdict": "hit",
+        "commentary": "Management fully preserved the additional standard asset provisions mandated by RBI on the agri-PSL portfolio without any drawdown or utilization."
+      },
+      {
+        "quarter": "Q3 FY26",
+        "guided": [
+          {
+            "metric": "Net Interest Margin Outlook",
+            "guidance": "Management guided that they expect NIM to remain range bound with some benefit expected around the CRR and repricing of term deposits.",
+            "source": "Q2 FY26 Concall Transcript (24-Oct-2025), PDF p. 8 — \"we do expect NIM to remain range bound with some benefit expected around the CRR and repricing of term deposits.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_24102025180135_NSEBSE.pdf#page=8",
+            "doc_id": "DOC_5",
+            "page": 8,
+            "evidence_file": "evidence/ICICIBANK/DOC_5_p8.txt"
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "Net Interest Margin Outlook",
+            "actual": "Net interest margin was 4.30% in Q3-2026 compared to 4.30% in Q2-2026.",
+            "source": "Q3 FY26 Concall Transcript (22-Jan-2026), PDF p. 3 — \"Net interest margin was 4.30% in Q3-2026 compared to 4.30% in Q2-2026\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/ICICI2022_22012026172959_NSEBSE.pdf#page=3",
+            "doc_id": "DOC_4",
+            "page": 3,
+            "evidence_file": "evidence/ICICIBANK/DOC_4_p3.txt"
+          }
+        ],
+        "verdict": "hit",
+        "commentary": "Net interest margin held flat sequentially at 4.30%, perfectly matching management's range-bound margin outlook."
       }
     ],
     "credibility_score": "high",
-    "pattern": "Management consistently delivers on risk-calibrated growth strategies, maintaining margin discipline within range-bound targets while proactively leveraging regulatory swap windows and maintaining tight asset quality control."
+    "pattern": "Management consistently avoids point forecasts in favor of conservative directional guidance (e.g. range-bound margins and risk-calibrated underwriting), meeting or beating asset quality expectations while absorbing macro and regulatory shifts."
   },
   "citation_audit": {
     "documents_fetched": 10,
-    "pages_actually_read": 185,
-    "verified_claims": 12,
-    "rejected_claims": 1,
-    "rejections_detail": [
-      {
-        "quarter": "Q3 FY26",
-        "type": "guided",
-        "doc_id": "DOC_4",
-        "page": 3,
-        "claim": "Management stated the bank has originated the portfolio since 2012 and will work to bring it in conformity with regulatory expectations.",
-        "quote": "The Bank has been originating this portfolio since 2012 and will work to bring it in conformity with regulatory expectations.",
-        "reasons": [
-          "chronology_violation (guided doc DOC_4 [Q3 FY26] period Q3 FY26 is not strictly earlier than delivered period Q3 FY26)"
-        ]
-      }
-    ]
+    "total_pdf_pages_available": 285,
+    "pages_actually_read": 54,
+    "pages_dropped": 231,
+    "verified_claims": 8,
+    "rejected_claims": 0,
+    "rejections_detail": []
   },
-  "model_used": "gemini-3.6-flash",
+  "model_used": "gemini-3.8-flash",
   "tokens": {
-    "in": 49125,
-    "out": 10165
+    "in": 41539,
+    "out": 16511,
+    "out_candidates": 1396,
+    "out_thoughts": 15115
   },
-  "cost_estimate_usd": 0.04015
+  "cost_estimate_usd": 0.053739
 }

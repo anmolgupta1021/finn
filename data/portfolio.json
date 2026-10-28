@@ -17,7 +17,8 @@
     { "ticker": "NTPC.NS", "name": "NTPC", "sector": "Power", "in_portfolio": true },
     { "ticker": "BAJFINANCE.NS", "name": "Bajaj Finance", "sector": "NBFC", "in_portfolio": false },
     { "ticker": "ETERNAL.NS", "name": "Eternal (formerly Zomato)", "sector": "Consumer Internet", "in_portfolio": false },
-    { "ticker": "ITC.NS", "name": "ITC", "sector": "Conglomerate", "in_portfolio": false }
+    { "ticker": "ITC.NS", "name": "ITC", "sector": "Conglomerate", "in_portfolio": false },
+    { "ticker": "PIDILITIND.NS", "name": "Pidilite Industries", "sector": "Chemicals", "in_portfolio": false }
   ],
   "alert_config": {
     "volume_threshold": 2.0,

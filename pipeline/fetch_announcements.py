@@ -296,28 +296,90 @@ def classify_by_rules(desc: str, att_text: str) -> tuple[str, int, str] | None:
         return ("bonus_split", 1, att_text or desc)
     if any(k in d_low for k in ["fund raising", "qualified institutional placement"]):
         return ("fund_raise", 1, att_text or desc)
+
+    # Prior intimations of board meetings ("will be held on", "to announce", "intimation")
+    # and standalone auditor UDIN certificates are routine compliance notices (P3), NOT results outcomes.
+    if any(
+        k in combined
+        for k in [
+            "to announce the",
+            "will be held on",
+            "scheduled to be held",
+            "intimation of board meeting",
+            "prior intimation",
+            "notice of board meeting",
+        ]
+    ):
+        return ("investor_meetings", 3, att_text or desc)
+    if "report of auditors" in combined or "with udin" in combined:
+        return ("unclassified", 3, att_text or desc)
+
     if "outcome of board meeting" in d_low or "financial results" in d_low:
-        if "financial results" in combined or "unaudited" in combined or "audited" in combined:
+        if "financial results" in combined:
             return ("results", 1, att_text or desc)
+        return ("unclassified", 2, att_text or desc)
 
     # Ambiguous (e.g., "General Updates", "Updates", "Order", etc.) -> send to LLM
     return None
 
 
-def _load_slice1_by_url_and_ticker() -> tuple[dict[str, dict[str, Any]], dict[str, dict[str, Any]]]:
+def _normalize_filing_url(url: str) -> str:
+    return (url or "").strip().split("?")[0].rstrip("/")
+
+
+def _infer_filing_period(desc: str, att_text: str, raw_dt: str) -> str | None:
+    """
+    Infer the reported quarter (e.g. 'Q2 FY27' or 'Q1 FY27') from the NSE announcement
+    text or filing date so `attach_slice1_results()` verifies both URL and period.
+    """
+    combined = f"{desc} {att_text}".lower()
+    if any(k in combined for k in ["september 30, 2026", "30th september, 2026", "30th september 2026", "30.09.2026", "q2 fy27", "second quarter"]):
+        return "Q2 FY27"
+    if any(k in combined for k in ["june 30, 2026", "30th june, 2026", "30th june 2026", "30.06.2026", "q1 fy27", "first quarter"]):
+        return "Q1 FY27"
+    # Fallback from filing month: Oct/Nov 2026 results outcomes are Q2 FY27; Jul/Aug 2026 are Q1 FY27
+    if "-Oct-2026" in raw_dt or "-Nov-2026" in raw_dt:
+        return "Q2 FY27"
+    if "-Jul-2026" in raw_dt or "-Aug-2026" in raw_dt:
+        return "Q1 FY27"
+    return None
+
+
+def _load_slice1_by_url() -> dict[str, dict[str, Any]]:
     s1_path = DATA_DIR / "slice1_extractions.json"
     by_url: dict[str, dict[str, Any]] = {}
-    by_ticker: dict[str, dict[str, Any]] = {}
     if s1_path.exists():
         try:
             for item in json.loads(s1_path.read_text()):
-                if item.get("source_url"):
-                    by_url[item["source_url"]] = item
-                if item.get("ticker"):
-                    by_ticker[item["ticker"]] = item
+                norm_url = _normalize_filing_url(item.get("source_url", ""))
+                if norm_url:
+                    by_url[norm_url] = item
         except Exception:
             pass
-    return by_url, by_ticker
+    return by_url
+
+
+def attach_slice1_results(
+    pdf_url: str,
+    desc: str,
+    att_text: str,
+    raw_dt: str,
+    s1_by_url: dict[str, dict[str, Any]],
+) -> dict[str, Any] | None:
+    """
+    Match a Slice 1 results extraction STRICTLY by filing URL and period — NEVER by ticker.
+    Results cards are attached ONLY to the actual results-outcome filing whose normalized
+    `source_url` matches the Slice 1 PDF's `source_url` AND whose period matches `s1['quarter']`.
+    """
+    norm_url = _normalize_filing_url(pdf_url)
+    if not norm_url or norm_url not in s1_by_url:
+        return None
+    s1_entry = s1_by_url[norm_url]
+    expected_quarter = s1_entry.get("quarter")
+    inferred_quarter = _infer_filing_period(desc, att_text, raw_dt)
+    if expected_quarter and inferred_quarter and expected_quarter != inferred_quarter:
+        return None
+    return s1_entry
 
 
 def _build_slice1_enrichment(s1: dict[str, Any]) -> tuple[dict[str, Any], str, str | None, dict[str, int]]:
@@ -343,6 +405,8 @@ def _build_slice1_enrichment(s1: dict[str, Any]) -> tuple[dict[str, Any], str, s
         "ebitda_status": s1.get("ebitda_status"),
         "revenue_label": s1.get("revenue_label"),
         "period_ended": s1.get("period_ended"),
+        "column_order": s1.get("column_order"),
+        "row_labels": s1.get("row_labels"),
         "revenue": s1.get("revenue"),
         "ebitda": s1.get("ebitda"),
         "operating_profit_ex_provisions": s1.get("operating_profit_ex_provisions"),
@@ -369,16 +433,14 @@ def process_ticker_announcements(
 ) -> list[dict[str, Any]]:
     sym = ticker_symbol(ticker)
     ann_path = ANN_DIR / f"{sym}.json"
-    s1_by_url, s1_by_ticker = _load_slice1_by_url_and_ticker()
+    s1_by_url = _load_slice1_by_url()
 
-    # Preserve off-window Slice 1 Q1 FY27 results cards (RELIANCE, SUNPHARMA, MARUTI, ITC, PAGEIND)
-    # while ingesting 100% of the 30-day NSE window announcements without any cap.
+    # Ingest 100% of the 30-day NSE window announcements without any cap or synthetic items.
     raw_rows = fetch_nse_announcements_for_ticker(session, ticker, days_back=days_back)
     all_rows = dedup_nse_rows(raw_rows)
 
     company_name = (
         (all_rows[0].get("sm_name") if all_rows else None)
-        or (s1_by_ticker.get(ticker, {}).get("company_name"))
         or sym
     )
 
@@ -431,13 +493,10 @@ def process_ticker_announcements(
         per_ambig_out = max(1, t_out // len(ambiguous_indices))
 
     final_anns: list[dict[str, Any]] = []
-    seen_urls: set[str] = set()
     mgmt_enrichment_calls = 0
 
     for idx, r in enumerate(all_rows):
         pdf_url = (r.get("attchmntFile") or "").strip()
-        if pdf_url:
-            seen_urls.add(pdf_url)
         raw_dt = (r.get("an_dt") or "").strip()
         iso_ts = parse_nse_timestamp(raw_dt)
         desc = (r.get("desc") or "Filing").strip()
@@ -464,9 +523,28 @@ def process_ticker_announcements(
         ann_id = f"nse-{sym.lower()}-{hashlib.sha256(uid_seed.encode()).hexdigest()[:10]}"
         enrichment: dict[str, Any] = {}
 
-        # Attach Slice 1 results extraction (or HDFCBANK corrupted_pdf fallback) if matched
-        if pdf_url in s1_by_url or (cat == "results" and ticker in s1_by_ticker):
-            s1_entry = s1_by_url.get(pdf_url) or s1_by_ticker[ticker]
+        # Attach Slice 1 results extraction STRICTLY by filing URL and period — NEVER by ticker.
+        # If an actual results-outcome filing is not yet in slice1_extractions.json, extract it live from its PDF!
+        s1_entry = attach_slice1_results(pdf_url, desc, att_text, raw_dt, s1_by_url)
+        if s1_entry is None and cat == "results" and pdf_url and pdf_url.lower().endswith(".pdf"):
+            try:
+                q_inferred = _infer_filing_period(desc, att_text, raw_dt) or "Q2FY27"
+                local_pdf = RESULTS_DIR / f"{sym}_{q_inferred.replace(' ', '')}.pdf"
+                if not local_pdf.exists():
+                    r_pdf = session.get(pdf_url, timeout=30)
+                    if r_pdf.status_code == 200 and r_pdf.content[:4] == b"%PDF":
+                        local_pdf.write_bytes(r_pdf.content)
+                if local_pdf.exists():
+                    s1_entry = extract_results_from_pdf(
+                        pdf_path=local_pdf,
+                        ticker=ticker,
+                        company=company_name,
+                        source_url=pdf_url,
+                    )
+            except Exception as e:
+                print(f"  ⚠️ On-the-fly results extraction failed for {ticker}: {e}")
+
+        if s1_entry is not None:
             enrichment, s1_summary, s1_mod, s1_tok = _build_slice1_enrichment(s1_entry)
             cat = "results"
             prio = 1
@@ -513,33 +591,6 @@ def process_ticker_announcements(
                 "tokens": item_tokens,
             }
         )
-
-    # Also ensure Q1 FY27 Slice 1 results filings outside the 30d window remain available
-    # for 14d/30d results inspection if not already in the 30d NSE response
-    if ticker in s1_by_ticker:
-        s1_entry = s1_by_ticker[ticker]
-        s1_url = s1_entry.get("source_url", "")
-        if s1_url and s1_url not in seen_urls and s1_entry.get("status") == "ok":
-            # Keep existing timestamp from previous announcement file if present
-            enrichment, s1_summary, s1_mod, s1_tok = _build_slice1_enrichment(s1_entry)
-            p_end = (s1_entry.get("period_ended") or {}).get("current") or "2026-07-31"
-            final_anns.append(
-                {
-                    "id": f"nse-{sym.lower()}-slice1-{s1_entry.get('quarter', 'q1fy27').lower().replace(' ', '')}",
-                    "ticker": ticker,
-                    "company_name": s1_entry.get("company_name", company_name),
-                    "timestamp": f"{p_end}T16:00:00+05:30",
-                    "headline": f"Outcome of Board Meeting — {s1_entry.get('quarter')} Financial Results ({s1_entry.get('basis', '').title()})",
-                    "category": "results",
-                    "priority": 1,
-                    "summary": s1_summary,
-                    "source_url": s1_url,
-                    "raw_text": s1_summary,
-                    "enrichment": enrichment,
-                    "model_used": s1_mod,
-                    "tokens": s1_tok,
-                }
-            )
 
     final_anns.sort(key=lambda a: a.get("timestamp", ""), reverse=True)
     save_json(ann_path, final_anns)

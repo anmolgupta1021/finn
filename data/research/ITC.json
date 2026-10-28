@@ -1,0 +1,134 @@
+{
+  "ticker": "ITC.NS",
+  "company_name": "ITC Limited",
+  "generated_at": "2026-10-28T05:04:57.353510Z",
+  "source_documents": [
+    {
+      "type": "results_filing",
+      "quarter": "Q1 FY27",
+      "url": "https://nsearchives.nseindia.com/corporate/ITC_31072026163240_Results.pdf",
+      "pages": 15,
+      "pages_selected": 3,
+      "selected_page_numbers": [
+        1,
+        3,
+        6
+      ]
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q4 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/ITC_21052026155432_Results.pdf",
+      "pages": 25,
+      "pages_selected": 3,
+      "selected_page_numbers": [
+        2,
+        4,
+        10
+      ]
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q3 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/ITC_29012026185052_SE_Media_.pdf",
+      "pages": 45,
+      "pages_selected": 7,
+      "selected_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q2 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/ITC_30102025164240_SE_Media_.pdf",
+      "pages": 46,
+      "pages_selected": 6,
+      "selected_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        8,
+        16
+      ]
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q1 FY26",
+      "url": "https://nsearchives.nseindia.com/corporate/ITC_01082025172207_SE_Results_.pdf",
+      "pages": 16,
+      "pages_selected": 3,
+      "selected_page_numbers": [
+        1,
+        3,
+        7
+      ]
+    }
+  ],
+  "page_selection_stats": {
+    "strategy": "prepared_remarks_and_keyword_qa_plus_pnl_results_pages",
+    "transcript_char_budget_per_quarter": 20000,
+    "results_char_budget_per_quarter": 8000,
+    "total_pdf_pages_available": 147,
+    "pages_selected": 22,
+    "pages_dropped": 125,
+    "corpus_chars_sent": 42814
+  },
+  "narrative_vs_numbers": {
+    "summary": "ITC demonstrates high capital return predictability, delivering on its guided interim dividend of Rs. 6.50 per share declared in Q3 FY26 for the financial year ended 31st March, 2026. Management's disclosure across filings focuses primarily on backward-looking segment performance and statutory dividend commitments rather than forward quantitative revenue guidance. Overall capital distribution milestones were executed precisely as communicated.",
+    "quarters": [
+      {
+        "quarter": "Q4 FY26",
+        "guided": [
+          {
+            "metric": "Interim Dividend per share",
+            "guidance": "Board recommends Interim Dividend of Rs. 6.50 per share for the Financial Year ending 31st March, 2026",
+            "source": "Q3 FY26 Results Filing (29-Jan-2026), PDF p. 3 — \"Board recommends Interim Dividend of Rs. 6.50 per share for the Financial Year ending 31st March, 2026\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/ITC_29012026185052_SE_Media_.pdf#page=3",
+            "doc_id": "DOC_3",
+            "page": 3,
+            "evidence_file": "evidence/ITC/DOC_3_p3.txt"
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "Interim Dividend per share",
+            "actual": "Interim Dividend off 6.50 per Ordinary Share declared by the Board on 29th January, 2026",
+            "source": "Q4 FY26 Results Filing (21-May-2026), PDF p. 2 — \"Together with the Interim Dividend off 6.50 per Ordinary Share declared by the Board on 29th January, 2026,\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/ITC_21052026155432_Results.pdf#page=2",
+            "doc_id": "DOC_2",
+            "page": 2,
+            "evidence_file": "evidence/ITC/DOC_2_p2.txt"
+          }
+        ],
+        "verdict": "hit",
+        "commentary": "Management fully executed its guided interim dividend distribution of Rs. 6.50 per share for the financial year ending 31st March, 2026 as declared in Q3 FY26."
+      }
+    ],
+    "credibility_score": "high",
+    "pattern": "Management maintains disciplined capital allocation, consistently fulfilling board-approved dividend commitments across financial year cycles."
+  },
+  "citation_audit": {
+    "documents_fetched": 5,
+    "total_pdf_pages_available": 147,
+    "pages_actually_read": 22,
+    "pages_dropped": 125,
+    "verified_claims": 2,
+    "rejected_claims": 0,
+    "rejections_detail": []
+  },
+  "model_used": "gemini-3.8-flash",
+  "tokens": {
+    "in": 18775,
+    "out": 10121,
+    "out_candidates": 453,
+    "out_thoughts": 9668
+  },
+  "cost_estimate_usd": 0.030935
+}

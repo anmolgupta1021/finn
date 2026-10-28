@@ -2,14 +2,14 @@
   "ticker": "MARUTI.NS",
   "name": "Maruti Suzuki India Limited",
   "sector": "Consumer Cyclical",
-  "fetched_at": "2026-10-27T07:05:36.187248Z",
+  "fetched_at": "2026-10-27T17:35:38.904669Z",
   "current": {
-    "price": 11230.0,
-    "change_pct": 0.54,
-    "volume": 333253,
-    "vol_ratio": 0.72,
+    "price": 11450.0,
+    "change_pct": 2.05,
+    "volume": 426626,
+    "vol_ratio": 0.91,
     "vol_guard": null,
-    "market_cap": 3578215530496,
+    "market_cap": 3599909257216,
     "name": "Maruti Suzuki India Limited",
     "sector": "Consumer Cyclical",
     "industry": "Auto Manufacturers"
@@ -981,6 +981,28 @@
       "volume": 333253,
       "change_pct": 0.54,
       "vol_ratio": 0.72,
+      "vol_guard": null
+    },
+    {
+      "date": "2026-10-26",
+      "open": 11250.0,
+      "high": 11299.0,
+      "low": 11102.0,
+      "close": 11220.0,
+      "volume": 489223,
+      "change_pct": -0.09,
+      "vol_ratio": 1.05,
+      "vol_guard": null
+    },
+    {
+      "date": "2026-10-27",
+      "open": 11220.0,
+      "high": 11460.0,
+      "low": 11190.0,
+      "close": 11450.0,
+      "volume": 426626,
+      "change_pct": 2.05,
+      "vol_ratio": 0.91,
       "vol_guard": null
     }
   ]

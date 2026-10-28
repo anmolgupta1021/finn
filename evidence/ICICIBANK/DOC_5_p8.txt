@@ -1,0 +1,43 @@
+TICKER: ICICIBANK.NS
+DOCUMENT_ID: DOC_5
+DOCUMENT_TITLE: Q2 FY26 Concall Transcript (24-Oct-2025)
+PDF_PAGE: 8 (of 41)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/ICICI2022_24102025180135_NSEBSE.pdf#page=8
+========================================================================
+
+Atmadip Ray:
+Okay. Thank you. And in terms of your microfinance book, how do you see the asset
+quality moving?
+Sandeep Batra:
+So, this microfinance book for us was fairly decent. We never really had any material
+issue even earlier. We try to be pretty careful about the counterparties that we select. I
+do believe that the microfinance sector is improving in general, which should have a
+positive impact.
+Atmadip Ray:
+Okay. Thank you so much.
+Moderator:
+Thank you. Next question is from Priyasmita Dutta from The Informist. Please go ahead.
+Priyasmita Dutta:
+Hi, sir. So, since you mentioned that, you touched upon both the points about net interest
+margin compression from RBI rate cuts and the impact on ECL norms, I just wanted to
+quickly follow up that we've seen only four basis points of compression on the margin
+from the expected 50 bps transmission that was expected in the June-Sept quarter. So, I
+just wanted an estimate on further how do you see your net interest margin in the next
+quarter? And on the ECL norms, if you have any ballpark figure on what kind of impact it
+will have on your capital adequacy ratio and on your PCR, if you could just quantify both?
+Thank you.
+Sandeep Batra:
+Priya, on the NIM part of it, as I did mention, we do expect NIM to remain range bound
+with some benefit expected around the CRR and repricing of term deposits. Of course, it
+will also get impacted by competitive intensity, monetary policy, if there are further rate
+cuts that could impact it. But largely, we do expect in the near term to remain range
+bound. And on your second question around ECL, based on our current estimates, we do
+not see any material impact either on capital or on profitability. So, of course, as I said,
+we will wait for the final guidelines of RBI to come out and make a final assessment at
+that point in time.
+Moderator:
+Thank you. Next question is from Ashish Agashe from PTI. Please go ahead.
+Ashish Agashe:
+Sir, good evening. You spoke about the retail credit growth and how the second half
+promises to be better. But what really sort of restricted the loan growth in the first half
+Page 7 of 14

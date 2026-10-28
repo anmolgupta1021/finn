@@ -1,0 +1,44 @@
+TICKER: BAJFINANCE.NS
+DOCUMENT_ID: DOC_5
+DOCUMENT_TITLE: Q2 FY26 Concall Transcript (13-Nov-2025)
+PDF_PAGE: 4 (of 19)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/BAJFINANCE_13112025183447_BFLInvestorCalloutcomeTranscriptforupload.pdf#page=4
+========================================================================
+
+Customer franchise, a key driver of our growth momentum for future years, expanded to cross
+110 million to end at 110.64 million. We added 4.13 million new customers in Q2 alone. We
+now expect to add 16 to 17 million new customers in FY '26.
+In general, from a growth standpoint, if I look at the outlook, the company has decided to take a
+prudent and balanced stance on AUM growth for FY '26. And we now think the growth will be
+in the region of 22-23% as compared to our earlier assessment of 24-25% due to a set of risk
+actions that we have taken in MSME business, and the revised assessment provided by BHFL
+on its AUM growth for FY '26.
+So we now would circle up our guidance to 22- 23% growth for full year versus 24-25% that we
+had pencilled in January'25, when we talked about. In terms of cost of funds and liquidity, cost
+of funds continue to improve, improved by 27 basis points in Q2 and came in at 7.52%.
+For FY '26, we expect cost of funds to be in the region of overall full year to be between 7.5%
+to 7.55%. NIM came in flat, in line with Q1. Deposit book, which contributes to 18% of the
+overall consolidated borrowing grew by 5% year-on-year.
+For FY '26, in general, as you saw in the trends in Q1 as well, the company has adopted a
+measured stance on its deposit program with higher focus on delivering cost of funds efficiencies
+to the businesses. And we'll share greater detail on deposits business as part of LRS that we'll
+publish for FY '26.
+In terms of operating efficiencies, company continued to deliver efficiencies. Opex to NTI
+improved to 32.6% as against 33.2% in Q2 last year. AI implementation across each line of
+business continues to move forward and should start to reflect in cost and productivity benefits
+over the next 12-18 months. In general, we remain very, very excited about the FinAI
+transformation.
+On risk and credit quality, loan loss to average AUF came in at 2.05% compared to 2.02% in Q1
+from a sequential standpoint. Credit costs principally remained elevated in Q2. However, the
+good news is that the vintage metrics when we look at the portfolio across 3 MOB, 6 MOB, 9
+MOB are showing significant improvement.
+As a result, we expect full year credit cost to come within 1.85% to 1.95% for FY'26, and we
+expect significant improvements in credit costs for FY'27. On credit cost, let me just give you a
+double-click on it to give you some texture. So MSME business remains under watch and
+company has taken significant risk actions.
+We have virtually cut MSME business by 25% in our unsecured MSME volumes. We now
+expect MSME business to grow in the current full fiscal by 10-12% only. The captive 2- and 3-
+wheeler business continues to -- which contributes to 1.5% of AUM, but accounts for 9% of the
+overall loan loss also continues to run down. That should also lead to significant improvement
+in loan loss to average AUM metric in second half of the year and also in FY'27.
+Page 3 of 18

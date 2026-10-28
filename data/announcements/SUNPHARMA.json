@@ -7,14 +7,14 @@
     "headline": "Allotment of Securities — Sun Pharmaceutical Industries Limited has informed the Exchange regarding allotment of 781600 securities pursuant to Non Convertible Securities at its meeting held on October 26, 2026",
     "category": "fund_raise",
     "priority": 1,
-    "summary": "Allotment of 781,600 non-convertible securities.",
+    "summary": "Allotted 781,600 non-convertible securities.",
     "source_url": "https://nsearchives.nseindia.com/corporate/SUNSEC_26102026122925_SE_Intimation_of_allotment_of_NCDs_26_Oct_2026.pdf",
     "raw_text": "Sun Pharmaceutical Industries Limited has informed the Exchange regarding allotment of 781600 securities pursuant to Non Convertible Securities at its meeting held on October 26, 2026",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 218,
-      "out": 58
+      "in": 267,
+      "out": 59
     }
   },
   {
@@ -159,74 +159,16 @@
     "company_name": "Sun Pharmaceutical Industries Limited",
     "timestamp": "2026-10-12T19:57:07+05:30",
     "headline": "Outcome of Board Meeting — Outcome of the Board Meeting held on 12 October 2026",
-    "category": "results",
-    "priority": 1,
-    "summary": "Q1 FY27 (consolidated): Revenue ₹15,300 Cr (+10.5% YoY, +4.7% QoQ); Operating EBITDA ₹4,418 Cr (+2.7% YoY, margin 28.9%); PAT ₹2,895 Cr (+27.0% YoY, +6.7% QoQ).",
+    "category": "unclassified",
+    "priority": 2,
+    "summary": "Outcome of the Board Meeting held on 12 October 2026",
     "source_url": "https://nsearchives.nseindia.com/corporate/SUNSEC_12102026195625_BMOutcome12October2026.pdf",
     "raw_text": "Outcome of the Board Meeting held on 12 October 2026",
-    "enrichment": {
-      "status": "ok",
-      "quarter": "Q1 FY27",
-      "basis": "consolidated",
-      "entity_type": "corporate",
-      "reported_unit": "million",
-      "normalised_unit": "crore",
-      "source_page": 10,
-      "vision_used": false,
-      "ebitda_status": "derived_from_schedule_iii",
-      "revenue_label": "Revenue from Operations",
-      "period_ended": {
-        "current": "2026-06-30",
-        "previous": "2026-03-31",
-        "year_ago": "2025-06-30"
-      },
-      "revenue": {
-        "value": 15299.88,
-        "previous_quarter": 14611.79,
-        "year_ago_quarter": 13851.4,
-        "qoq": 4.71,
-        "yoy": 10.46
-      },
-      "ebitda": {
-        "value": 4417.67,
-        "previous_quarter": 3954.2,
-        "year_ago_quarter": 4301.66,
-        "qoq": 11.72,
-        "yoy": 2.7
-      },
-      "operating_profit_ex_provisions": null,
-      "pbt": {
-        "value": 4098.81,
-        "previous_quarter": 3551.34,
-        "year_ago_quarter": 3172.77,
-        "qoq": 15.42,
-        "yoy": 29.19
-      },
-      "pat": {
-        "value": 2894.79,
-        "previous_quarter": 2714.03,
-        "year_ago_quarter": 2278.63,
-        "qoq": 6.66,
-        "yoy": 27.04
-      },
-      "pat_owners": null,
-      "derivation": {
-        "basis_note": "Statement of Consolidated Unaudited Financial Results (PDF p. 10, reported in ₹ Million; normalised ÷10 to ₹ crore).",
-        "revenue_definition": "Revenue from Operations = ₹1,52,998.8 Mn ÷ 10 = ₹15,299.88 Cr.",
-        "ebitda_formula": "Operating Profit (Revenue ₹1,52,998.8 Mn − Total Expenses ₹1,17,206.0 Mn = ₹35,792.8 Mn) + Finance Costs (₹996.7 Mn) + Depreciation & Amortisation (₹7,387.2 Mn) = ₹44,176.7 Mn ÷ 10 = ₹4,417.67 Cr (28.87% margin).",
-        "pbt_basis": "Profit Before Exceptional Items and Tax = ₹40,988.1 Mn ÷ 10 = ₹4,098.81 Cr (before exceptional items of ₹3,234.4 Mn).",
-        "pat_basis": "Total Consolidated Profit for the period (after tax and exceptional items) = ₹28,947.9 Mn ÷ 10 = ₹2,894.79 Cr."
-      },
-      "validation": {
-        "passed": true,
-        "flags": []
-      },
-      "highlights": "Basis: Consolidated · Normalised from ₹ million (Page 10) · EBITDA derived from schedule iii"
-    },
-    "model_used": "gemini-3.5-flash-lite",
+    "enrichment": {},
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 3243,
-      "out": 653
+      "in": 0,
+      "out": 0
     }
   },
   {
@@ -333,8 +275,8 @@
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 218,
-      "out": 58
+      "in": 267,
+      "out": 59
     }
   },
   {
@@ -345,14 +287,14 @@
     "headline": "Updates — Sun Pharmaceutical Industries Limited has informed the Exchange regarding 'Completion and Result of Postal Ballot dated 25 August 2026'.",
     "category": "postal_ballot",
     "priority": 2,
-    "summary": "Completion and result of postal ballot dated August 25, 2026.",
+    "summary": "Completed and announced results of postal ballot dated 25 August 2026.",
     "source_url": "https://nsearchives.nseindia.com/corporate/SUNSEC_28092026200828_SEIntimationforVR.pdf",
     "raw_text": "Sun Pharmaceutical Industries Limited has informed the Exchange regarding 'Completion and Result of Postal Ballot dated 25 August 2026'.",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 218,
-      "out": 58
+      "in": 267,
+      "out": 59
     }
   },
   {
@@ -371,82 +313,6 @@
     "tokens": {
       "in": 0,
       "out": 0
-    }
-  },
-  {
-    "id": "nse-sunpharma-slice1-q1fy27",
-    "ticker": "SUNPHARMA.NS",
-    "company_name": "Sun Pharmaceutical Industries Limited",
-    "timestamp": "2026-06-30T16:00:00+05:30",
-    "headline": "Outcome of Board Meeting — Q1 FY27 Financial Results (Consolidated)",
-    "category": "results",
-    "priority": 1,
-    "summary": "Q1 FY27 (consolidated): Revenue ₹15,300 Cr (+10.5% YoY, +4.7% QoQ); Operating EBITDA ₹4,418 Cr (+2.7% YoY, margin 28.9%); PAT ₹2,895 Cr (+27.0% YoY, +6.7% QoQ).",
-    "source_url": "https://nsearchives.nseindia.com/corporate/SUNSEC_31072026142955_BMOutcomewithannexures31072026.pdf",
-    "raw_text": "Q1 FY27 (consolidated): Revenue ₹15,300 Cr (+10.5% YoY, +4.7% QoQ); Operating EBITDA ₹4,418 Cr (+2.7% YoY, margin 28.9%); PAT ₹2,895 Cr (+27.0% YoY, +6.7% QoQ).",
-    "enrichment": {
-      "status": "ok",
-      "quarter": "Q1 FY27",
-      "basis": "consolidated",
-      "entity_type": "corporate",
-      "reported_unit": "million",
-      "normalised_unit": "crore",
-      "source_page": 10,
-      "vision_used": false,
-      "ebitda_status": "derived_from_schedule_iii",
-      "revenue_label": "Revenue from Operations",
-      "period_ended": {
-        "current": "2026-06-30",
-        "previous": "2026-03-31",
-        "year_ago": "2025-06-30"
-      },
-      "revenue": {
-        "value": 15299.88,
-        "previous_quarter": 14611.79,
-        "year_ago_quarter": 13851.4,
-        "qoq": 4.71,
-        "yoy": 10.46
-      },
-      "ebitda": {
-        "value": 4417.67,
-        "previous_quarter": 3954.2,
-        "year_ago_quarter": 4301.66,
-        "qoq": 11.72,
-        "yoy": 2.7
-      },
-      "operating_profit_ex_provisions": null,
-      "pbt": {
-        "value": 4098.81,
-        "previous_quarter": 3551.34,
-        "year_ago_quarter": 3172.77,
-        "qoq": 15.42,
-        "yoy": 29.19
-      },
-      "pat": {
-        "value": 2894.79,
-        "previous_quarter": 2714.03,
-        "year_ago_quarter": 2278.63,
-        "qoq": 6.66,
-        "yoy": 27.04
-      },
-      "pat_owners": null,
-      "derivation": {
-        "basis_note": "Statement of Consolidated Unaudited Financial Results (PDF p. 10, reported in ₹ Million; normalised ÷10 to ₹ crore).",
-        "revenue_definition": "Revenue from Operations = ₹1,52,998.8 Mn ÷ 10 = ₹15,299.88 Cr.",
-        "ebitda_formula": "Operating Profit (Revenue ₹1,52,998.8 Mn − Total Expenses ₹1,17,206.0 Mn = ₹35,792.8 Mn) + Finance Costs (₹996.7 Mn) + Depreciation & Amortisation (₹7,387.2 Mn) = ₹44,176.7 Mn ÷ 10 = ₹4,417.67 Cr (28.87% margin).",
-        "pbt_basis": "Profit Before Exceptional Items and Tax = ₹40,988.1 Mn ÷ 10 = ₹4,098.81 Cr (before exceptional items of ₹3,234.4 Mn).",
-        "pat_basis": "Total Consolidated Profit for the period (after tax and exceptional items) = ₹28,947.9 Mn ÷ 10 = ₹2,894.79 Cr."
-      },
-      "validation": {
-        "passed": true,
-        "flags": []
-      },
-      "highlights": "Basis: Consolidated · Normalised from ₹ million (Page 10) · EBITDA derived from schedule iii"
-    },
-    "model_used": "gemini-3.5-flash-lite",
-    "tokens": {
-      "in": 3243,
-      "out": 653
     }
   }
 ]

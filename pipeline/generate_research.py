@@ -39,7 +39,7 @@ from config import (
     save_json,
     ticker_symbol,
 )
-from extract_results import call_gemini_multimodal
+from extract_results import _score_statement_page, call_gemini_multimodal
 from fetch_announcements import create_nse_session
 
 
@@ -51,10 +51,10 @@ EVIDENCE_DIR.mkdir(parents=True, exist_ok=True)
 # Confirmed in data/verified_models.json (v=3.6-flash-07-2026); retry gemini-3.6-flash
 # twice before falling back to gemini-3.5-flash / gemini-3-flash-preview.
 ANALYSIS_MODELS = [
+    "gemini-3.8-flash",
+    "gemini-3.7-flash",
     "gemini-3.6-flash",
-    "gemini-3.6-flash",
-    "gemini-3.5-flash",
-    "gemini-3-flash-preview",
+    "gemini-3.5-flash-lite",
 ]
 
 
@@ -180,17 +180,67 @@ def discover_nse_primary_documents(
     return company_name, docs
 
 
+# Smart Page Selection & Per-Quarter Token Budget Constants
+# - Concall transcripts: prepared remarks (first 8 content pages) + Q&A pages with
+#   quantitative guidance keywords, capped at ~8,000 tokens (~32,000 chars) per transcript.
+# - Results filings: only the P&L statement page(s) scored by _score_statement_page()
+#   plus immediate highlights/notes pages, capped at ~2,500 tokens (~10,000 chars) per filing.
+TRANSCRIPT_CHAR_BUDGET_PER_QUARTER = 20000  # ~5,000 tokens per transcript
+RESULTS_CHAR_BUDGET_PER_QUARTER = 8000      # ~2,000 tokens per results filing
+Prepared_REMARKS_MAX_PAGES = 5
+
+GUIDANCE_KEYWORDS = (
+    "guidance",
+    "outlook",
+    "target",
+    "margin",
+    "ebitda",
+    "revenue growth",
+    "constant currency",
+    "capex",
+    "fy26",
+    "fy27",
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "double digit",
+    "double-digit",
+    "basis points",
+    "bps",
+    "aspir",
+    "band",
+    "range",
+    "trajectory",
+    "expect",
+    "order book",
+    "inflow",
+    "nim",
+    "credit cost",
+    "slippage",
+    "roa",
+    "roe",
+)
+
+
+def _score_transcript_qa_page(txt: str) -> int:
+    """Score a transcript Q&A page by quantitative guidance density."""
+    low = txt.lower()
+    kw_hits = sum(2 for kw in GUIDANCE_KEYWORDS if kw in low)
+    pct_hits = len(re.findall(r"\b\d+(?:\.\d+)?\s*(?:%|bps|crore|cr|million|billion)\b", low))
+    return kw_hits + min(pct_hits * 2, 12)
+
+
 def download_and_extract_pages(
     session: creq.Session,
     ticker: str,
     docs: list[dict[str, Any]],
-) -> tuple[list[dict[str, Any]], dict[tuple[str, int], str], str]:
+) -> tuple[list[dict[str, Any]], dict[tuple[str, int], str], str, dict[str, Any]]:
     """
     Download each primary PDF into `data/documents/research/{SYM}/`, read pages
-    via `pdfplumber`, and build:
-    - `enriched_docs`: metadata list with `doc_id`, `pages`, `local_path`, `url`
-    - `read_pages`: `{(doc_id, page_number): extracted_text}` for strict citation verification
-    - `prompt_corpus`: formatted text corpus tagged with `[{doc_id} | PDF PAGE {p_num}]`
+    via `pdfplumber`, and select pages using:
+    - Prepared-remarks + keyword-scored Q&A pages for Concall Transcripts (per-quarter budget ~8k tokens)
+    - P&L statement-only pages for Results Filings (per-quarter budget ~2.5k tokens)
     """
     sym = ticker_symbol(ticker)
     ticker_dir = RESEARCH_DOCS_DIR / sym
@@ -209,6 +259,8 @@ def download_and_extract_pages(
     enriched_docs: list[dict[str, Any]] = []
     read_pages: dict[tuple[str, int], str] = {}
     corpus_blocks: list[str] = []
+    total_pdf_pages_across_docs = 0
+    total_selected_pages = 0
 
     for idx, d in enumerate(docs):
         doc_id = f"DOC_{idx + 1}"
@@ -240,6 +292,7 @@ def download_and_extract_pages(
         try:
             with pdfplumber.open(local_path) as pdf:
                 total_pages = len(pdf.pages)
+                total_pdf_pages_across_docs += total_pages
                 doc_type = d["type"]
                 q_label = d["quarter"]
                 f_date = d["filing_date"]
@@ -249,21 +302,10 @@ def download_and_extract_pages(
                     else f"{q_label} Results Filing ({f_date})"
                 )
 
-                pages_to_read: list[int] = []
-                if doc_type == "concall_transcript":
-                    pages_to_read = list(range(1, min(total_pages, 24) + 1))
-                else:
-                    pages_to_read = list(range(1, min(total_pages, 18) + 1))
-                    if pdf_url in slice1_by_url:
-                        sp = int(slice1_by_url[pdf_url]["source_page"])
-                        if sp not in pages_to_read and 1 <= sp <= total_pages:
-                            pages_to_read.append(sp)
-                    for p_i in range(19, min(total_pages, 45) + 1):
-                        if p_i not in pages_to_read:
-                            pages_to_read.append(p_i)
-
-                page_texts_for_doc: list[str] = []
-                for p_num in sorted(pages_to_read):
+                # Extract raw text of candidate pages first
+                raw_page_map: dict[int, str] = {}
+                max_scan = min(total_pages, 45)
+                for p_num in range(1, max_scan + 1):
                     raw_txt = (pdf.pages[p_num - 1].extract_text() or "").strip()
                     if pdf_url in slice1_by_url and slice1_by_url[pdf_url].get("source_page") == p_num:
                         s1 = slice1_by_url[pdf_url]
@@ -276,14 +318,66 @@ def download_and_extract_pages(
                             f"PAT={s1['raw_in_reported_unit']['pat']}]"
                         )
                         raw_txt = (raw_txt + v_block).strip()
+                    if len(raw_txt) >= 40:
+                        raw_page_map[p_num] = raw_txt
 
-                    if len(raw_txt) < 40:
-                        continue
+                selected_page_nums: list[int] = []
+                char_budget = (
+                    TRANSCRIPT_CHAR_BUDGET_PER_QUARTER
+                    if doc_type == "concall_transcript"
+                    else RESULTS_CHAR_BUDGET_PER_QUARTER
+                )
 
+                if doc_type == "concall_transcript":
+                    # 1. Prepared remarks: first up to 8 content pages
+                    content_p_nums = sorted(raw_page_map.keys())
+                    prep_pages = content_p_nums[:Prepared_REMARKS_MAX_PAGES]
+                    # 2. Q&A pages ranked by quantitative guidance keyword density
+                    qa_candidates = content_p_nums[Prepared_REMARKS_MAX_PAGES:]
+                    qa_scored = sorted(
+                        qa_candidates,
+                        key=lambda p: (-_score_transcript_qa_page(raw_page_map[p]), p),
+                    )
+                    used_chars = 0
+                    for p in prep_pages + qa_scored:
+                        p_len = min(len(raw_page_map[p]), 3200)
+                        if used_chars + p_len > char_budget and len(selected_page_nums) >= 4:
+                            continue
+                        selected_page_nums.append(p)
+                        used_chars += p_len
+                    selected_page_nums.sort()
+                else:
+                    # Results filing: prioritize P&L statement pages scored via _score_statement_page()
+                    # plus page 1-2 cover/press-release highlights, within RESULTS_CHAR_BUDGET_PER_QUARTER
+                    scored_pages: list[tuple[int, int]] = []
+                    for p_num, p_txt in raw_page_map.items():
+                        st_meta = _score_statement_page(p_txt)
+                        st_score = st_meta["score"]
+                        if pdf_url in slice1_by_url and slice1_by_url[pdf_url].get("source_page") == p_num:
+                            st_score += 200
+                        elif p_num in (1, 2):
+                            st_score = max(st_score, 25)
+                        elif any(k in p_txt.lower() for k in ("revenue from operations", "profit before tax", "segment", "highlights")):
+                            st_score = max(st_score, 15)
+                        scored_pages.append((st_score, p_num))
+
+                    scored_pages.sort(key=lambda x: (-x[0], x[1]))
+                    used_chars = 0
+                    for sc, p_num in scored_pages:
+                        if sc < 0 and len(selected_page_nums) >= 2:
+                            continue
+                        p_len = min(len(raw_page_map[p_num]), 3200)
+                        if used_chars + p_len > char_budget and len(selected_page_nums) >= 2:
+                            continue
+                        selected_page_nums.append(p_num)
+                        used_chars += p_len
+                    selected_page_nums.sort()
+
+                page_texts_for_doc: list[str] = []
+                for p_num in selected_page_nums:
+                    raw_txt = raw_page_map[p_num]
                     read_pages[(doc_id, p_num)] = raw_txt
                     trimmed = raw_txt[:3200]
-                    # Redact internal transcript footers like "Page 2 of 37" in the prompt
-                    # so the model never confuses the footer number with PDF PAGE p_num.
                     prompt_safe_txt = re.sub(
                         r"\bPage\s+\d+\s+of\s+\d+\b",
                         f"[PDF_PAGE_{p_num}]",
@@ -299,6 +393,7 @@ def download_and_extract_pages(
                 if not page_texts_for_doc:
                     continue
 
+                total_selected_pages += len(page_texts_for_doc)
                 enriched_docs.append(
                     {
                         "doc_id": doc_id,
@@ -309,11 +404,13 @@ def download_and_extract_pages(
                         "url": pdf_url,
                         "pages": total_pages,
                         "pages_read": len(page_texts_for_doc),
+                        "selected_pages": selected_page_nums,
+                        "char_budget": char_budget,
                     }
                 )
                 corpus_blocks.append(
                     f"================================================================\n"
-                    f"DOCUMENT {doc_id}: {doc_title} (File: {fname}, Total Pages: {total_pages})\n"
+                    f"DOCUMENT {doc_id}: {doc_title} (File: {fname}, Total Pages: {total_pages}, Selected Pages: {selected_page_nums})\n"
                     f"================================================================\n"
                     + "\n\n".join(page_texts_for_doc)
                 )
@@ -321,7 +418,17 @@ def download_and_extract_pages(
             print(f"  ⚠️ Error reading {local_path.name}: {e}")
             continue
 
-    return enriched_docs, read_pages, "\n\n".join(corpus_blocks)
+    full_corpus = "\n\n".join(corpus_blocks)
+    page_selection_stats = {
+        "strategy": "prepared_remarks_and_keyword_qa_plus_pnl_results_pages",
+        "transcript_char_budget_per_quarter": TRANSCRIPT_CHAR_BUDGET_PER_QUARTER,
+        "results_char_budget_per_quarter": RESULTS_CHAR_BUDGET_PER_QUARTER,
+        "total_pdf_pages_available": total_pdf_pages_across_docs,
+        "pages_selected": total_selected_pages,
+        "pages_dropped": max(0, total_pdf_pages_across_docs - total_selected_pages),
+        "corpus_chars_sent": len(full_corpus),
+    }
+    return enriched_docs, read_pages, full_corpus, page_selection_stats
 
 
 NARRATIVE_VS_NUMBERS_PROMPT = """You are a senior institutional equity analyst at an Indian investment firm conducting a "Narrative vs. Numbers" (Promised vs. Delivered) audit for {company} ({ticker}).
@@ -611,52 +718,37 @@ def generate_research_for_ticker(
     company_name, docs = discover_nse_primary_documents(session, ticker, days_back=460)
     print(f"  Found {len(docs)} primary PDFs on NSE for {company_name}")
 
-    enriched_docs, read_pages, corpus = download_and_extract_pages(session, ticker, docs)
+    enriched_docs, read_pages, corpus, page_selection_stats = download_and_extract_pages(
+        session, ticker, docs
+    )
     if not enriched_docs or not read_pages:
         raise RuntimeError(f"No readable primary documents found on NSE for {ticker}")
 
     print(
-        f"  📖 Read {len(read_pages)} pages across {len(enriched_docs)} PDFs "
-        f"({len(corpus):,} chars)"
+        f"  📖 Selected {len(read_pages)}/{page_selection_stats['total_pdf_pages_available']} pages "
+        f"across {len(enriched_docs)} PDFs ({len(corpus):,} chars; "
+        f"dropped {page_selection_stats['pages_dropped']} non-P&L/boilerplate pages)"
     )
 
     docs_by_id = {d["doc_id"]: d for d in enriched_docs}
     manifest_lines = [
-        f"- {d['doc_id']}: {d['title']} | type={d['type']} | total_pages={d['pages']} | pages_read={d['pages_read']} | url={d['url']}"
+        f"- {d['doc_id']}: {d['title']} | type={d['type']} | total_pages={d['pages']} | pages_selected={d['pages_read']} ({d['selected_pages']}) | url={d['url']}"
         for d in enriched_docs
     ]
 
-    V2_CACHE_BY_TICKER = {
-        "INFY.NS": "narrative_vs_numbers_v2_6a8cc20c12fb906c.json",
-        "RELIANCE.NS": "narrative_vs_numbers_v2_5179b61cabdf1139.json",
-        "TCS.NS": "narrative_vs_numbers_v2_062161016207fc9c.json",
-        "ICICIBANK.NS": "narrative_vs_numbers_v2_30986449a043b597.json",
-        "ETERNAL.NS": "narrative_vs_numbers_v2_064352e4ce519bf3.json",
-        "PIDILITIND.NS": "narrative_vs_numbers_v2_77997ff1808491f8.json",
-    }
-    cache_fname = V2_CACHE_BY_TICKER.get(ticker)
-    cache_path = (DATA_DIR / ".llm_cache" / cache_fname) if cache_fname else None
-
-    if cache_path and cache_path.exists():
-        raw_out = json.loads(cache_path.read_text())
-        model_used = raw_out.get("_meta_model", "gemini-3.6-flash")
-        meta_tok = raw_out.get("_meta_tokens") or {"in": 47000, "out": 8000}
-        tokens_in = int(meta_tok.get("in", 0))
-        tokens_out = int(meta_tok.get("out", 0))
-    else:
-        prompt = NARRATIVE_VS_NUMBERS_PROMPT.format(
-            company=company_name,
-            ticker=ticker,
-            doc_manifest="\n".join(manifest_lines),
-            corpus=corpus[:180000],
-        )
-        raw_out, model_used, tokens_in, tokens_out = call_gemini_multimodal(
-            prompt=prompt,
-            image_png_bytes=None,
-            task="narrative_vs_numbers_v2",
-            ticker=ticker,
-            models=ANALYSIS_MODELS,
-        )
+    prompt = NARRATIVE_VS_NUMBERS_PROMPT.format(
+        company=company_name,
+        ticker=ticker,
+        doc_manifest="\n".join(manifest_lines),
+        corpus=corpus,
+    )
+    raw_out, model_used, tokens_in, tokens_out = call_gemini_multimodal(
+        prompt=prompt,
+        image_png_bytes=None,
+        task="narrative_vs_numbers_v4",
+        ticker=ticker,
+        models=ANALYSIS_MODELS,
+    )
 
     verified_nvn, stats = verify_and_write_evidence(
         ticker, raw_out, docs_by_id, read_pages
@@ -665,6 +757,10 @@ def generate_research_for_ticker(
         f"  🛡️ Tightened Citation Gate: {stats['verified_claims']} claims verified, "
         f"{stats['rejected_claims']} rejected ({len(verified_nvn['quarters'])} quarters retained)"
     )
+    print(
+        f"  💰 Model={model_used} | Tokens: in={tokens_in:,}, out={tokens_out:,} | "
+        f"Cost=${estimate_cost_usd(model_used, tokens_in, tokens_out):.4f}"
+    )
 
     source_documents = [
         {
@@ -672,6 +768,8 @@ def generate_research_for_ticker(
             "quarter": d["quarter"],
             "url": d["url"],
             "pages": d["pages"],
+            "pages_selected": d["pages_read"],
+            "selected_page_numbers": d["selected_pages"],
         }
         for d in enriched_docs
     ]
@@ -681,16 +779,24 @@ def generate_research_for_ticker(
         "company_name": company_name,
         "generated_at": datetime.utcnow().isoformat() + "Z",
         "source_documents": source_documents,
+        "page_selection_stats": page_selection_stats,
         "narrative_vs_numbers": verified_nvn,
         "citation_audit": {
             "documents_fetched": len(enriched_docs),
+            "total_pdf_pages_available": page_selection_stats["total_pdf_pages_available"],
             "pages_actually_read": len(read_pages),
+            "pages_dropped": page_selection_stats["pages_dropped"],
             "verified_claims": stats["verified_claims"],
             "rejected_claims": stats["rejected_claims"],
             "rejections_detail": stats["rejections_detail"],
         },
         "model_used": model_used,
-        "tokens": {"in": tokens_in, "out": tokens_out},
+        "tokens": {
+            "in": tokens_in,
+            "out": tokens_out,
+            "out_candidates": (raw_out.get("_meta_tokens") or {}).get("out_candidates"),
+            "out_thoughts": (raw_out.get("_meta_tokens") or {}).get("out_thoughts"),
+        },
         "cost_estimate_usd": estimate_cost_usd(model_used, tokens_in, tokens_out),
     }
 
@@ -704,6 +810,9 @@ DEFAULT_RESEARCH_TICKERS = [
     "TCS.NS",
     "ICICIBANK.NS",
     "ETERNAL.NS",
+    "PIDILITIND.NS",
+    "BAJFINANCE.NS",
+    "ITC.NS",
 ]
 
 

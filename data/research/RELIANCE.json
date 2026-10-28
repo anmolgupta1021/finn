@@ -1,95 +1,187 @@
 {
   "ticker": "RELIANCE.NS",
   "company_name": "Reliance Industries Limited",
-  "generated_at": "2026-10-27T12:38:01.685227Z",
+  "generated_at": "2026-10-28T04:48:35.729539Z",
   "source_documents": [
     {
       "type": "concall_transcript",
       "quarter": "Q1 FY27",
       "url": "https://nsearchives.nseindia.com/corporate/kavinavora_19072026180618_SE_Transcript.pdf",
-      "pages": 32
+      "pages": 32,
+      "pages_selected": 8,
+      "selected_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        32
+      ]
     },
     {
       "type": "concall_transcript",
       "quarter": "Q4 FY26",
       "url": "https://nsearchives.nseindia.com/corporate/kavinavora_26042026232750_SE_26042026.pdf",
-      "pages": 31
+      "pages": 31,
+      "pages_selected": 8,
+      "selected_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        10,
+        31
+      ]
     },
     {
       "type": "concall_transcript",
       "quarter": "Q3 FY26",
       "url": "https://nsearchives.nseindia.com/corporate/kavinavora_18012026235015_SE_Transcript.pdf",
-      "pages": 38
+      "pages": 38,
+      "pages_selected": 8,
+      "selected_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        27
+      ]
     },
     {
       "type": "concall_transcript",
       "quarter": "Q2 FY26",
       "url": "https://nsearchives.nseindia.com/corporate/kavinavora_19102025225511_SE__Transcripts.pdf",
-      "pages": 37
+      "pages": 37,
+      "pages_selected": 8,
+      "selected_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        15,
+        33
+      ]
+    },
+    {
+      "type": "results_filing",
+      "quarter": "Q2 FY27",
+      "url": "https://nsearchives.nseindia.com/corporate/kavinavora_27102026220855_RIL_SELETTER_271026.pdf",
+      "pages": 2,
+      "pages_selected": 2,
+      "selected_page_numbers": [
+        1,
+        2
+      ]
     },
     {
       "type": "results_filing",
       "quarter": "Q1 FY27",
       "url": "https://nsearchives.nseindia.com/corporate/kavinavora_17072026191923_SE_MR_1.pdf",
-      "pages": 21
+      "pages": 21,
+      "pages_selected": 4,
+      "selected_page_numbers": [
+        1,
+        2,
+        3,
+        8
+      ]
     },
     {
       "type": "results_filing",
       "quarter": "Q4 FY26",
       "url": "https://nsearchives.nseindia.com/corporate/kavinavora_24042026193424_SE_24042026_MR.pdf",
-      "pages": 23
+      "pages": 23,
+      "pages_selected": 4,
+      "selected_page_numbers": [
+        1,
+        2,
+        3,
+        4
+      ]
     },
     {
       "type": "results_filing",
       "quarter": "Q3 FY26",
       "url": "https://nsearchives.nseindia.com/corporate/kavinavora_16012026192013_MR_file.pdf",
-      "pages": 21
+      "pages": 21,
+      "pages_selected": 4,
+      "selected_page_numbers": [
+        1,
+        2,
+        3,
+        5
+      ]
     },
     {
       "type": "results_filing",
       "quarter": "Q2 FY26",
       "url": "https://nsearchives.nseindia.com/corporate/kavinavora_17102025190605_SE_MR.pdf",
-      "pages": 21
+      "pages": 21,
+      "pages_selected": 4,
+      "selected_page_numbers": [
+        1,
+        2,
+        3,
+        19
+      ]
     }
   ],
+  "page_selection_stats": {
+    "strategy": "prepared_remarks_and_keyword_qa_plus_pnl_results_pages",
+    "transcript_char_budget_per_quarter": 20000,
+    "results_char_budget_per_quarter": 8000,
+    "total_pdf_pages_available": 226,
+    "pages_selected": 50,
+    "pages_dropped": 176,
+    "corpus_chars_sent": 119264
+  },
   "narrative_vs_numbers": {
-    "summary": "Reliance Industries Limited demonstrated strong execution across its digital and consumer segments, systematically beating operational benchmarks. Jio continuously expanded its 5G subscriber base from 253 million in Q3 FY26 to 285 million in Q1 FY27, while FMCG revenues doubled to Rs.7350 Crores in Q4 FY26 following the December 1st demerger.",
+    "summary": "Reliance Industries demonstrated strong operational execution across FY26 and Q1 FY27, consistently delivering on digital subscriber ramp-up and retail footprint expansion. The company crossed key operational thresholds, reaching 20,000 retail stores in Q4 FY26 and growing digital services by 20% year-on-year in Q1 FY27, while FMCG demerger execution saw only minor timing slippage from November to 1st December.",
     "quarters": [
       {
         "quarter": "Q1 FY27",
         "guided": [
           {
-            "metric": "Jio 5G Subscriber Base",
-            "guidance": "268 million 5G user base with 77 million additions during the year",
-            "source": "Q4 FY26 Concall Transcript (26-Apr-2026), PDF p. 4 — \"268 million 5G user base, so that is an addition of 77 million during the year of 5G subscribers.\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_26042026232750_SE_26042026.pdf#page=4",
+            "metric": "Digital Services Scaling",
+            "guidance": "Scale up and ramp up digital services launched over the prior couple of quarters",
+            "source": "Q4 FY26 Concall Transcript (26-Apr-2026), PDF p. 31 — \"of course, digital services. We have launched a few in the last couple of quarters and we want them to scale up, ramp up.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_26042026232750_SE_26042026.pdf#page=31",
             "doc_id": "DOC_2",
-            "page": 4,
-            "evidence_file": "evidence/RELIANCE/DOC_2_p4.txt"
+            "page": 31,
+            "evidence_file": "evidence/RELIANCE/DOC_2_p31.txt"
           },
           {
-            "metric": "Fixed Broadband Connects & AirFiber",
-            "guidance": "27 million fixed broadband connects including 12.9 million JioAirFiber homes",
-            "source": "Q4 FY26 Concall Transcript (26-Apr-2026), PDF p. 4 — \"27 million fixed broadband connects that was a net addition of almost 10 million during the year and 12.9 million JioAirFiber homes.\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_26042026232750_SE_26042026.pdf#page=4",
+            "metric": "Home Broadband and AirFiber Expansion",
+            "guidance": "Optimistic about working at scale to increase the run rate and increase the acquisition rate even more",
+            "source": "Q4 FY26 Concall Transcript (26-Apr-2026), PDF p. 5 — \"So, we are very optimistic about this working at scale and will help us increase the run rate, increase the acquisition rate even more.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_26042026232750_SE_26042026.pdf#page=5",
             "doc_id": "DOC_2",
-            "page": 4,
-            "evidence_file": "evidence/RELIANCE/DOC_2_p4.txt"
+            "page": 5,
+            "evidence_file": "evidence/RELIANCE/DOC_2_p5.txt"
           }
         ],
         "delivered": [
           {
-            "metric": "Jio 5G Subscriber Base",
-            "actual": "285 million 5G users with 73 million additions in the last 12 months",
-            "source": "Q1 FY27 Concall Transcript (19-Jul-2026), PDF p. 5 — \"Out of these, 285 million are 5G users, so which is an addition of 73 million in the last 12 months of 5G users.\"",
+            "metric": "Digital Services Scaling",
+            "actual": "Digital services growth reached 20% year-on-year, outpacing connectivity growth",
+            "source": "Q1 FY27 Concall Transcript (19-Jul-2026), PDF p. 5 — \"The digital services growth is 20% year-on-year, which outpaces the connectivity growth, which has been the trend over the last several quarters.\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_19072026180618_SE_Transcript.pdf#page=5",
             "doc_id": "DOC_1",
             "page": 5,
             "evidence_file": "evidence/RELIANCE/DOC_1_p5.txt"
           },
           {
-            "metric": "Fixed Broadband Connects & AirFiber",
-            "actual": "28.6 million fixed broadband connects with 14 million AirFiber homes",
+            "metric": "Home Broadband and AirFiber Expansion",
+            "actual": "Fixed broadband connects increased to 28.6 million, out of which 14 million are AirFiber homes",
             "source": "Q1 FY27 Concall Transcript (19-Jul-2026), PDF p. 5 — \"The home broadband, fixed broadband connects has increased to 28.6 million, out of which 14 million are AirFiber homes.\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_19072026180618_SE_Transcript.pdf#page=5",
             "doc_id": "DOC_1",
@@ -97,69 +189,118 @@
             "evidence_file": "evidence/RELIANCE/DOC_1_p5.txt"
           }
         ],
-        "verdict": "beat",
-        "commentary": "Jio Platforms outpaced previous quarter user growth targets, expanding its 5G subscriber base and home broadband connects significantly."
+        "verdict": "hit",
+        "commentary": "Digital services scaled up rapidly with double-digit growth outpacing connectivity, and home broadband additions expanded to 28.6 million connections driven by AirFiber."
       },
       {
         "quarter": "Q4 FY26",
         "guided": [
           {
-            "metric": "Jio 5G Subscriber Base",
-            "guidance": "253 million plus 5G subscribers on the network",
-            "source": "Q3 FY26 Concall Transcript (18-Jan-2026), PDF p. 5 — \"5G user base has been growing very rapidly and quite well, 253 million plus 5G subscribers as well on our network.\"",
+            "metric": "Retail Store Network Expansion",
+            "guidance": "Store count stood at close to 20,000 stores after having added about 430 stores",
+            "source": "Q3 FY26 Concall Transcript (18-Jan-2026), PDF p. 3 — \"Overall store count at close to 20,000 stores and having added about 430 stores.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_18012026235015_SE_Transcript.pdf#page=3",
+            "doc_id": "DOC_3",
+            "page": 3,
+            "evidence_file": "evidence/RELIANCE/DOC_3_p3.txt"
+          },
+          {
+            "metric": "Home Broadband Additions Pace",
+            "guidance": "Continue to add almost a million homes every month",
+            "source": "Q3 FY26 Concall Transcript (18-Jan-2026), PDF p. 5 — \"Homes, we continue to add almost a million homes every month.\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_18012026235015_SE_Transcript.pdf#page=5",
             "doc_id": "DOC_3",
             "page": 5,
             "evidence_file": "evidence/RELIANCE/DOC_3_p5.txt"
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "Retail Store Network Expansion",
+            "actual": "Opened 333 total new stores during the quarter and crossed the milestone of 20,000 stores",
+            "source": "Q4 FY26 Concall Transcript (26-Apr-2026), PDF p. 7 — \"We opened 333 total new stores during the quarter and crossed the milestone of 20,000 stores during this quarter.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_26042026232750_SE_26042026.pdf#page=7",
+            "doc_id": "DOC_2",
+            "page": 7,
+            "evidence_file": "evidence/RELIANCE/DOC_2_p7.txt"
           },
           {
-            "metric": "FMCG Revenue",
-            "guidance": "Demerger on 1st December with turnover of more than 5,000 Crores",
+            "metric": "Home Broadband Additions Pace",
+            "actual": "Reached 27 million fixed broadband connects with an addition of almost 10 million during the year and 12.9 million JioAirFiber homes",
+            "source": "Q4 FY26 Concall Transcript (26-Apr-2026), PDF p. 4 — \"27 million fixed broadband connects that was a net addition of almost 10 million during the year and 12.9 million JioAirFiber homes.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_26042026232750_SE_26042026.pdf#page=4",
+            "doc_id": "DOC_2",
+            "page": 4,
+            "evidence_file": "evidence/RELIANCE/DOC_2_p4.txt"
+          }
+        ],
+        "verdict": "hit",
+        "commentary": "Reliance crossed the major operational threshold of 20,000 retail stores and sustained home broadband additions to reach 27 million connects."
+      },
+      {
+        "quarter": "Q3 FY26",
+        "guided": [
+          {
+            "metric": "FMCG Business Demerger Timeline",
+            "guidance": "Targeted that the de-merger will happen in November pending written judgment",
+            "source": "Q2 FY26 Concall Transcript (19-Oct-2025), PDF p. 3 — \"so this is something that the de-merger will happen in November, but we are waiting for the written judgment on that one.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_19102025225511_SE__Transcripts.pdf#page=3",
+            "doc_id": "DOC_4",
+            "page": 3,
+            "evidence_file": "evidence/RELIANCE/DOC_4_p3.txt"
+          },
+          {
+            "metric": "Fixed Broadband Subscriber Base",
+            "guidance": "Reached 23 million fixed broadband connected premises with 3 million net adds in the quarter",
+            "source": "Q2 FY26 Concall Transcript (19-Oct-2025), PDF p. 5 — \"23 million fixed broadband connected premises, 3 million net adds in this quarter. So, our million a month kind of run rate has sustained\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_19102025225511_SE__Transcripts.pdf#page=5",
+            "doc_id": "DOC_4",
+            "page": 5,
+            "evidence_file": "evidence/RELIANCE/DOC_4_p5.txt"
+          }
+        ],
+        "delivered": [
+          {
+            "metric": "FMCG Business Demerger Timeline",
+            "actual": "The demerger happened on 1st December with turnover crossing 5,000 Crores",
             "source": "Q3 FY26 Concall Transcript (18-Jan-2026), PDF p. 3 — \"On the FMCG side, the demerger happened on 1st December. And we are at more than 5,000 Crores of turnover\"",
             "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_18012026235015_SE_Transcript.pdf#page=3",
             "doc_id": "DOC_3",
             "page": 3,
             "evidence_file": "evidence/RELIANCE/DOC_3_p3.txt"
-          }
-        ],
-        "delivered": [
-          {
-            "metric": "Jio 5G Subscriber Base",
-            "actual": "268 million 5G user base with 77 million additions during the year",
-            "source": "Q4 FY26 Concall Transcript (26-Apr-2026), PDF p. 4 — \"268 million 5G user base, so that is an addition of 77 million during the year of 5G subscribers.\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_26042026232750_SE_26042026.pdf#page=4",
-            "doc_id": "DOC_2",
-            "page": 4,
-            "evidence_file": "evidence/RELIANCE/DOC_2_p4.txt"
           },
           {
-            "metric": "FMCG Revenue",
-            "actual": "Full year revenue of Rs.22,000 Crores in 2026 and Q4 revenue of Rs.7350 Crores",
-            "source": "Q4 FY26 Concall Transcript (26-Apr-2026), PDF p. 9 — \"From an FMCG business perspective, we closed our revenue of Rs.22,000 Crores in 2026 and for the Q4 alone, we delivered a revenue of Rs.7350 Crores\"",
-            "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_26042026232750_SE_26042026.pdf#page=9",
-            "doc_id": "DOC_2",
-            "page": 9,
-            "evidence_file": "evidence/RELIANCE/DOC_2_p9.txt"
+            "metric": "Fixed Broadband Subscriber Base",
+            "actual": "Maintained run rate reaching 25 million plus fixed broadband connects and 11.5 million JioAirFiber homes",
+            "source": "Q3 FY26 Concall Transcript (18-Jan-2026), PDF p. 5 — \"Now we maintain that run rate, 25 million plus fixed broadband connects, and 11.5 million JioAirFiber homes.\"",
+            "source_url": "https://nsearchives.nseindia.com/corporate/kavinavora_18012026235015_SE_Transcript.pdf#page=5",
+            "doc_id": "DOC_3",
+            "page": 5,
+            "evidence_file": "evidence/RELIANCE/DOC_3_p5.txt"
           }
         ],
-        "verdict": "beat",
-        "commentary": "FMCG business accelerated sharply post-demerger, while Jio sustained rapid 5G adoption."
+        "verdict": "hit",
+        "commentary": "Broadband additions maintained the run rate to reach 25 million connects, while the FMCG demerger was completed with a slight delay into 1st December."
       }
     ],
     "credibility_score": "high",
-    "pattern": "Management consistently delivers on digital subscriber expansion and market share acquisition in consumer verticals while actively navigating volatile energy macros."
+    "pattern": "Management reliably converts proprietary technology and physical infrastructure rollouts into steady volume and subscriber milestones, with corporate actions occasionally shifting by a few weeks due to regulatory processes."
   },
   "citation_audit": {
-    "documents_fetched": 8,
-    "pages_actually_read": 182,
-    "verified_claims": 8,
+    "documents_fetched": 9,
+    "total_pdf_pages_available": 226,
+    "pages_actually_read": 50,
+    "pages_dropped": 176,
+    "verified_claims": 12,
     "rejected_claims": 0,
     "rejections_detail": []
   },
-  "model_used": "gemini-3.6-flash",
+  "model_used": "gemini-3.8-flash",
   "tokens": {
-    "in": 46149,
-    "out": 6573
+    "in": 38902,
+    "out": 18422,
+    "out_candidates": 1603,
+    "out_thoughts": 16819
   },
-  "cost_estimate_usd": 0.030277
+  "cost_estimate_usd": 0.057726
 }

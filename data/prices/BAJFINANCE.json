@@ -2,14 +2,14 @@
   "ticker": "BAJFINANCE.NS",
   "name": "Bajaj Finance Limited",
   "sector": "Financial Services",
-  "fetched_at": "2026-10-27T07:05:41.851009Z",
+  "fetched_at": "2026-10-27T17:35:49.641650Z",
   "current": {
-    "price": 918.7,
-    "change_pct": -1.1,
-    "volume": 3976714,
-    "vol_ratio": 0.45,
+    "price": 912.0,
+    "change_pct": -0.73,
+    "volume": 6231984,
+    "vol_ratio": 0.75,
     "vol_guard": null,
-    "market_cap": 5691137851392,
+    "market_cap": 5676200361984,
     "name": "Bajaj Finance Limited",
     "sector": "Financial Services",
     "industry": "Credit Services"
@@ -992,6 +992,17 @@
       "volume": 3976714,
       "change_pct": -1.1,
       "vol_ratio": 0.45,
+      "vol_guard": null
+    },
+    {
+      "date": "2026-10-27",
+      "open": 916.0,
+      "high": 924.0,
+      "low": 907.5,
+      "close": 912.0,
+      "volume": 6231984,
+      "change_pct": -0.73,
+      "vol_ratio": 0.75,
       "vol_guard": null
     }
   ]

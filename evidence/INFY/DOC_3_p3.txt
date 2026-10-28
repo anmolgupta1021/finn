@@ -1,0 +1,39 @@
+TICKER: INFY.NS
+DOCUMENT_ID: DOC_3
+DOCUMENT_TITLE: Q3 FY26 Concall Transcript (19-Jan-2026)
+PDF_PAGE: 3 (of 39)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/Infosys_19012026222220_SEfiling_Earningscalltranscript_19012026.pdf#page=3
+========================================================================
+
+Rishi Basu
+A very good evening, everyone, and wishing you all a very Happy New Year. Thank you for joining
+us today. My name is Rishi. And on behalf of Infosys, I would like to welcome all of you. As always,
+since this is the New Year, my rules do not really change, one question from each media house. We
+try our best.
+But with that, let me invite our Chief Executive Officer, Mr. Salil Parekh, for his opening remarks.
+Over to you, Salil.
+Salil Parekh
+Thanks, Rishi. It is good to see that you are very consistent, and I am sure the media team is as well.
+Good afternoon, everyone, and thank you for being here. Warm wishes for the new year to all of you.
+We have had a strong performance in Q3. Our revenue grew 0.6% sequentially and 1.7% year-on-
+year in constant currency terms. Our large deals were at $4.8 bn, with 57% net new. This was across
+26 deals.
+Our adjusted operating margin was 21.2%. We generated free cash flow of $915 mn. One of the
+most significant large deals we won was with the National Health Service in the U.K. This $1.6 bn
+deal expands our work in the healthcare sector. We will help NHS leverage AI to streamline
+operations and improve patient care for U.K. citizens.
+We have deepened our Topaz AI capability with an agent services suite called Topaz Fabric. This
+suite helps our clients manage and implement AI agents across the enterprise. We had strong
+momentum in AI adoption across our client base. Today, we work with 90% of our largest 200 clients
+to unlock value with AI. We are currently working on 4,600 AI projects. Our teams have generated
+over 28 mn lines of code using AI. We have built over 500 agents. We are scaling our forward
+deployed engineer team.
+We are now witnessing six AI-led value pools emerging that could unlock a large incremental
+opportunity. We also see productivity-led benefits that compress some legacy areas. The six large
+AI-led value pools are:
+- AI engineering services,
+- Data for AI,
+- Agents for operations,
+- AI software development and legacy modernization,
+2
+External Document © 2026 Infosys Limited

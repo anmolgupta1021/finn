@@ -1,0 +1,49 @@
+TICKER: ICICIBANK.NS
+DOCUMENT_ID: DOC_1
+DOCUMENT_TITLE: Q2 FY27 Concall Transcript (23-Oct-2026)
+PDF_PAGE: 5 (of 42)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/ICICI2022_23102026175603_NSEBSE23102026.pdf#page=5
+========================================================================
+
+Moderator:
+Thank you very much, sir. We will now begin the Q&A session with Mr. Batra and Mr.
+Banerjee. Anyone who wishes to ask a question may press ‘*’ and ‘1’ on their telephone.
+If you wish to remove yourself from the question queue you may press ‘*’ and ‘2’. Today's
+announcement is on the Bank's financial performance. Hence, we would like to request
+you to ask questions related to that. Please contact the Corporate Communications team
+separately for any other queries.
+Due to time constraints, I request all of you to ask two questions at a time. If you have
+additional queries, you may join the queue again, if time permits. Thank you.
+We will take our first question from Ritu Singh from CNBC-TV18. Please go ahead.
+Ritu Singh:
+Thanks very much for that, and good evening, Mr. Batra. I just quickly wanted to start by
+understanding what has happened on the margin front. That 18-basis point decline.
+Could you give us an explanation, how much is because of the FCNR flows and how much
+is because of this one-time tax refund, in the first quarter? Where do you see margins
+sort of stabilising? That is the first question.
+Also, the sustainability of your deposit and credit growth. Almost 27-28% year-on-year
+deposit growth, but excluding FCNR, deposits just grew by 17%. Again, the loan book
+from 30% would have fallen to about 24% excluding the loans by international branches
+against these FCNR deposits. So where are you seeing growth? How do you see that
+stabilising as well? And a quick point, if you could add on your slippages of ₹4,833 crore,
+where they came from? Anything you would like to flag?
+Sandeep Batra:
+That is three questions, Ritu, but let me answer them. As we have reported, the net
+interest income increased by about 17.7% year-on-year and about 3.9% sequentially. The
+NIM was 4.18% for this quarter compared to 4.36% in the previous quarter. As I had
+mentioned, if I exclude the interest on tax refund, it was 4.28% in the previous quarter.
+So, we are really talking of a decline from 4.28% to 4.18%. That is largely a function of
+FCNR(B) which accordingly results in a higher deposit amount and a lower CASA. As you
+would have seen, our CASA ratio has marginally declined, which has been responsible
+for the marginal decline in the NIMs. The large sequential increase in retail term deposits
+and increase in overseas branches of total assets has also led to moderation in margins.
+The full impact would largely get reflected in the third quarter, after which we expect the
+margins to start moving up, even based on the current level of policy rates.
+The other thing which I want to talk about, given you talked about it, I thiznk the FCNR
+(B) has also provided us with a lot of opportunities to interact with a new set of NRI
+customers. As a bank, we continue to be focussed on PBT, and that is an area that we
+will look forward to expanding as we go forward. You talked about the deposit growth
+excluding FCNR (B). Our outstanding deposits, as you would have noticed, grew about
+27% year-on-year. For the period-end deposits excluding FCNR (B), we have grown by
+about 17% and 3.1% sequentially. As you would be aware, we continue to focus on
+Page 4 of 18

@@ -1,0 +1,42 @@
+TICKER: ETERNAL.NS
+DOCUMENT_ID: DOC_3
+DOCUMENT_TITLE: Q3 FY26 Concall Transcript (27-Jan-2026)
+PDF_PAGE: 3 (of 18)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/ZOMATO_27012026182242_Eternallimitedtranscriptofearningcallsigned.pdf#page=3
+========================================================================
+
+Moderator: Ladies and gentlemen, a very good evening, and welcome to Eternal Limited's Q3FY26
+earnings conference call. From Eternal's management team, we have with us today
+Akshant Goyal, Albinder Singh Dhindsa, and Kunal Swarup.
+Before we begin, a few quick announcements for the attendees. Anything said on this
+call, which reflects the outlook for the future, or which could be construed as a forward-
+looking statement, may involve risks and uncertainties. Such statements or comments
+are not guarantees of future performance, and actual results may differ from those
+statements.
+Additionally, please note that this earnings call is scheduled for a duration of 45 minutes,
+and we will be starting directly with the Q&A section of the call. If you wish to ask a
+question, please use the raise hand feature available on your Zoom dashboard. We will
+announce your name on the call and unmute your line, post which you can proceed with
+your question. We will wait for a minute while the question queue assembles.
+Moderator: The first question is from the line of Manish Adukia from Goldman Sachs. Please go
+ahead.
+Manish Adukia: Hi, good evening. Thank you so much for taking my questions and congratulations on a
+good quarter.
+My first question is on the quick commerce margins or losses, and congratulations on
+the breakeven there. In this quarter, if you look at the numbers, your gross margin didn't
+really expand, store throughput was down about 6% QoQ, but despite that, your
+contribution margin expanded 90 basis points, EBITDA expanded about 130 basis points,
+and all of this is while you say that the competition is irrational.
+If you assume competition remains irrational, which is what you are assuming, then why
+should, directionally, margins not continue to improve at the same pace as what you did
+in this quarter? I would love to get your thoughts on that. That's my first question, please.
+Akshant Goyal: Hi, Manish. Akshant here. It's very hard to predict the trajectory of margin, which is what
+we have also mentioned in one of the questions in the letter, in the near term.
+Competitive intensity, even if it's high, is not steady always. On our last conference call,
+we mentioned that the competitive intensity is now easing off and then it changed.
+So, the margins are a function of various things. Competitive intensity is one of it and
+even within a quarter or even in a longer period, there are various variables which are
+geography specific and so on. So yes, directionally we say that margin should expand,
+but we're not able to confidently say that the pace of margin expansion will be the same
+as what happened in the last quarter because the competitive intensity was high and
+Page 2 of 17

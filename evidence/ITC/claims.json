@@ -1,0 +1,40 @@
+[
+  {
+    "claim_id": "ITC-01",
+    "ticker": "ITC.NS",
+    "quarter": "Q4 FY26",
+    "type": "guided",
+    "metric": "Interim Dividend per share",
+    "claim_text": "Board recommends Interim Dividend of Rs. 6.50 per share for the Financial Year ending 31st March, 2026",
+    "verbatim_quote": "Board recommends Interim Dividend of Rs. 6.50 per share for the Financial Year ending 31st March, 2026",
+    "numbers_verified_on_page": [
+      "6.50",
+      "3",
+      "2026"
+    ],
+    "doc_id": "DOC_3",
+    "doc_title": "Q3 FY26 Results Filing (29-Jan-2026)",
+    "pdf_page": 3,
+    "source_url": "https://nsearchives.nseindia.com/corporate/ITC_29012026185052_SE_Media_.pdf#page=3",
+    "evidence_page_file": "evidence/ITC/DOC_3_p3.txt"
+  },
+  {
+    "claim_id": "ITC-02",
+    "ticker": "ITC.NS",
+    "quarter": "Q4 FY26",
+    "type": "delivered",
+    "metric": "Interim Dividend per share",
+    "claim_text": "Interim Dividend off 6.50 per Ordinary Share declared by the Board on 29th January, 2026",
+    "verbatim_quote": "Together with the Interim Dividend off 6.50 per Ordinary Share declared by the Board on 29th January, 2026,",
+    "numbers_verified_on_page": [
+      "6.50",
+      "2",
+      "2026"
+    ],
+    "doc_id": "DOC_2",
+    "doc_title": "Q4 FY26 Results Filing (21-May-2026)",
+    "pdf_page": 2,
+    "source_url": "https://nsearchives.nseindia.com/corporate/ITC_21052026155432_Results.pdf#page=2",
+    "evidence_page_file": "evidence/ITC/DOC_2_p2.txt"
+  }
+]

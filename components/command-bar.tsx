@@ -20,11 +20,15 @@ const SUGGESTIONS = [
   { ticker: "ITC.NS", label: "ITC" },
 ];
 
-export function CommandBar() {
+export function CommandBar({
+  initialResearch = null,
+}: {
+  initialResearch?: ResearchData | null;
+}) {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(false);
-  const [research, setResearch] = useState<ResearchData | null>(null);
+  const [research, setResearch] = useState<ResearchData | null>(initialResearch);
   const [error, setError] = useState<string | null>(null);
 
   const filtered = query

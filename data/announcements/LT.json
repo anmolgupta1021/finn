@@ -1,5 +1,141 @@
 [
   {
+    "id": "nse-lt-2534c868da",
+    "ticker": "LT.NS",
+    "company_name": "Larsen & Toubro Limited",
+    "timestamp": "2026-10-27T22:13:16+05:30",
+    "headline": "Analysts/Institutional Investor Meet/Con. Call Updates — Larsen & Toubro Limited has informed the Exchange about Link of Recording",
+    "category": "earnings_call",
+    "priority": 2,
+    "summary": "Larsen & Toubro Limited has informed the Exchange about Link of Recording",
+    "source_url": "https://nsearchives.nseindia.com/corporate/PAM_27102026221257_Intimation27102026.pdf",
+    "raw_text": "Larsen & Toubro Limited has informed the Exchange about Link of Recording",
+    "enrichment": {},
+    "model_used": "rule_engine",
+    "tokens": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  {
+    "id": "nse-lt-bb4abf6509",
+    "ticker": "LT.NS",
+    "company_name": "Larsen & Toubro Limited",
+    "timestamp": "2026-10-27T18:37:19+05:30",
+    "headline": "Updates — Larsen & Toubro Limited has informed the Exchange regarding 'Analyst Presentation.- Q2 / H1 FY27'.",
+    "category": "press_release",
+    "priority": 2,
+    "summary": "Analyst presentation released for Q2 / H1 FY27 financial performance.",
+    "source_url": "https://nsearchives.nseindia.com/corporate/PAM_27102026183653_AnalystPresentationSep2026.pdf",
+    "raw_text": "Larsen & Toubro Limited has informed the Exchange regarding 'Analyst Presentation.- Q2 / H1 FY27'.",
+    "enrichment": {},
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 148,
+      "out": 48
+    }
+  },
+  {
+    "id": "nse-lt-39f4276032",
+    "ticker": "LT.NS",
+    "company_name": "Larsen & Toubro Limited",
+    "timestamp": "2026-10-27T17:13:09+05:30",
+    "headline": "Outcome of Board Meeting — Larsen & Toubro Limited has submitted to the Exchange, the consolidated and standalone un-audited financial results of the Company for the quarter and half-year ended September 30, 2026.",
+    "category": "results",
+    "priority": 1,
+    "summary": "Q2 FY27 (consolidated): Revenue ₹78,750 Cr (+15.8% YoY, +15.9% QoQ); EBITDA (derived) ₹6,845 Cr (+0.6% YoY, margin 8.7%); PAT ₹5,949 Cr (+27.2% YoY, +19.3% QoQ).",
+    "source_url": "https://nsearchives.nseindia.com/corporate/PAM_27102026171156_LTSep2026.pdf",
+    "raw_text": "Larsen & Toubro Limited has submitted to the Exchange, the consolidated and standalone un-audited financial results of the Company for the quarter and half-year ended September 30, 2026.",
+    "enrichment": {
+      "status": "ok",
+      "quarter": "Q2 FY27",
+      "basis": "consolidated",
+      "entity_type": "corporate",
+      "reported_unit": "crore",
+      "normalised_unit": "crore",
+      "source_page": 11,
+      "vision_used": false,
+      "ebitda_status": "derived",
+      "revenue_label": "Revenue from Operations",
+      "period_ended": {
+        "current": "2026-09-30",
+        "previous": "2026-06-30",
+        "year_ago": "2025-09-30"
+      },
+      "column_order": {
+        "col_1_header": "September 30, 2026",
+        "col_2_header": "June 30, 2026",
+        "col_3_header": "September 30, 2025",
+        "current_col": "Col 1",
+        "previous_col": "Col 2",
+        "year_ago_col": "Col 3"
+      },
+      "row_labels": {
+        "revenue": "a) Revenue from operations",
+        "total_expenses": "Total Expenses",
+        "finance_costs": "e) Finance costs",
+        "depreciation_amortisation": "f) Depreciation. amortisation. impairment and obsolescence",
+        "operating_profit_before_provisions": null,
+        "pbt": "5 Profit before tax (3+4)",
+        "pat": "9 Net profit after tax including share in profit/(loss) of joint ventures/associates (7+8)",
+        "pat_owners": "Attributable to: Owners of the Company"
+      },
+      "revenue": {
+        "value": 78749.94,
+        "previous_quarter": 67941.74,
+        "year_ago_quarter": 67983.53,
+        "qoq": 15.91,
+        "yoy": 15.84
+      },
+      "ebitda": {
+        "value": 6844.65,
+        "previous_quarter": 6116.48,
+        "year_ago_quarter": 6806.41,
+        "qoq": 11.91,
+        "yoy": 0.56
+      },
+      "operating_profit_ex_provisions": null,
+      "pbt": {
+        "value": 7641.06,
+        "previous_quarter": 6922.26,
+        "year_ago_quarter": 6336.11,
+        "qoq": 10.38,
+        "yoy": 20.6
+      },
+      "pat": {
+        "value": 5949.15,
+        "previous_quarter": 4988.03,
+        "year_ago_quarter": 4678.01,
+        "qoq": 19.27,
+        "yoy": 27.17
+      },
+      "pat_owners": {
+        "value": 5202.1,
+        "previous_quarter": 4122.85,
+        "year_ago_quarter": 3926.09,
+        "qoq": 26.18,
+        "yoy": 32.5
+      },
+      "derivation": {
+        "basis_note": "Consolidated Statement of Financial Results (PDF p. 11, reported in ₹ crore). Columns L→R: Col 1='September 30, 2026', Col 2='June 30, 2026', Col 3='September 30, 2025' (mapped Current=Col 1, Previous=Col 2, Year-Ago=Col 3).",
+        "revenue_definition": "Printed row 'a) Revenue from operations' (Net of GST) (excludes Other Income of ₹2,306.26 Cr) = ₹78,749.94 Cr (Prev Q: ₹67,941.74 Cr; Year-ago Q: ₹67,983.53 Cr).",
+        "ebitda_formula": "Derived (`derived`): Operating Profit (Revenue ₹78,749.94 Cr − Total Expenses ₹73,415.14 Cr + Finance Costs ₹472.94 Cr = ₹5,807.74 Cr) + D&A (₹1,036.91 Cr) = ₹6,844.65 Cr (8.69% margin; Prev Q: ₹6,116.48 Cr; Year-ago Q: ₹6,806.41 Cr).",
+        "pbt_basis": "Printed row '5 Profit before tax (3+4)' (no current-quarter exceptional items) = ₹7,641.06 Cr (Prev Q: ₹6,922.26 Cr; Year-ago Q: ₹6,336.11 Cr).",
+        "pat_basis": "Printed row '9 Net profit after tax including share in profit/(loss) of joint ventures/associates (7+8)' (Total Consolidated Profit after tax) = ₹5,949.15 Cr (Profit attributable to Owners of the Company/Parent = ₹5,202.10 Cr; Non-controlling interest = ₹747.05 Cr)."
+      },
+      "validation": {
+        "passed": true,
+        "flags": []
+      },
+      "highlights": "Basis: Consolidated · Normalised from ₹ crore (Page 11) · EBITDA derived"
+    },
+    "model_used": "gemini-3.5-flash-lite",
+    "tokens": {
+      "in": 4829,
+      "out": 1136
+    }
+  },
+  {
     "id": "nse-lt-131645806a",
     "ticker": "LT.NS",
     "company_name": "Larsen & Toubro Limited",
@@ -23,16 +159,16 @@
     "company_name": "Larsen & Toubro Limited",
     "timestamp": "2026-10-27T10:16:48+05:30",
     "headline": "Bagging/Receiving of orders/contracts — Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts",
-    "category": "press_release",
+    "category": "capex",
     "priority": 1,
-    "summary": "Larsen & Toubro secured new orders/contracts.",
+    "summary": "Company secured new business orders/contracts.",
     "source_url": "https://nsearchives.nseindia.com/corporate/PAM_27102026101631_PressRelease27102026.pdf",
     "raw_text": "Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 158,
-      "out": 50
+      "in": 148,
+      "out": 48
     }
   },
   {
@@ -41,16 +177,16 @@
     "company_name": "Larsen & Toubro Limited",
     "timestamp": "2026-10-21T09:46:52+05:30",
     "headline": "Bagging/Receiving of orders/contracts — Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts",
-    "category": "press_release",
+    "category": "capex",
     "priority": 1,
-    "summary": "Larsen & Toubro secured new orders/contracts.",
+    "summary": "Company secured new business orders/contracts.",
     "source_url": "https://nsearchives.nseindia.com/corporate/PAM_21102026094637_PressRelease21102026.pdf",
     "raw_text": "Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 158,
-      "out": 50
+      "in": 148,
+      "out": 48
     }
   },
   {
@@ -59,16 +195,16 @@
     "company_name": "Larsen & Toubro Limited",
     "timestamp": "2026-10-19T10:18:20+05:30",
     "headline": "Bagging/Receiving of orders/contracts — Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts",
-    "category": "press_release",
+    "category": "capex",
     "priority": 1,
-    "summary": "Larsen & Toubro secured new orders/contracts.",
+    "summary": "Company secured new business orders/contracts.",
     "source_url": "https://nsearchives.nseindia.com/corporate/PAM_19102026101805_PressRelease19102026.pdf",
     "raw_text": "Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 158,
-      "out": 50
+      "in": 148,
+      "out": 48
     }
   },
   {
@@ -136,16 +272,16 @@
     "company_name": "Larsen & Toubro Limited",
     "timestamp": "2026-10-07T10:13:23+05:30",
     "headline": "Bagging/Receiving of orders/contracts — Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts",
-    "category": "press_release",
+    "category": "capex",
     "priority": 1,
-    "summary": "Larsen & Toubro secured new orders/contracts.",
+    "summary": "Company secured new business orders/contracts.",
     "source_url": "https://nsearchives.nseindia.com/corporate/PAM_07102026101304_PressRelease07102026.pdf",
     "raw_text": "Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 158,
-      "out": 50
+      "in": 148,
+      "out": 48
     }
   },
   {
@@ -154,16 +290,16 @@
     "company_name": "Larsen & Toubro Limited",
     "timestamp": "2026-10-05T09:35:26+05:30",
     "headline": "Bagging/Receiving of orders/contracts — Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts",
-    "category": "press_release",
+    "category": "capex",
     "priority": 1,
-    "summary": "Larsen & Toubro secured new orders/contracts.",
+    "summary": "Company secured new business orders/contracts.",
     "source_url": "https://nsearchives.nseindia.com/corporate/PAM_05102026093512_PressRelease05102026.pdf",
     "raw_text": "Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 158,
-      "out": 50
+      "in": 148,
+      "out": 48
     }
   },
   {
@@ -174,14 +310,14 @@
     "headline": "General Updates — Larsen & Toubro Limited has informed the Exchange about General Updates",
     "category": "press_release",
     "priority": 2,
-    "summary": "Larsen & Toubro provided general updates.",
+    "summary": "General corporate update provided to the exchange.",
     "source_url": "https://nsearchives.nseindia.com/corporate/PAM_30092026152845_IntimationLTMRHL30092026.pdf",
     "raw_text": "Larsen & Toubro Limited has informed the Exchange about General Updates",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 158,
-      "out": 50
+      "in": 148,
+      "out": 48
     }
   },
   {
@@ -190,16 +326,16 @@
     "company_name": "Larsen & Toubro Limited",
     "timestamp": "2026-09-30T12:16:57+05:30",
     "headline": "Bagging/Receiving of orders/contracts — Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts",
-    "category": "press_release",
+    "category": "capex",
     "priority": 1,
-    "summary": "Larsen & Toubro secured new orders/contracts.",
+    "summary": "Company secured new business orders/contracts.",
     "source_url": "https://nsearchives.nseindia.com/corporate/PAM_30092026121641_PressRelease30092026.pdf",
     "raw_text": "Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 158,
-      "out": 50
+      "in": 148,
+      "out": 48
     }
   }
 ]

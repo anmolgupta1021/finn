@@ -1,0 +1,59 @@
+TICKER: BAJFINANCE.NS
+DOCUMENT_ID: DOC_4
+DOCUMENT_TITLE: Q3 FY26 Concall Transcript (07-Feb-2026)
+PDF_PAGE: 4 (of 13)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/BAJFINANCE_07022026151022_BFL_Investor_Call_outcome_Transcript.pdf#page=4
+========================================================================
+
+Bajaj Finance Limited
+February 03, 2026
+is the core operating performance. These two are one-time charges that we have taken, given, as I explained, one
+is gratuity related and another being voluntary in nature.
+This takes me to the third important event in the quarter, which is gain on sale of BHFL shares. This is another
+exceptional item that is figuring in the financials of Q3. It's recognized in the stand-alone P&L statement of BFL.
+On a consolidated basis, it has a -- it's below the line item. As part of MPS compliance, 2% of BHFL stake was
+sold by Block sale and as a result, the BHFL shareholding by BFL in BHFL now stands at 86.7%. The resulting
+gain was INR 1,416 crores and has been recognized in stand-alone financials as an exceptional item.
+Let me now jump to the more routine metrics that we principally talk about, which is Panel 6. As a result of the
+INR 1,416 crores, you will see two lines. There's a change. You will see on top the reported number, which is
+22%, the core growth number, which is 22%. The INR 1,416 crores also gets knocked off from the AUM, and
+that's why you see two numbers there. We are focused on core operating performance. Core operating AUM was
+up 22%. New loans booked were up 15%.
+We booked a record 14 million loans in Q3 versus 12 million loans that we did in last year Q3. Customer franchise,
+just we added 4.76 million customers. We are virtually adding between 4.2 million to 4.5 million new customers
+every quarter. We now expect 17 to 18 million customers to be added to the franchise in FY '26. It will be on back
+of 17 million customers we added in the previous fiscal as well. The overall franchise stood at 115 million. We
+are well on course to cross 120 million franchise in the current year.
+The cross-sell franchise continued to expand and stood at 74 million. Geographic presence, as I've made a point
+in the past that we have mostly peaked out. It's deepening rather than broadening, that's happening, more products
+in geography rather than new geographies, as you can continue to see, also is resulting in operating leverage as a
+firm. Active distribution, 241,000 is where we are present in. Liquidity buffer stood at INR 15,100 crores. Cost of
+funds came in at 7.45%.
+It is an improvement of 7 basis points sequentially and COF is expected to be -- we had outlined at the beginning
+of the year from a guidance standpoint, the number to be between 7.55% to 7.65%. We're likely to be between
+7.55% to 7.60% in terms of cost of funds as we exit the year. The deposit book, as we had outlined, as part of the
+strategy in the current year to optimize that deposits growth will be slower. Deposits contributed 17% of
+consolidated borrowing as of December '25.
+In terms of outlook, in terms of operating efficiencies, just on that from an outlook standpoint, given that we are
+in -- the year is virtually coming to an end, overall, we've taken a view that the top line growth or AUM growth
+will gravitate between 22% and 23%, but more likely to be 22% on a full year basis. Given the actions that we
+have taken in the MSME business, that's something that you'll see, which has grown in this -- in quarter 3 only by
+11%.
+We think it will still take us two to three more quarters before we are back to 20s growth in that business. So based
+on the conscious decision that the company has taken to slow it down, we will have some level of impact. And the
+second order impact is on account of the captive 2-wheeler financing book, which is winding down. Based on both
+these, we think the overall full year growth will be between 22% to 23%. Operating efficiencies continue to deliver
+benefit, net interest income grew by 21%. NIMs were steady. That's an important point.
+NTI grew by 19%. Opex to NTI continued to improve, came in at 32.8%. The AI implementation, for the first
+time, we have now started to cover metrics on AI, which I'll cover in a few panels down the line. We've now started
+to metricize AI, it is moving to what I would call gear two in the company where from innovation, we are now
+tracking implementation and the benefits that it's delivering to the business.
+And we thought that time has come post second LRS or the Investor Day that we did, that we’ll start to publish AI
+benefit metrics to the street. Full-time employees stood at 69,000, virtually 70,000, including all the three
+companies. Fixed-term contract folks stood at 78,000. Let me just go to credit cost, which has been an important
+metric of profit growth or the direction of the business came in at INR 3,625 crores.
+The core metric came in at INR 2,043 crores, a growth of 9%. So, as I said, we are tracking core because INR
+1,406 crores is principally a voluntary decision that we've taken. Year-on-year basis, loan losses and provisions
+grew by 9%. Annualized number came in at 1.91%. After a while we've seen a sub 2% number. And we think
+from here on, the number will continue to slide down as we get into next fiscal as well.
+Page 3 of 12

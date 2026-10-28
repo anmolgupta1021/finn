@@ -2,14 +2,14 @@
   "ticker": "INFY.NS",
   "name": "Infosys Limited",
   "sector": "Technology",
-  "fetched_at": "2026-10-27T07:05:28.221084Z",
+  "fetched_at": "2026-10-27T17:35:23.837715Z",
   "current": {
-    "price": 1166.0,
-    "change_pct": 1.06,
-    "volume": 25964569,
-    "vol_ratio": 1.73,
+    "price": 1163.0,
+    "change_pct": -0.26,
+    "volume": 20116414,
+    "vol_ratio": 1.26,
     "vol_guard": null,
-    "market_cap": 4710385319936,
+    "market_cap": 4710587695104,
     "name": "Infosys Limited",
     "sector": "Technology",
     "industry": "Information Technology Services"
@@ -992,6 +992,17 @@
       "volume": 25964569,
       "change_pct": 1.06,
       "vol_ratio": 1.73,
+      "vol_guard": null
+    },
+    {
+      "date": "2026-10-27",
+      "open": 1151.95,
+      "high": 1165.8,
+      "low": 1129.3,
+      "close": 1163.0,
+      "volume": 20116414,
+      "change_pct": -0.26,
+      "vol_ratio": 1.26,
       "vol_guard": null
     }
   ]

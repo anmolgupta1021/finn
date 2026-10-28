@@ -2,14 +2,14 @@
   "ticker": "TITAN.NS",
   "name": "Titan Company Limited",
   "sector": "Consumer Cyclical",
-  "fetched_at": "2026-10-27T07:05:37.383364Z",
+  "fetched_at": "2026-10-27T17:35:41.949072Z",
   "current": {
-    "price": 4323.0,
-    "change_pct": 0.54,
-    "volume": 382563,
-    "vol_ratio": 0.48,
+    "price": 4365.9,
+    "change_pct": 0.99,
+    "volume": 749064,
+    "vol_ratio": 0.94,
     "vol_guard": null,
-    "market_cap": 3871521374208,
+    "market_cap": 3873916846080,
     "name": "Titan Company Limited",
     "sector": "Consumer Cyclical",
     "industry": "Luxury Goods"
@@ -992,6 +992,17 @@
       "volume": 382563,
       "change_pct": 0.54,
       "vol_ratio": 0.48,
+      "vol_guard": null
+    },
+    {
+      "date": "2026-10-27",
+      "open": 4303.0,
+      "high": 4377.2,
+      "low": 4300.0,
+      "close": 4365.9,
+      "volume": 749064,
+      "change_pct": 0.99,
+      "vol_ratio": 0.94,
       "vol_guard": null
     }
   ]

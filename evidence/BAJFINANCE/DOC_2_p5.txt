@@ -1,0 +1,42 @@
+TICKER: BAJFINANCE.NS
+DOCUMENT_ID: DOC_2
+DOCUMENT_TITLE: Q1 FY27 Concall Transcript (04-Aug-2026)
+PDF_PAGE: 5 (of 23)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/BAJFINANCE_04082026181739_BFL_Investor_Call_outcome_Transcript.pdf#page=5
+========================================================================
+
+Bajaj Finance Limited
+July 30, 2026
+improving to 1.54% versus same time during the same period, 1.87%. Now
+both numbers are comparable.
+As a measure of prudence, we've recognized an additional management
+and macroeconomic provision of INR296 crores during current quarter on
+account of what's happening geopolitically and the monsoon uncertainty.
+Of course, monsoon has covered a lot of ground, I would say, in the last 15-
+odd days, but I think we still have some distance to cover on monsoon
+before we say that the super El Nino did not impact the country. If you
+exclude this provision because this is a macroeconomic overlay of
+provision, loan loss to AUF for the current quarter would have been 1.31%.
+New Stage 2 and Stage 3 contribution was 1.87% from 1.94% in the
+previous quarter. We expect continued improvement at this juncture on
+this metric over the coming quarters. Vintage performance, which is
+principally how the portfolio churns across 3MOB, 6MOB, 9MOB continue
+to reflects, significant and sustained improvement and is now running
+below FY '20 our pre-COVID benchmark.
+I keep reminding people within the company and otherwise that pre-COVID
+remains my benchmark. People say our size was smaller. I don't agree with
+that point. I've made this point many times. Across businesses, now we're
+looking lower than or equal to our pre-COVID benchmark. And we, in
+general, remain quite optimistic about the credit cost outlook for FY '27.
+GNPA and NNPA came in line, 0.96% and 0.39%. Provision coverage is at
+60%. We'll continue to hold there structurally. On portfolio credit quality, all
+businesses are green. You may see a marginal dip in business loan, but I
+have pencilled as green because it's just a denominator effect rather than
+a numerator effect, the 3MOB, 6MOB and some vintages of 9, we are
+beginning to see significant improvement even over FY '20.
+FinAI, while if some of you were there on the AGM, I've covered a lot, but if
+you're not there I'll just cover some points that are principally not covered.
+We showed five different examples in production. If it was a physical one,
+I would have showed it in as a live demo, but on VC it was difficult to do a
+live demo.
+Page 4 of 22

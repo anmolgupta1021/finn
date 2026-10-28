@@ -2,14 +2,14 @@
   "ticker": "TMPV.NS",
   "name": "Tata Motors Passenger Vehicles Limited",
   "sector": "Consumer Cyclical",
-  "fetched_at": "2026-10-27T07:05:34.006778Z",
+  "fetched_at": "2026-10-27T17:35:33.996191Z",
   "current": {
-    "price": 263.7,
-    "change_pct": -0.34,
-    "volume": 8761869,
-    "vol_ratio": 0.84,
+    "price": 261.2,
+    "change_pct": -0.95,
+    "volume": 8542623,
+    "vol_ratio": 0.82,
     "vol_guard": null,
-    "market_cap": 972125831168,
+    "market_cap": 961997570048,
     "name": "Tata Motors Passenger Vehicles Limited",
     "sector": "Consumer Cyclical",
     "industry": "Auto Manufacturers"
@@ -992,6 +992,17 @@
       "volume": 8761869,
       "change_pct": -0.34,
       "vol_ratio": 0.84,
+      "vol_guard": null
+    },
+    {
+      "date": "2026-10-27",
+      "open": 263.5,
+      "high": 264.8,
+      "low": 260.7,
+      "close": 261.2,
+      "volume": 8542623,
+      "change_pct": -0.95,
+      "vol_ratio": 0.82,
       "vol_guard": null
     }
   ]

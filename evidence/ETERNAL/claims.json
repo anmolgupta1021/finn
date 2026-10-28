@@ -4,28 +4,30 @@
     "ticker": "ETERNAL.NS",
     "quarter": "Q1 FY27",
     "type": "guided",
-    "metric": "Long-term quick commerce margin guidance",
-    "claim_text": "5-6% margin",
-    "verbatim_quote": "As we move to 5-6% margin that we are saying we will get to at some point, contribution margin will go up",
+    "metric": "Quick Commerce Margin Guidance",
+    "claim_text": "implied margin for quick commerce comes to around, say, roughly 3-3.5%",
+    "verbatim_quote": "implied margin for quick commerce comes to around, say, roughly 3-3.5%, give or take. Is that the number which we are expecting from a margin perspective in the next three to four years?",
     "numbers_verified_on_page": [
-      "5",
-      "6"
+      "3",
+      "3.5"
     ],
     "doc_id": "DOC_2",
     "doc_title": "Q4 FY26 Concall Transcript (06-May-2026)",
-    "pdf_page": 6,
-    "source_url": "https://nsearchives.nseindia.com/corporate/ZOMATO_06052026135430_TranscriptfilingsignedApril2026.pdf#page=6",
-    "evidence_page_file": "evidence/ETERNAL/DOC_2_p6.txt"
+    "pdf_page": 3,
+    "source_url": "https://nsearchives.nseindia.com/corporate/ZOMATO_06052026135430_TranscriptfilingsignedApril2026.pdf#page=3",
+    "evidence_page_file": "evidence/ETERNAL/DOC_2_p3.txt"
   },
   {
     "claim_id": "ETERNAL-02",
     "ticker": "ETERNAL.NS",
     "quarter": "Q1 FY27",
     "type": "delivered",
-    "metric": "Long-term quick commerce margin guidance",
-    "claim_text": "6%",
-    "verbatim_quote": "Firstly, you seem to have raised the long-term guidance in quick commerce from 5-6% to 6%.",
+    "metric": "Quick Commerce Margin Guidance",
+    "claim_text": "raised the long-term guidance in quick commerce from 5-6% to 6%",
+    "verbatim_quote": "Firstly, you seem to have raised the long-term guidance in quick commerce from 5-6% to 6%. What gives you this confidence to do this now, especially when there is sort of competitive intensity in this sector?",
     "numbers_verified_on_page": [
+      "5",
+      "6",
       "6"
     ],
     "doc_id": "DOC_1",
@@ -37,103 +39,34 @@
   {
     "claim_id": "ETERNAL-03",
     "ticker": "ETERNAL.NS",
-    "quarter": "Q4 FY26",
+    "quarter": "Q3 FY26",
     "type": "guided",
-    "metric": "Food delivery YoY growth trend",
-    "claim_text": "20% YoY",
-    "verbatim_quote": "we expect year-on-year growth to continue slowly trending up towards 20% YoY, is what our current sense on the market is.",
-    "numbers_verified_on_page": [
-      "20"
-    ],
-    "doc_id": "DOC_3",
-    "doc_title": "Q3 FY26 Concall Transcript (27-Jan-2026)",
-    "pdf_page": 11,
-    "source_url": "https://nsearchives.nseindia.com/corporate/ZOMATO_27012026182242_Eternallimitedtranscriptofearningcallsigned.pdf#page=11",
-    "evidence_page_file": "evidence/ETERNAL/DOC_3_p11.txt"
+    "metric": "Quick Commerce Operating Performance",
+    "claim_text": "expect that projection to continue, subject to competitive intensity remaining the same",
+    "verbatim_quote": "So from here on, how long therefore, does that take to cross 0 is a function of how fast we're able to expand, and expansion also is not fully in our control because it's dependent on various external factors. So, we're not keen to give that number - also because I don't think it matters eventually. Parts of our business, as I mentioned, are already at 2.5% margin. So, the rest of the business catching up is a function of time.",
+    "numbers_verified_on_page": [],
+    "doc_id": "DOC_5",
+    "doc_title": "Q1 FY26 Concall Transcript (25-Jul-2025)",
+    "pdf_page": 7,
+    "source_url": "https://nsearchives.nseindia.com/corporate/ZOMATO_25072025223203_TranscriptfilingsignedJuly2025.pdf#page=7",
+    "evidence_page_file": "evidence/ETERNAL/DOC_5_p7.txt"
   },
   {
     "claim_id": "ETERNAL-04",
     "ticker": "ETERNAL.NS",
-    "quarter": "Q4 FY26",
-    "type": "delivered",
-    "metric": "Food delivery YoY growth trend",
-    "claim_text": "15% YoY",
-    "verbatim_quote": "In food, order growth was 15% YoY but the active delivery partners on a monthly basis went up by 30%.",
-    "numbers_verified_on_page": [
-      "15"
-    ],
-    "doc_id": "DOC_2",
-    "doc_title": "Q4 FY26 Concall Transcript (06-May-2026)",
-    "pdf_page": 14,
-    "source_url": "https://nsearchives.nseindia.com/corporate/ZOMATO_06052026135430_TranscriptfilingsignedApril2026.pdf#page=14",
-    "evidence_page_file": "evidence/ETERNAL/DOC_2_p14.txt"
-  },
-  {
-    "claim_id": "ETERNAL-05",
-    "ticker": "ETERNAL.NS",
-    "quarter": "Q3 FY26",
-    "type": "guided",
-    "metric": "Quick commerce YoY growth",
-    "claim_text": "above 100%",
-    "verbatim_quote": "So, I do expect the year-on-year growth to remain above 100% for the next one or two years at least.",
-    "numbers_verified_on_page": [
-      "100"
-    ],
-    "doc_id": "DOC_4",
-    "doc_title": "Q2 FY26 Concall Transcript (23-Oct-2025)",
-    "pdf_page": 10,
-    "source_url": "https://nsearchives.nseindia.com/corporate/ZOMATO_23102025141236_TranscriptSeptember2025signed.pdf#page=10",
-    "evidence_page_file": "evidence/ETERNAL/DOC_4_p10.txt"
-  },
-  {
-    "claim_id": "ETERNAL-06",
-    "ticker": "ETERNAL.NS",
     "quarter": "Q3 FY26",
     "type": "delivered",
-    "metric": "Quick commerce YoY growth",
-    "claim_text": "130% YoY",
-    "verbatim_quote": "Your growth is good, you said like for like 130% YoY and you're expanding margins.",
+    "metric": "Quick Commerce Operating Performance",
+    "claim_text": "contribution margin expanded 90 basis points, EBITDA expanded about 130 basis points",
+    "verbatim_quote": "In this quarter, if you look at the numbers, your gross margin didn't really expand, store throughput was down about 6% QoQ, but despite that, your contribution margin expanded 90 basis points, EBITDA expanded about 130 basis points, and all of this is while you say that the competition is irrational.",
     "numbers_verified_on_page": [
+      "90",
       "130"
     ],
     "doc_id": "DOC_3",
     "doc_title": "Q3 FY26 Concall Transcript (27-Jan-2026)",
-    "pdf_page": 4,
-    "source_url": "https://nsearchives.nseindia.com/corporate/ZOMATO_27012026182242_Eternallimitedtranscriptofearningcallsigned.pdf#page=4",
-    "evidence_page_file": "evidence/ETERNAL/DOC_3_p4.txt"
-  },
-  {
-    "claim_id": "ETERNAL-07",
-    "ticker": "ETERNAL.NS",
-    "quarter": "Q2 FY26",
-    "type": "guided",
-    "metric": "Mature city baseline growth rate",
-    "claim_text": "70% year-on-year",
-    "verbatim_quote": "we've seen a growth of 70% year-on-year in this quarter. So, as Albinder said, same-store growth may not be that relevant",
-    "numbers_verified_on_page": [
-      "70"
-    ],
-    "doc_id": "DOC_5",
-    "doc_title": "Q1 FY26 Concall Transcript (25-Jul-2025)",
     "pdf_page": 3,
-    "source_url": "https://nsearchives.nseindia.com/corporate/ZOMATO_25072025223203_TranscriptfilingsignedJuly2025.pdf#page=3",
-    "evidence_page_file": "evidence/ETERNAL/DOC_5_p3.txt"
-  },
-  {
-    "claim_id": "ETERNAL-08",
-    "ticker": "ETERNAL.NS",
-    "quarter": "Q2 FY26",
-    "type": "delivered",
-    "metric": "Mature city baseline growth rate",
-    "claim_text": "137%",
-    "verbatim_quote": "Currently if you look at the growth rate, it's much higher at 137%.",
-    "numbers_verified_on_page": [
-      "137"
-    ],
-    "doc_id": "DOC_4",
-    "doc_title": "Q2 FY26 Concall Transcript (23-Oct-2025)",
-    "pdf_page": 10,
-    "source_url": "https://nsearchives.nseindia.com/corporate/ZOMATO_23102025141236_TranscriptSeptember2025signed.pdf#page=10",
-    "evidence_page_file": "evidence/ETERNAL/DOC_4_p10.txt"
+    "source_url": "https://nsearchives.nseindia.com/corporate/ZOMATO_27012026182242_Eternallimitedtranscriptofearningcallsigned.pdf#page=3",
+    "evidence_page_file": "evidence/ETERNAL/DOC_3_p3.txt"
   }
 ]

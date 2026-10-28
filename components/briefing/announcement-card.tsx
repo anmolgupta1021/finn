@@ -88,17 +88,20 @@ function ResultsCard({ announcement }: { announcement: Announcement }) {
   }[] = [
     { label: e.revenue_label || "Revenue", data: e.revenue },
     isBank
-      ? { label: "EBITDA", data: null, naNote: "N/A (Bank format)" }
-      : { label: "Operating EBITDA", data: e.ebitda },
+      ? { label: "EBITDA", data: null, naNote: "N/A (bank format)" }
+      : {
+          label: e.ebitda_status === "reported" ? "EBITDA" : "EBITDA (derived)",
+          data: e.ebitda,
+        },
     ...(isBank && e.operating_profit_ex_provisions
-      ? [{ label: "Op. Profit (ex-prov)", data: e.operating_profit_ex_provisions }]
+      ? [{ label: "Op. profit pre-prov.", data: e.operating_profit_ex_provisions }]
       : []),
     { label: "PBT", data: e.pbt },
     { label: "PAT", data: e.pat },
   ];
 
   return (
-    <div className="mt-2.5 border-t border-finn-border pt-2">
+    <div className="mt-2.5 border-t border-finn-border pt-2 min-w-0">
       {/* Metadata badges */}
       <div className="flex items-center justify-between gap-1.5 flex-wrap mb-2">
         <div className="flex items-center gap-1.5 flex-wrap">
@@ -124,29 +127,29 @@ function ResultsCard({ announcement }: { announcement: Announcement }) {
             )}
           >
             {e.validation.passed
-              ? `Verified · p.${e.source_page ?? "?"}`
+              ? `Checked · p.${e.source_page ?? "?"}`
               : `Flags (${e.validation.flags.length})`}
           </span>
         )}
       </div>
 
-      {/* Metrics table: Metric | Value (₹ Cr) | YoY | QoQ */}
-      <div className="rounded-lg bg-finn-bg/70 p-2 space-y-1.5">
-        <div className="grid grid-cols-12 text-[10px] text-finn-muted uppercase tracking-wider pb-1 border-b border-finn-border/60">
-          <span className="col-span-5">Metric</span>
-          <span className="col-span-3 text-right">Current</span>
-          <span className="col-span-2 text-right">YoY</span>
-          <span className="col-span-2 text-right">QoQ</span>
+      {/* Metrics table: Metric | Current (₹ Cr) | YoY | QoQ — fits 390px without horizontal scroll */}
+      <div className="rounded-lg bg-finn-bg/70 px-1.5 py-1.5 space-y-1 tabular-nums">
+        <div className="grid grid-cols-[minmax(0,1fr)_auto_3.25rem_3.25rem] gap-x-1.5 text-[10px] text-finn-muted uppercase tracking-wider pb-1 border-b border-finn-border/60">
+          <span>Metric</span>
+          <span className="text-right">Current</span>
+          <span className="text-right">YoY</span>
+          <span className="text-right">QoQ</span>
         </div>
         {rows.map((r) => {
           if (r.naNote) {
             return (
               <div
                 key={r.label}
-                className="grid grid-cols-12 items-baseline text-xs py-0.5"
+                className="grid grid-cols-[minmax(0,1fr)_auto] gap-x-1.5 items-baseline text-[11px] py-0.5"
               >
-                <span className="col-span-5 text-finn-muted">{r.label}</span>
-                <span className="col-span-7 text-right text-2xs font-mono text-finn-muted italic">
+                <span className="text-finn-muted truncate">{r.label}</span>
+                <span className="text-right text-2xs font-mono text-finn-muted italic">
                   {r.naNote}
                 </span>
               </div>
@@ -158,22 +161,16 @@ function ResultsCard({ announcement }: { announcement: Announcement }) {
           return (
             <div
               key={r.label}
-              className="grid grid-cols-12 items-baseline text-xs py-0.5"
+              className="grid grid-cols-[minmax(0,1fr)_auto_3.25rem_3.25rem] gap-x-1.5 items-baseline text-[11px] py-0.5"
             >
-              <span className="col-span-5 text-finn-muted truncate pr-1">
-                {r.label}
-              </span>
-              <span className="col-span-3 text-right font-mono font-medium">
+              <span className="text-finn-muted truncate">{r.label}</span>
+              <span className="text-right font-mono font-medium whitespace-nowrap">
                 {formatIndianCurrency(r.data.value)}
               </span>
-              <span
-                className={cn("col-span-2 text-right text-2xs font-mono", yoy.className)}
-              >
+              <span className={cn("text-right text-2xs font-mono whitespace-nowrap", yoy.className)}>
                 {yoy.text}
               </span>
-              <span
-                className={cn("col-span-2 text-right text-2xs font-mono", qoq.className)}
-              >
+              <span className={cn("text-right text-2xs font-mono whitespace-nowrap", qoq.className)}>
                 {qoq.text}
               </span>
             </div>
@@ -182,7 +179,7 @@ function ResultsCard({ announcement }: { announcement: Announcement }) {
       </div>
 
       {e.derivation && (
-        <div className="mt-2 rounded-lg border border-finn-border/60 bg-finn-bg/40 p-2 space-y-1 text-2xs text-finn-muted">
+        <div className="mt-2 rounded-lg border border-finn-border/60 bg-finn-bg/40 p-2 space-y-1 text-2xs text-finn-muted break-words [overflow-wrap:anywhere]">
           <div className="text-[10px] font-semibold uppercase tracking-wider text-finn-text/80">
             Line-Item Derivations (PDF p.{e.source_page ?? "?"})
           </div>

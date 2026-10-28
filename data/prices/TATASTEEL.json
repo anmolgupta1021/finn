@@ -2,14 +2,14 @@
   "ticker": "TATASTEEL.NS",
   "name": "Tata Steel Limited",
   "sector": "Basic Materials",
-  "fetched_at": "2026-10-27T07:05:39.564938Z",
+  "fetched_at": "2026-10-27T17:35:46.886259Z",
   "current": {
-    "price": 169.94,
-    "change_pct": 1.35,
-    "volume": 22624704,
-    "vol_ratio": 0.98,
+    "price": 171.42,
+    "change_pct": 0.87,
+    "volume": 27056029,
+    "vol_ratio": 1.15,
     "vol_guard": null,
-    "market_cap": 2134854336512,
+    "market_cap": 2138347143168,
     "name": "Tata Steel Limited",
     "sector": "Basic Materials",
     "industry": "Steel"
@@ -992,6 +992,17 @@
       "volume": 22624704,
       "change_pct": 1.35,
       "vol_ratio": 0.98,
+      "vol_guard": null
+    },
+    {
+      "date": "2026-10-27",
+      "open": 169.19,
+      "high": 172.45,
+      "low": 168.2,
+      "close": 171.42,
+      "volume": 27056029,
+      "change_pct": 0.87,
+      "vol_ratio": 1.15,
       "vol_guard": null
     }
   ]

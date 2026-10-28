@@ -79,14 +79,14 @@
     "headline": "Record Date — Asian Paints Limited has informed the Exchange that Record date for the purpose of Dividend  is 04-Nov-2026.",
     "category": "dividend",
     "priority": 1,
-    "summary": "Record date fixed as November 4, 2026, for the purpose of dividend.",
+    "summary": "Asian Paints sets 04-Nov-2026 as the record date for dividend.",
     "source_url": "https://nsearchives.nseindia.com/corporate/ASIANPAINT_06102026191216_BMintimationtoStockExchangesOct26.pdf",
     "raw_text": "Asian Paints Limited has informed the Exchange that Record date for the purpose of Dividend  is 04-Nov-2026.",
     "enrichment": {},
     "model_used": "gemini-3.5-flash-lite",
     "tokens": {
-      "in": 392,
-      "out": 74
+      "in": 627,
+      "out": 69
     }
   },
   {
@@ -95,16 +95,16 @@
     "company_name": "Asian Paints Limited",
     "timestamp": "2026-10-06T19:10:16+05:30",
     "headline": "Updates — Asian Paints Limited has informed the Exchange regarding 'This is to inform you that a meeting of the Board of Directors of the Company will be held on Thursday, 29th October 2026, inter alia, to consider the declaration of interim dividend, if any, for the financial ye",
-    "category": "dividend",
-    "priority": 1,
-    "summary": "Board meeting scheduled for October 29, 2026, to consider interim dividend for FY 2026-27 with a record date of November 4, 2026.",
+    "category": "investor_meetings",
+    "priority": 3,
+    "summary": "Asian Paints Limited has informed the Exchange regarding 'This is to inform you that a meeting of the Board of Directors of the Company will be held on Thursday, 29th October 2026, inter alia, to consider the declaration of interim dividend, if any, for the financial year ending 31st March 2027.  It is further informed that the record date for payment of interim dividend, if declared, will be Wednesday, 4th November 2026.'.",
     "source_url": "https://nsearchives.nseindia.com/corporate/ASIANPAINT_06102026190837_BMintimationtoStockExchangesOct26.pdf",
     "raw_text": "Asian Paints Limited has informed the Exchange regarding 'This is to inform you that a meeting of the Board of Directors of the Company will be held on Thursday, 29th October 2026, inter alia, to consider the declaration of interim dividend, if any, for the financial year ending 31st March 2027.  It is further informed that the record date for payment of interim dividend, if declared, will be Wednesday, 4th November 2026.'.",
     "enrichment": {},
-    "model_used": "gemini-3.5-flash-lite",
+    "model_used": "rule_engine",
     "tokens": {
-      "in": 392,
-      "out": 74
+      "in": 0,
+      "out": 0
     }
   }
 ]

@@ -1,0 +1,41 @@
+TICKER: INFY.NS
+DOCUMENT_ID: DOC_5
+DOCUMENT_TITLE: Q1 FY26 Concall Transcript (28-Jul-2025)
+PDF_PAGE: 22 (of 40)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/Infosys_28072025173504_SEfiling_Earningscalltranscript_28072025.pdf#page=22
+========================================================================
+
+opportunities. We won a large deal in this vertical in Q1 to help a client set up a GCC. In Auto, we
+are helping clients in rationalizing their footprints and in Industrial, we are helping them in cost
+optimization.
+EURS vertical outlook remains mixed due to economic uncertainties. Pipeline for both large and
+mega deals remain strong. Our investment in Industry Cloud, Energy Transition and AI-driven
+operational efficiency are driving growth and differentiating us in large deals. In Energy, high-cost
+pressures due to oil price volatility are prompting clients to consolidate vendors for savings. In
+Utilities, advancement in renewable energy, smart grid technology, and sustainability regulations are
+reshaping the market. In Services, clients remain cautious about spending across capex and opex.
+In Retail, uncertainty around tariffs has led to muted spending in large geographies, supply chain
+impact and procurement disruptions. Budgets remain tight and decision cycles elongated. There is
+a slowdown amongst clients on discretionary spend though our pipeline is strong. We are seeing
+strong commitment from clients to engage us as trusted partners for AI first, outsourcing, and
+transformation deals in both IT and BPM services. Enhanced interest in AI is resulting in budget
+reallocation with discretionary spend expected to be self-funded through AI-led productivity benefits.
+Deals in the sector continue to leverage Topaz and AI Next platform capabilities.
+Communications is facing growth challenges and increased opex pressures amidst volatile
+macroeconomic and political landscape. Clients are focusing on cost takeouts and vendor
+consolidation. There is strong focus on AI and customization to monetize 5G use cases, though ROI
+concerns are delaying newer investments. OEMs are aiming for profitable growth and are exploring
+all levers, including tighter and reduced IT budgets, and leveraging AI and automation. Growth for
+us is led by ramp-up of previously won large deals.
+Clients in Hi-Tech remain cautious due to macro headwinds and geopolitical tensions, leading to
+cost pressures and budget cuts. Discretionary programs are paused because of significant
+investments in Gen AI GPU and AI.
+Driven by our Q1 performance and our current assessment of the rest of the year, we have revised
+our FY26 revenue guidance to 1% to 3% in constant currency terms. This continues to assume a
+reduction in third-party revenues versus FY25 based on existing deals and new deals in the pipeline.
+Our operating margin guidance for the year is 20% to 22%.
+We will continue to keep a close watch in economic environment and its impact on client budgets
+and reassess our guidance as we progress during the year.
+With that, we can open the floor for questions.
+7
+External Document © 2025 Infosys Limited

@@ -1,0 +1,36 @@
+TICKER: TCS.NS
+DOCUMENT_ID: DOC_2
+DOCUMENT_TITLE: Q1 FY27 Concall Transcript (15-Jul-2026)
+PDF_PAGE: 5 (of 25)
+SOURCE_URL: https://nsearchives.nseindia.com/corporate/TCS_CORPCS_15072026193646_SEInt15072026_Signed.pdf#page=5
+========================================================================
+
+I will now invite Samir, Aarthi, and Sudeep to go over di(cid:431)erent aspects
+of our performance during the quarter. I'll step in later to provide more
+color on the demand trends that we are seeing. Over to you, Samir.
+Samir Seksaria: Thank you, Krithi. Good day everyone.
+Our quarterly revenue was ₹72,275 crores, a growth of 2.2% QoQ and
+13.9% YoY in rupee terms. In dollar terms, revenue was $7,624 million,
+which was flat growth sequentially and 2.7% YoY. In constant currency
+terms, our growth was 40 bps sequentially and 3.2% YoY.
+This quarter, we have undertaken a refinement of cost categories to
+address the previously elevated ‘other expenses’ to provide a clearer view
+of the underlying cost drivers. This change has no impact on overall
+expenses or operating margins, and prior periods have been aligned for
+comparability. Prior four-quarter comparative details are available on our
+quarterly fact sheet.
+Operating margin for the quarter was 24%, declining 130 bps sequentially.
+In Q1, we rolled out annual increments for our global workforce, which
+impacted margins by 170 bps. We strengthened our partnership
+ecosystem and made targeted investments, which we were able to partly
+o(cid:431)set with 40 bps of currency benefit and operational e(cid:431)iciencies.
+Our strong profitability allows us the ability to make significant
+investments which are aligned with our aspirations. We are investing in AI
+capabilities, talent transformation, partner ecosystems, platforms,
+domain solutions, and go-to-market capacity. These investments are
+necessary as client demand increasingly requires integrated o(cid:431)erings
+across the Infrastructure to Intelligence AI stack. At the same time, we
+continue to drive operational rigor through pyramid optimization,
+productivity improvement, better resource fulfillment, automation, and
+disciplined cost management.
+Page 4 of 24

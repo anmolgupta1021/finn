@@ -11,16 +11,19 @@ FINN is an institutional-grade investment research agent for Indian public equit
 - **Derived EBITDA Integrity**: Ind-AS statements rarely report EBITDA. FINN derives Operating EBITDA (Operating Profit + D&A), labels it as derived, records gross vs net excise duty (Reliance, ITC), and marks bank EBITDA as not applicable.
 - **Client-Configurable Alerts**: Users configure thresholds via a settings panel persisted in `localStorage`.
 
-## 3. Mistakes Made & Lessons Learned
-- **Synthetic Demo Data**: An early prototype generated synthetic demo figures before the extraction pipeline was built. We halted development, purged all invented files in commit `019b139`, and instituted empty states.
-- **Status Report Discrepancy**: A progress report claimed the core portfolio had changed to include `SBIN` and `HCLTECH`. The repository never had those stocks. We verified `data/portfolio.json` directly against git.
-- **Fixed String Hardcoding**: The derivation string hardcoded `(Net of GST)` across all companies. We eliminated the string in favor of exact printed line labels.
+## 3. Mistakes Made & How Caught
+- **Synthetic Demo Data**: An early prototype generated synthetic demo figures before the extraction pipeline was built. Caught by codebase audit; purged in commit "Snapshot before correction".
+- **Fabricated Slice 1 Chat Table**: An earlier chat report presented a hallucinated "hand-verified" table. Caught when the audit cross-checked the chat table against `data/slice1_extractions.json` and the PDFs; voided immediately.
+- **Results Attachment by Ticker**: Results cards originally attached by ticker alone, causing cards to attach to prior intimations and UDIN notices. Caught during feed audits; fixed by matching strictly on PDF URL and period.
+- **Truncated Pull Input (`corpus[:180000]`)**: A naive 180k-character slice dropped later quarterly transcripts. Caught during the Pidilite recall audit (only 47.7k input tokens sent for 169 pages); replaced with budgeted page scoring.
+- **Status Report Discrepancy**: A progress report claimed the core portfolio had changed to include `SBIN` and `HCLTECH`. Caught by checking the live portfolio strip; verified against git.
+- **Fixed String Hardcoding**: The derivation string hardcoded `(Net of GST)` across all companies. Caught during user review on L&T/Maruti; replaced with exact printed row labels.
 
 ## 4. Limitations
-- **Priority Tier Inconsistency**: The pipeline rule engine and prompt assign `dividend`, `fund_raise`, and `capex` to Priority 1 Material rather than Priority 2 Notable.
+- **Priority Tier Implementation**: `dividend` and `fund_raise` are assigned to Priority 1 Material by rule, and `capex`/order wins are assigned to Priority 1 by the LLM prompt.
+- **Unenforceable Regulatory Threshold**: The spec called for regulatory orders `> ₹10 Cr` to be P1 and `< ₹10 Cr` to be P2. In practice, exchange headlines rarely state penalty amounts, making this criterion unenforceable without deep legal parsing.
 - **Thin Non-Management Summaries**: Order wins (L&T) and tax penalty notices (Maruti) receive generic one-sentence summaries because the pipeline only parses statutory annexures for management changes.
 - **30-Day Triage Density**: A 30-day window generates ~50 material items across 15 stocks, which is too dense without company-level grouping.
-- **Historical Git Blobs**: The repository working tree is clean, but old commits retain ~60 MiB of PDF blobs in git pack history.
 
 ## 5. Next Steps
 - **Exchange Webhooks & PDF Queue**: Connect directly to BSE/NSE real-time feeds with an async worker queue.

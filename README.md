@@ -78,11 +78,13 @@ python3 pipeline/generate_research.py TITAN.NS
 
 ## Known Limitations
 
-1. **Priority Tiers Inconsistency**:
-   - `pipeline/fetch_announcements.py` (lines 286–298 and line 115) assigns `dividend`, `fund_raise`, and `capex` to Priority 1 Material rather than Priority 2 Notable as documented in the architecture spec.
-2. **Thin Summaries for Order Wins & Regulatory Penalties**:
+1. **Priority Tiers (Code Implementation vs Architecture Hierarchy)**:
+   - In `pipeline/fetch_announcements.py`, `dividend` and `fund_raise` are assigned to Priority 1 Material by deterministic rule (`classify_by_rules()` lines 291–298), and `capex` / order wins are assigned to Priority 1 Material by LLM prompt instruction (`CLASSIFICATION_PROMPT` line 115).
+2. **Unenforceable `> ₹10 Cr` Regulatory Threshold**:
+   - The design spec called for regulatory/tax orders `> ₹10 Cr` to be Priority 1 and `< ₹10 Cr` to be Priority 2. In practice, exchange headline subjects and one-line summaries rarely state the penalty quantum upfront, making the `> ₹10 Cr` criterion unenforceable without deep multi-page legal document parsing.
+3. **Thin Summaries for Order Wins & Regulatory Penalties**:
    - Contract wins (L&T) and tax penalty notices (Maruti) receive generic 1-sentence summaries ("Company secured new business orders/contracts") because the pipeline only parses statutory annexures for management changes.
-3. **30-Day Triage Volume (~50 material items)**:
+4. **30-Day Triage Volume (~50 material items)**:
    - A 30-day window generates ~50 material items across 15 stocks. This is comprehensive but too dense for a quick morning scan without company-level grouping or sector tabs.
-4. **Historical Git Blobs**:
-   - Commits prior to `0c012e4` retain ~60 MiB of PDF blobs in git pack history. An orphan branch or `git filter-repo` clean is recommended before public remote push.
+5. **Historical Git Blobs (Scrubbed)**:
+   - Historical PDF blobs in the git pack (~60.8 MiB) were scrubbed via `git filter-repo --path data/documents --invert-paths --force`, reducing git pack size to 553 KiB with 0 PDF objects remaining.

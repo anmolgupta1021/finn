@@ -1,22 +1,27 @@
 # FINN — Secrets & Credentials Scan Report
 
 Date: 2026-10-28
-Tool: Automated Regex Security Audit
+Tool: Automated Security Audit (Regex & Exact Value Scanner)
 
-## 1. Git History Audit (`git log -p`)
-Scanned all commit diffs in git history for:
-- Google Gemini API Keys (`AIza...`)
-- GitHub Personal Access Tokens (`ghp_...`)
-- RSA/OpenSSH Private Keys
-- Vercel API Tokens
-- Hardcoded `GEMINI_API_KEY` assignments
+## 1. Scanner Patterns
+- **Actual Key Value from `.env`**: Scanned for the exact value of `GEMINI_API_KEY` (length: 53 characters).
+- **Google Gemini API Key Pattern**: `AIza[0-9A-Za-z\-_]{35}`
+- **Google Antigravity / Vertex Token Pattern**: `AQ\.[A-Za-z0-9_\-]{10,}`
+- **GitHub Personal Access Token Pattern**: `ghp_[0-9A-Za-z]{36}`
+- **Generic RSA/OpenSSH Private Key Headers**: `-----BEGIN (?:RSA )?PRIVATE KEY-----`
 
-**Result**: `PASS` — 0 secrets found across all commits in repository history.
+## 2. Scan Results by Target
 
-## 2. Environment File Check
-- `.env`: Verified present in `.gitignore` and untracked in git index (`git status --ignored`).
-- `.env.example`: Committed with dummy placeholder `GEMINI_API_KEY=your_gemini_api_key_here`.
+| Target File | Status | Matches Found |
+|---|---|---|
+| `build_history/transcript.jsonl` | **PASS** | 0 secrets (4 instances of API keys redacted to `[REDACTED_API_KEY]`) |
+| `build_history/transcript_full.jsonl` | **PASS** | 0 secrets (8 instances of API keys redacted to `[REDACTED_API_KEY]`) |
+| `build_history/LOG.md` | **PASS** | 0 secrets |
+| `COVERING_NOTE.md` | **PASS** | 0 secrets |
+| `DECISIONS.md` | **PASS** | 0 secrets |
+| `README.md` | **PASS** | 0 secrets |
+| Git History (`git log -p`) | **PASS** | 0 secrets |
 
-## 3. Large File & Document Check
-- `data/documents/`: Added to `.gitignore` and untracked from git index (`git rm -r --cached data/documents`).
-- Note on PDF objects in git pack: See `DECISIONS.md` on historical pack objects and repo clean options prior to first public remote push.
+## 3. Environment & Local Configuration
+- `.env`: Present in `.gitignore` and untracked in git index (`git status --ignored`).
+- `.env.example`: Committed with safe placeholder `GEMINI_API_KEY=your_gemini_api_key_here`.

@@ -21,7 +21,7 @@ Every significant decision, the alternatives considered, and the reasoning.
 
 ## Correction log (2026-10-27)
 
-Kept on purpose. Git commit `019b139` holds the state before these fixes.
+Kept on purpose. The commit titled "Snapshot before correction: includes FABRICATED demo data" holds the state before these fixes.
 
 **What went wrong**
 1. **Ticker check without network access.** The subagent asked to verify tickers had no network access. It confirmed all 18 from web search instead of calling yfinance and reported them as valid. The first real `fetch_prices.py` run returned no data for `TATAMOTORS.NS` and `ZOMATO.NS`.
@@ -57,23 +57,28 @@ Kept on purpose. Git commit `019b139` holds the state before these fixes.
 
 ## Mistakes Table
 
-| # | Mistake | Root Cause | Impact | Fix & Prevention | Traceable Files |
+| # | Mistake | Root Cause | Impact | Fix & How Caught | Traceable Files |
 |---|---|---|---|---|---|
-| 1 | **Ticker verification claimed without network access** | Subagent lacked network access and trusted web search memory rather than invoking yfinance | Reported `TATAMOTORS.NS` and `ZOMATO.NS` as valid, which failed on first real run | Replaced with real yfinance script `pipeline/verify_tickers.py`; switched to `TMPV.NS` and `ETERNAL.NS` | `pipeline/verify_tickers.py`, `data/portfolio.json` |
-| 2 | **Synthetic demo data authored by model** | Agent wrote placeholder files (`digest.json`, sample research) to lay out the frontend before data pipeline was built | Contained invented numbers, false HDFC CEO dates, and secondary-source wording ("street estimates") | Purged all fake files (`019b139`); enforced fail-closed empty states until real pipeline ran | Git commit `019b139`, `lib/data.ts` |
-| 3 | **Status report claimed a portfolio change that never happened** | Model progress report asserted the core portfolio list was updated to include `SBIN`, `KOTAKBANK`, `HCLTECH` | Chat report contradicted repository reality; `data/portfolio.json` in git always had the original 15 stocks | Acknowledged discrepancy plainly; added automated verification script checking `data/portfolio.json` directly | `data/portfolio.json`, `pipeline/config.py` |
-| 4 | **Fixed `(Net of GST)` string hardcoded in derivation text** | Ind AS 115 revenue excludes GST, so developer hardcoded `(Net of GST)` into `extract_results.py` | Appeared on every company's derivation text even when not printed in the statement | Replaced with `Revenue from operations as printed ('{row}')`; removed string from all JSON files | `pipeline/extract_results.py:592`, `data/slice1_extractions.json` |
+| 1 | **Ticker verification claimed without network access** | Subagent lacked network access and trusted web search memory rather than invoking yfinance | Reported `TATAMOTORS.NS` and `ZOMATO.NS` as valid, which failed on first real run | **Caught**: `fetch_prices.py` failed with no data. **Fix**: Replaced with real yfinance script `pipeline/verify_tickers.py`; switched to `TMPV.NS` and `ETERNAL.NS`. | `pipeline/verify_tickers.py`, `data/portfolio.json` |
+| 2 | **Synthetic demo data authored by model** | Agent wrote placeholder files (`digest.json`, sample research) to lay out the frontend before data pipeline was built | Contained invented numbers, false HDFC CEO dates, and secondary-source wording ("street estimates") | **Caught**: Codebase grep found hardcoded numbers not originating from fetchers. **Fix**: Purged all fake files in commit "Snapshot before correction"; enforced fail-closed empty states. | Commit "Snapshot before correction", `lib/data.ts` |
+| 3 | **Fabricated Slice 1 "hand-verified" table** | Model hallucinated a markdown table in chat to report verified figures rather than waiting for pipeline extractions | Presented conflicting numbers for TCS, INFY, and ICICI Bank | **Caught**: Integrity audit compared the chat table directly against `data/slice1_extractions.json` and actual PDF pages. **Fix**: Voided chat table; hardened `slice1_extractions.json` with printed row labels, column date order, and derived formulas. | `data/slice1_extractions.json` |
+| 4 | **Results cards attached by ticker instead of filing URL** | `attach_slice1_results()` matched filings by ticker symbol alone | Attached quarterly financial results cards to unrelated board meeting prior intimations (Infosys) and auditor UDIN filings | **Caught**: Feed audit caught results cards attached to non-results filings in 24h and 30d views. **Fix**: Re-engineered matching strictly by normalized `source_url` and quarter period (`_infer_filing_period()`). | `pipeline/fetch_announcements.py:380-420` |
+| 5 | **Truncated pull input (`corpus[:180000]`)** | Arbitrary character slice on concatenated multi-quarter PDF text | Dropped later quarterly earnings call transcripts and P&L pages for companies with large filings | **Caught**: Pidilite cold-ticker test revealed only 47.7k input tokens sent for 169-page corpus (~441k chars), dropping ~60% of transcripts. **Fix**: Replaced with smart budgeted page selection (prepared remarks + scored Q&A, and scored P&L pages). | `pipeline/generate_research.py:120-190` |
+| 6 | **Status report claimed a portfolio change that never happened** | Model progress report asserted the core portfolio list was updated to include `SBIN`, `KOTAKBANK`, `HCLTECH` | Chat report contradicted repository reality; `data/portfolio.json` in git always had the original 15 stocks | **Caught**: User caught contradiction against live portfolio strip. **Fix**: Acknowledged discrepancy plainly; automated verification check against `data/portfolio.json`. | `data/portfolio.json`, `pipeline/config.py` |
+| 7 | **Fixed `(Net of GST)` string hardcoded in derivation text** | Ind AS 115 revenue excludes GST, so developer hardcoded `(Net of GST)` into `extract_results.py` | Appeared on every company's derivation text even when not printed in the statement | **Caught**: User review noted `(Net of GST)` on L&T and Maruti where not printed. **Fix**: Replaced with `Revenue from operations as printed ('{row}')`; removed string from all JSON files. | `pipeline/extract_results.py:592`, `data/slice1_extractions.json` |
 
 ---
 
 ## Known Limitations
 
-1. **Priority tiers inconsistent with documented hierarchy**:
-   - `pipeline/fetch_announcements.py` (lines 286–298 in `classify_by_rules()` and line 115 in `CLASSIFICATION_PROMPT`) assigns `dividend`, `fund_raise`, and `capex` to Priority 1 Material rather than Priority 2 Notable as originally classified in the design documentation.
-2. **Thin summaries for order-win and regulatory-order items**:
-   - Announcements for large infrastructure contract awards (e.g. L&T order wins) and regulatory penalties (e.g. Maruti tax orders) receive generic 1-sentence summaries ("Company secured new business orders/contracts") because the rule engine and lightweight prompt do not parse contract terms or penalty amounts from non-management PDFs.
-3. **30-day view volume (~50 material items)**:
-   - Over a 30-day lookback window across 15 portfolio companies, ~47–51 items are classified as Priority 1 Material. This is too dense for a single morning triage scan and requires company-level grouping or sector tabs.
-4. **Historical PDF objects in git pack**:
-   - While raw PDFs are untracked and gitignored on `main`, commits prior to `0c012e4` contain ~60.8 MiB of PDF blobs in the local git object database. An orphan branch or `git filter-repo` clean is required before public remote push.
+1. **Priority Tiers (Code Implementation vs Architecture Hierarchy)**:
+   - In `pipeline/fetch_announcements.py`, `dividend` and `fund_raise` are assigned to Priority 1 Material by deterministic rule (`classify_by_rules()` lines 291–298), and `capex` / order wins are assigned to Priority 1 Material by LLM prompt instruction (`CLASSIFICATION_PROMPT` line 115).
+2. **Unenforceable `> ₹10 Cr` Regulatory Threshold**:
+   - The design spec called for regulatory/tax orders `> ₹10 Cr` to be Priority 1 and `< ₹10 Cr` to be Priority 2. In practice, exchange headline subjects and one-line summaries rarely state the penalty quantum upfront, making the `> ₹10 Cr` criterion unenforceable without deep multi-page legal document parsing.
+3. **Thin Summaries for Order-Win and Regulatory Items**:
+   - Announcements for large infrastructure contract awards (e.g. L&T order wins) and regulatory penalties (e.g. Maruti tax orders) receive generic 1-sentence summaries ("Company secured new business orders/contracts") because the pipeline only parses statutory annexures for management changes.
+4. **30-Day Triage Volume (~50 material items)**:
+   - Over a 30-day lookback window across 15 portfolio companies, ~47–51 items are classified as Priority 1 Material. This is comprehensive but too dense for a single morning triage scan without company-level grouping or sector tabs.
+5. **Git Pack History Cleaned**:
+   - Historical PDF blobs in the git pack (~60.8 MiB) were scrubbed via `git filter-repo --path data/documents --invert-paths --force`, reducing git pack size to 553 KiB with 0 PDF objects remaining.
 

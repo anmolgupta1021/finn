@@ -49,3 +49,31 @@ Kept on purpose. Git commit `019b139` holds the state before these fixes.
 | 25 | **Smart Budgeted Page Selection for Multi-Quarter Research (`pipeline/generate_research.py`)** | Naive `corpus[:180000]` character slicing | Replaced arbitrary truncation with per-quarter budgeted selection: concall transcripts include prepared remarks (first 5–8 pages) plus Q&A pages ranked by quantitative guidance keyword density (~20k chars/quarter); results filings include only scored P&L statement pages (~8k chars/quarter). Drops 80–90% of boilerplate pages (e.g. 937 of 1,008 pages dropped for Infosys) while preserving all guidance and P&L figures. | 2026-10-28 |
 | 26 | **User-Configurable Push Alerts Panel & Window-Aware Evaluation (`lib/data.ts`)** | Hard-coded volume/price thresholds in code | Added a `<Settings />` panel allowing the user to configure volume spike multiple $N$, daily price move $\pm X\%$, and watched announcement categories, persisted in browser `localStorage`. `computeAlerts()` evaluates all sessions in the selected lookback window (`24h`, `3d`, `7d`, `30d`) and emits `material_announcement` alerts for watched categories with direct filing links. Shows a live alert badge count in the header. | 2026-10-28 |
 | 27 | **Strict Results Attachment by URL & Period, and PDF Repo Hygiene** | Matching Slice 1 by ticker alone; tracking 80MB PDFs in git | `attach_slice1_results()` matches strictly by normalized `source_url` and quarter period, preventing false attachments on prior board meeting notices, auditor UDIN filings, or off-quarter results. Extracted Maruti's actual Q2 FY27 filing from Oct 27. Gitignored `data/documents/` and untracked raw PDF binaries from git while preserving verified text extracts in `evidence/{SYM}/`. Deleted dead prototype scripts (`pipeline/ai_pipeline.py`). | 2026-10-28 |
+| 28 | **Alerts Banner Feed De-duplication (`lib/data.ts`)** | Duplicating filings in both ALERTS and WHAT MATTERS | Priority 1 announcements already headline the WHAT MATTERS section right below the alerts banner. `computeAlerts()` now omits Priority 1 filings from the top banner to eliminate redundancy, reserving the top banner for price/volume thresholds and notable filings. | 2026-10-28 |
+| 29 | **"Auto-checked" Badge & Honest Footnote (`components/briefing/announcement-card.tsx`)** | Calling automated arithmetic checks "Checked" | Renamed "Checked" to "Auto-checked" and added an explicit tooltip and footnote explaining that the badge denotes automated mathematical sanity checks (non-null fields, EBITDA < Revenue, PAT ≤ PBT), not human auditor verification. | 2026-10-28 |
+| 30 | **Non-PDF Filings & Link Hygiene (`components/briefing/announcement-card.tsx`)** | Showing PDF page citations for .zip files; broken "-" links | For filings whose `source_url` is not a PDF (e.g. Sun Pharma `.zip` file), stripped nonsensical `(Filing p. 1)` citations and render the headline only. For filings with `source_url: "-"`, suppressed the "View original filing" link entirely. | 2026-10-28 |
+
+---
+
+## Mistakes Table
+
+| # | Mistake | Root Cause | Impact | Fix & Prevention | Traceable Files |
+|---|---|---|---|---|---|
+| 1 | **Ticker verification claimed without network access** | Subagent lacked network access and trusted web search memory rather than invoking yfinance | Reported `TATAMOTORS.NS` and `ZOMATO.NS` as valid, which failed on first real run | Replaced with real yfinance script `pipeline/verify_tickers.py`; switched to `TMPV.NS` and `ETERNAL.NS` | `pipeline/verify_tickers.py`, `data/portfolio.json` |
+| 2 | **Synthetic demo data authored by model** | Agent wrote placeholder files (`digest.json`, sample research) to lay out the frontend before data pipeline was built | Contained invented numbers, false HDFC CEO dates, and secondary-source wording ("street estimates") | Purged all fake files (`019b139`); enforced fail-closed empty states until real pipeline ran | Git commit `019b139`, `lib/data.ts` |
+| 3 | **Status report claimed a portfolio change that never happened** | Model progress report asserted the core portfolio list was updated to include `SBIN`, `KOTAKBANK`, `HCLTECH` | Chat report contradicted repository reality; `data/portfolio.json` in git always had the original 15 stocks | Acknowledged discrepancy plainly; added automated verification script checking `data/portfolio.json` directly | `data/portfolio.json`, `pipeline/config.py` |
+| 4 | **Fixed `(Net of GST)` string hardcoded in derivation text** | Ind AS 115 revenue excludes GST, so developer hardcoded `(Net of GST)` into `extract_results.py` | Appeared on every company's derivation text even when not printed in the statement | Replaced with `Revenue from operations as printed ('{row}')`; removed string from all JSON files | `pipeline/extract_results.py:592`, `data/slice1_extractions.json` |
+
+---
+
+## Known Limitations
+
+1. **Priority tiers inconsistent with documented hierarchy**:
+   - `pipeline/fetch_announcements.py` (lines 286–298 in `classify_by_rules()` and line 115 in `CLASSIFICATION_PROMPT`) assigns `dividend`, `fund_raise`, and `capex` to Priority 1 Material rather than Priority 2 Notable as originally classified in the design documentation.
+2. **Thin summaries for order-win and regulatory-order items**:
+   - Announcements for large infrastructure contract awards (e.g. L&T order wins) and regulatory penalties (e.g. Maruti tax orders) receive generic 1-sentence summaries ("Company secured new business orders/contracts") because the rule engine and lightweight prompt do not parse contract terms or penalty amounts from non-management PDFs.
+3. **30-day view volume (~50 material items)**:
+   - Over a 30-day lookback window across 15 portfolio companies, ~47–51 items are classified as Priority 1 Material. This is too dense for a single morning triage scan and requires company-level grouping or sector tabs.
+4. **Historical PDF objects in git pack**:
+   - While raw PDFs are untracked and gitignored on `main`, commits prior to `0c012e4` contain ~60.8 MiB of PDF blobs in the local git object database. An orphan branch or `git filter-repo` clean is required before public remote push.
+

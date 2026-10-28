@@ -223,6 +223,11 @@ function ManagementCard({ announcement }: { announcement: Announcement }) {
   const e = announcement.enrichment as ManagementEnrichment;
   if (!e?.person_name) return null;
 
+  const isPdf = announcement.source_url && /\.pdf($|\?)/i.test(announcement.source_url);
+  const background = isPdf
+    ? e.background
+    : (e.background ?? "").replace(/\s*\(Filing p\.\s*\d+\)/gi, "").trim();
+
   return (
     <div className="mt-2 flex gap-2.5">
       <div className="w-8 h-8 rounded-full bg-finn-accent/20 flex items-center justify-center flex-shrink-0">
@@ -231,9 +236,9 @@ function ManagementCard({ announcement }: { announcement: Announcement }) {
       <div className="min-w-0">
         <div className="text-xs font-medium">{e.person_name}</div>
         <div className="text-2xs text-finn-muted">{e.role}</div>
-        {e.background && (
+        {background && (
           <p className="text-2xs text-finn-muted mt-1 leading-relaxed">
-            {e.background}
+            {background}
           </p>
         )}
       </div>
@@ -251,6 +256,7 @@ export function AnnouncementCard({
   const [expanded, setExpanded] = useState(
     announcement.category === "results" || announcement.category === "management_change"
   );
+  const isPdf = Boolean(announcement.source_url && /\.pdf($|\?)/i.test(announcement.source_url));
   const Icon = CATEGORY_ICONS[announcement.category] || Star;
   const categoryLabel =
     CATEGORY_LABELS[announcement.category] || announcement.category;
@@ -335,20 +341,23 @@ export function AnnouncementCard({
         </span>
       </div>
 
-      {/* Summary — the "so what" line */}
-      <p className="text-sm mt-1.5 leading-snug">{announcement.summary}</p>
+      {/* Summary — the "so what" line (show headline only if source_url is not a PDF) */}
+      <p className="text-sm mt-1.5 leading-snug">
+        {!isPdf ? announcement.headline : announcement.summary}
+      </p>
 
-      {/* Enriched content */}
-      {expanded && announcement.category === "results" && (
+      {/* Enriched content — only for PDF-backed filings */}
+      {isPdf && expanded && announcement.category === "results" && (
         <ResultsCard announcement={announcement} />
       )}
-      {expanded && announcement.category === "management_change" && (
+      {isPdf && expanded && announcement.category === "management_change" && (
         <ManagementCard announcement={announcement} />
       )}
 
-      {/* Expand hint for enrichable categories */}
-      {(announcement.category === "results" ||
-        announcement.category === "management_change") &&
+      {/* Expand hint for enrichable categories — only for PDF-backed filings */}
+      {isPdf &&
+        (announcement.category === "results" ||
+          announcement.category === "management_change") &&
         !expanded && (
           <div className="flex items-center gap-0.5 mt-1.5 text-2xs text-finn-accent">
             <ChevronDown className="w-3 h-3" />
@@ -356,8 +365,8 @@ export function AnnouncementCard({
           </div>
         )}
 
-      {/* Source link */}
-      {expanded && announcement.source_url && (
+      {/* Source link — omitted if source_url is '-' or empty */}
+      {expanded && announcement.source_url && announcement.source_url !== "-" && (
         <div className="mt-2 pt-2 border-t border-finn-border flex items-center justify-between">
           <a
             href={announcement.source_url}

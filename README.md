@@ -64,9 +64,25 @@ python3 pipeline/generate_research.py TITAN.NS
 ---
 
 ## Key Files
-- [`DECISIONS.md`](DECISIONS.md) — Architectural, data, and model decisions log (including the transparent correction log from commit `019b139`).
+- [`COVERING_NOTE.md`](COVERING_NOTE.md) — Executive covering note (<600 words) summarizing what was built, key decisions, mistakes & lessons learned, and next steps.
+- [`DECISIONS.md`](DECISIONS.md) — Complete 30-item architectural and data decisions log, mistakes table, and known limitations.
+- [`build_history/SECRETS_SCAN.md`](build_history/SECRETS_SCAN.md) — Automated security scan verifying 0 secrets in git history and untracked `.env`.
 - [`pipeline/extract_results.py`](pipeline/extract_results.py) — Slice 1 results PDF page scorer, `pypdfium2` vision fallback, unit normaliser (`crore`/`million`/`lakh` → `₹ crore`), Schedule III Operating EBITDA calculator, and accounting validator.
 - [`pipeline/fetch_announcements.py`](pipeline/fetch_announcements.py) — NSE announcement fetcher (`curl_cffi`), materiality classifier, and `management_change` PDF enricher.
 - [`pipeline/generate_research.py`](pipeline/generate_research.py) — Multi-quarter NSE transcript + results PDF fetcher and citation-verified "Narrative vs. Numbers" analyzer.
-- [`data/slice1_extractions.json`](data/slice1_extractions.json) — Full raw + normalised extraction output across the 9 test filings.
+- [`pipeline/citation_gate.py`](pipeline/citation_gate.py) — Citation Gate v3 engine with 12 negative test cases.
+- [`data/slice1_extractions.json`](data/slice1_extractions.json) — Full raw + normalised extraction output across the test filings with derivation formulas.
 - [`data/llm_log.json`](data/llm_log.json) — Complete token and cost audit log for every Gemini API call.
+
+---
+
+## Known Limitations
+
+1. **Priority Tiers Inconsistency**:
+   - `pipeline/fetch_announcements.py` (lines 286–298 and line 115) assigns `dividend`, `fund_raise`, and `capex` to Priority 1 Material rather than Priority 2 Notable as documented in the architecture spec.
+2. **Thin Summaries for Order Wins & Regulatory Penalties**:
+   - Contract wins (L&T) and tax penalty notices (Maruti) receive generic 1-sentence summaries ("Company secured new business orders/contracts") because the pipeline only parses statutory annexures for management changes.
+3. **30-Day Triage Volume (~50 material items)**:
+   - A 30-day window generates ~50 material items across 15 stocks. This is comprehensive but too dense for a quick morning scan without company-level grouping or sector tabs.
+4. **Historical Git Blobs**:
+   - Commits prior to `0c012e4` retain ~60 MiB of PDF blobs in git pack history. An orphan branch or `git filter-repo` clean is recommended before public remote push.

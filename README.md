@@ -10,9 +10,9 @@ FINN separates **offline data ingestion & AI extraction** (Python pipeline) from
 
 | Layer / Feature | Status in Repo | Upstream Primary Source | How It Works |
 |---|---|---|---|
-| **EOD Prices & Volume-Spike Alerts** (`data/prices/*.json`) | **Real data cached on disk** (refreshed `2026-10-27` via live `yfinance` `1.2.0` across all 18 NSE tickers) | Yahoo Finance (`*.NS`) | [`pipeline/fetch_prices.py`](pipeline/fetch_prices.py) pulls 90-day OHLCV bars, drops partial intraday bars before `16:00 IST`, computes the prior 20-session SMA (`shift(1).rolling(20).mean()`), and applies a **corporate-action guard (`vol_guard`)** that pauses volume alerts when a stock split, bonus, `<20` prior sessions, or `>20%` overnight price gap (e.g., demerger) falls inside the 20-day window. |
+| **EOD Prices & Volume-Spike Alerts** (`data/prices/*.json`) | **Real data cached on disk** (refreshed `2026-10-27` via live `yfinance` `1.2.0` across all 19 NSE tickers (15 portfolio + 4 ad-hoc)) | Yahoo Finance (`*.NS`) | [`pipeline/fetch_prices.py`](pipeline/fetch_prices.py) pulls 90-day OHLCV bars, drops partial intraday bars before `16:00 IST`, computes the prior 20-session SMA (`shift(1).rolling(20).mean()`), and applies a **corporate-action guard (`vol_guard`)** that pauses volume alerts when a stock split, bonus, `<20` prior sessions, or `>20%` overnight price gap (e.g., demerger) falls inside the 20-day window. |
 | **Results Filing Extraction — Slice 1** (`data/slice1_extractions.json`) | **Real primary extractions cached on disk** (PDFs gitignored, cached locally in `data/documents/results/*.pdf`, citations grounded in text evidence) | NSE Corporate Archives (`nsearchives.nseindia.com/corporate/*.pdf`) | [`pipeline/extract_results.py`](pipeline/extract_results.py) scores pages deterministically (Consolidated over Standalone), detects broken embedded OCR in scanned PDFs (`RELIANCE_Q1FY27.pdf` p. 9, `INFY_Q2FY27.pdf` p. 18, `MARUTI_Q2FY27.pdf` p. 6) and renders those pages to PNG via `pypdfium2`, extracts raw line items in native units (`crore`, `million`, `lakh`), normalises to `₹ crore` in Python, computes Schedule III Operating EBITDA (`"not_applicable"` for banks), records line-item derivations (Gross vs Net of Excise, PBT before/after exceptional), and validates `EBITDA < Revenue` and `PAT <= PBT`. |
-| **Corporate Announcements Digest & Mgmt Change Enrichment** (`data/announcements/*.json`) | **100% of 30-day NSE filings ingested without caps** (180 unique non-XML announcements across 15 portfolio stocks; 63.3% classified via rules, 0 false results cards) | NSE Corporate Announcements API (`www.nseindia.com/api/corporate-announcements`) | BSE (`api.bseindia.com`) blocks automated requests with Akamai `403`. [`pipeline/fetch_announcements.py`](pipeline/fetch_announcements.py) uses `curl_cffi` (`impersonate="chrome"`) against NSE's JSON API, uses rule-first classification to save 114 LLM calls, attaches Slice 1 results strictly by URL and period (never by ticker alone), and downloads the actual PDF for `management_change` filings to extract incoming/outgoing executive backgrounds with page citations. |
+| **Corporate Announcements Digest & Mgmt Change Enrichment** (`data/announcements/*.json`) | **All announcements NSE's API returned for the window (completeness checked on HDFC Bank: 19/19)** (180 unique non-XML announcements across 15 portfolio stocks; 63.3% classified via rules, 0 false results cards) | NSE Corporate Announcements API (`www.nseindia.com/api/corporate-announcements`) | BSE API tested on 2026-10-27 returned HTTP 403 Akamai WAF (cited in [`DECISIONS.md`](DECISIONS.md) `#18`, `pipeline/fetch_announcements.py:5`, and `build_history/transcript.jsonl:286`); NSE alone covered the portfolio. [`pipeline/fetch_announcements.py`](pipeline/fetch_announcements.py) uses `curl_cffi` (`impersonate="chrome"`) against NSE's JSON API, uses rule-first classification to save 114 LLM calls, attaches Slice 1 results strictly by URL and period (never by ticker alone), and downloads the actual PDF for `management_change` filings to extract incoming/outgoing executive backgrounds with page citations. |
 | **Pull Mode — "Narrative vs. Numbers"** (`data/research/*.json`) | **8 companies pre-computed** (`INFY.NS`, `RELIANCE.NS`, `TCS.NS`, `ICICIBANK.NS`, `ETERNAL.NS`, `PIDILITIND.NS`, `BAJFINANCE.NS`, `ITC.NS`); **CLI runs live for any NSE ticker** | NSE Corporate Archives (`concall_transcript` + `results_filing` PDFs over last 4–5 quarters) | [`pipeline/generate_research.py`](pipeline/generate_research.py) uses smart page selection (first 5 pages prepared remarks + quantitative keyword-scored Q&A, and P&L statement pages) within a per-quarter token budget, dropping boilerplate pages, runs Gemini Flash, and enforces the **strict Citation Gate v3**: zero page tolerance, every number in claim appears inside the contiguous quote, and chronological priority (`guided_quarter < delivered_quarter`). Every verified claim writes source text to `evidence/{SYM}/`. |
 | **Morning Briefing Assembly, Configurable Alerts & Window Selector** (`/`, `/api/digest`) | **Live at request time** (`force-dynamic`) | Reads `data/prices/*.json` and `data/announcements/*.json` | [`lib/data.ts`](lib/data.ts) (`getDigest()`) dynamically filters announcements by the selected lookback window (`24h`, `3d`, `7d`, `30d`), evaluates configurable alert settings (volume multiple N, price move ±X%, watched filing categories) across trading sessions in the window, and persists custom settings in `localStorage`. |
 
@@ -22,7 +22,7 @@ FINN separates **offline data ingestion & AI extraction** (Python pipeline) from
 
 Model names were verified against `GET https://generativelanguage.googleapis.com/v1beta/models` and rate-limit documentation at `https://ai.google.dev/gemini-api/docs/rate-limits` (see [`DECISIONS.md`](DECISIONS.md) `#15`):
 - **Bulk classification, summaries, and single-page table/filing extraction**: `gemini-3.5-flash-lite` (fallback `gemini-3.1-flash-lite`) — fast, multimodal PNG support, zero thinking-token overhead.
-- **Multi-quarter "Narrative vs. Numbers" synthesis across 8–10 PDFs (~45k–65k input tokens)**: `gemini-3.6-flash` (fallback `gemini-3-flash-preview` / `gemini-3.5-flash-lite`).
+- **Multi-quarter "Narrative vs. Numbers" synthesis across 8–10 PDFs (~45k–65k input tokens)**: `gemini-3.8-flash` (fallback `gemini-3.5-flash-lite`, used on `ETERNAL.NS`).
 - Every LLM call is content-hash cached in `data/.llm_cache/` and logged with exact token counts and cost in [`data/llm_log.json`](data/llm_log.json).
 
 ---
@@ -43,7 +43,7 @@ Create `finn/.env` with `GEMINI_API_KEY=<your_key>` (confirmed gitignored in `.g
 ```bash
 pip install -r pipeline/requirements.txt
 
-# 1. Verify all 18 portfolio + ad-hoc tickers against live Yahoo Finance
+# 1. Verify all 19 portfolio + ad-hoc tickers against live Yahoo Finance
 python3 pipeline/verify_tickers.py
 
 # 2. Fetch 90-day EOD prices + compute 20-day volume ratios with corporate-action guard
@@ -65,7 +65,7 @@ python3 pipeline/generate_research.py TITAN.NS
 
 ## Key Files
 - [`COVERING_NOTE.md`](COVERING_NOTE.md) — Executive covering note (<600 words) summarizing what was built, key decisions, mistakes & lessons learned, and next steps.
-- [`DECISIONS.md`](DECISIONS.md) — Complete 30-item architectural and data decisions log, mistakes table, and known limitations.
+- [`DECISIONS.md`](DECISIONS.md) — Complete 31-item architectural and data decisions log, mistakes table, and known limitations.
 - [`build_history/SECRETS_SCAN.md`](build_history/SECRETS_SCAN.md) — Automated security scan verifying 0 secrets in git history and untracked `.env`.
 - [`pipeline/extract_results.py`](pipeline/extract_results.py) — Slice 1 results PDF page scorer, `pypdfium2` vision fallback, unit normaliser (`crore`/`million`/`lakh` → `₹ crore`), Schedule III Operating EBITDA calculator, and accounting validator.
 - [`pipeline/fetch_announcements.py`](pipeline/fetch_announcements.py) — NSE announcement fetcher (`curl_cffi`), materiality classifier, and `management_change` PDF enricher.
@@ -86,5 +86,9 @@ python3 pipeline/generate_research.py TITAN.NS
    - Contract wins (L&T) and tax penalty notices (Maruti) receive generic 1-sentence summaries ("Company secured new business orders/contracts") because the pipeline only parses statutory annexures for management changes.
 4. **30-Day Triage Volume (~50 material items)**:
    - A 30-day window generates ~50 material items across 15 stocks. This is comprehensive but too dense for a quick morning scan without company-level grouping or sector tabs.
-5. **Historical Git Blobs (Scrubbed)**:
-   - Historical PDF blobs in the git pack (~60.8 MiB) were scrubbed via `git filter-repo --path data/documents --invert-paths --force`, reducing git pack size to 553 KiB with 0 PDF objects remaining.
+5. **Quarters Produced Per Company (1 to 4)**:
+   - Multi-quarter narrative output evaluates between 1 and 4 quarters based on transcript availability (INFY: 4, BAJFINANCE: 4, ICICIBANK: 4, PIDILITIND: 4, RELIANCE: 3, TCS: 3, ETERNAL: 2, ITC: 1), rather than the 5–6 quarters fetched in the document manifest.
+6. **Annual Reports Unused**:
+   - Research is grounded strictly in quarterly earnings call transcripts and results filings; full multi-hundred page annual reports are not indexed.
+7. **Reliance and ITC Revenue Gross of Excise**:
+   - Primary statement revenues for Reliance and ITC are reported gross of excise duty (itemized under expenses).

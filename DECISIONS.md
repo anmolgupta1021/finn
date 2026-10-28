@@ -52,6 +52,7 @@ Kept on purpose. The commit titled "Snapshot before correction: includes FABRICA
 | 28 | **Alerts Banner Feed De-duplication (`lib/data.ts`)** | Duplicating filings in both ALERTS and WHAT MATTERS | Priority 1 announcements already headline the WHAT MATTERS section right below the alerts banner. `computeAlerts()` now omits Priority 1 filings from the top banner to eliminate redundancy, reserving the top banner for price/volume thresholds and notable filings. | 2026-10-28 |
 | 29 | **"Auto-checked" Badge & Honest Footnote (`components/briefing/announcement-card.tsx`)** | Calling automated arithmetic checks "Checked" | Renamed "Checked" to "Auto-checked" and added an explicit tooltip and footnote explaining that the badge denotes automated mathematical sanity checks (non-null fields, EBITDA < Revenue, PAT ≤ PBT), not human auditor verification. | 2026-10-28 |
 | 30 | **Non-PDF Filings & Link Hygiene (`components/briefing/announcement-card.tsx`)** | Showing PDF page citations for .zip files; broken "-" links | For filings whose `source_url` is not a PDF (e.g. Sun Pharma `.zip` file), stripped nonsensical `(Filing p. 1)` citations and render the headline only. For filings with `source_url: "-"`, suppressed the "View original filing" link entirely. | 2026-10-28 |
+| 31 | **Historical Git Pack History Scrubbed via `git-filter-repo`** | Retaining 60.8 MiB of raw PDF blobs in git packfile history | Executed `git filter-repo --path data/documents --invert-paths --force` to permanently purge raw PDF binary blobs from git commit objects. Verified 0 PDF objects remain in history (`git rev-list --objects --all | grep -i "\.pdf"` is empty), reducing pack size from 60.8 MiB to 553 KiB while preserving working tree evidence extracts. | 2026-10-28 |
 
 ---
 
@@ -79,6 +80,10 @@ Kept on purpose. The commit titled "Snapshot before correction: includes FABRICA
    - Announcements for large infrastructure contract awards (e.g. L&T order wins) and regulatory penalties (e.g. Maruti tax orders) receive generic 1-sentence summaries ("Company secured new business orders/contracts") because the pipeline only parses statutory annexures for management changes.
 4. **30-Day Triage Volume (~50 material items)**:
    - Over a 30-day lookback window across 15 portfolio companies, ~47–51 items are classified as Priority 1 Material. This is comprehensive but too dense for a single morning triage scan without company-level grouping or sector tabs.
-5. **Git Pack History Cleaned**:
-   - Historical PDF blobs in the git pack (~60.8 MiB) were scrubbed via `git filter-repo --path data/documents --invert-paths --force`, reducing git pack size to 553 KiB with 0 PDF objects remaining.
+5. **Quarters Produced Per Company (1 to 4)**:
+   - Multi-quarter narrative output evaluates between 1 and 4 quarters based on transcript availability (INFY: 4, BAJFINANCE: 4, ICICIBANK: 4, PIDILITIND: 4, RELIANCE: 3, TCS: 3, ETERNAL: 2, ITC: 1), rather than the 5–6 quarters fetched in the document manifest.
+6. **Annual Reports Unused**:
+   - Research is grounded strictly in quarterly earnings call transcripts and results filings; full multi-hundred page annual reports are not indexed.
+7. **Reliance and ITC Revenue Gross of Excise**:
+   - Primary statement revenues for Reliance and ITC are reported gross of excise duty (itemized under expenses).
 

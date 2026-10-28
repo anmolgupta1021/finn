@@ -8,9 +8,7 @@
     "quote": "revenues for the quarter grew 2.2% sequentially and 2.9% year-on-year in constant currency",
     "rejected": true,
     "rejection_reasons": [
-      "quote_not_on_page (segment 'revenues for the quarter grew 2.2% sequentially and 2.9% yea' not found on DOC_4 p.15)",
-      "quote_numbers_missing_on_page (['2.2', '2.9'] not on DOC_4 p.15)",
-      "claim_numbers_missing_on_page (['2.2', '2.9'] in claim 'Q2 FY26 revenue grew 2.2% QoQ and 2.9% YoY in CC terms.' not on DOC_4 p.15)"
+      "page_not_read ((DOC_4, p.15) not in read_pages; ±1 tolerance disabled)"
     ]
   },
   {

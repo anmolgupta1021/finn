@@ -363,7 +363,7 @@ if __name__ == "__main__":
 
     sess = create_nse_session()
     _, infy_docs = discover_nse_primary_documents(sess, "INFY.NS", days_back=460)
-    infy_enriched, infy_pages, _ = download_and_extract_pages(sess, "INFY.NS", infy_docs)
+    infy_enriched, infy_pages, _, _ = download_and_extract_pages(sess, "INFY.NS", infy_docs)
     infy_by_id = {d["doc_id"]: d for d in infy_enriched}
 
     neg_results = run_negative_test_suite(infy_by_id, infy_pages)
@@ -384,7 +384,7 @@ if __name__ == "__main__":
     total_rej = 0
     for sym in ["INFY.NS", "RELIANCE.NS", "TCS.NS", "ICICIBANK.NS", "ETERNAL.NS", "PIDILITIND.NS"]:
         _, docs = discover_nse_primary_documents(sess, sym, days_back=460)
-        enriched, read_pages, _ = download_and_extract_pages(sess, sym, docs)
+        enriched, read_pages, _, _ = download_and_extract_pages(sess, sym, docs)
         docs_by_id = {d["doc_id"]: d for d in enriched}
         comp_file = RESEARCH_DIR / f"{sym.split('.')[0]}.json"
         res_data = json.loads(comp_file.read_text())

@@ -2,7 +2,7 @@
 
 import { cn, displayTicker } from "@/lib/utils";
 import type { Alert } from "@/lib/types";
-import { Activity, ArrowUpRight, FileText, PauseCircle, TrendingDown, TrendingUp } from "lucide-react";
+import { Activity, FileText, PauseCircle, TrendingDown, TrendingUp } from "lucide-react";
 
 export function AlertsBanner({ alerts }: { alerts: Alert[] }) {
   if (!alerts.length) return null;
@@ -35,22 +35,10 @@ export function AlertsBanner({ alerts }: { alerts: Alert[] }) {
             <span className="text-finn-muted flex-1 min-w-0 break-words [overflow-wrap:anywhere] line-clamp-3">
               {alert.message}
             </span>
-            {isFiling && alert.source_url ? (
-              <a
-                href={alert.source_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open filing"
-                className={cn("flex-shrink-0", tone.text)}
-              >
-                <ArrowUpRight className="w-3.5 h-3.5" />
-              </a>
-            ) : (
-              !paused && (
-                <span className={cn("font-mono text-2xs flex-shrink-0", tone.text)}>
-                  ₹{alert.close.toLocaleString("en-IN")}
-                </span>
-              )
+            {!paused && !isFiling && (
+              <span className={cn("font-mono text-2xs flex-shrink-0", tone.text)}>
+                ₹{alert.close.toLocaleString("en-IN")}
+              </span>
             )}
           </div>
         );

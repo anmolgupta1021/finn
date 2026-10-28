@@ -114,22 +114,28 @@ export function BriefingPage({
   }
 
   const now = new Date();
-  const greeting =
-    now.getHours() < 12
-      ? "Good morning"
-      : now.getHours() < 17
-      ? "Good afternoon"
-      : "Good evening";
-  const dateStr = now.toLocaleDateString("en-IN", {
+  const dateStr = new Intl.DateTimeFormat("en-IN", {
+    timeZone: "Asia/Kolkata",
     weekday: "short",
     day: "numeric",
     month: "short",
-  });
-  const timeStr = now.toLocaleTimeString("en-IN", {
+  }).format(now);
+  const istHour = parseInt(
+    new Intl.DateTimeFormat("en-IN", { timeZone: "Asia/Kolkata", hour: "numeric", hour12: false }).format(now),
+    10
+  );
+  const greeting =
+    istHour < 12
+      ? "Good morning"
+      : istHour < 17
+      ? "Good afternoon"
+      : "Good evening";
+  const timeStr = new Intl.DateTimeFormat("en-IN", {
+    timeZone: "Asia/Kolkata",
     hour: "numeric",
     minute: "2-digit",
     hour12: true,
-  });
+  }).format(now);
 
   const materialCount = digest.material.length;
   const alertCount = digest.alerts.filter((a) => a.type !== "volume_unreliable").length;
@@ -141,7 +147,7 @@ export function BriefingPage({
         <div className="flex items-center justify-between mb-1">
           <div>
             <h1 className="text-lg font-bold tracking-tight">FINN</h1>
-            <p className="text-2xs text-finn-muted">
+            <p className="text-2xs text-finn-muted" suppressHydrationWarning>
               {greeting} · {dateStr} · {timeStr}
             </p>
           </div>

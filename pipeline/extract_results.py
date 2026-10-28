@@ -589,7 +589,7 @@ def _build_derivation(
         else:
             oi_str = f" (excludes Other Income of ₹{other_inc['current']:,.2f} Cr)" if other_inc.get("current") is not None else ""
             revenue_definition = (
-                f"Printed row '{rev_row_lbl}' (Net of GST){oi_str} = ₹{r_c:,.2f} Cr "
+                f"Revenue from operations as printed ('{rev_row_lbl}'){oi_str} = ₹{r_c:,.2f} Cr "
                 f"(Prev Q: ₹{r_p:,.2f} Cr; Year-ago Q: ₹{r_y:,.2f} Cr)."
             )
 

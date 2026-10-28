@@ -334,7 +334,7 @@
       },
       "derivation": {
         "basis_note": "Consolidated Statement of Financial Results (PDF p. 8, reported in ₹ crore). Columns L→R: Col 1='September 30, 2026', Col 2='June 30, 2026', Col 3='September 30, 2025' (mapped Current=Col 1, Previous=Col 2, Year-Ago=Col 3).",
-        "revenue_definition": "Printed row 'Revenue from operations' (Net of GST) (excludes Other Income of ₹1,337.00 Cr) = ₹73,188.00 Cr (Prev Q: ₹72,275.00 Cr; Year-ago Q: ₹65,799.00 Cr).",
+        "revenue_definition": "Revenue from operations as printed ('Revenue from operations') (excludes Other Income of ₹1,337.00 Cr) = ₹73,188.00 Cr (Prev Q: ₹72,275.00 Cr; Year-ago Q: ₹65,799.00 Cr).",
         "ebitda_formula": "Derived (`derived`): Operating Profit (Revenue ₹73,188.00 Cr − Total Expenses ₹55,887.00 Cr + Finance Costs ₹252.00 Cr = ₹17,553.00 Cr) + D&A (₹1,262.00 Cr) = ₹18,815.00 Cr (25.71% margin; Prev Q: ₹18,556.00 Cr; Year-ago Q: ₹17,978.00 Cr).",
         "pbt_basis": "Printed row 'PROFIT BEFORE TAX' (after exceptional items) = ₹18,638.00 Cr (Prev Q: ₹17,944.00 Cr; Year-ago Q: ₹16,068.00 Cr; PBT before exceptional items = ₹18,638.00 Cr, Current Q exceptional item = ₹0.00 Cr).",
         "pat_basis": "Printed row 'PROFIT FOR THE PERIOD' (Total Consolidated Profit after tax) = ₹13,934.00 Cr (Profit attributable to Owners of the Company/Parent = ₹13,884.00 Cr; Non-controlling interest = ₹50.00 Cr)."

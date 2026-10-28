@@ -137,9 +137,11 @@ export function computeAlerts(
   }
 
   // 3. Emit announcement-triggered alerts for watched categories inside the selected window
+  //    Omit filings that are already shown in WHAT MATTERS (priority 1) to avoid duplicating the feed
   const watchedSet = new Set(cfg.watched_categories ?? []);
   for (const ann of annsInWindow) {
     if (watchedSet.has(ann.category) && ann.priority <= 2) {
+      if (ann.priority === 1) continue; // Already featured in WHAT MATTERS right below ALERTS
       const catLabel = ann.category.replace(/_/g, " ").toUpperCase();
       out.push({
         ticker: prices.ticker,
@@ -149,8 +151,7 @@ export function computeAlerts(
         value: ann.priority,
         threshold: 1,
         category: ann.category,
-        source_url: ann.source_url,
-        message: `[${catLabel}] ${ann.summary}`,
+        message: `[${catLabel}] see below`,
       });
     }
   }

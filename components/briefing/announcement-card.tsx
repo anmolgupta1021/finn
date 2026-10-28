@@ -119,15 +119,16 @@ function ResultsCard({ announcement }: { announcement: Announcement }) {
         </div>
         {e.validation && (
           <span
+            title="Automated mathematical and sanity check from PDF statement; not a human audit verification."
             className={cn(
-              "text-2xs font-mono px-1.5 py-0.5 rounded",
+              "text-2xs font-mono px-1.5 py-0.5 rounded cursor-help",
               e.validation.passed
                 ? "text-emerald-400 bg-emerald-500/10"
                 : "text-amber-400 bg-amber-500/10"
             )}
           >
             {e.validation.passed
-              ? `Checked · p.${e.source_page ?? "?"}`
+              ? `Auto-checked · p.${e.source_page ?? "?"}`
               : `Flags (${e.validation.flags.length})`}
           </span>
         )}
@@ -203,6 +204,9 @@ function ResultsCard({ announcement }: { announcement: Announcement }) {
             <span className="text-finn-text/90 font-medium">PAT: </span>
             {e.derivation.pat_basis}
           </div>
+          <p className="text-[10px] text-finn-muted pt-1 italic border-t border-finn-border/40">
+            * Auto-checked indicates automated sanity checks passed (revenue, PBT, PAT non-null; EBITDA &lt; revenue; PAT ≤ PBT). Not human verified.
+          </p>
         </div>
       )}
 

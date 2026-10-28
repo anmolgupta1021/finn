@@ -1,35 +1,39 @@
 # FINN — Covering Note
 
 ## 1. What Was Built
-FINN is an investment research agent for Indian public equities, designed mobile-first at 390px.
-1. **Daily Briefing (Push)**: Morning triage for 15 portfolio companies across key sectors. Evaluates end-of-day price and volume thresholds (customizable $N\times$ volume spike, $\pm X\%$ price move), ingests corporate filings from NSE archives, extracts quarterly P&L results with Schedule III derived EBITDA formulas, and summarizes management changes with executive biographies where the filing includes one.
-2. **Ad-hoc Research (Pull)**: Deep-dive multi-quarter analysis across 8 pre-computed research companies (4 ad-hoc: Bajaj Finance, Eternal, ITC, Pidilite; 4 portfolio: Infosys, Reliance, TCS, ICICI Bank) using primary filings. Enforces **Citation Gate v3**: zero page tolerance, chronological priority, and a number-in-quote rule (every digit in a claim must appear inside the contiguous verbatim quote).
+FINN is an investment research agent for Indian equities at 390px.
+**Interaction Point of View**: Filtering, not aggregating — a mobile-first "Morning Briefing + Command Bar" answering "so what?" in one line grounded in primary filings, not news or memory.
+1. **Daily Briefing (Push)**: Morning triage for 15 portfolio stocks. Evaluates EOD price/volume alerts (24h, 3d, 7d, 30d), ingests 100% of NSE filings, extracts results with Schedule III derived EBITDA, and summarizes management changes with bios where provided.
+2. **Ad-hoc Research (Pull)**: Multi-quarter analysis across 8 pre-computed companies (4 ad-hoc: Bajaj Finance, Eternal, ITC, Pidilite; 4 portfolio: Infosys, Reliance, TCS, ICICI Bank). Enforces **Citation Gate v3**: zero page tolerance, chronological priority, and a number-in-quote rule (every digit in a claim must appear inside the quote).
 
 ## 2. Key Decisions
-- **Fail-Closed Primary Sources**: No broker notes, street consensus, or news memory. Corrupted filings (e.g. truncated `HDFCBANK_Q2FY27.pdf`) render honest fallback cards rather than secondary estimates.
-- **Rule-First Pipeline**: 63% of routine filings are triaged via deterministic rules, saving 114 LLM calls.
-- **Derived EBITDA Integrity**: Ind-AS statements rarely report EBITDA. FINN derives Operating EBITDA (Operating Profit + D&A), labels it as derived, and marks bank EBITDA as not applicable.
-- **Client-Configurable Alerts**: Users configure thresholds via a settings panel persisted in `localStorage`.
+- **Fail-Closed Primary Sources**: Corrupted filings (`HDFCBANK_Q2FY27.pdf`) render honest error cards rather than secondary estimates.
+- **Rule-First Pipeline**: 63% of routine filings triaged via rules, saving 114 LLM calls.
+- **Derived EBITDA Integrity**: Ind-AS statements rarely report EBITDA. FINN derives Operating EBITDA (Operating Profit + D&A), labeled derived; bank EBITDA marked not applicable.
+- **Configurable Alerts**: Thresholds configurable in a settings panel persisted in `localStorage`.
 
 ## 3. Deliberately Left Out
-- **Six Pull Lenses**: Business snapshot, financial snapshot, trajectory, balance sheet, cash quality, and bull vs bear were omitted to focus engineering on verifiable primary citations.
-- **Annual Reports & Freeform Chat**: Omitted ungrounded conversational chat and multi-hundred-page annual reports to prevent hallucination.
-- **BSE API & Deployed Live Research**: BSE API was dropped due to Akamai WAF blocks. Live generation is disabled on the deployed Vercel app because NSE blocks cloud server IPs; cold-ticker research is run via the local CLI pipeline (`pipeline/generate_research.py`).
+- **Six Pull Lenses, Chat & Annual Reports**: Cut because of the time-box, to build one lens with verified citations.
+- **BSE Ingestion**: BSE API was tested on 2026-10-27 and returned HTTP 403 (Akamai WAF); NSE alone covered the portfolio.
+- **Deployed Live Research**: Disabled on Vercel because NSE blocks cloud server IPs; cold-ticker research runs locally via `pipeline/generate_research.py`.
 
 ## 4. Cost Per Query (`data/llm_log.json`)
-- **Uncached Query**: ~19k–48k input tokens; output tokens split into 453–2,179 candidate tokens and 9,668–16,819 thinking tokens (total output: 10,121–18,422 tokens). Cost ranges from $0.0309 to $0.0577 per company on `gemini-3.8-flash` ($0.0047 on `gemini-3.5-flash-lite`).
-- **Cached Query**: 0 input tokens, 0 output tokens, $0.0000 cost (local content-hash cache hit).
+- **Uncached**: ~19k–48k input tokens; output split into 453–2,179 candidate and 9,668–16,819 thinking tokens (total: 10,121–18,422). Cost: $0.0309–$0.0577 per company on `gemini-3.8-flash` ($0.0047 on `gemini-3.5-flash-lite`).
+- **Cached**: 0 tokens, $0.0000 cost (local content-hash hit).
 
 ## 5. Mistakes Made & How Caught
-Early prototypes encountered ticker verification failures, model-authored synthetic fixtures, a fabricated Slice 1 chat table, false results attachments by ticker alone, naive text truncation that "dropped about 60% of pages, including all results filings", and hardcoded derivation strings. Each mistake was caught via integrity audits, feed reviews, and primary-source cross-checks, and resolved with permanent automated gates.
-*Full mistake details, root causes, and fixes are cataloged in [`DECISIONS.md`](DECISIONS.md).*
+- **Caught by Audits**: Synthetic demo data purged in commit "Snapshot before correction". Fabricated Slice 1 chat table caught by checking numbers against `data/slice1_extractions.json` and PDFs. Results cards attaching to intimations caught in feed audits. Naive text truncation that "dropped about 60% of pages, including all results filings" caught by Pidilite recall audit.
+- **Caught by User Review**: Discrepancy claiming portfolio included `SBIN`/`HCLTECH`, and the hardcoded `(Net of GST)` string on L&T/Maruti where not printed.
+- **Verification Integrity**: Because agent self-verification proved unreliable, verification was redone against the PDFs and extraction JSON. Full details in [`DECISIONS.md`](DECISIONS.md).
 
 ## 6. Known Limitations
-- **Quarters Available**: INFY (6), ETERNAL (6), BAJFINANCE (5), ICICIBANK (5), ITC (5), PIDILITIND (5), RELIANCE (5), TCS (5).
-- **Primary Sources**: Annual reports are unused; analysis is grounded strictly in earnings transcripts and results filings.
-- **Excise Duty**: Reliance and ITC revenues are reported gross of excise duty (excise duty itemized in expenses).
-- **Auto-checked Badge**: Indicates automated mathematical and accounting sanity checks (EBITDA < revenue, PAT ≤ PBT), not human audit review.
+- **Quarters Actually Produced**: INFY (4), BAJFINANCE (4), ICICIBANK (4), PIDILITIND (4), RELIANCE (3), TCS (3), ETERNAL (2), ITC (1). Earlier reports counted all 5–6 quarters of fetched source documents in the manifest, not narrative output.
+- **Primary Sources**: Annual reports unused; grounded strictly in earnings transcripts and results filings.
+- **Excise Duty**: Reliance and ITC revenues are reported gross of excise duty (itemized in expenses).
+- **Auto-checked Badge**: Denotes automated mathematical sanity checks (EBITDA < revenue, PAT $\le$ PBT), not human review.
 - **Verification Statement**: Hand-checked by me against: [FILL IN]
 
 ## 7. Next Steps
-- Real-time exchange webhooks and cash flow statement extraction (operating cash flow vs PAT).
+- **Omitted Lenses**: Implement balance sheet, cash quality (operating cash flow vs PAT), and trajectory lenses with primary table citations.
+- **Annual-Report Indexing**: Extract and index multi-hundred-page annual reports into chunked, citation-gated storage.
+- **Live Research Worker / Proxy**: Deploy a residential proxy or background worker queue to bypass cloud IP blocks on exchange servers, enabling on-demand live generation directly from the web app.
